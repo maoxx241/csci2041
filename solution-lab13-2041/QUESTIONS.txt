@@ -1,0 +1,477 @@
+                           __________________
+
+                            LAB 13 QUESTIONS
+                           __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+PROBLEM 1: `lazy_calls.ml'
+==========================
+
+  Compile the file `lazy_calls.ml' and run it with several command line
+  parameters such as
+  ,----
+  | > ocamlc lazy_calls.ml
+  | > ./a.out 20
+  | ...
+  | > ./a.out 25
+  | ...
+  | > ./a.out 30
+  | ...
+  | > ./a.out 32
+  | ...
+  `----
+
+  The input parameter is passed to a `fib n' function so will repeatedly
+  compute the `nth' Fibonacci number. The questions below pertain to
+  timing repeated calls to these functions so pick an `n' that is large
+  enough to see timing info printed but not so large as to make repeated
+  runs tediously long.
+
+
+(A)
+~~~
+
+  Examine the timing information output for the section marked
+  ,----
+  | =====(1) either_args=====
+  `----
+  and find the corresponding block of code.
+
+  Answer the following questions.
+  1. Describe what the function `either_args' does, especially its
+     dependence on the `(flag1,flag2)' parameters.
+  2. Explain why the times printed for each invocation of `either_args'
+     is identical regardless of the flags passed in. Incorporate the
+     notion of *eager evaluation* in your answer.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. Describe what the function `either_args' does, especially its
+     dependence on the `(flag1,flag2)' parameters.
+     - This function simply prints `arg1' when `flag1' is true and
+       similarly for `flag2' and `arg2'.
+  2. Explain why the times printed for each invocation of `either_args'
+     is identical regardless of the flags passed in. Incorporate the
+     notion of *eager evaluation* in your answer.
+     - Before `either_args' is called, its arguments are evaluated to
+       produce values due to the *eager evaluation* model for
+       computation used by OCaml.  This means that even when both
+       `flag1,flag2' are false, the full cost of evaluating both
+       Fibonacci computations is incurred leading to the same runtime in
+       each case such as the below.
+  ,----
+  | > ./a.out 31
+  | =====(1) either_args=====
+  | (false,false) time: 0.1720 secs
+  | First:  1346269
+  | ( true,false) time: 0.1572 secs
+  | Second: 1346269
+  | (false, true) time: 0.1917 secs
+  | First:  1346269
+  | Second: 1346269
+  | ( true, true) time: 0.1776 secs
+  `----
+
+
+(B)
+~~~
+
+  Examine the output with section marked
+  ,----
+  | =====(2) either_susp, new suspension each iter=====
+  `----
+  and locate the corresponding code in `lazy_calls.ml'.
+
+  Contrast this with the first section by answering the following
+  questions.
+  1. How are `either_susp' and `either_arg' from the previous section
+     different?
+  2. Why are the times for some of the calls of `either_susp' different
+     from each other?
+  3. Explain why some of the times in section (1) and (2) differ and
+     some are the same.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. While `either_args' just prints its arguments, `either_susp' takes
+     function arguments and will evaluate them as functions if the
+     results need to be printed.
+  2. The arguments to `either_susp' are only run if the results are
+     needed for printing. Thus if both flags are false, no evaluation is
+     done so it takes no time for the function to complete. If one arg
+     is needed for printing, it is evaluated while the other is not.
+  3. The times for `eval_args' are uniform because both arguments need
+     to be evaluated before passing to the function.  The only place
+     this matches `eval_susp' is when both flags are true as `eval_susp'
+     needs to run both functions in that case. Otherwise, `eval_susp'
+     takes less time as it only evaluates what it needs for printing.
+
+  ,----
+  | =====(2) either_susp, new suspension each iter=====
+  | (false,false) time: 0.0000 secs
+  | First:  1346269
+  | ( true,false) time: 0.0943 secs
+  | Second: 1346269
+  | (false, true) time: 0.0956 secs
+  | First:  1346269
+  | Second: 1346269
+  | ( true, true) time: 0.1918 secs
+  `----
+
+
+(C)
+~~~
+
+  Examine the output with section marked
+  ,----
+  | =====(3) either_lazy, lazy expr each iteration======
+  `----
+  and locate the corresponding code in `lazy_calls.ml'.
+
+  1. How does the code associated with the `either_lazy' differ from
+     `either_susp'? What module and special syntax are used?
+  2. Compare the timings from output section (2) and (3) to each other
+     and explain any similarities or differences.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. How does the code associated with the `either_lazy' differ from
+     `either_susp'? What module and special syntax are used?
+     - This version uses "lazy expressions" which delay evaluation of an
+       expression until it is actually needed at which point the module
+       function `Lazy.force' is used to retrieve the associated value.
+
+  2. Compare the timings from output section (2) and (3) to each other
+     and explain any similarities or differences.
+     - All of the timings are the same in this case as this use of lazy
+       expressions is identical to the function-based suspensions.
+
+  ,----
+  | =====(3) either_lazy, new lazy expr each iter======
+  | (false,false) time: 0.0000 secs
+  | First:  1346269
+  | ( true,false) time: 0.0957 secs
+  | Second: 1346269
+  | (false, true) time: 0.0955 secs
+  | First:  1346269
+  | Second: 1346269
+  | ( true, true) time: 0.1916 secs
+  `----
+
+
+(D)
+~~~
+
+  Examine the output with section marked `====(4) either_susp, single
+  suspension before loop====' and locate the corresponding code in
+  `lazy_calls.ml'.
+
+  Contrast the code associated with (4) and the previous use of
+  suspensions in (2): how do the codes differ? Explain why their timings
+  are the same or why there are differences.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  Version (2) generates a new suspension each iteration for both
+  arguments while (4) creates a single suspension prior to the loop.
+  This is used each time but both time the same as each evaluation of
+  the suspension function is the same.
+
+  ,----
+  | =====(4) either_susp, single suspension before loop=====
+  | (false,false) time: 0.0000 secs
+  | First:  1346269
+  | ( true,false) time: 0.0956 secs
+  | Second: 1346269
+  | (false, true) time: 0.0983 secs
+  | First:  1346269
+  | Second: 1346269
+  | ( true, true) time: 0.1912 secs
+  | 
+  `----
+
+
+(E)
+~~~
+
+  Examine the output with section marked
+  ,----
+  | =====(5) either_lazy, new lazy expr each iter======
+  `----
+  and locate the corresponding code in `lazy_calls.ml'.
+
+  Contrast the code associated with (5) and the previous use of
+  suspensions in (3): how do the codes differ? Explain why their timings
+  are the same or why there are differences.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  A single lazy expression is created prior to the loop starting in (5)
+  while two new lazy expressions are created each iteration in (3). This
+  means that the first time the lazy expression is evaluated, its result
+  is saved leading to the flags `(true,false)' taking some
+  time. However, once evaluated, further calls to `Lazy.force' simply
+  return the result of the expression which is immediate. This is why
+  subsequent calls take no time in (5).  In (3), since new expressions
+  are created each iteration, there is no saving of results.
+
+  ,----
+  | =====(5) either_lazy, new lazy expr each iter======
+  | (false,false) time: 0.0000 secs
+  | First:  1346269
+  | ( true,false) time: 0.0958 secs
+  | Second: 1346269
+  | (false, true) time: 0.0000 secs
+  | First:  1346269
+  | Second: 1346269
+  | ( true, true) time: 0.0000 secs
+  `----
+
+
+PROBLEM 2: Streams of Data
+==========================
+
+  Compile and run the code in `stream_demo.ml'. Examine the results
+  noting that you *must press Ctrl-c to kill the program* as it will
+  otherwise loop infinitely.
+
+
+EXAMPLE                                                       :solution:
+-------
+
+  ,----
+  | > ocamlc stream_demo.ml
+  | > ./a.out
+  | =====finite stream from list=====
+  | 0: List.hd: Mal  Stream.next: Mal
+  | 1: List.hd: Mal  Stream.next: Zoe
+  | 2: List.hd: Mal  Stream.next: Wash
+  | 3: List.hd: Mal  Stream.next: Kaylee
+  | 4: List.hd: Mal  Stream.next: Book
+  | 5: List.hd: Mal  Stream.next: Jayne
+  | 6: List.hd: Mal  Stream.next: Inara
+  | 7: List.hd: Mal  Stream.next: Simon
+  | 8: List.hd: Mal  Stream.next: River
+  | =====infinite int stream from function=====
+  | <enter>: advance  <Ctrl-c>: exit
+  | 0: 1
+  | 1: 2
+  | 2: 4
+  | 3: 8
+  | 4: 16
+  | 5: 32
+  | 6: 64
+  | 7: 128
+  | 8: 256
+  | 9: 512  Ctl-c
+  `----
+
+
+(A)
+~~~
+
+  Analyze the first section of code associated with the heading
+  ,----
+  | =====finite stream from list=====
+  `----
+
+  Answer the following questions about the code.
+  1. Describe what data source is used as a source for the stream and
+     what library function is used to create a stateful stream from it.
+  2. What library functions are used to access elements of the stream?
+     Examine their documentation and describe what they do.
+  3. Why does the output of the program differed between the list and
+     stream from one iteration to the next?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. Describe what data source is used as a source for the stream and
+     what library function is used to create a stateful stream from it.
+     - A standard linked list is created and `Stream.of_list' is used to
+       create a stream from it.
+  2. What library functions are used to access elements of the stream?
+     Examine their documentation and describe what they do.
+     - Stream.peek is used in the loop condition to check if there is
+       any data left in the stream. None is returned when the stream is
+       exhausted while Some is returned otherwise. However, `peek' does
+       not advance the stream.
+     - Stream.next is used to retrieve the next element in the stream
+       and advance its state so that subsequent calls return later
+       elements in the stream.
+  3. Why does the output of the program differed between the list and
+     stream from one iteration to the next?
+     - The repeated calls to `List.hd crew_list' will always access the
+       first element in the list as lists are immutable.
+     - Streams on the other hand are mutable so each call to
+       `Stream.next' advances the stream forward leading to all elements
+       in the list being printed.
+
+
+(B)
+~~~
+
+  Examine the second section of `stream_demo.ml' with heading
+  ,----
+  | =====infinite int stream from function=====
+  `----
+
+  Answer the following questions about the code.
+  1. As in the previous problem, describe what data source is used as a
+     source for the stream and what library function is used to create a
+     stateful stream from it.
+  2. What library functions are used to access elements of the stream?
+     Are they the same or different from part (A) above?
+  3. Will the stream in this case ever "run out" of data? Explain your
+     reasons why or why not?
+  4. Explain why this stream can produce a lot of data but requires very
+     little memory to represent.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. As in the previous problem, describe what data source is used as a
+     source for the stream and what library function is used to create a
+     stateful stream from it.
+     - A function called `two_pow' is created which returns increasing
+       powers of two is created. It maintains a "private" local ref with
+       the next power of 2 to return. `Stream.from' is used to convert
+       it to a stream.
+
+  2. What library functions are used to access elements of the stream?
+     Are they the same or different from part (A) above?
+     - The same functions `peek' and `next' are used to handle the data
+       from this stream.
+
+  3. Will the stream in this case ever "run out" of data? Explain your
+     reasons why or why not?
+     - No: it is an infinite stream of data so the printing loop will go
+       on indefinitely. This is because the next power of two can always
+       be generated by doubling the private state integer `cur'.
+
+  4. Explain why this stream can produce a lot of data but requires very
+     little memory to represent.
+     - The stream can produce an infinite amount of data but does so
+       using essentially only a function and a single integer in
+       memory. This is common for generative objects: they simply need
+       some state along with a routine to produce the next element that
+       updates state.
+
+
+Optional Extras
+===============
+
+Custom implementations of `lazy' fail
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  A first instinct for most folks observing the connection between
+  Problem 1's suspensions via functions and the `lazy' keyword is to
+  attempt their own implementation of it along the following lines.  (*
+  custom_lazy.ml: optional problem exploring possible implementations of
+  lazy expressions. *)
+
+
+  type 'a lazy_expr = { (* type for lazy expressions *) expr : unit ->
+      'a; (* expression to evaluate *) mutable result : 'a option; (*
+      saved results, None if uneval'd yet *) };;
+
+  let my_lazy expr = (* create a lazy version of expr *) {expr = (fun ()
+    -> expr); result = None} ;;
+
+  let my_force lazy_expr = (* force a value out of the lazy_expr *)
+    match lazy_expr.result with
+   Some a -> a                     (* already evaluated *) 
+   None ->                         (* not eval'd yet *)    
+       let a = lazy_expr.expr () in (* eval *) lazy_expr.result <- Some
+       a; (* save result *) a (* return result *) ;;
+
+  Experiment with this version by adding calls to its `my_lazy' into the
+  demo in `lazy_calls.ml'.  See if it in fact creates the same effects
+  as the built-in `lazy' keyword.
+
+  When you determine that it does not, speculate as to why it fails and
+  why compiler support is required for features like `lazy'.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  Using `my_lazy' as `lazy' is used such as in
+  ,----
+  | either_xxx (flag1,flag2) (my_lazy (fib n)) (my_lazy (fib n)); 
+  `----
+  will give timing that indicates both fib calls are evaluated. This is
+  because `my_lazy' is a function call which, due to eager evaluation,
+  requires the full evaluation of arguments.  If the more obtuse version
+  is used as in
+  ,----
+  | let arg1 = {expr=(fun ()-> fib n); result=None} in
+  | let arg2 = {expr=(fun ()-> fib n); result=None} in
+  | either_xxx (flag1,flag2) arg1 arg2;
+  `----
+  The desired effect will be achieved.
+
+  The compiler is the only entity in a position to interpret thinks like
+  `lazy' as different than normal function calls. Since `my_lazy' looks
+  like a normal function call, eager evaluation will be used. In
+  contrast, `ocamlc' knows about `lazy' and will insert special
+  construction to affect the lazy evaluation.  This is the same reason
+  that `if/then/else' constructs are not normal function calls but are
+  instead special syntactic constructions supported by the compiler.
+
+
+Stream peek vs. has_more
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+  It is natural to expect the `Stream' module to contain a function like
+  `Stream.has_more stream' which returns true when the stream has more
+  data and false otherwise. However, there is no such `has_more'
+  function present and the `peek' function which returns a None/Some is
+  used instead.  Why would it be difficult or even impossible to write a
+  general purpose `has_more' function? Consider that streams are very
+  general and in the sample code provided, data from two different
+  sources is converted to streams.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  `has_more' functionality seems obvious when considering sources like
+  lists, arrays, or other finite data structures.  It may also seem easy
+  to implement with the `two_pow' function as it would always return
+  `true' indicating more data is available.  However, the difficulty
+  arises in trying to get such different sources as a list and an
+  arbitrary function aligned with the simple interface provided by
+  `Stream'. Since `Stream' allows an arbitrary function to be converted
+  to a stream via `Stream.from func', it would need at least a second
+  function to be provided that determines whether more data exists. If
+  not, the only way to determine if the stream has more data in a
+  `has_more' function is to ask for more as `peek' does.  While the
+  resulting data can be saved for later calls to `peek' and `next', the
+  subtle effect is that the function is evaluated to produce the
+  data. This effect is obvious in a `peek' or `next' call, but since
+  `has_more' returns a boolean true/false, users may not realize that
+  the stream has advanced. If any side-effects such as exceptions can
+  result from advancing the stream, `has_more' would trigger them.
+  Thus, to make it obvious that the data production is happening, only
+  `peek' is provided.

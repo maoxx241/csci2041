@@ -1,0 +1,347 @@
+                           __________________
+
+                            LAB 10 QUESTIONS
+                           __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+PROBLEM 1: lexer.ml
+===================
+
+(A)
+~~~
+
+  Examine `lexer.ml'. The central function of interest is `lex_string'
+  which is intended to process a string with an arithmetic expression in
+  it and produce a list of tokens of the `token' type defined at the top
+  of the file.
+
+  Study the given code carefully and answer the following questions on
+  how it works.
+
+  1. The code makes use of recursion. Describe how recursion is used to
+     process the entire string and to produce a list of the tokens that
+     are found.
+
+  2. There is a loop associated with digits. Why is this needed while no
+     loop is needed for the other cases of tokens?
+
+  3. Demonstrate some uses of `lex_string' in a REPL to show that it
+     works.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. The code makes use of recursion. Describe how recursion is used to
+     process the entire string and to produce a list of the tokens that
+     are found.
+
+     `lex_string' uses a recursive helper which takes a position in the
+     string as an argument. The string is analyzed at the given position
+     to determine a token then recurses with `pos' increased.
+
+  2. There is a loop associated with digits. Why is this needed while no
+     loop is needed for the other cases of tokens?
+
+     Since numbers are multi-character entities, the loop is used to
+     identify the entire substring associated with the number before
+     advancing to the next token.
+
+  3. Below are sample uses of `lex_string'
+
+  ,----
+  | # lex_string "+ * ( 123 )";;
+  | - : token list = [Plus; Times; OParen; Int 123; CParen]
+  | # lex_string "5 + 10*4 + 7*(3+2)";;
+  | - : token list =
+  | [Int 5; Plus; Int 10; Times; Int 4; Plus; Int 7; Times; OParen; Int 3; Plus;
+  |  Int 2; CParen]
+  `----
+
+
+(B)
+~~~
+
+  Extend the code in `lexer.ml' to account for the following new kinds
+  of tokens.
+  1. Subtraction with the Minus (-) sign - like Addition
+  2. Division with the Slash (/) - like multiplication
+  3. Identifiers of strings (abbreviated Ident) - like Int of integers.
+
+  To complete the extension, make the following three modifications.
+  1. Add in a variant to the `token' type for each of Minus, Slash,
+     Ident.
+  2. In `lex_string', extend the `match/with' single character cases to
+     include one for - and / associated with Minus and Slash. These will
+     behave similarly to their Plus and Times counterparts.
+  3. Add in a case for character data which will become Ident cases and
+     be similar to Int. Make use of the provided `is_letter' function to
+     help identify letters.
+
+  Once you have completed the modifications, uncomment the provided
+  examples at the end of the file to ensure the modifications compile
+  and work.  Try out the `lex_string' in a REPL.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  | 
+  | let lex_string string =                      (* create a list of tokens  *)
+  |   let len = String.length string in
+  |   let rec lex pos =                          (* recursive helper *)
+  |     if pos >= len then
+  |       []
+  |     else
+  |       match string.[pos] with                (* match a single character *)
+  |       |' ' | '\t' | '\n' -> lex (pos+1)      (* skip whitespace *)
+  |       |'+' -> Plus :: (lex (pos+1))          (* single char ops become operators *)
+  |       |'-' -> Minus :: (lex (pos+1))         
+  |       |'*' -> Times :: (lex (pos+1))
+  |       |'/' -> Slash :: (lex (pos+1))
+  |       |'(' -> OParen :: (lex (pos+1))        (* and open/close parens *)
+  |       |')' -> CParen :: (lex (pos+1))
+  |       | d when is_digit d ->                 (* see a digit *)
+  |          let stop = ref pos in               (* scan through until a non-digit is found *)
+  |          while !stop < len && is_digit string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let numstr = String.sub string pos (!stop - pos) in (* substring is the int *)
+  |          let num = int_of_string numstr in   (* parse the integer *)
+  |          Int(num) :: (lex !stop)             (* and tack onto the stream of tokens *)
+  |       | a when is_letter a ->                (* see a letter *)
+  |          let stop = ref pos in               (* scan through until a non-letter is found *)
+  |          while !stop < len && is_letter string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let ident = String.sub string pos (!stop - pos) in (* substring is the identifier *)
+  |          Ident(ident) :: (lex !stop)         (* and tack onto the stream of tokens *)
+  |       | _ ->                                 (* any other characters lead to failures *)
+  |          let msg = sprintf "lex error at char %d, char '%c'" pos string.[pos] in
+  |          failwith msg
+  |   in                                         (* end helper *)
+  |   lex 0                                      (* call helper *)
+  | ;;
+  `----
+
+
+PROBLEM 2: `parser.ml'
+======================
+
+(A)
+~~~
+
+  Examine `parser.ml'. This file contains a solution for Problem 1's
+  lexer as it is required for the parser (this is also useful if you get
+  stuck).
+
+  The central function of interest is `parse_tokens' which converts a
+  list of `tokens' into a tree structure which will be referred to as a
+  Parse Tree or Abstract Syntax Tree (AST). This tree is comprised of
+  variants of the `expr' type defined midway through the file.
+
+  Describe the kinds of elements in the `expr' type and what kinds of
+  data they carry. Note how this creates a tree structure.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  The `expr' type is
+  ,----
+  | type expr =
+  |   | Add of expr * expr
+  |   | Mul of expr * expr
+  |   | Const of int
+  `----
+
+  This means that only `Const' elements are leaves in the tree and carry
+  integers.  `Add' and `Mul' expressions have two child expressions and
+  thus comprise internal nodes.
+
+
+(B)
+~~~
+
+  The code for `parse_tokens' uses recursion to perform the
+  parsing. Notice its structure of dividing the task into 4 mutually
+  recursive functions:
+  1. prec0 which handles Int and OParen/CParen tokens.
+  2. prec1 which handles Times tokens
+  3. prec2 which handles Plus tokens
+  4. parse which serves as an entry point for the beginning of parsing.
+
+  Answer the following questions about how each of these work.
+
+  1. Functions `prec2' starts by calling `prec1' and prec1 starts by
+     calling prec0.  In both situations, a pair of `(lexpr, rest)' are
+     returned.  What types are the `lexpr' and `rest' and how are they
+     used?
+  2. `prec0' matches in one case the `OParen' token which corresponds to
+     `(' in the input.  This is handled by calling the `parse'
+     function. Describe what effect this has in parsing. What happens if
+     there is no `CParen' (closing paraenthesis `)' ) in the input?
+  3. Try running `parse_tokens' on the following inputs as follows and
+     report your results. Each of these will raise an error. How the
+     code reaches this error.
+
+  ,----
+  | # parse_tokens (lex_string "5+10+");;
+  | # parse_tokens (lex_string "5+10+11 )");;
+  | # parse_tokens (lex_string "5*10+11 9");;
+  | # parse_tokens (lex_string "5+10+11 + +");;
+  | # parse_tokens (lex_string "5*(10+11");;
+  `----
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  | # parse_tokens (lex_string "5+10+");;
+  | Exception: ParseError {msg = "expected an expression"; toks = []}.
+  | 
+  | (* Symbol + should be followed by another expression *)
+  | 
+  | # parse_tokens (lex_string "5+10+11 )");;
+  | Exception: ParseError {msg = "tokens remain in stream"; toks = [CParen]}.
+  | 
+  | # parse_tokens (lex_string "5*10+11 9");;
+  | Exception: ParseError {msg = "tokens remain in stream"; toks = [Int 9]}.
+  | 
+  | (* In both the above cases, the additional tokens cause the
+  |    error as the parse completes but the remaining in put is
+  |    not empty *)
+  | 
+  | # parse_tokens (lex_string "5+10+11 + +");;
+  | Exception: ParseError {msg = "syntax error"; toks = [Plus]}.
+  | 
+  | (* Some sort of expression is expected after the first + 
+  |    such as a number the second + cannot be parsed this way *)
+  | 
+  | # parse_tokens (lex_string "5*(10+11");;
+  | Exception: ParseError {msg = "unclosed parentheses"; toks = [Int 10; Plus; Int 11]}.
+  | 
+  | (* The parenthesis is not closed as and this is expected in the 
+  |    prec0 function when OParen appears  *)
+  | 
+  `----
+
+
+(C)
+~~~
+
+  Modify the parser to accommodate the new tokens - and / and string
+  identifiers.  Add in the following variants type to the `expr' type.
+  - `Sub' which corresponds to the `Minus' token and is similar to `Add'
+  - `Div' which corresponds to the `Slash' token and is similar to `Mul'
+  - `Varname' which corresponds to the `Ident' token and is similar to
+    `Const'
+
+  Note that each of these has analogues already in the parser.
+
+  CORRECTED INSTRUCTIONS
+  - Handle `Ident' tokens in the `prec0' function. It should create a
+    `Varname' expression similar to `Int'. It is at the same precedence
+    level as `Int' so can be in the same function.
+  - Handle `Slash' tokens in a new `prec1_div' function. It should
+    create a `Div' expression similar to `Mul' but be at a higher
+    precedence than `prec1'.
+  - Handle `Minus' tokens in a new `prec2_sub' function. It should
+    create a `Sub' expression similar to `Add' but be at a higher
+    precedence than `prec2'.
+
+  ORIGINAL INCORRECT INSTRUCTIONS
+  - Handle `Minus' tokens in the `prec2' function. It should create a
+    `Sub' expression similar to `Add'
+  - Handle `Slash' tokens in the `prec1' function. It should create a
+    `Div' expression similar to `Mul'.
+  - Handle `Ident' tokens in the `prec0' function. It should create a
+    `Varname' expression similar to `Int'.
+
+  When you complete the parser extensions, uncomment the code at the end
+  of the file which allows you to test it in a REPL.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  | (* Create an expression tree from a series of tokens *)
+  | let parse_tokens tokens =
+  | 
+  |   (* prec0: self-evaluating tokens like Int and parenthsized expressions *)
+  |   let rec prec0 toks =
+  |     match toks with
+  |     | [] ->                                  (* out of input *)
+  |        raise (ParseError {msg="expected an expression"; toks=toks})
+  |     | Int n ::  tail ->                      (* ints are self-evaluating *)
+  |        (Const(n),tail)
+  |     | Ident s ::  tail ->                      (* identifiers will require lookup *)
+  |        (Varname(s),tail)
+  |     | OParen :: tail ->                      (* parenthesized expresion *)
+  |        begin
+  |          let (expr,rest) = parse tail in     (* start back at highest precedence *)
+  |          match rest with
+  |          | CParen::tail -> (expr,tail)
+  |          | _ -> raise (ParseError {msg="unclosed parentheses"; toks=tail})
+  |        end
+  |     | _ ->
+  |        raise (ParseError {msg="syntax error"; toks=toks})
+  | 
+  |   (* prec1: multiplication and division *)
+  |   and prec1_div toks =
+  |     let (lexpr, rest) = prec0 toks in        (* try higher precdence expression first *)
+  |     match rest with
+  |     | Slash :: tail ->                       (* / is first *)
+  |        let (rexpr,rest) = prec1_div tail in  (* recursively generate right-had expression *)
+  |        (Div(lexpr,rexpr), rest)              (* return division of these two *)
+  |     | _ -> (lexpr, rest)                     (* not a multiply so return expression and remaining tokens *)
+  | 
+  |   and prec1_mul toks =
+  |     let (lexpr, rest) = prec1_div toks in    (* try higher precedence expression first *)
+  |     match rest with
+  |     | Times :: tail ->                       (* * is first *)
+  |        let (rexpr,rest) = prec1_mul tail in  (* recursively generate right-had expression *)
+  |        (Mul(lexpr,rexpr), rest)              (* return multiplication of these two *)
+  |     | _ -> (lexpr, rest)                     (* not a multiply so return expression and remaining tokens *)
+  | 
+  | 
+  |   (* prec2: addition and subtraction *)
+  |   and prec2_sub toks =
+  |     let (lexpr, rest) = prec1_mul toks in    (* try higher precdence expression first *)
+  |     match rest with
+  |     | Minus :: tail ->                       (* - is first *)
+  |        let (rexpr,rest) = prec2_sub tail in  (* recursively generate right-had expression *)
+  |        (Sub(lexpr,rexpr), rest)              (* return subtraction of these two *)
+  |     | _ -> (lexpr, rest)                     (* not an addition so return expression and remaining tokens *)
+  | 
+  |   and prec2_add toks =
+  |     let (lexpr, rest) = prec2_sub toks in    (* try higher precdence expression first *)
+  |     match rest with
+  |     | Plus :: tail ->                        (* + is first *)
+  |        let (rexpr,rest) = prec2_add tail in  (* recursively generate right-had expression *)
+  |        (Add(lexpr,rexpr), rest)              (* return addition of these two *)
+  |     | _ -> (lexpr, rest)                     (* not an addition so return expression and remaining tokens *)
+  | 
+  |   (* top-level parsing entry *)
+  |   and parse toks =
+  |     prec2_add toks
+  |   in
+  | 
+  |   let (expr, rest) = parse tokens in
+  |   match rest with
+  |   | [] -> expr
+  |   | _  -> raise (ParseError{msg="tokens remain in stream";toks=rest})
+  | ;;
+  | 
+  `----

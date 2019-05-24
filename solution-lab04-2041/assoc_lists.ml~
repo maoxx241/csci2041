@@ -1,0 +1,8 @@
+(* Return the value associated with query_key in association list alist.
+   Raises a Not_found exception if there is no association *)
+let rec assoc query_key alist =
+  match alist with
+  | [] -> raise Not_found
+  | (key,value)::tail when query_key=key -> value
+  | _::tail -> assoc query_key tail
+;;

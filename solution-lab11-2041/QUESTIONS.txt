@@ -1,0 +1,408 @@
+                           __________________
+
+                            LAB 11 QUESTIONS
+                           __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+Files `lex_parse_eval.ml' and `lpe_main.ml'
+===========================================
+
+  This lab deals with a lexer, parser, evaluator system for a small
+  language that includes arithmetic, `let/in' expressions, and
+  `if/then/else' expressions. `lex_parse_eval.ml' is primarily
+  responsible for this and is divided into 4 sections that handle a
+  simple arithmetic language with some more programmatic elements. The 4
+  sections are:
+  1. Lexer: which converts a character string into a list of tokens.
+  2. Parser: which converts a list of tokens into an expression tree,
+     often referred to as a Parse Tree or Abstract Syntax Tree (AST).
+  3. Evaluator: which analyzes the expression tree and computes a
+     numeric result.
+  4. To-string functions: which are used to convert token lists and
+     parse trees to strings that can be printed.
+
+  The functions in `lex_parse_eval.ml' are used in the file
+  `lpe_main.ml' which takes an expression from the command line and
+  performs lexing, parsing, and evaluation on it.  Here are some
+  examples though the examples for `if/then/else' won't work until the
+  lab is completed.
+  ,----
+  | > ocamlc lex_parse_eval.ml lpe_main.ml
+  | 
+  | > ./a.out '1'
+  | Tokens:
+  | [Int(1)]
+  | 
+  | Parse Tree:
+  | IConst(1)
+  | 
+  | Result:
+  | Int(1)
+  | 
+  | > ./a.out 'true'
+  | Tokens:
+  | [Bool(true)]
+  | 
+  | Parse Tree:
+  | BConst(true)
+  | 
+  | Result:
+  | Bool(true)
+  | 
+  | > ./a.out '1+2'
+  | Tokens:
+  | [Int(1); Plus; Int(2)]
+  | 
+  | Parse Tree:
+  | Add
+  |   IConst(1)
+  |   IConst(2)
+  | 
+  | Result:
+  | Int(3)
+  | 
+  | > ./a.out '1+2*3'
+  | Tokens:
+  | [Int(1); Plus; Int(2); Times; Int(3)]
+  | 
+  | Parse Tree:
+  | Add
+  |   IConst(1)
+  |   Mul
+  |     IConst(2)
+  |     IConst(3)
+  | 
+  | Result:
+  | Int(7)
+  | 
+  | > ./a.out 'if false then 1+2*3 else 4*5'          # WON'T WORK UNTIL LAB IS COMPLETED
+  | Tokens:
+  | [If; Bool(false); Then; Int(1); Plus; Int(2); Times; Int(3); Else ; Int(4); 
+  |  Times; Int(5)]
+  | 
+  | Parse Tree:
+  | Cond
+  |   .if_expr:
+  |     BConst(false)
+  |   .then_expr:
+  |     Mul
+  |       IConst(4)
+  |       IConst(5)
+  |   .else_expr:
+  |     Add
+  |       IConst(1)
+  |       Mul
+  |         IConst(2)
+  |         IConst(3)
+  | 
+  | Result:
+  | Int(20)
+  | 
+  | > ./a.out 'let x=5 in let y=2 in x*y'
+  | Tokens:
+  | [Let; Ident(x); Equal; Int(5); In; Let; Ident(y); Equal; Int(2); In; 
+  |  Ident(x); Times; Ident(y)]
+  | 
+  | Parse Tree:
+  | Letin( x )
+  |   .var_expr:
+  |     IConst(5)
+  |   .in_expr:
+  |     Letin( y )
+  |       .var_expr:
+  |         IConst(2)
+  |       .in_expr:
+  |         Mul
+  |           Varname(x)
+  |           Varname(y)
+  | 
+  | Result:
+  | Int(10)
+  `----
+
+
+PROBLEM 1: Lexer and Parser
+===========================
+
+(A)
+~~~
+
+  In addition to arithmetic, the lexer/parser/evaluator understands two
+  additional features
+  1. `if/then/else' constructs for conditional execution
+  2. `let/in' expressions as `let x=1+2 in x*7' for binding names to
+     values
+
+  Examine the first section of `lex_parse_eval.ml' which contains the
+  lexer. Explain what tokens exist for the keywords like `let' and `if'
+  and how the lexer creates these tokens versus variable name `Ident'
+  tokens.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  The lexer contains a block which handles 'letter' data which scans
+  through to create a substring which is the potential
+  identifier. However, matching is performed where each possible keyword
+  such as `let, if, true' are checked. If any match, then a token is
+  created of the appropriate kind. If none match, a standard identifier
+  is created instead.
+
+
+(B)
+~~~
+
+  Examine the second section of `lex_parse_eval.ml' which contains the
+  parser. Examine the `expr' type which represents the tree-like
+  structure of parsed expressions.  Describe the new entries in this
+  type that correspond to `if/then/else' and `let/in'
+  constructs. Describe their parts and whether expression trees will
+  always be binary trees.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  The two new variants are as follows.
+
+  ,----
+  |   | Letin of {var_name: string;               (* let expression binding a var_name *)
+  |               var_expr: expr;                 (* to resutls of var_expr then evaluating *)
+  |               in_expr:  expr;}                (* in_expr to get results *)
+  `----
+  Letin uses an anonymous record to name its constituent parts. There
+  are three of these.  The are
+  - var_name: a string naming the variable that will be bound
+  - var_expr: an expression to evaluate to determine the bound
+    variable's name
+  - in_expr: the expression to evaluate with the new variable bound
+
+  ,----
+  |   | Cond of {if_expr: expr;                   (* if/then/else, expressions associated with each  *)
+  |              then_expr: expr;                 (* when if_expr is true,  eval then_expr *)
+  |              else_expr: expr;}                (* when if_expr is false, eval else_expr *)
+  `----
+  Like the above, Cond names its three constituent parts each of which
+  is an expression. These three correspond are
+  - if_expr: expression to test for true/false value
+  - then_expr: expression to evaluate when the test is true
+  - else_expr: expression to evaluate when the test is false
+
+  Unlike the arithmetic operators which had a "left" and "right"
+  expression, these expr variants have three parts each. The resulting
+  tree is no longer just binary but may split into three children at
+  times.
+
+
+(C)
+~~~
+
+  The parser is somewhat more complex then previous versions but has
+  many of the same features in that it is comprised of a series of
+  mutually recursive functions.  However some cosmetic differences are
+  immediately apparent.
+  - The names of the parsing elements do not mention their precedence
+    but instead name the kind of element they handle such as `parse_add'
+    and `parse_cond'. Some of these such as `parse_add' handle more than
+    `Add' tokens but this should be easy to interpret.
+  - The parsing functions, starting with `parse_expr' are shown in
+    source code "top-down" with lower-precedence `parse_add' coming
+    before higher-precedence `parse_mul'.
+
+  Examine the parsing functions carefully and answer the following
+  questions.
+  1. Is the parsing of `let/in' and `if/then/else' expressions higher or
+     lower precedence than adding and multiplying?
+  2. Functions like `parse_add' make recursive calls to themselves to
+     try to parse more additions.  Is this what `parse_letin' and
+     `parse_cond' do? Why or why not?
+  3. Functions like `parse_add' first attempt to call higher-precedence
+     parsing functions like `parse_mul'.  They then use the results in
+     an addition.  Is the same done by `parse_letin' and `parse_cond'?
+     Why or why not?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. Is the parsing of `let/in' and `if/then/else' expressions higher or
+     lower precedence than adding and multiplying?
+     - These are higher-precedence than arithmetic.  This allows code
+       like `1 + let y=2 in y' to evaluate properly to 3.
+  2. Functions like `parse_add' make recursive calls to themselves to
+     try to parse more additions.  Is this what `parse_letin' and
+     `parse_cond' do? Why or why not?
+     - Both `parse_letin' and `parse_cond' make calls back to the
+       top-level `parse_expr' function where they expect
+       expressions. This allows code like `let x=2+3 in x*4' to evaluate
+       properly: full expressions are allowed, not just higher
+       precedence elements.
+  3. Functions like `parse_add' first attempt to call higher-precedence
+     parsing functions like `parse_mul'.  They then use the results in
+     an addition.  Is the same done by `parse_letin' and `parse_cond'?
+     Why or why not?
+     - Both `parse_letin' and `parse_cond' try immediately to match
+       relevant tokens like `if' and `let'. If they instead called lower
+       down, the parser would reach `parse_ident' where nothing would
+       match leading to an error.
+
+
+PROBLEM 2: Evaluator
+====================
+
+(A)
+~~~
+
+  Examine the third section of `lex_parse_eval.ml' which contains the
+  Evaluator.  This portion defines types and functions relevant to
+  walking through an expression tree generated by the parser to evaluate
+  an answer.
+
+  The first few lines of the evaluator lay out a type `varval' for
+  results and create a `varmap_t' type to map string names. Answer the
+  following questions about this section.
+  1. Describe the kinds of value that can result for evaluation or be
+     let-bound via `let/in' bindings.
+  2. How is OCaml's standard library used to easily derive functions for
+     adding and looking up variable bindings in the `varmap_t'? What
+     standard functor is used?
+  3. Will the variable maps be mutable or immutable?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. Describe the kinds of value that can result for evaluation or be
+     let-bound via `let/in' bindings.
+     - Only `Int' and `Bool' values are handled in the language. These
+       are the two variants for the `varval' type.
+  2. How is OCaml's standard library used to easily derive functions for
+     adding and looking up variable bindings in the `varmap_t'? What
+     standard functor is used?
+     - `Map.Make' is used with the `String' module. This creates the
+       `Varmap' module which has `add, find, remove' and many other
+       functions.
+  3. Will the variable maps be mutable or immutable?
+     - The maps manipulated by `Map.Make' are persistent (immutable)
+       maps.
+
+
+(B)
+~~~
+
+  Examine the `eval_expr' function which is where most of the work of
+  the evaluator is performed. Answer the following questions.
+
+  1. What two arguments does `eval_expr' take? What types are they as
+     inferred by looking through the rest of the code?
+  2. What action is taken when a `Varname' expression is found and what
+     error can result?
+  3. Inspect how the different arithmetic operators are
+     handled. Describe how the common task of evaluating the left/right
+     child expressions is handled while still performing appropriate
+     arithmetic operations.
+  4. Analyze the `Letin' case within `eval_expr'. Describe how a new
+     binding is created in a `let/in' expression.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. What two arguments does `eval_expr' take? What types are they as
+     inferred by looking through the rest of the code?
+     - It takes a variable map `varmap' which has type `varmap_t' and an
+       expression tree which has type `expr'.
+  2. What action is taken when a `Varname' expression is found and what
+     error can result?
+     - The value associated with the variable is looked up in the
+       variable map with
+       ,----
+       | Varmap.find_opt varname varmap
+       `----
+       If the variable is found in the map, its value is returned.
+       Otherwise, an exception is raised indicating the variable is not
+       bound.
+  3. Inspect how the different arithmetic operators are
+     handled. Describe how the common task of evaluating the left/right
+     child expressions is handled while still performing appropriate
+     arithmetic operations.
+     - All of `Add, Sub, Mul, Div' are matched to the same case where
+       the left/right sub-expressions are evaluated.  A nested
+       `match/with' is then used to perform the appropriate arithmetic
+       operation.
+  4. Analyze the `Letin' case within `eval_expr'. Describe how a new
+     binding is created in a `let/in' expression.
+     - First the `var_expr' expression is evaluated. This produces a
+       value for the variable named in `varname'.  The `varmap' then has
+       the binding of `varname' to the value added to it before
+       recursively calling `eval_expr' with the new variable map.
+
+
+(C)
+~~~
+
+  The code for the `Cond' case is not complete so `if/then/else'
+  expressions will not evaluate yet.  Fill in the gaps marked `EDIT ME'
+  to complete this code.
+  - Evaluate the `c.if_expr' to determine if the test is true or false
+  - When b is true, evaluate c.then_expr
+  - When b is false, evaluate c.else_expr
+
+  Paste your code below as your solution.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  |   (* COMPLETE THIS CASE *)
+  |   | Cond(c) -> begin                                       (* eval a condition *)
+  |       let test = eval_expr varmap c.if_expr in             (* evaluate the test, 'if <expr>'  *)
+  |       match test with                                      
+  |       | Bool b ->                                          (* ensure result of <expr> was a true/false value  *)
+  |          if b = true then                                  
+  |            eval_expr varmap c.then_expr                    (* true: do the 'then <expr>'  *)
+  |          else
+  |            eval_expr varmap c.else_expr                    (* false: do the 'else <expr>' *)
+  |       | _ ->                                               (* error: 'if <expr>' did not give a true/false *)
+  |          let msg = sprintf "Expected Bool for if <expr>, found '%s'" (data_string test) in
+  |          raise (EvalError{msg})
+  |     end
+  `----
+
+
+Optional Extras
+===============
+
+  Currently the lexer/parser/evaluator does not handle numeric
+  comparisons to produce boolean results such as
+  ,----
+  | 5 < 2 -> Bool false
+  | if 1+2 > 0 then 8 else 4  -> Int 8
+  `----
+  This will be a required part of the final assignment interpreter so it
+  would be an excellent exercise to extend the system to handle these
+  new expression types.
+
+  - Extend the lexer to include < and >. The = sign is already part of
+    the lexer.
+  - Extend the expression type to include comparison expressions for
+    Less, Greater, Equal with constituent left/right expressions (like
+    arithmetic).
+  - Extend the parser functions with a new function to parse
+    comparisons. This should occur at a lower precedence than
+    arithmetic.
+  - Extend the evaluator to include evaluation cases for
+    comparisons. These should check that their left/right expressions
+    are integers, do the appropriate comparison on the numbers, and
+    return a Bool.  You may wish to model them after the arithmetic
+    evaluation code.

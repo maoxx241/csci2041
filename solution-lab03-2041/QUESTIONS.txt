@@ -1,0 +1,330 @@
+			   __________________
+
+			    LAB 03 QUESTIONS
+			   __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+PROBLEM 1: concat_all and match/with
+====================================
+
+(A)
+~~~
+
+  Examine the code provided in `concat_all.ml'
+  ,----
+  | let rec concat_all_crap strlist =
+  |   if strlist=[] then
+  |     ""
+  |   else
+  |     let head = List.hd strlist in
+  |     let tail = List.tl strlist in
+  |     let rest = concat_all_crap tail in
+  |     head ^ " " ^ rest
+  | ;;  
+  | 
+  | let rec concat_all_good strlist =
+  |   if strlist=[] then
+  |     ""
+  |   else
+  |     let head = List.hd strlist in
+  |     let tail = List.tl strlist in
+  |     if tail=[] then
+  |       head
+  |     else
+  |       let rest = concat_all_good tail in
+  |       head ^ " " ^ rest
+  | ;;
+  `----
+
+  Two functions are present which perform a similar operation but their
+  output varies subtly.
+
+  - Describe what the functions do.
+  - Execute both functions on the following inputs in a REPL and paste
+    the results below.
+    - []
+    - ["Fold-em"]
+    - ["Muh";"muh"]
+    - ["P"; "p"; "p"; "poker"; "face"]
+  - Describe the difference in return value between the two
+    functions. Pay particular attention to the ends of the strings.
+
+
+Solution                                                      :solution:
+--------
+
+  The two functions both concatenate all strings in a list together to
+  form a single string with each separated by spaces.  The primary
+  difference is
+  - concat_all_crap always ends with a space
+  - concat_all_good does finer case analysis so the resulting string
+    doesn't end with a space
+
+  ,----
+  | # #use "concat_all.ml";;
+  | val concat_all_crap : string list -> string = <fun>
+  | val concat_all_good : string list -> string = <fun>
+  | # concat_all_crap [];;
+  | - : string = ""
+  | # concat_all_good [];;
+  | - : string = ""
+  | # concat_all_crap ["Fold-em"];;
+  | - : string = "Fold-em "
+  | # concat_all_good ["Fold-em"];;
+  | - : string = "Fold-em"
+  | # concat_all_crap ["Muh";"muh"];;
+  | - : string = "Muh muh "
+  | # concat_all_good ["Muh";"muh"];;
+  | - : string = "Muh muh"
+  | # concat_all_crap ["P"; "p"; "p"; "poker"; "face"];;
+  | - : string = "P p p poker face "
+  | # concat_all_good ["P"; "p"; "p"; "poker"; "face"];;
+  | - : string = "P p p poker face"
+  `----
+
+
+(B)
+~~~
+
+  Create a function `concat_all' which operates the same way that
+  `concat_all_good' does but uses PATTERN MATCHING via the match/with
+  construct.  Paste your code below and the results of testing it in a
+  REPL.
+
+
+Solution                                                      :solution:
+--------
+
+  ,----
+  | (* pattern matching version: concatenate several string *)
+  | let rec concat_all strlist =
+  |   match strlist with
+  |   | [] -> ""
+  |   | head :: []   -> head
+  |   | head :: tail -> head ^ " " ^ (concat_all tail)
+  | ;;
+  | 
+  | (* # concat_all [];;
+  |    - : string = ""
+  |    # concat_all ["Fold-em"];;
+  |    - : string = "Fold-em"
+  |    # concat_all ["Muh";"muh"];;
+  |    - : string = "Muh muh"
+  |    # concat_all ["P"; "p"; "p"; "poker"; "face"];;
+  |    - : string = "P p p poker face"
+  | *)
+  `----
+
+
+PROBLEM 2: colsum and the stack
+===============================
+
+(A)
+~~~
+
+  Analyze the code in `colsum.ml'. It contains a function called
+  `colsum_nt' which computes a certain sequence of numbers and sums the
+  sequence.
+
+  This file can be compiled and run as a program which will perform
+  `colsum_nt 10' and print some intermediate and final results. Paste
+  the lines you use to compile and run the `colsum.ml' below as well as
+  the output for the program.
+
+
+Solution                                                      :solution:
+--------
+
+  ,----
+  | > ocamlc colsum.ml
+  | > ./a.out
+  | 10
+  | 5
+  | 16
+  | 8
+  | 4
+  | 2
+  | 1
+  | sum: 46
+  `----
+
+
+(B)
+~~~
+
+  Consider the source code for `colsum_nt'
+  ,----
+  |  1  let rec colsum_nt n =
+  |  2    Printf.printf "%d\n" n;
+  |  3    if n = 1 then
+  |  4      1
+  |  5    else
+  |  6      let next = 
+  |  7        if n mod 2 = 0 
+  |  8        then n/2
+  |  9        else 3*n+1
+  | 10      in
+  | 11      let rest = colsum_nt next in
+  | 12      n + rest
+  | 13  ;;
+  | 14  
+  | 15  let sum = colsum_nt 10 in
+  | 16  Printf.printf "sum: %d\n" sum;
+  | 17  ;;
+  `----
+
+  The `colsum_nt' function is NOT tail recursive. This means it builds a
+  sequence of activation records as it recurses at line 11 until it
+  reaches the base case at line 4. The initial call is `colsum_nt 10'
+  and the first few frames of this sequence of activation records are
+  below. Add on to this table to show all Activation Records present
+  when line 4 is first reached in `colsum_nt'.
+
+  ----------------------
+   FRAME      SYM   VAL 
+  ----------------------
+   init       ...   ..  
+   line:15    sum   ??  
+  ----------------------
+   colsum_nt  n     10  
+   line:11    next  5   
+              rest  ??  
+  ----------------------
+   colsum_nt  n     5   
+   line:11    next  16  
+              rest  ??  
+  ----------------------
+   ...        ...   ... 
+
+
+Solution                                                      :solution:
+--------
+
+  ----------------------
+   FRAME      SYM   VAL 
+  ----------------------
+   init       ...    .. 
+   line:15    sum    ?? 
+  ----------------------
+   colsum_nt  n      10 
+   line:11    next    5 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n       5 
+   line:11    next   16 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n      16 
+   line:11    next    8 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n       8 
+   line:11    next    4 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n       4 
+   line:11    next    2 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n       2 
+   line:11    next    1 
+              rest   ?? 
+  ----------------------
+   colsum_nt  n       1 
+   line:4     next   ?? 
+              rest   ?? 
+  ----------------------
+
+
+(C)
+~~~
+
+  Programmers new to the idea of tail recursion may at times think
+  trivial changes code re-arrangements such as the one below will make a
+  function tail recursive. Notice in the `colsum_alt' version below how
+  line 11 now has both the addition and recursive call.
+
+  ,----
+  |  1 let rec colsum_alt n =
+  |  2   Printf.printf "%d\n" n;
+  |  3   if n = 1 then
+  |  4     1
+  |  5   else
+  |  6     let next = 
+  |  7       if n mod 2 = 0 
+  |  8       then n/2
+  |  9       else 3*n+1
+  | 10     in
+  | 11     n + (colsum_alt next)       (* changed line *)
+  | 12 ;;
+  `----
+
+  Explain why this version is still NOT tail recursive and in fact will
+  execute identically to the previous `colsum_nt' version.
+
+
+Solution                                                      :solution:
+--------
+
+  The recursive call at line 11, `(colsum_alt next)' must execute first
+  before a number can be established add onto `n'.  Thus there will be
+  an unnamed temporary variable created by the compiler to hold the
+  results of the recursive call. The stack will grow down until a base
+  case is hit and these temporaries will get filled in as the stack
+  unwinds.  Thus this version is identical to the `colsum_nt' version
+  where the results are given a binding to name `rest'.
+
+
+(D)
+~~~
+
+  Write a tail recursive version of `colsum' called `colsum_tr'. A good
+  strategy for this is to use an internal helper function which takes
+  some additional parameters beyond single value.  Paste your code below
+  and show that it works identically to `colsum_nt'.
+
+
+Solution                                                      :solution:
+--------
+
+  ,----
+  | > cat -n colsum_answer.ml 
+  |      1  (* tail recursive version *)
+  |      2  let rec colsum_tr n =
+  |      3    let rec helper n sum =
+  |      4      Printf.printf "%d\n" n;
+  |      5      if n=1 then
+  |      6        sum+1
+  |      7      else
+  |      8        let next = 
+  |      9          if n mod 2 = 0 
+  |     10          then n/2
+  |     11          else 3*n+1
+  |     12        in
+  |     13        helper next (sum+n)
+  |     14    in
+  |     15    helper n 0
+  |     16  ;;
+  |     17          
+  |     18  let sum = colsum_tr 10 in
+  |     19  Printf.printf "sum: %d\n" sum;
+  |     20  ;;
+  | > ocamlc colsum_answer.ml
+  | > ./a.out
+  | 10
+  | 5
+  | 16
+  | 8
+  | 4
+  | 2
+  | 1
+  | sum: 46
+  `----
