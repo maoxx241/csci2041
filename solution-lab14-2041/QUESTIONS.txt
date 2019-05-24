@@ -1,0 +1,253 @@
+                           __________________
+
+                            LAB 14 QUESTIONS
+                           __________________
+
+
+The following are review problems which
+
+
+Review Problem 1: Exponentiation in Calculon
+============================================
+
+  Consider extending Calculon to include exponentiation associated with
+  the `^' symbol. Below are some examples of the desired behavior.
+  ,----
+  | calculon> 2^5;
+  | - : IntDat(32)
+  | 
+  | calculon> 2^4;
+  | - : IntDat(16)
+  | 
+  | calculon> 2^2 + 2^5 - 2^4;
+  | - : IntDat(20)
+  | 
+  | calculon> 16 / 8;
+  | - : IntDat(2)
+  | 
+  | calculon> (4^2) / (2^3);
+  | - : IntDat(2)
+  | 
+  | calculon> 4^2 / 2^3;
+  | - : IntDat(2)
+  | 
+  | calculon> 2^2^2;
+  | - : IntDat(16)
+  | 
+  | calculon> 2^2^3^4;
+  | - : IntDat(16777216)
+  `----
+
+  - Exponentiation has higher precedence than other operators so must be
+    parsed before addition, subtraction, multiplication, and division.
+  - As shown, exponentiation can be repeated in a chain like `2^2^2'.
+
+  Discuss which parts of Calculon's system would need to be altered to
+  support this new operator. Be specific about which files and functions
+  would need to change. If you are feeling adventurous, copy your A5
+  files to a new directory and code the change.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  - The lexer in `calclex.ml' would need to change to recognize a new
+    token like `CARROT' associated with the `^' character
+  - A new parsed `expr' type would need to be added, likely extending
+    the `IntOp' variants to include `Pow'.
+  - The parser `calcparse.ml' would need a new function/production that
+    occurs deeper than `parse_muldiv' giving exponentiation higher
+    precedence. `parse_muldiv' would need to change to start calling
+    this `parse_pow' function. `parse_pow' itself would then produce an
+    `IntOp' of `Pow' kind.
+  - The evaluator in `calceval.ml' would need to handle `IntOp' of kind
+    `Pow' to exponential the two integers using some library or custom
+    function.
+
+
+Review Problem 2: Lexing and Streams
+====================================
+
+  Examine Calculon's main lexing function called `lex_string'.  Recall
+  that this function processes an entire string and transforms it into a
+  list of tokens. Consider how it might be converted to a *stream*
+  instead of a list. Discuss how this might work with the interface for
+  streams provided in OCamls standard library `Stream' module.
+
+  - Discuss how the state of the stream can be represented
+  - Discuss changes that would need to take place in the code to make it
+    compatible with the `Stream' module
+
+  Below is the desired behavior via a `lex_stream' function which
+  creates a stream of tokens.
+
+  ,----
+  | # let stream = Calclex.lex_stream "let x = 4*2 in x-6;";;
+  | val stream : Calclex.token Stream.t = <abstr>
+  | 
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Let
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Ident "x"
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Equal
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.IntTok 4
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Times
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.IntTok 2
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.In
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Ident "x"
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Minus
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.IntTok 6
+  | # Stream.next stream;;
+  | - : Calclex.token = Calclex.Semicolon
+  | 
+  | # Stream.peek stream;;
+  | - : Calclex.token option = None
+  | # Stream.next stream;;
+  | Exception: Stdlib.Stream.Failure.
+  `----
+
+
+SOLUTION                                                      :solution:
+--------
+
+  - Most of the state in `lex_stream' is in a `pos' parameter which
+    walks through the string being parsed.  Simply creating a ref
+    version of this that is local will capture most of the state.
+  - Modifying the internal function `lex' to increment `pos' as it uses
+    up parts of the string is the main change.  Rather than appending to
+    lists and recursing, this function will increment `pos' and return
+    `Some' of an identified token or `None' at the end of the string.
+  - With these modifications, use the `Stream.from' call on the internal
+    `lex' helper to get complete the stream.  Below are the original and
+    stream versions.
+
+  ,----
+  | (* ORIGINAL VERSION *)
+  | (* create a list of tokens based on the string given.  *)
+  | let lex_string string =
+  |   let len = String.length string in
+  |   let rec lex pos =                          (* recursive helper *)
+  |     if pos >= len then                       (* off end of string ? *)
+  |       []                                     (* end of input *)
+  |     else                                     (* more to lex *)
+  |       match string.[pos] with                (* match a single character *)
+  |       |' ' | '\t' | '\n' -> lex (pos+1)      (* skip whitespace *)
+  |       |'+' -> Plus      :: (lex (pos+1))        (* single char ops become operators *)
+  |       |'-' -> Minus     :: (lex (pos+1))        
+  |       |'*' -> Times     :: (lex (pos+1))
+  |       |'/' -> Slash     :: (lex (pos+1))
+  |       |'^' -> Carrot    :: (lex (pos+1))
+  |       |'<' -> LessThan  :: (lex (pos+1))
+  |       |'>' -> GreatThan :: (lex (pos+1))
+  |       |'@' -> At        :: (lex (pos+1))
+  |       |'=' -> Equal     :: (lex (pos+1))
+  |       |'(' -> OParen    :: (lex (pos+1))        (* and open/close parens *)
+  |       |')' -> CParen    :: (lex (pos+1))
+  |       |';' -> Semicolon :: (lex (pos+1))
+  |       | d when is_digit d ->                 (* see a digit *)
+  |          let stop = ref pos in               (* scan through until a non-digit is found *)
+  |          while !stop < len && is_digit string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let numstr = String.sub string pos (!stop - pos) in (* substring is the int *)
+  |          let num = int_of_string numstr in   (* parse the integer *)
+  |          (IntTok num) :: (lex !stop)          (* and tack onto the stream of tokens *)
+  |       | a when is_letter a ->                (* see a letter *)
+  |          let stop = ref pos in               (* scan through until a non-letter is found *)
+  |          while !stop < len && is_letter string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let ident = String.sub string pos (!stop - pos) in (* substring is the identifier *)
+  |          let tok = 
+  |            match ident with
+  |            | "def"   -> Def
+  |            | "let"   -> Let
+  |            | "in"    -> In
+  |            | "if"    -> If
+  |            | "then"  -> Then
+  |            | "else"  -> Else
+  |            | "and"   -> AndTok
+  |            | "or"    -> OrTok
+  |            | "true"  -> BoolTok true
+  |            | "false" -> BoolTok false
+  |            | _ -> Ident(ident)
+  |          in
+  |          tok :: (lex !stop)         (* and tack onto the stream of tokens *)
+  |       | _ ->                                 (* any other characters lead to failures *)
+  |          let msg = sprintf "char '%c' not recognized, at position %d in the input '%s'" string.[pos] pos string in
+  |          raise (LexError{msg})
+  |          (* let msg = sprintf "lex error at char %d, char '%c'" pos string.[pos] in
+  |           * failwith msg *)
+  |   in                                         (* end helper *)
+  |   lex 0                                      (* call helper *)
+  | ;;
+  | 
+  | (* STREAM VERSION *)
+  | (* produce stream which would repeatedly produce tokens via calls to Stream.next  *)
+  | let lex_stream string =
+  |   let len = String.length string in
+  |   let pos = ref 0 in
+  |   let rec lex i =
+  |     if !pos >= len then
+  |       None
+  |     else
+  |       match string.[!pos] with
+  |       |' ' | '\t' | '\n' -> incr pos; lex i
+  |       |'+' -> incr pos; Some Plus
+  |       |'-' -> incr pos; Some Minus            
+  |       |'*' -> incr pos; Some Times     
+  |       |'/' -> incr pos; Some Slash     
+  |       |'^' -> incr pos; Some Carrot    
+  |       |'<' -> incr pos; Some LessThan  
+  |       |'>' -> incr pos; Some GreatThan 
+  |       |'@' -> incr pos; Some At        
+  |       |'=' -> incr pos; Some Equal     
+  |       |'(' -> incr pos; Some OParen
+  |       |')' -> incr pos; Some CParen    
+  |       |';' -> incr pos; Some Semicolon 
+  |       | d when is_digit d ->
+  |          let stop = ref !pos in
+  |          while !stop < len && is_digit string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let numstr = String.sub string !pos (!stop - !pos) in
+  |          let num = int_of_string numstr in
+  |          pos := !stop;
+  |          Some (IntTok num)
+  |       | a when is_letter a ->
+  |          let stop = ref !pos in
+  |          while !stop < len && is_letter string.[!stop] do
+  |            incr stop;
+  |          done;
+  |          let ident = String.sub string !pos (!stop - !pos) in
+  |          let tok = 
+  |            match ident with
+  |            | "def"   -> Def
+  |            | "let"   -> Let
+  |            | "in"    -> In
+  |            | "if"    -> If
+  |            | "then"  -> Then
+  |            | "else"  -> Else
+  |            | "and"   -> AndTok
+  |            | "or"    -> OrTok
+  |            | "true"  -> BoolTok true
+  |            | "false" -> BoolTok false
+  |            | _ -> Ident(ident)
+  |          in
+  |          pos := !stop;
+  |          Some(tok)
+  |       | _ ->
+  |          let msg = sprintf "char '%c' not recognized, at position %d in the input '%s'" string.[!pos] !pos string in
+  |          raise (LexError{msg})
+  |   in
+  |   Stream.from lex
+  | ;;
+  `----

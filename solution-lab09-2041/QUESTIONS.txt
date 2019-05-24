@@ -1,0 +1,306 @@
+                           __________________
+
+                            LAB 09 QUESTIONS
+                           __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+PROBLEM 1: Memfunc1 Module
+==========================
+
+(A)
+~~~
+
+  Examine `memfunc1.ml' and answer the following questions.
+  1. What is the name of the functor defined in the module?
+  2. Like all functors, this one takes a parameter module. What bindings
+     must the parameter module have according to its signature?
+  3. The module that is created by the functor has several internal
+     bindings but only one of them is publicly visible. What is it and
+     how is this visibility control enforced?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. What is the name of the functor defined in the module?
+     - The functor is called `Memoize'
+  2. Like all functors, this one takes a parameter module. What parts
+     must the parameter module have according to its signature?
+     - The parameter module `FuncMod' adheres to the `FUNC1_SIG'
+       signature so it must have two types, `arg_t, ret_t', a `func'
+       value and a `compare_arg' value. The latter two are both
+       functions.
+       ,----
+       |      type arg_t;;                                      (* function argument type *)
+       |      type ret_t;;                                      (* function return type *)
+       |      val func : arg_t -> ret_t;;                       (* the function itself *)
+       |      val compare_arg : arg_t -> arg_t -> int;;         (* comparison function argument types *)
+       `----
+  3. The module that is created by the functor has several internal
+     parts but only one of them is publicly visible. What is it and how
+     is this visibility control enforced?
+     - Only the `call' function is publicly visible. This is
+       accomplished by specifying the signature of the resulting module
+       via a `sig/end'. This is specified after the functor declaration
+       but before the implementation details of the `struct/end' block.
+
+
+(B)
+~~~
+
+  As in any other place a module is being defined, functors can
+  establish nested modules.  The functor in `Memfunc1' creates two
+  nested modules within its body.  Describe these two modules providing
+  their names and what their purpose appears to be. Describe how
+  bindings of the parameter module are used in these nested modules.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  The first module is `MapInterface' which has a type `t' and comparison
+  function. The parameter module `FuncMod' has a `compare_arg' function
+  which is assigned to `MapInterface.compare' while `MapInteface.t'
+  becomes `FuncMod.arg_t'.
+
+  After creating `MapInterface', it is used to call the standard library
+  function `Map.Make' which creates the module `MemoMap'. The latter
+  module allows maps with keys of `arg_t' to be created.
+
+
+(C)
+~~~
+
+  Analyze the bindings for `arg_ret_map' and the function `call'.
+  Describe how these are used in conjunction the a function carried by
+  the parameter module.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  The `call' function is meant to act just like `FuncMod.call' by
+  returning the same values for input arguments.  This is done slightly
+  differently than `func' by first checking if there is a binding for an
+  `arg' in `arg_ret_map'. If so, then the associated `ret' value is
+  produced without actually calling `func'. If no binding exists,
+  `FuncMod.call' is called and the return value is stored in
+  `arg_ret_map'
+
+
+PROBLEM 2: fib Program
+======================
+
+(A)
+~~~
+
+  Examine the first section of the provided `fib.ml' file. Describe how
+  the functor in `memfunc1.ml' is used at the top of `fib.ml'. Include a
+  description of how the parameter module to the functor is created.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  A module called `FibFunc' is created near the top of `fib.ml'.  This
+  carries `arg_t,ret_t' as `int' as the `func' binding is to the `fib'
+  function which has `int' as argument and return types.
+
+  `FibFunc' is then passed as an argument to `Memfunc1.Memoize' to
+  create the `MemoFib' module.
+
+
+(B)
+~~~
+
+  The main intent of the program in `fib.ml' is to compare the amount of
+  time it takes to make repeated calls to the `fib' function versus a
+  memoized version of it in `MemoFib.call'.  Analyze the main code for
+  the program.
+  1. Identify where calls to `fib' and `MemoFib.func' are made.
+  2. Identify where the results of these calls are stored.
+  3. Describe what function is used to gather timing information on how
+     long the repeated function calls take.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. Identify where calls to `fib' and `MemoFib.func' are made.
+     - They are made in loops from 1 to command line parameter n
+  2. Identify where the results of these calls are stored.
+     - The results are stored in arrays called `farr' and `marr'
+  3. Describe what function is used to gather timing information on how
+     long the repeated function calls take.
+     - `Sys.time' gives the current time and is used to track how long
+       the loops take to execute.
+
+
+(C)
+~~~
+
+  Use `ocamlc' to Compile and run the `fib.ml' program together with its
+  dependency `memfunc1.ml'. Run the resulting program with and paste in
+  the output in the space below.
+
+  Note that the program requires command line argument, an integer. Use
+  30 as the parameter.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  | > ocamlc memfunc1.ml fib.ml
+  | 
+  | > ./a.out 
+  | usage: ./a.out {integer}
+  | 
+  | > ./a.out 30
+  | n = 30
+  | ---------------------------------
+  | Running loops on fib/mem functions
+  | fib time: 0.0913 secs
+  | mem time: 0.0885 secs
+  | fib( 1) =        1  | MemoFib.call( 1) =        1
+  | fib( 2) =        1  | MemoFib.call( 2) =        1
+  | fib( 3) =        2  | MemoFib.call( 3) =        2
+  | fib( 4) =        3  | MemoFib.call( 4) =        3
+  | fib( 5) =        5  | MemoFib.call( 5) =        5
+  | fib( 6) =        8  | MemoFib.call( 6) =        8
+  | fib( 7) =       13  | MemoFib.call( 7) =       13
+  | fib( 8) =       21  | MemoFib.call( 8) =       21
+  | fib( 9) =       34  | MemoFib.call( 9) =       34
+  | fib(10) =       55  | MemoFib.call(10) =       55
+  | fib(11) =       89  | MemoFib.call(11) =       89
+  | fib(12) =      144  | MemoFib.call(12) =      144
+  | fib(13) =      233  | MemoFib.call(13) =      233
+  | fib(14) =      377  | MemoFib.call(14) =      377
+  | fib(15) =      610  | MemoFib.call(15) =      610
+  | fib(16) =      987  | MemoFib.call(16) =      987
+  | fib(17) =     1597  | MemoFib.call(17) =     1597
+  | fib(18) =     2584  | MemoFib.call(18) =     2584
+  | fib(19) =     4181  | MemoFib.call(19) =     4181
+  | fib(20) =     6765  | MemoFib.call(20) =     6765
+  | fib(21) =    10946  | MemoFib.call(21) =    10946
+  | fib(22) =    17711  | MemoFib.call(22) =    17711
+  | fib(23) =    28657  | MemoFib.call(23) =    28657
+  | fib(24) =    46368  | MemoFib.call(24) =    46368
+  | fib(25) =    75025  | MemoFib.call(25) =    75025
+  | fib(26) =   121393  | MemoFib.call(26) =   121393
+  | fib(27) =   196418  | MemoFib.call(27) =   196418
+  | fib(28) =   317811  | MemoFib.call(28) =   317811
+  | fib(29) =   514229  | MemoFib.call(29) =   514229
+  | fib(30) =   832040  | MemoFib.call(30) =   832040
+  | ---------------------------------
+  | Re-running loops on fib/mem again
+  | fib time: 0.0881 secs
+  | mem time: 0.0000 secs
+  | fib( 1) =        1  | MemoFib.call( 1) =        1
+  | fib( 2) =        1  | MemoFib.call( 2) =        1
+  | fib( 3) =        2  | MemoFib.call( 3) =        2
+  | fib( 4) =        3  | MemoFib.call( 4) =        3
+  | fib( 5) =        5  | MemoFib.call( 5) =        5
+  | fib( 6) =        8  | MemoFib.call( 6) =        8
+  | fib( 7) =       13  | MemoFib.call( 7) =       13
+  | fib( 8) =       21  | MemoFib.call( 8) =       21
+  | fib( 9) =       34  | MemoFib.call( 9) =       34
+  | fib(10) =       55  | MemoFib.call(10) =       55
+  | fib(11) =       89  | MemoFib.call(11) =       89
+  | fib(12) =      144  | MemoFib.call(12) =      144
+  | fib(13) =      233  | MemoFib.call(13) =      233
+  | fib(14) =      377  | MemoFib.call(14) =      377
+  | fib(15) =      610  | MemoFib.call(15) =      610
+  | fib(16) =      987  | MemoFib.call(16) =      987
+  | fib(17) =     1597  | MemoFib.call(17) =     1597
+  | fib(18) =     2584  | MemoFib.call(18) =     2584
+  | fib(19) =     4181  | MemoFib.call(19) =     4181
+  | fib(20) =     6765  | MemoFib.call(20) =     6765
+  | fib(21) =    10946  | MemoFib.call(21) =    10946
+  | fib(22) =    17711  | MemoFib.call(22) =    17711
+  | fib(23) =    28657  | MemoFib.call(23) =    28657
+  | fib(24) =    46368  | MemoFib.call(24) =    46368
+  | fib(25) =    75025  | MemoFib.call(25) =    75025
+  | fib(26) =   121393  | MemoFib.call(26) =   121393
+  | fib(27) =   196418  | MemoFib.call(27) =   196418
+  | fib(28) =   317811  | MemoFib.call(28) =   317811
+  | fib(29) =   514229  | MemoFib.call(29) =   514229
+  | fib(30) =   832040  | MemoFib.call(30) =   832040
+  `----
+
+
+(D)
+~~~
+
+  Describe why the time to run `fib' and `MemoFib.call' are very similar
+  in the first timing loop but drastically different in the second
+  timing loop. Relate your answer to the internal workings of the
+  `Memofunc1.Memoize' functor.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  In the first timing run, `fib' runs normally and since the memoized
+  `MemoFib.call' has not seen any input arguments, it defaults to
+  calling `fib' as well. Thus the two will have very similar times.
+
+  In the second timing loop, `fib' again runs normally which takes some
+  time to compute the answer for each argument.  `MemoFib.call' has
+  already seen each of the input arguments and saved them in an internal
+  map of argument to return value.  That means each call simply looks up
+  the return value in the table which takes substantially less time than
+  the calling `fib'.  Thus the time for `fib' mostly the same as in the
+  first loop but `Memoefib.call' takes almost no time to complete its
+  loop.
+
+
+Optional Enrichment Problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  1. We have seen that `MemoFib.call 30' will take some time on the
+     first call but a subsequent call runs in almost no time.  Does this
+     mean that the speed of `MemoFib.call 31' will be shorter as well?
+     Why or why not?
+  2. The functor established in `Memofunc1' works for functions of 1
+     parameter.  How would one go about handling functions of two,
+     three, or four arguments? If one is writing functions to be
+     compatible with memoization, how could one write the functions of
+     multiple arguments so as to avoid the need write more functors?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. The call to `MemoFib.call 30' will not improve the speed of
+     `MemoFib.call 31'. The reason is that memoization occurs on exact
+     parameter matching.  Since argument `31' does not appear as a key
+     in the map, `MemoFib.call' will simply call `fib 31'.  Internally
+     `fib' makes calls to itself rather than the memoized version which
+     means the full amount of time will be required to compute the
+     answer for 31.  In lexically scoped languages like OCaml, it is not
+     possible to intercept internal calls like `fib' makes. That means
+     it is not possible to reap the full benefits of memoization unless
+     the function is built from the outset using memoization techniques.
+
+  2. The simplest way to handle this is to pass multiple parameters to a
+     function as a tuple, as in `func (a,b,c)' rather than `func a b c'.
+     This tuple is treated as a single argument and so long as an
+     appropriate `compare_arg' is created for the argument tuple,
+     `Memfunc1.Memoize' will work without modification.  Existing
+     functions can be wrapped to take tuples as in:
+     ,----
+     | let func_tup (a,b,c) =
+     |    func a b c;;
+     `----
+     to make them compatible with the requirements of
+     `Memfunc1.Memoize'. This precludes partial application of such
+     functions as now only take one argument and are no longer curried.

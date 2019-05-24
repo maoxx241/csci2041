@@ -1,0 +1,32 @@
+type force_user = {
+    name     : string;
+    darkside : bool;
+    episodes : int list;
+  };;
+
+let luke = {
+    name="Luke Skywalker";
+    darkside=false;
+    episodes=[4;5;6;7;8];
+  };;
+
+let maul = {
+    name="Maul";
+    darkside=true;
+    episdoes=[1]
+  };;
+
+let vader = {
+    name="Anakin Skywalker";
+    darkside=true;
+    episodes=[1;2;3;4;5;6];
+  };;
+
+let rey = {
+    name="Rey";
+    darkside=false;
+    episodes=[7;8];
+  };;
+
+            
+             

@@ -1,0 +1,414 @@
+                           __________________
+
+                            LAB 08 QUESTIONS
+                           __________________
+
+
+- Name: (FILL THIS in)
+- NetID: (THE kauf0095 IN kauf0095@umn.edu)
+
+Answer the questions below according to the lab specification. Write
+your answers directly in this text file and submit it to complete the
+lab.
+
+
+PROBLEM 1: Persistent Binary Trees
+==================================
+
+(A)
+~~~
+
+  Examine the provided file `strtree.ml' which implements a few
+  functions pertaining to a Binary Search Tree on strings. You can see
+  example uses for these trees in `use_strtree.ml'. Compile these two
+  files together and run the resulting executable as in
+  ,----
+  | > ocamlc strtree.ml use_strtree.ml
+  | > ./a.out
+  | ...
+  `----
+  Show the results of the run
+
+
+SOLUTION                                                      :solution:
+--------
+
+  ,----
+  | > ocamlc strtree.ml use_strtree.ml
+  | > ./a.out
+  | tree1:
+  | 
+  | tree2:
+  |  0: Mario
+  | 
+  | tree3:
+  |    1: Luigi
+  |  0: Mario
+  | 
+  | tree4:
+  |    1: Luigi
+  |  0: Mario
+  |    1: Princess
+  | 
+  | liltree:
+  |    1: Donkey Kong
+  |      2: Luigi
+  |  0: Mario
+  |    1: Princess
+  |      2: Toad
+  | 
+  | bigtree:
+  |        3: Bob-omb
+  |      2: Bowser
+  |          4: Bullet Bill
+  |        3: Buzzy Beetle
+  |          4: Chain Chomp
+  |    1: Donkey Kong
+  |        3: Goomba
+  |          4: Koopa
+  |      2: Luigi
+  |  0: Mario
+  |      2: Pokey
+  |    1: Princess
+  |        3: Thwomp
+  |      2: Toad
+  |        3: Wario
+  | 
+  | liltree:
+  |    1: Donkey Kong
+  |      2: Luigi
+  |  0: Mario
+  |    1: Princess
+  |      2: Toad
+  `----
+
+
+(B)
+~~~
+
+  Examine the `strtree.ml' and `use_strtree.ml' and answer the following
+  series of short questions.
+
+  1. How is the type associated with string trees defined? What OCaml
+     mechanisms are used?
+  2. How does one create an empty tree?
+  3. When adding a string to a tree, does it actually change or does
+     something else happen?
+  4. What technique is used in `use_stretree.ml' to refer to bindings in
+     the `Strtree' module without writing the entire module name?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. How is the type associated with string trees defined? What OCaml
+     mechanisms are used?
+     - `strtree' is an algebraic type of either `Empty' or `Node' which
+       defines the tree. The `Node' variant has a record with fields
+       `data,left,right' associated with it.
+  2. How does one create an empty tree?
+     - Use `Stringtree.Empty' or with the module alias defined in
+       `use_strtree.ml' `ST.Empty' works as well.
+  3. When adding a string to a tree, does it actually change or does
+     something else happen?
+     - Trees are persistent/immutable so never change. Instead, calls to
+       `add' produce new trees with a new element added while the
+       original tree doesn't change.
+  4. What technique is used in `use_stretree.ml' to refer to bindings in
+     the `Strtree' module without writing the entire module name?
+     - A module alias is created near the top of the file via `module ST
+            = Strtree;;' allowing shorthand access to `Stretree'
+            functions/data.
+
+
+(C)
+~~~
+
+  Examine the `Strtree.add' and `Strtree.tree_string' function and
+  answer the following questions.
+
+  1. How is pattern matching used to decompose the tree structurally?
+  2. What happens during `add' when a string is not present and the
+     bottom of the tree is reached?
+  3. What function is used to compute a "difference" between Node data
+     and a string being inserted? What is the return value for this
+     "difference" function?
+  4. During `add', when a left or right branch is "visited", what is
+     done with the return value of recursive calls to `add'?
+  5. What module and type is used in `Strtree.tree_string' to create a
+     string representation of the tree? How is it used?
+  6. How does `Strtree.tree_string' create different indentation levels
+     for different nodes during its recursive run?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  1. How is pattern matching used to decompose the tree structurally?
+     - Trees are pattern matched as `Empty' (bottom of tree) or
+       `Node(node)' (data with left/right branch).
+  2. What happens during `add' when a string is not present and the
+     bottom of the tree is reached?
+     - When Empty is matched, a new `Node' with a record is created and
+       returned.
+  3. What function is used to compute a "difference" between Node data
+     and a string being inserted? What is the return value for this
+     "difference" function?
+     - `String.compare x y' is used: it returns 0 for equal strings, a
+       negative number for x < y, and a positive number for x > y.
+  4. During `add', when a left or right branch is "visited", what is
+     done with the return value of recursive calls to `add'?
+     - The result of the recursive call is captured and assigned to the
+       left/right field of a new `Node' record which is returned.
+  5. What module and type is used in `Strtree.tree_string' to create a
+     string representation of the tree? How is it used?
+     - The `Buffer' module is used. Strings are appended to it with the
+       `Buffer.add_string' function.
+  6. How does `Strtree.tree_string' create different indentation levels
+     for different nodes during its recursive run?
+     - A `depth' parameter is passed to each recursive call. This is
+       used in a loop to indent strings for nodes. Each call downward
+       increases `depth' by 1.
+
+
+(D)
+~~~
+
+  Complete the function `Strtree.getopt'.  Use the patterns outlined in
+  `Strtree.add' to guide your code for `getopt'. Standard
+  implementations should be 10-15 lines long.
+
+  Next complete the related `Strtree.contains' which should be a
+  one-liner which uses `getopt'.
+
+  Demonstrate your functions work in a REPL or through modification of
+  `use_strtree.ml'.
+
+  Paste your completed code and demo below.
+
+
+SOLUTION                                                      :solution:
+--------
+
+* SOURCE CODE
+
+  ,----
+  | (* val getopt : strtree -> string -> string option
+  |    let opt = getopt tree str in ...
+  | 
+  |    Search tree for string str. Return None if str is not in the tree
+  |    and return (Some str) if it is found in tree.
+  | *)
+  | let rec getopt tree str =
+  |   match tree with
+  |   | Empty -> None
+  |   | Node(node) ->
+  |      let diff = String.compare str node.data in
+  |      if diff = 0 then         
+  |        Some node.data
+  |      else if diff < 0 then    
+  |        getopt node.left str 
+  |      else                     
+  |        getopt node.right str
+  | ;;
+  | 
+  | (* val contains : strtree -> string -> bool
+  |    let present = contains tree str in ...
+  | 
+  |    Returns true if str is present in strtree and fals
+  |    otherwise. Uses funciton getopt for this.
+  | *)
+  | let contains tree str =
+  |   None <> (getopt tree str)
+  | ;;
+  | 
+  `----
+
+
+* DEMO IN A REPL
+
+  ,----
+  | > ocamlc strtree.ml use_strtree.ml
+  | > ocaml
+  |         OCaml version 4.07.0
+  | 
+  | # #mod_use "strtree.ml";;
+  | # #mod_use "use_strtree.ml";;
+  | # module ST = Strtree;;
+  | module ST = Strtree
+  | # open Use_strtree;;
+  | # let liltree = List.fold_left ST.add ST.Empty data1;;
+  | 
+  | val liltree : Use_strtree.ST.strtree =
+  |   Use_strtree.ST.Node
+  |    {Use_strtree.ST.data = "Mario";
+  |     left =
+  |      Use_strtree.ST.Node
+  |       {Use_strtree.ST.data = "Donkey Kong"; left = Use_strtree.ST.Empty;
+  |        right =
+  |         Use_strtree.ST.Node
+  |          {Use_strtree.ST.data = "Luigi"; left = Use_strtree.ST.Empty;
+  |           right = Use_strtree.ST.Empty}};
+  |     right =
+  |      Use_strtree.ST.Node
+  |       {Use_strtree.ST.data = "Princess"; left = Use_strtree.ST.Empty;
+  |        right =
+  |         Use_strtree.ST.Node
+  |          {Use_strtree.ST.data = "Toad"; left = Use_strtree.ST.Empty;
+  |           right = Use_strtree.ST.Empty}}}
+  | # ST.contains liltree "Princess";;
+  | - : bool = true
+  | # ST.contains liltree "Bowser";;
+  | - : bool = false
+  | # ST.contains liltree "Donkey Kong";;
+  | - : bool = true
+  | # ST.contains liltree "Wario";;
+  | - : bool = false
+  | # 
+  `----
+
+
+PROBLEM 2: Module Signatures
+============================
+
+  Examine the file `sigdemo.ml'.  This file declares several nested
+  modules using `module/struct/end' syntax.  Some of these modules also
+  have explicit *signatures* specified using `sig/end' syntax.
+  Signatures are to modules as types are to values: signatures describe
+  the contents of the module while types describe the contents of
+  values.
+
+
+(A) Default Signatures
+~~~~~~~~~~~~~~~~~~~~~~
+
+  Open a REPL and issue a `#use' directive to bring in the contents of
+  `sigdemo.ml' as in
+  ,----
+  | > ocaml
+  |         OCaml version 4.07.0
+  | 
+  | # #use "sigdemo.ml";;
+  | ...
+  `----
+
+  The signatures of each of the modules in the file will be shown though
+  short module signatures may be on a single line making them harder to
+  read.
+  - Is there any difference between the signatures for `All' and
+    `AllSig'?
+  - What is the default signature for a module without an explicit
+    signature?
+
+
+SOLUTION                                                      :solution:
+--------
+
+  As per the output below, there is no difference between the signatures
+  of `All' and `AllSig': they have identical structure.  To that end, if
+  no signature is given for a module, all its bindings are available by
+  default.
+
+  ,----
+  | # #use "sigdemo.ml";;
+  | module All :
+  |   sig
+  |     val val1 : int
+  |     val val2 : string
+  |     val func1 : int -> int -> string
+  |     val func2 : 'a * 'b -> 'b * 'a
+  |   end
+  | module AllSig :
+  |   sig
+  |     val val1 : int
+  |     val val2 : string
+  |     val func1 : int -> int -> string
+  |     val func2 : 'a * 'b -> 'b * 'a
+  |   end
+  | module Func1Only : sig val func1 : int -> int -> string end
+  | module type ONLY2S = sig val val2 : string val func2 : 'a * 'b -> 'b * 'a end
+  | module A2SModule : ONLY2S
+  | module Another2S : ONLY2S
+  | module RestrictAll : ONLY2S
+  `----
+
+
+(B)
+~~~
+
+  Compare the signatures of `All' and `Func1Onlyly' and describe any
+  differences. Note that the printing of the signature of `Func1Onlyly'
+  may appear on a single line rather than spread across several lines.
+
+  Attempt to access the bindings for `val1,val2,func1' in `All, AllSig,
+  Func1Onlyly'. Describe your success/failures in accessing
+  values/functions from the various modules below. Relate this to the
+  purpose of a module signature.
+
+
+SOLUTION                                                      :solution:
+--------
+
+  As per the previous output, the signature of `Func1Onlyly' omits
+  `val1,val2' so they are not available directly as they are for `All'
+  and `AllSig'. This results in "unbound value" errors as one would try
+  to access `Func1Onlyly.val1' for example. The values are still present
+  so `Func1Onlyly.func1' can be there is no way to access them as there
+  is in `All' and `AllSig'.
+
+  ,----
+  | # All.val1;;
+  | - : int = 42
+  | # All.val2;;
+  | - : string = "Ta-da!"
+  | # AllSig.val2;;
+  | - : string = "Ta-da!"
+  | # Func1Onlyly.val2;;
+  | Characters 0-21:
+  |   Func1Onlyly.val2;;
+  |   ^^^^^^^^^^^^^^^^^^^^^
+  | Error: Unbound value Func1Onlyly.val2
+  | # All.func1 2 3;;
+  | - : string = "Ta-da! 87"
+  | # Func1Only.func1 2 3;;
+  | - : string = "Ta-da! 87"
+  `----
+
+
+Additional Info
+~~~~~~~~~~~~~~~
+
+Named Signatures
+----------------
+
+  Signatures can be named via the `module/type' syntax such as the
+  definition `ONLY2S'.  This can be can shorten code which uses the
+  signature several times such as with `A2SModule' and `Another2S'.
+
+
+Module Aliasing and Signatures
+------------------------------
+
+  Existing modules can be aliased with a new, restricted signature such
+  as is done with with the module `RestrictAll' that aliases `All' but
+  makes use of a new signature, `ONLY2S'.
+
+
+Interface Files: Signatures for Source Code Modules
+---------------------------------------------------
+
+  Source level modules have signatures as well. By default, all
+  top-level bindings in the source file are public which may be
+  undesirable. For a source module file `src.ml' the corresponding
+  *interface file* `src.mli' will specify its signature of publicly
+  available bindings.  An example is given with `counter.ml' and
+  `counter.mli' in which binding `the_count' is present in `counter.ml'
+  but not in `counter.mli'. This means other modules cannot access
+  `the_count'. You can try this by compiling with
+  ,----
+  | > ocamlc counter.mli counter.ml use_counter.ml
+  | > ./a.out
+  | ...
+  `----
+  and playing with the application. Then, in `use_counter.ml', try to
+  modify `Counter.the_count' directly and recompile to see an error.
