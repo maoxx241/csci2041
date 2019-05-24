@@ -1,0 +1,182 @@
+LM> load test-data/villains.txt					LM> load test-data/villains.txt
+LM> mergein test-data/heros.txt					LM> mergein test-data/heros.txt
+LM> add Korra							LM> add Korra
+LM> add Bolin							LM> add Bolin
+LM> add Mako							LM> add Mako
+LM> undo							LM> undo
+LM> undo							LM> undo
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Amon								Amon
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kuvira								Kuvira
+Kya								Kya
+Mako								Mako
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tenzin								Tenzin
+Tonraq								Tonraq
+Zaheer								Zaheer
+--END LIST--							--END LIST--
+LM> undo							LM> undo
+LM> undo							LM> undo
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Amon								Amon
+Hiroshi								Hiroshi
+Kuvira								Kuvira
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tonraq								Tonraq
+Zaheer								Zaheer
+--END LIST--							--END LIST--
+LM> redo							LM> redo
+LM> remove Amon							LM> remove Amon
+LM> remove Zaheer						LM> remove Zaheer
+LM> remove Void							LM> remove Void
+LM> remove Null							LM> remove Null
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kuvira								Kuvira
+Kya								Kya
+Mako								Mako
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tenzin								Tenzin
+Tonraq								Tonraq
+--END LIST--							--END LIST--
+LM> save test-data/x.tmp					LM> save test-data/x.tmp
+LM> remove Tenzin						LM> remove Tenzin
+LM> remove Pema							LM> remove Pema
+LM> remove Meelo						LM> remove Meelo
+LM> remove Mako							LM> remove Mako
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kuvira								Kuvira
+Kya								Kya
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tonraq								Tonraq
+--END LIST--							--END LIST--
+LM> mergein test-data/x.tmp					LM> mergein test-data/x.tmp
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kuvira								Kuvira
+Kya								Kya
+Mako								Mako
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tenzin								Tenzin
+Tonraq								Tonraq
+--END LIST--							--END LIST--
+LM> undo							LM> undo
+LM> undo							LM> undo
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kuvira								Kuvira
+Kya								Kya
+Mako								Mako
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tonraq								Tonraq
+--END LIST--							--END LIST--
+LM> redo							LM> redo
+LM> clear							LM> clear
+LM> load test-data/villains.txt					LM> load test-data/villains.txt
+LM> add Korra							LM> add Korra
+LM> add Bumi							LM> add Bumi
+LM> remove Kuvira						LM> remove Kuvira
+LM> load test-data/heros.txt					LM> load test-data/heros.txt
+LM> undo							LM> undo
+LM> mergein test-data/heros.txt					LM> mergein test-data/heros.txt
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Amon								Amon
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Hiroshi								Hiroshi
+Jinora								Jinora
+Korra								Korra
+Kya								Kya
+Mako								Mako
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tenzin								Tenzin
+Tonraq								Tonraq
+Zaheer								Zaheer
+--END LIST--							--END LIST--
+LM> undo							LM> undo
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Amon								Amon
+Bumi								Bumi
+Hiroshi								Hiroshi
+Korra								Korra
+Ming-Hua							Ming-Hua
+P-li								P-li
+Tonraq								Tonraq
+Zaheer								Zaheer
+--END LIST--							--END LIST--
+LM> redo							LM> redo
+LM> redo							LM> redo
+WARNING: redo list empty, no changes made			WARNING: redo list empty, no changes made
+LM> remove Kuvira						LM> remove Kuvira
+LM> add Eska							LM> add Eska
+LM> save test-data/y.tmp					LM> save test-data/y.tmp
+LM> load test-data/heros.txt					LM> load test-data/heros.txt
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Jinora								Jinora
+Korra								Korra
+Kya								Kya
+Mako								Mako
+Tenzin								Tenzin
+--END LIST--							--END LIST--
+LM> mergein y.tmp						LM> mergein y.tmp
+Error with 'mergein y.tmp': Sys_error("y.tmp: No such file or	Error with 'mergein y.tmp': Sys_error("y.tmp: No such file or
+LM> show							LM> show
+--BEG LIST--							--BEG LIST--
+Asami								Asami
+Bumi								Bumi
+Bolin								Bolin
+Jinora								Jinora
+Korra								Korra
+Kya								Kya
+Mako								Mako
+Tenzin								Tenzin
+--END LIST--							--END LIST--
+LM> 								LM> 
+List managed!							List managed!

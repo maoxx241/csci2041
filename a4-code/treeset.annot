@@ -1,0 +1,583 @@
+"treeset.ml" 21 675 683 "treeset.ml" 21 675 695
+type(
+  ElMod.element -> ElMod.element -> int
+)
+ident(
+  def compare_keys "treeset.ml" 22 714 718 "treeset.ml" 23 772 778
+)
+"treeset.ml" 21 675 698 "treeset.ml" 21 675 711
+type(
+  ElMod.element -> ElMod.element -> int
+)
+ident(
+  int_ref ElMod.compare "treeset.ml" 10 360 362 "treeset.ml" 10 360 401
+)
+"treeset.ml" 22 714 722 "treeset.ml" 22 714 735
+type(
+  ElMod.element -> 'a -> string
+)
+ident(
+  def keyval_string "treeset.ml" 22 714 768 "treeset.ml" 23 772 778
+)
+"treeset.ml" 22 714 736 "treeset.ml" 22 714 739
+type(
+  ElMod.element
+)
+ident(
+  def key "treeset.ml" 22 714 740 "treeset.ml" 22 714 768
+)
+"treeset.ml" 22 714 740 "treeset.ml" 22 714 745
+type(
+  'a
+)
+ident(
+  def value "treeset.ml" 22 714 747 "treeset.ml" 22 714 768
+)
+"treeset.ml" 22 714 747 "treeset.ml" 22 714 764
+type(
+  ElMod.element -> string
+)
+ident(
+  int_ref ElMod.elem_string "treeset.ml" 11 404 406 "treeset.ml" 11 404 441
+)
+"treeset.ml" 22 714 765 "treeset.ml" 22 714 768
+type(
+  ElMod.element
+)
+ident(
+  int_ref key "treeset.ml" 22 714 736 "treeset.ml" 22 714 739
+)
+"treeset.ml" 22 714 747 "treeset.ml" 22 714 768
+call(
+  tail
+)
+type(
+  string
+)
+"treeset.ml" 25 828 849 "treeset.ml" 25 828 873
+call(
+  stack
+)
+"treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+type(
+  ElTreemap.treemap
+)
+ident(
+  def empty "treeset.ml" 31 987 989 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 28 903 917 "treeset.ml" 28 903 932
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref ElTreemap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> ElTreemap.treemap
+)
+ident(
+  def add "treeset.ml" 36 1116 1118 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 31 987 997 "treeset.ml" 31 987 1000
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 31 987 1001 "treeset.ml" 32 1008 1037
+)
+"treeset.ml" 31 987 1001 "treeset.ml" 31 987 1005
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def elem "treeset.ml" 32 1008 1012 "treeset.ml" 32 1008 1037
+)
+"treeset.ml" 32 1008 1012 "treeset.ml" 32 1008 1025
+type(
+  ElTreemap.treemap ->
+  ElemKeyVal.key_t -> ElemKeyVal.value_t -> ElTreemap.treemap
+)
+ident(
+  int_ref ElTreemap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"treeset.ml" 32 1008 1026 "treeset.ml" 32 1008 1029
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 31 987 997 "treeset.ml" 31 987 1000
+)
+"treeset.ml" 32 1008 1030 "treeset.ml" 32 1008 1034
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref elem "treeset.ml" 31 987 1001 "treeset.ml" 31 987 1005
+)
+"treeset.ml" 32 1008 1035 "treeset.ml" 32 1008 1037
+type(
+  ElemKeyVal.value_t
+)
+"treeset.ml" 32 1008 1012 "treeset.ml" 32 1008 1037
+call(
+  tail
+)
+type(
+  ElTreemap.treemap
+)
+"treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+type(
+  ElTreemap.treemap -> string
+)
+ident(
+  def tree_string "treeset.ml" 41 1243 1245 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 36 1116 1134 "treeset.ml" 36 1116 1137
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 37 1140 1142 "treeset.ml" 37 1140 1167
+)
+"treeset.ml" 37 1140 1142 "treeset.ml" 37 1140 1163
+type(
+  ElTreemap.treemap -> string
+)
+ident(
+  int_ref ElTreemap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"treeset.ml" 37 1140 1164 "treeset.ml" 37 1140 1167
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 36 1116 1134 "treeset.ml" 36 1116 1137
+)
+"treeset.ml" 37 1140 1142 "treeset.ml" 37 1140 1167
+call(
+  tail
+)
+type(
+  string
+)
+"treeset.ml" 41 1243 1249 "treeset.ml" 41 1243 1255
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> ElemKeyVal.key_t option
+)
+ident(
+  def getopt "treeset.ml" 46 1400 1402 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 41 1243 1256 "treeset.ml" 41 1243 1259
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 41 1243 1260 "treeset.ml" 42 1267 1330
+)
+"treeset.ml" 41 1243 1260 "treeset.ml" 41 1243 1264
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def elem "treeset.ml" 42 1267 1271 "treeset.ml" 42 1267 1330
+)
+"treeset.ml" 42 1267 1274 "treeset.ml" 42 1267 1296
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> bool
+)
+ident(
+  int_ref ElTreemap.contains_key "treemap.ml" 41 1184 1186 "treemap.ml" 41 1184 1235
+)
+"treeset.ml" 42 1267 1297 "treeset.ml" 42 1267 1300
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 41 1243 1256 "treeset.ml" 41 1243 1259
+)
+"treeset.ml" 42 1267 1301 "treeset.ml" 42 1267 1305
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref elem "treeset.ml" 41 1243 1260 "treeset.ml" 41 1243 1264
+)
+"treeset.ml" 42 1267 1274 "treeset.ml" 42 1267 1305
+call(
+  stack
+)
+type(
+  bool
+)
+"treeset.ml" 42 1267 1316 "treeset.ml" 42 1267 1320
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref elem "treeset.ml" 41 1243 1260 "treeset.ml" 41 1243 1264
+)
+"treeset.ml" 42 1267 1311 "treeset.ml" 42 1267 1320
+type(
+  ElemKeyVal.key_t option
+)
+"treeset.ml" 42 1267 1326 "treeset.ml" 42 1267 1330
+type(
+  ElemKeyVal.key_t option
+)
+"treeset.ml" 42 1267 1271 "treeset.ml" 42 1267 1330
+type(
+  ElemKeyVal.key_t option
+)
+"treeset.ml" 46 1400 1406 "treeset.ml" 46 1400 1414
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> bool
+)
+ident(
+  def contains "treeset.ml" 52 1590 1592 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 46 1400 1415 "treeset.ml" 46 1400 1418
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 46 1400 1419 "treeset.ml" 47 1426 1461
+)
+"treeset.ml" 46 1400 1419 "treeset.ml" 46 1400 1423
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def elem "treeset.ml" 47 1426 1430 "treeset.ml" 47 1426 1461
+)
+"treeset.ml" 47 1426 1430 "treeset.ml" 47 1426 1452
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> bool
+)
+ident(
+  int_ref ElTreemap.contains_key "treemap.ml" 41 1184 1186 "treemap.ml" 41 1184 1235
+)
+"treeset.ml" 47 1426 1453 "treeset.ml" 47 1426 1456
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 46 1400 1415 "treeset.ml" 46 1400 1418
+)
+"treeset.ml" 47 1426 1457 "treeset.ml" 47 1426 1461
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref elem "treeset.ml" 46 1400 1419 "treeset.ml" 46 1400 1423
+)
+"treeset.ml" 47 1426 1430 "treeset.ml" 47 1426 1461
+call(
+  tail
+)
+type(
+  bool
+)
+"treeset.ml" 52 1590 1596 "treeset.ml" 52 1590 1600
+type(
+  (ElemKeyVal.key_t -> 'b) -> ElTreemap.treemap -> unit
+)
+ident(
+  def iter "treeset.ml" 59 1814 1816 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 52 1590 1601 "treeset.ml" 52 1590 1605
+type(
+  ElemKeyVal.key_t -> 'b
+)
+ident(
+  def func "treeset.ml" 52 1590 1606 "treeset.ml" 54 1650 1679
+)
+"treeset.ml" 52 1590 1606 "treeset.ml" 52 1590 1609
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 53 1612 1614 "treeset.ml" 54 1650 1679
+)
+"treeset.ml" 53 1612 1618 "treeset.ml" 53 1612 1624
+type(
+  ElemKeyVal.key_t -> 'c -> 'b
+)
+ident(
+  def helper "treeset.ml" 54 1650 1654 "treeset.ml" 54 1650 1679
+)
+"treeset.ml" 53 1612 1625 "treeset.ml" 53 1612 1628
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def key "treeset.ml" 53 1612 1629 "treeset.ml" 53 1612 1645
+)
+"treeset.ml" 53 1612 1629 "treeset.ml" 53 1612 1634
+type(
+  'c
+)
+ident(
+  def value "treeset.ml" 53 1612 1637 "treeset.ml" 53 1612 1645
+)
+"treeset.ml" 53 1612 1637 "treeset.ml" 53 1612 1641
+type(
+  ElemKeyVal.key_t -> 'b
+)
+ident(
+  int_ref func "treeset.ml" 52 1590 1601 "treeset.ml" 52 1590 1605
+)
+"treeset.ml" 53 1612 1642 "treeset.ml" 53 1612 1645
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref key "treeset.ml" 53 1612 1625 "treeset.ml" 53 1612 1628
+)
+"treeset.ml" 53 1612 1637 "treeset.ml" 53 1612 1645
+call(
+  tail
+)
+type(
+  'b
+)
+"treeset.ml" 54 1650 1654 "treeset.ml" 54 1650 1668
+type(
+  (ElemKeyVal.key_t -> ElemKeyVal.value_t -> 'b) -> ElTreemap.treemap -> unit
+)
+ident(
+  int_ref ElTreemap.iter "treemap.ml" 43 1237 1239 "treemap.ml" 43 1237 1305
+)
+"treeset.ml" 54 1650 1669 "treeset.ml" 54 1650 1675
+type(
+  ElemKeyVal.key_t -> ElemKeyVal.value_t -> 'b
+)
+ident(
+  int_ref helper "treeset.ml" 53 1612 1618 "treeset.ml" 53 1612 1624
+)
+"treeset.ml" 54 1650 1676 "treeset.ml" 54 1650 1679
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 52 1590 1606 "treeset.ml" 52 1590 1609
+)
+"treeset.ml" 54 1650 1654 "treeset.ml" 54 1650 1679
+call(
+  tail
+)
+type(
+  unit
+)
+"treeset.ml" 53 1612 1614 "treeset.ml" 54 1650 1679
+type(
+  unit
+)
+"treeset.ml" 59 1814 1820 "treeset.ml" 59 1814 1824
+type(
+  ('d -> ElemKeyVal.key_t -> 'd) -> 'd -> ElTreemap.treemap -> 'd
+)
+ident(
+  def fold "treeset.ml" 65 1972 1974 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 59 1814 1825 "treeset.ml" 59 1814 1829
+type(
+  'd -> ElemKeyVal.key_t -> 'd
+)
+ident(
+  def func "treeset.ml" 59 1814 1830 "treeset.ml" 61 1887 1921
+)
+"treeset.ml" 59 1814 1830 "treeset.ml" 59 1814 1834
+type(
+  'd
+)
+ident(
+  def init "treeset.ml" 59 1814 1835 "treeset.ml" 61 1887 1921
+)
+"treeset.ml" 59 1814 1835 "treeset.ml" 59 1814 1838
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 60 1841 1843 "treeset.ml" 61 1887 1921
+)
+"treeset.ml" 60 1841 1847 "treeset.ml" 60 1841 1853
+type(
+  'd -> ElemKeyVal.key_t -> 'e -> 'd
+)
+ident(
+  def helper "treeset.ml" 61 1887 1891 "treeset.ml" 61 1887 1921
+)
+"treeset.ml" 60 1841 1854 "treeset.ml" 60 1841 1857
+type(
+  'd
+)
+ident(
+  def cur "treeset.ml" 60 1841 1858 "treeset.ml" 60 1841 1882
+)
+"treeset.ml" 60 1841 1858 "treeset.ml" 60 1841 1861
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def key "treeset.ml" 60 1841 1862 "treeset.ml" 60 1841 1882
+)
+"treeset.ml" 60 1841 1862 "treeset.ml" 60 1841 1867
+type(
+  'e
+)
+ident(
+  def value "treeset.ml" 60 1841 1870 "treeset.ml" 60 1841 1882
+)
+"treeset.ml" 60 1841 1870 "treeset.ml" 60 1841 1874
+type(
+  'd -> ElemKeyVal.key_t -> 'd
+)
+ident(
+  int_ref func "treeset.ml" 59 1814 1825 "treeset.ml" 59 1814 1829
+)
+"treeset.ml" 60 1841 1875 "treeset.ml" 60 1841 1878
+type(
+  'd
+)
+ident(
+  int_ref cur "treeset.ml" 60 1841 1854 "treeset.ml" 60 1841 1857
+)
+"treeset.ml" 60 1841 1879 "treeset.ml" 60 1841 1882
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref key "treeset.ml" 60 1841 1858 "treeset.ml" 60 1841 1861
+)
+"treeset.ml" 60 1841 1870 "treeset.ml" 60 1841 1882
+call(
+  tail
+)
+type(
+  'd
+)
+"treeset.ml" 61 1887 1891 "treeset.ml" 61 1887 1905
+type(
+  ('d -> ElemKeyVal.key_t -> ElemKeyVal.value_t -> 'd) ->
+  'd -> ElTreemap.treemap -> 'd
+)
+ident(
+  int_ref ElTreemap.fold "treemap.ml" 45 1307 1309 "treemap.ml" 45 1307 1385
+)
+"treeset.ml" 61 1887 1906 "treeset.ml" 61 1887 1912
+type(
+  'd -> ElemKeyVal.key_t -> ElemKeyVal.value_t -> 'd
+)
+ident(
+  int_ref helper "treeset.ml" 60 1841 1847 "treeset.ml" 60 1841 1853
+)
+"treeset.ml" 61 1887 1913 "treeset.ml" 61 1887 1917
+type(
+  'd
+)
+ident(
+  int_ref init "treeset.ml" 59 1814 1830 "treeset.ml" 59 1814 1834
+)
+"treeset.ml" 61 1887 1918 "treeset.ml" 61 1887 1921
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 59 1814 1835 "treeset.ml" 59 1814 1838
+)
+"treeset.ml" 61 1887 1891 "treeset.ml" 61 1887 1921
+call(
+  tail
+)
+type(
+  'd
+)
+"treeset.ml" 60 1841 1843 "treeset.ml" 61 1887 1921
+type(
+  'd
+)
+"treeset.ml" 65 1972 1978 "treeset.ml" 65 1972 1987
+type(
+  ElTreemap.treemap -> string
+)
+ident(
+  def to_string "treeset.ml" 70 2082 2084 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 65 1972 1988 "treeset.ml" 65 1972 1991
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 66 1995 1999 "treeset.ml" 66 1995 2022
+)
+"treeset.ml" 66 1995 1999 "treeset.ml" 66 1995 2018
+type(
+  ElTreemap.treemap -> string
+)
+ident(
+  int_ref ElTreemap.to_string "treemap.ml" 47 1387 1389 "treemap.ml" 47 1387 1422
+)
+"treeset.ml" 66 1995 2019 "treeset.ml" 66 1995 2022
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 65 1972 1988 "treeset.ml" 65 1972 1991
+)
+"treeset.ml" 66 1995 1999 "treeset.ml" 66 1995 2022
+call(
+  tail
+)
+type(
+  string
+)
+"treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> ElTreemap.treemap
+)
+ident(
+  def remove "treeset.ml" 71 2106 2139 "treeset.ml" 73 2145 2148
+)
+"treeset.ml" 70 2082 2095 "treeset.ml" 70 2082 2098
+type(
+  ElTreemap.treemap
+)
+ident(
+  def set "treeset.ml" 70 2082 2099 "treeset.ml" 71 2106 2139
+)
+"treeset.ml" 70 2082 2099 "treeset.ml" 70 2082 2103
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  def elem "treeset.ml" 71 2106 2110 "treeset.ml" 71 2106 2139
+)
+"treeset.ml" 71 2106 2110 "treeset.ml" 71 2106 2130
+type(
+  ElTreemap.treemap -> ElemKeyVal.key_t -> ElTreemap.treemap
+)
+ident(
+  int_ref ElTreemap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"treeset.ml" 71 2106 2131 "treeset.ml" 71 2106 2134
+type(
+  ElTreemap.treemap
+)
+ident(
+  int_ref set "treeset.ml" 70 2082 2095 "treeset.ml" 70 2082 2098
+)
+"treeset.ml" 71 2106 2135 "treeset.ml" 71 2106 2139
+type(
+  ElemKeyVal.key_t
+)
+ident(
+  int_ref elem "treeset.ml" 70 2082 2099 "treeset.ml" 70 2082 2103
+)
+"treeset.ml" 71 2106 2110 "treeset.ml" 71 2106 2139
+call(
+  tail
+)
+type(
+  ElTreemap.treemap
+)

@@ -1,0 +1,1060 @@
+"undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+type(
+  string list ref
+)
+ident(
+  def curr_list "undolist.ml" 5 84 84 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 2 2 36 "undolist.ml" 2 2 39
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"undolist.ml" 2 2 40 "undolist.ml" 2 2 42
+type(
+  string list
+)
+"undolist.ml" 2 2 36 "undolist.ml" 2 2 42
+type(
+  string list ref
+)
+type(
+  string list ref
+)
+"undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+type(
+  string list list ref
+)
+ident(
+  def undo_stack "undolist.ml" 8 189 189 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 5 84 125 "undolist.ml" 5 84 128
+type(
+  string list list -> string list list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"undolist.ml" 5 84 130 "undolist.ml" 5 84 132
+type(
+  string list list
+)
+"undolist.ml" 5 84 125 "undolist.ml" 5 84 132
+type(
+  string list list ref
+)
+type(
+  string list list ref
+)
+"undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+type(
+  string list list ref
+)
+ident(
+  def redo_stack "undolist.ml" 11 290 290 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 8 189 229 "undolist.ml" 8 189 232
+type(
+  string list list -> string list list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"undolist.ml" 8 189 233 "undolist.ml" 8 189 235
+type(
+  string list list
+)
+"undolist.ml" 8 189 229 "undolist.ml" 8 189 235
+type(
+  string list list ref
+)
+type(
+  string list list ref
+)
+"undolist.ml" 11 290 294 "undolist.ml" 11 290 303
+type(
+  unit -> unit
+)
+ident(
+  def reset_all "undolist.ml" 18 499 499 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 11 290 304 "undolist.ml" 11 290 306
+type(
+  unit
+)
+"undolist.ml" 12 310 314 "undolist.ml" 12 310 324
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 12 310 325 "undolist.ml" 12 310 327
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 12 310 328 "undolist.ml" 12 310 330
+type(
+  string list list
+)
+"undolist.ml" 12 310 314 "undolist.ml" 12 310 330
+type(
+  unit
+)
+"undolist.ml" 13 333 337 "undolist.ml" 13 333 347
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 13 333 348 "undolist.ml" 13 333 350
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 13 333 351 "undolist.ml" 13 333 353
+type(
+  string list list
+)
+"undolist.ml" 13 333 337 "undolist.ml" 13 333 353
+type(
+  unit
+)
+"undolist.ml" 14 356 360 "undolist.ml" 14 356 369
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 14 356 370 "undolist.ml" 14 356 372
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 14 356 373 "undolist.ml" 14 356 375
+type(
+  string list
+)
+"undolist.ml" 14 356 360 "undolist.ml" 14 356 375
+type(
+  unit
+)
+"undolist.ml" 13 333 337 "undolist.ml" 14 356 375
+type(
+  unit
+)
+"undolist.ml" 12 310 314 "undolist.ml" 14 356 375
+type(
+  unit
+)
+"undolist.ml" 18 499 503 "undolist.ml" 18 499 514
+type(
+  string list -> unit
+)
+ident(
+  def set_to_list "undolist.ml" 25 752 752 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 18 499 515 "undolist.ml" 18 499 523
+type(
+  string list
+)
+ident(
+  def new_list "undolist.ml" 19 527 531 "undolist.ml" 21 607 627
+)
+"undolist.ml" 19 527 531 "undolist.ml" 19 527 541
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 19 527 542 "undolist.ml" 19 527 544
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 19 527 548 "undolist.ml" 19 527 549
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 19 527 549 "undolist.ml" 19 527 558
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 19 527 547 "undolist.ml" 19 527 559
+type(
+  string list
+)
+"undolist.ml" 19 527 563 "undolist.ml" 19 527 564
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 19 527 564 "undolist.ml" 19 527 574
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 19 527 562 "undolist.ml" 19 527 575
+type(
+  string list list
+)
+"undolist.ml" 19 527 546 "undolist.ml" 19 527 576
+type(
+  string list list
+)
+"undolist.ml" 19 527 531 "undolist.ml" 19 527 576
+type(
+  unit
+)
+"undolist.ml" 20 579 583 "undolist.ml" 20 579 592
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 20 579 593 "undolist.ml" 20 579 595
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 20 579 596 "undolist.ml" 20 579 604
+type(
+  string list
+)
+ident(
+  int_ref new_list "undolist.ml" 18 499 515 "undolist.ml" 18 499 523
+)
+"undolist.ml" 20 579 583 "undolist.ml" 20 579 604
+type(
+  unit
+)
+"undolist.ml" 21 607 611 "undolist.ml" 21 607 621
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 21 607 622 "undolist.ml" 21 607 624
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 21 607 625 "undolist.ml" 21 607 627
+type(
+  string list list
+)
+"undolist.ml" 21 607 611 "undolist.ml" 21 607 627
+type(
+  unit
+)
+"undolist.ml" 20 579 583 "undolist.ml" 21 607 627
+type(
+  unit
+)
+"undolist.ml" 19 527 531 "undolist.ml" 21 607 627
+type(
+  unit
+)
+"undolist.ml" 25 752 756 "undolist.ml" 25 752 764
+type(
+  string -> unit
+)
+ident(
+  def add_elem "undolist.ml" 31 973 973 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 25 752 765 "undolist.ml" 25 752 769
+type(
+  string
+)
+ident(
+  def elem "undolist.ml" 26 773 777 "undolist.ml" 27 830 854
+)
+"undolist.ml" 26 773 781 "undolist.ml" 26 773 789
+type(
+  string list
+)
+ident(
+  def new_list "undolist.ml" 27 830 834 "undolist.ml" 27 830 854
+)
+"undolist.ml" 26 773 792 "undolist.ml" 26 773 809
+type(
+  string list -> string -> string list
+)
+ident(
+  ext_ref Sortedlist.insert
+)
+"undolist.ml" 26 773 810 "undolist.ml" 26 773 811
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 26 773 811 "undolist.ml" 26 773 820
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 26 773 810 "undolist.ml" 26 773 820
+type(
+  string list
+)
+"undolist.ml" 26 773 821 "undolist.ml" 26 773 825
+type(
+  string
+)
+ident(
+  int_ref elem "undolist.ml" 25 752 765 "undolist.ml" 25 752 769
+)
+"undolist.ml" 26 773 792 "undolist.ml" 26 773 825
+call(
+  stack
+)
+type(
+  string list
+)
+"undolist.ml" 27 830 834 "undolist.ml" 27 830 845
+type(
+  string list -> unit
+)
+ident(
+  int_ref set_to_list "undolist.ml" 18 499 503 "undolist.ml" 18 499 514
+)
+"undolist.ml" 27 830 846 "undolist.ml" 27 830 854
+type(
+  string list
+)
+ident(
+  int_ref new_list "undolist.ml" 26 773 781 "undolist.ml" 26 773 789
+)
+"undolist.ml" 27 830 834 "undolist.ml" 27 830 854
+call(
+  tail
+)
+type(
+  unit
+)
+"undolist.ml" 26 773 777 "undolist.ml" 27 830 854
+type(
+  unit
+)
+"undolist.ml" 31 973 977 "undolist.ml" 31 973 988
+type(
+  string -> unit
+)
+ident(
+  def remove_elem "undolist.ml" 37 1202 1202 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 31 973 989 "undolist.ml" 31 973 993
+type(
+  string
+)
+ident(
+  def elem "undolist.ml" 32 997 1001 "undolist.ml" 33 1054 1078
+)
+"undolist.ml" 32 997 1005 "undolist.ml" 32 997 1013
+type(
+  string list
+)
+ident(
+  def new_list "undolist.ml" 33 1054 1058 "undolist.ml" 33 1054 1078
+)
+"undolist.ml" 32 997 1016 "undolist.ml" 32 997 1033
+type(
+  string list -> string -> string list
+)
+ident(
+  ext_ref Sortedlist.remove
+)
+"undolist.ml" 32 997 1034 "undolist.ml" 32 997 1035
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 32 997 1035 "undolist.ml" 32 997 1044
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 32 997 1034 "undolist.ml" 32 997 1044
+type(
+  string list
+)
+"undolist.ml" 32 997 1045 "undolist.ml" 32 997 1049
+type(
+  string
+)
+ident(
+  int_ref elem "undolist.ml" 31 973 989 "undolist.ml" 31 973 993
+)
+"undolist.ml" 32 997 1016 "undolist.ml" 32 997 1049
+call(
+  stack
+)
+type(
+  string list
+)
+"undolist.ml" 33 1054 1058 "undolist.ml" 33 1054 1069
+type(
+  string list -> unit
+)
+ident(
+  int_ref set_to_list "undolist.ml" 18 499 503 "undolist.ml" 18 499 514
+)
+"undolist.ml" 33 1054 1070 "undolist.ml" 33 1054 1078
+type(
+  string list
+)
+ident(
+  int_ref new_list "undolist.ml" 32 997 1005 "undolist.ml" 32 997 1013
+)
+"undolist.ml" 33 1054 1058 "undolist.ml" 33 1054 1078
+call(
+  tail
+)
+type(
+  unit
+)
+"undolist.ml" 32 997 1001 "undolist.ml" 33 1054 1078
+type(
+  unit
+)
+"undolist.ml" 37 1202 1206 "undolist.ml" 37 1202 1221
+type(
+  string list -> unit
+)
+ident(
+  def merge_with_list "undolist.ml" 43 1422 1422 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 37 1202 1222 "undolist.ml" 37 1202 1226
+type(
+  string list
+)
+ident(
+  def list "undolist.ml" 38 1230 1234 "undolist.ml" 39 1286 1310
+)
+"undolist.ml" 38 1230 1238 "undolist.ml" 38 1230 1246
+type(
+  string list
+)
+ident(
+  def new_list "undolist.ml" 39 1286 1290 "undolist.ml" 39 1286 1310
+)
+"undolist.ml" 38 1230 1249 "undolist.ml" 38 1230 1265
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"undolist.ml" 38 1230 1266 "undolist.ml" 38 1230 1270
+type(
+  string list
+)
+ident(
+  int_ref list "undolist.ml" 37 1202 1222 "undolist.ml" 37 1202 1226
+)
+"undolist.ml" 38 1230 1271 "undolist.ml" 38 1230 1272
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 38 1230 1272 "undolist.ml" 38 1230 1281
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 38 1230 1271 "undolist.ml" 38 1230 1281
+type(
+  string list
+)
+"undolist.ml" 38 1230 1249 "undolist.ml" 38 1230 1281
+call(
+  stack
+)
+type(
+  string list
+)
+"undolist.ml" 39 1286 1290 "undolist.ml" 39 1286 1301
+type(
+  string list -> unit
+)
+ident(
+  int_ref set_to_list "undolist.ml" 18 499 503 "undolist.ml" 18 499 514
+)
+"undolist.ml" 39 1286 1302 "undolist.ml" 39 1286 1310
+type(
+  string list
+)
+ident(
+  int_ref new_list "undolist.ml" 38 1230 1238 "undolist.ml" 38 1230 1246
+)
+"undolist.ml" 39 1286 1290 "undolist.ml" 39 1286 1310
+call(
+  tail
+)
+type(
+  unit
+)
+"undolist.ml" 38 1230 1234 "undolist.ml" 39 1286 1310
+type(
+  unit
+)
+"undolist.ml" 43 1422 1426 "undolist.ml" 43 1422 1430
+type(
+  unit -> bool
+)
+ident(
+  def undo "undolist.ml" 56 1958 1958 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 43 1422 1431 "undolist.ml" 43 1422 1433
+type(
+  unit
+)
+"undolist.ml" 44 1437 1444 "undolist.ml" 44 1437 1454
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 44 1437 1455 "undolist.ml" 44 1437 1456
+type(
+  string list list ref -> string list list ref -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"undolist.ml" 44 1437 1457 "undolist.ml" 44 1437 1460
+type(
+  string list list -> string list list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"undolist.ml" 44 1437 1461 "undolist.ml" 44 1437 1463
+type(
+  string list list
+)
+"undolist.ml" 44 1437 1457 "undolist.ml" 44 1437 1463
+type(
+  string list list ref
+)
+"undolist.ml" 44 1437 1444 "undolist.ml" 44 1437 1463
+type(
+  bool
+)
+"undolist.ml" 44 1437 1469 "undolist.ml" 44 1437 1474
+type(
+  bool
+)
+"undolist.ml" 44 1437 1484 "undolist.ml" 44 1437 1488
+type(
+  unit -> bool
+)
+ident(
+  def func "undolist.ml" 49 1635 1642 "undolist.ml" 49 1635 1648
+)
+"undolist.ml" 44 1437 1488 "undolist.ml" 44 1437 1490
+type(
+  unit
+)
+"undolist.ml" 45 1493 1497 "undolist.ml" 45 1493 1507
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 45 1493 1508 "undolist.ml" 45 1493 1510
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 45 1493 1514 "undolist.ml" 45 1493 1515
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 45 1493 1515 "undolist.ml" 45 1493 1524
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 45 1493 1513 "undolist.ml" 45 1493 1525
+type(
+  string list
+)
+"undolist.ml" 45 1493 1529 "undolist.ml" 45 1493 1530
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 45 1493 1530 "undolist.ml" 45 1493 1540
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 45 1493 1528 "undolist.ml" 45 1493 1541
+type(
+  string list list
+)
+"undolist.ml" 45 1493 1512 "undolist.ml" 45 1493 1542
+type(
+  string list list
+)
+"undolist.ml" 45 1493 1497 "undolist.ml" 45 1493 1542
+type(
+  unit
+)
+"undolist.ml" 46 1545 1549 "undolist.ml" 46 1545 1558
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 46 1545 1559 "undolist.ml" 46 1545 1561
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 46 1545 1562 "undolist.ml" 46 1545 1569
+type(
+  string list list -> string list
+)
+ident(
+  ext_ref List.hd
+)
+"undolist.ml" 46 1545 1570 "undolist.ml" 46 1545 1571
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 46 1545 1571 "undolist.ml" 46 1545 1581
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 46 1545 1570 "undolist.ml" 46 1545 1581
+type(
+  string list list
+)
+"undolist.ml" 46 1545 1562 "undolist.ml" 46 1545 1581
+call(
+  stack
+)
+type(
+  string list
+)
+"undolist.ml" 46 1545 1549 "undolist.ml" 46 1545 1581
+type(
+  unit
+)
+"undolist.ml" 47 1584 1588 "undolist.ml" 47 1584 1598
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 47 1584 1599 "undolist.ml" 47 1584 1601
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 47 1584 1602 "undolist.ml" 47 1584 1609
+type(
+  string list list -> string list list
+)
+ident(
+  ext_ref List.tl
+)
+"undolist.ml" 47 1584 1610 "undolist.ml" 47 1584 1611
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 47 1584 1611 "undolist.ml" 47 1584 1621
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 47 1584 1610 "undolist.ml" 47 1584 1621
+type(
+  string list list
+)
+"undolist.ml" 47 1584 1602 "undolist.ml" 47 1584 1621
+call(
+  stack
+)
+type(
+  string list list
+)
+"undolist.ml" 47 1584 1588 "undolist.ml" 47 1584 1621
+type(
+  unit
+)
+"undolist.ml" 48 1624 1628 "undolist.ml" 48 1624 1633
+type(
+  bool
+)
+"undolist.ml" 47 1584 1588 "undolist.ml" 48 1624 1633
+type(
+  bool
+)
+"undolist.ml" 46 1545 1549 "undolist.ml" 48 1624 1633
+type(
+  bool
+)
+"undolist.ml" 45 1493 1497 "undolist.ml" 48 1624 1633
+type(
+  bool
+)
+"undolist.ml" 49 1635 1642 "undolist.ml" 49 1635 1646
+type(
+  unit -> bool
+)
+ident(
+  int_ref func "undolist.ml" 44 1437 1484 "undolist.ml" 44 1437 1488
+)
+"undolist.ml" 49 1635 1646 "undolist.ml" 49 1635 1648
+type(
+  unit
+)
+"undolist.ml" 49 1635 1642 "undolist.ml" 49 1635 1648
+call(
+  tail
+)
+type(
+  bool
+)
+"undolist.ml" 44 1437 1480 "undolist.ml" 49 1635 1648
+type(
+  bool
+)
+"undolist.ml" 44 1437 1441 "undolist.ml" 49 1635 1648
+type(
+  bool
+)
+"undolist.ml" 56 1958 1962 "undolist.ml" 56 1958 1966
+type(
+  unit -> bool
+)
+ident(
+  def redo "undolist.ml" 62 2177 2190 "undolist.ml" 1 0 -1
+)
+"undolist.ml" 56 1958 1967 "undolist.ml" 56 1958 1969
+type(
+  unit
+)
+"undolist.ml" 57 1973 1980 "undolist.ml" 57 1973 1990
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 57 1973 1991 "undolist.ml" 57 1973 1992
+type(
+  string list list ref -> string list list ref -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"undolist.ml" 57 1973 1993 "undolist.ml" 57 1973 1996
+type(
+  string list list -> string list list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"undolist.ml" 57 1973 1996 "undolist.ml" 57 1973 1998
+type(
+  string list list
+)
+"undolist.ml" 57 1973 1993 "undolist.ml" 57 1973 1998
+type(
+  string list list ref
+)
+"undolist.ml" 57 1973 1980 "undolist.ml" 57 1973 1998
+type(
+  bool
+)
+"undolist.ml" 57 1973 2004 "undolist.ml" 57 1973 2009
+type(
+  bool
+)
+"undolist.ml" 57 1973 2019 "undolist.ml" 57 1973 2023
+type(
+  unit -> bool
+)
+ident(
+  def func "undolist.ml" 62 2177 2184 "undolist.ml" 62 2177 2190
+)
+"undolist.ml" 57 1973 2024 "undolist.ml" 57 1973 2026
+type(
+  unit
+)
+"undolist.ml" 58 2029 2033 "undolist.ml" 58 2029 2043
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 58 2029 2044 "undolist.ml" 58 2029 2046
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 58 2029 2050 "undolist.ml" 58 2029 2051
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 58 2029 2051 "undolist.ml" 58 2029 2060
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 58 2029 2049 "undolist.ml" 58 2029 2061
+type(
+  string list
+)
+"undolist.ml" 58 2029 2065 "undolist.ml" 58 2029 2066
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 58 2029 2066 "undolist.ml" 58 2029 2076
+type(
+  string list list ref
+)
+ident(
+  int_ref undo_stack "undolist.ml" 5 84 88 "undolist.ml" 5 84 98
+)
+"undolist.ml" 58 2029 2064 "undolist.ml" 58 2029 2077
+type(
+  string list list
+)
+"undolist.ml" 58 2029 2048 "undolist.ml" 58 2029 2078
+type(
+  string list list
+)
+"undolist.ml" 58 2029 2033 "undolist.ml" 58 2029 2078
+type(
+  unit
+)
+"undolist.ml" 59 2081 2085 "undolist.ml" 59 2081 2094
+type(
+  string list ref
+)
+ident(
+  int_ref curr_list "undolist.ml" 2 2 6 "undolist.ml" 2 2 15
+)
+"undolist.ml" 59 2081 2095 "undolist.ml" 59 2081 2097
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 59 2081 2098 "undolist.ml" 59 2081 2105
+type(
+  string list list -> string list
+)
+ident(
+  ext_ref List.hd
+)
+"undolist.ml" 59 2081 2106 "undolist.ml" 59 2081 2107
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 59 2081 2107 "undolist.ml" 59 2081 2117
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 59 2081 2106 "undolist.ml" 59 2081 2117
+type(
+  string list list
+)
+"undolist.ml" 59 2081 2098 "undolist.ml" 59 2081 2117
+call(
+  stack
+)
+type(
+  string list
+)
+"undolist.ml" 59 2081 2085 "undolist.ml" 59 2081 2117
+type(
+  unit
+)
+"undolist.ml" 60 2121 2125 "undolist.ml" 60 2121 2135
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 60 2121 2136 "undolist.ml" 60 2121 2138
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"undolist.ml" 60 2121 2141 "undolist.ml" 60 2121 2148
+type(
+  string list list -> string list list
+)
+ident(
+  ext_ref List.tl
+)
+"undolist.ml" 60 2121 2149 "undolist.ml" 60 2121 2150
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"undolist.ml" 60 2121 2150 "undolist.ml" 60 2121 2160
+type(
+  string list list ref
+)
+ident(
+  int_ref redo_stack "undolist.ml" 8 189 193 "undolist.ml" 8 189 203
+)
+"undolist.ml" 60 2121 2149 "undolist.ml" 60 2121 2160
+type(
+  string list list
+)
+"undolist.ml" 60 2121 2140 "undolist.ml" 60 2121 2162
+call(
+  stack
+)
+type(
+  string list list
+)
+"undolist.ml" 60 2121 2125 "undolist.ml" 60 2121 2162
+type(
+  unit
+)
+"undolist.ml" 61 2165 2169 "undolist.ml" 61 2165 2175
+type(
+  bool
+)
+"undolist.ml" 60 2121 2125 "undolist.ml" 61 2165 2175
+type(
+  bool
+)
+"undolist.ml" 59 2081 2085 "undolist.ml" 61 2165 2175
+type(
+  bool
+)
+"undolist.ml" 58 2029 2033 "undolist.ml" 61 2165 2175
+type(
+  bool
+)
+"undolist.ml" 62 2177 2184 "undolist.ml" 62 2177 2188
+type(
+  unit -> bool
+)
+ident(
+  int_ref func "undolist.ml" 57 1973 2019 "undolist.ml" 57 1973 2023
+)
+"undolist.ml" 62 2177 2188 "undolist.ml" 62 2177 2190
+type(
+  unit
+)
+"undolist.ml" 62 2177 2184 "undolist.ml" 62 2177 2190
+call(
+  tail
+)
+type(
+  bool
+)
+"undolist.ml" 57 1973 2015 "undolist.ml" 62 2177 2190
+type(
+  bool
+)
+"undolist.ml" 57 1973 1977 "undolist.ml" 62 2177 2190
+type(
+  bool
+)

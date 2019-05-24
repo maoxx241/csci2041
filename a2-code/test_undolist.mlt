@@ -1,0 +1,877 @@
+open Undolist;;                 (* set_to_list, add_elem, remove_elem, merge_with_list, undo, redo *)
+open Printf;;
+open Mltest;;
+
+let strlistlist2str strlistlist =
+  let lines = List.map strlist2str strlistlist in
+  let linestr = String.concat ";\n  " lines in
+  "[ " ^ linestr ^ " ]\n"
+;;
+
+(* generate error message for an string list *)
+let make_msg expect_curr expect_undo expect_redo =
+  String.concat "\n" [
+      if expect_curr = !curr_list then "curr_list ok" else "**MISMATCH** curr_list";
+      "Expect curr_list:  "  ^ (strlist2str expect_curr);
+      "Actual curr_list:  "  ^ (strlist2str !curr_list);
+      "";
+      if expect_undo = !undo_stack then "undo_stack ok" else "**MISMATCH** undo_stack";
+      "Expect undo_stack:\n" ^ (strlistlist2str expect_undo);
+      "Actual undo_stack:\n" ^ (strlistlist2str !undo_stack);
+      if expect_redo = !redo_stack then "redo_stack ok" else "**MISMATCH** redo_stack";
+      "Expect redo_stack:\n" ^ (strlistlist2str expect_redo);
+      "Actual redo_stack:\n" ^ (strlistlist2str !redo_stack);
+    ]
+;;
+
+
+(* generate error message for an string list *)
+let make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo =
+  let str = String.concat "\n" [
+      if expect_ret = actual_ret then "return value ok" else "**MISMATCH** return value";
+      "Expect undo/redo return: " ^ (string_of_bool expect_ret);
+      "Actual undo/redo return: " ^ (string_of_bool actual_ret);
+      "";
+  ] in
+  str^"\n"^(make_msg expect_curr expect_undo expect_redo)^"\n"
+;;
+
+Mltest.main [|
+(******************************************)
+(* undolist.ml tests *)
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.set_to_list reset_all *)
+  Undolist.reset_all ();
+  let expect_curr = [] in
+  let expect_undo = [] in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:52"; msg=msg; code="46:  (* Undolist.set_to_list reset_all *)\n47:  Undolist.reset_all ();\n48:  let expect_curr = [] in\n49:  let expect_undo = [] in\n50:  let expect_redo = [] in\n51:  let msg = make_msg expect_curr expect_undo expect_redo in\n52:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.set_to_list set_to_list then reset_all *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  let expect_curr = ["Korra"] in
+  let expect_undo = [[]] in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:64"; msg=msg; code="57:  (* Undolist.set_to_list set_to_list then reset_all *)\n58:  Undolist.reset_all ();\n59:  Undolist.set_to_list [\"Korra\"];\n60:  let expect_curr = [\"Korra\"] in\n61:  let expect_undo = [[]] in\n62:  let expect_redo = [] in\n63:  let msg = make_msg expect_curr expect_undo expect_redo in\n64:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  Undolist.reset_all ();
+  let expect_curr = [] in
+  let expect_undo = [] in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:70"; msg=msg; code="57:  (* Undolist.set_to_list set_to_list then reset_all *)\n58:  Undolist.reset_all ();\n59:  Undolist.set_to_list [\"Korra\"];\n60:  let expect_curr = [\"Korra\"] in\n61:  let expect_undo = [[]] in\n62:  let expect_redo = [] in\n63:  let msg = make_msg expect_curr expect_undo expect_redo in\n64:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n65:  Undolist.reset_all ();\n66:  let expect_curr = [] in\n67:  let expect_undo = [] in\n68:  let expect_redo = [] in\n69:  let msg = make_msg expect_curr expect_undo expect_redo in\n70:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.set_to_list several times *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  Undolist.set_to_list ["Mako"];
+  let expect_curr = ["Mako"] in
+  let expect_undo =
+    [ ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:89"; msg=msg; code="78:  (* Undolist.set_to_list several times *)\n79:  Undolist.reset_all ();\n80:  Undolist.set_to_list [\"Korra\"];\n81:  Undolist.set_to_list [\"Mako\"];\n82:  let expect_curr = [\"Mako\"] in\n83:  let expect_undo =\n84:    [ [\"Korra\"];\n85:      [] ]\n86:  in\n87:  let expect_redo = [] in\n88:  let msg = make_msg expect_curr expect_undo expect_redo in\n89:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.set_to_list several times *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  Undolist.set_to_list ["Mako"];
+  Undolist.set_to_list ["Bolin"];
+  Undolist.set_to_list ["Asami"];
+  let expect_curr = ["Asami"] in
+  let expect_undo =
+    [ ["Bolin"];
+      ["Mako"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:108"; msg=msg; code="93:  (* Undolist.set_to_list several times *)\n94:  Undolist.reset_all ();\n95:  Undolist.set_to_list [\"Korra\"];\n96:  Undolist.set_to_list [\"Mako\"];\n97:  Undolist.set_to_list [\"Bolin\"];\n98:  Undolist.set_to_list [\"Asami\"];\n99:  let expect_curr = [\"Asami\"] in\n100:  let expect_undo =\n101:    [ [\"Bolin\"];\n102:      [\"Mako\"];\n103:      [\"Korra\"];\n104:      [] ]\n105:  in\n106:  let expect_redo = [] in\n107:  let msg = make_msg expect_curr expect_undo expect_redo in\n108:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  (* Undolist.set_to_list several times *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  Undolist.set_to_list ["Korra";"Mako"];
+  Undolist.set_to_list ["Bolin";"Korra";"Mako"];
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  let expect_curr = ["Asami";"Bolin";"Korra";"Mako"] in
+  let expect_undo =
+    [ ["Bolin"; "Korra"; "Mako"];
+      ["Korra"; "Mako"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:125"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  let expect_curr = ["Korra"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:141"; msg=msg; code="132:  (* Undolist.add_elem several times *)\n133:  Undolist.reset_all ();\n134:  Undolist.add_elem \"Korra\";\n135:  let expect_curr = [\"Korra\"] in\n136:  let expect_undo =\n137:    [ [] ]\n138:  in\n139:  let expect_redo = [] in\n140:  let msg = make_msg expect_curr expect_undo expect_redo in\n141:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.add_elem "Asami";
+  Undolist.add_elem "Mako";
+  Undolist.add_elem "Bolin";
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"] in
+  let expect_undo =
+    [ ["Asami"; "Korra"; "Mako"];
+      ["Asami"; "Korra"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:160"; msg=msg; code="145:  (* Undolist.add_elem several times *)\n146:  Undolist.reset_all ();\n147:  Undolist.add_elem \"Korra\";\n148:  Undolist.add_elem \"Asami\";\n149:  Undolist.add_elem \"Mako\";\n150:  Undolist.add_elem \"Bolin\";\n151:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n152:  let expect_undo =\n153:    [ [\"Asami\"; \"Korra\"; \"Mako\"];\n154:      [\"Asami\"; \"Korra\"];\n155:      [\"Korra\"];\n156:      [] ]\n157:  in\n158:  let expect_redo = [] in\n159:  let msg = make_msg expect_curr expect_undo expect_redo in\n160:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.add_elem "Asami";
+  Undolist.add_elem "Tenzin";
+  Undolist.add_elem "Mako";
+  Undolist.add_elem "Bolin";
+  Undolist.add_elem "Amon";
+  Undolist.add_elem "Kuvira";
+  let expect_curr = ["Amon"; "Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Tenzin"] in
+  let expect_undo =
+    [ ["Amon"; "Asami"; "Bolin"; "Korra"; "Mako"; "Tenzin"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"; "Tenzin"];
+      ["Asami"; "Korra"; "Mako"; "Tenzin"];
+      ["Asami"; "Korra"; "Tenzin"];
+      ["Asami"; "Korra"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:185"; msg=msg; code="164:  (* Undolist.add_elem several times *)\n165:  Undolist.reset_all ();\n166:  Undolist.add_elem \"Korra\";\n167:  Undolist.add_elem \"Asami\";\n168:  Undolist.add_elem \"Tenzin\";\n169:  Undolist.add_elem \"Mako\";\n170:  Undolist.add_elem \"Bolin\";\n171:  Undolist.add_elem \"Amon\";\n172:  Undolist.add_elem \"Kuvira\";\n173:  let expect_curr = [\"Amon\"; \"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Tenzin\"] in\n174:  let expect_undo =\n175:    [ [\"Amon\"; \"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Tenzin\"];\n176:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Tenzin\"];\n177:      [\"Asami\"; \"Korra\"; \"Mako\"; \"Tenzin\"];\n178:      [\"Asami\"; \"Korra\"; \"Tenzin\"];\n179:      [\"Asami\"; \"Korra\"];\n180:      [\"Korra\"];\n181:      [] ]\n182:  in\n183:  let expect_redo = [] in\n184:  let msg = make_msg expect_curr expect_undo expect_redo in\n185:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem and remove_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.remove_elem "Korra";
+  let expect_curr = [] in
+  let expect_undo =
+    [ ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:203"; msg=msg; code="192:  (* Undolist.add_elem and remove_elem several times *)\n193:  Undolist.reset_all ();\n194:  Undolist.add_elem \"Korra\";\n195:  Undolist.remove_elem \"Korra\";\n196:  let expect_curr = [] in\n197:  let expect_undo =\n198:    [ [\"Korra\"];\n199:      [] ]\n200:  in\n201:  let expect_redo = [] in\n202:  let msg = make_msg expect_curr expect_undo expect_redo in\n203:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem and remove_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.remove_elem "Mako";
+  let expect_curr = ["Korra"] in
+  let expect_undo =
+    [ ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:218"; msg=msg; code="207:  (* Undolist.add_elem and remove_elem several times *)\n208:  Undolist.reset_all ();\n209:  Undolist.add_elem \"Korra\";\n210:  Undolist.remove_elem \"Mako\";\n211:  let expect_curr = [\"Korra\"] in\n212:  let expect_undo =\n213:    [ [\"Korra\"];\n214:      [] ]\n215:  in\n216:  let expect_redo = [] in\n217:  let msg = make_msg expect_curr expect_undo expect_redo in\n218:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem and remove_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.add_elem "Mako";
+  Undolist.remove_elem "Korra";
+  let expect_curr = ["Mako"] in
+  let expect_undo =
+    [ ["Korra"; "Mako"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:235"; msg=msg; code="222:  (* Undolist.add_elem and remove_elem several times *)\n223:  Undolist.reset_all ();\n224:  Undolist.add_elem \"Korra\";\n225:  Undolist.add_elem \"Mako\";\n226:  Undolist.remove_elem \"Korra\";\n227:  let expect_curr = [\"Mako\"] in\n228:  let expect_undo =\n229:    [ [\"Korra\"; \"Mako\"];\n230:      [\"Korra\"];\n231:      [] ]\n232:  in\n233:  let expect_redo = [] in\n234:  let msg = make_msg expect_curr expect_undo expect_redo in\n235:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem and remove_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.add_elem "Mako";
+  Undolist.remove_elem "Korra";
+  Undolist.add_elem "Bolin";
+  Undolist.add_elem "Mako";
+  Undolist.remove_elem "Bolin";
+  Undolist.remove_elem "Mako";
+  let expect_curr = [] in
+  let expect_undo =
+    [ ["Mako"];
+      ["Bolin"; "Mako"];
+      ["Bolin"; "Mako"];
+      ["Mako"];
+      ["Korra"; "Mako"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:260"; msg=msg; code="239:  (* Undolist.add_elem and remove_elem several times *)\n240:  Undolist.reset_all ();\n241:  Undolist.add_elem \"Korra\";\n242:  Undolist.add_elem \"Mako\";\n243:  Undolist.remove_elem \"Korra\";\n244:  Undolist.add_elem \"Bolin\";\n245:  Undolist.add_elem \"Mako\";\n246:  Undolist.remove_elem \"Bolin\";\n247:  Undolist.remove_elem \"Mako\";\n248:  let expect_curr = [] in\n249:  let expect_undo =\n250:    [ [\"Mako\"];\n251:      [\"Bolin\"; \"Mako\"];\n252:      [\"Bolin\"; \"Mako\"];\n253:      [\"Mako\"];\n254:      [\"Korra\"; \"Mako\"];\n255:      [\"Korra\"];\n256:      [] ]\n257:  in\n258:  let expect_redo = [] in\n259:  let msg = make_msg expect_curr expect_undo expect_redo in\n260:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.add_elem and remove_elem several times *)
+  Undolist.reset_all ();
+  Undolist.add_elem "Korra";
+  Undolist.remove_elem "Korra";
+  Undolist.add_elem "Bolin";
+  Undolist.remove_elem "Bolin";
+  Undolist.remove_elem "Mako";
+  Undolist.add_elem "Mako";
+  Undolist.add_elem "Korra";
+  Undolist.add_elem "Asami";
+  Undolist.add_elem "Bolin";
+  Undolist.add_elem "Tenzin";
+  Undolist.add_elem "Amon";
+  Undolist.remove_elem "Korra";
+  Undolist.remove_elem "Tenzin";
+  let expect_curr = ["Amon"; "Asami"; "Bolin"; "Mako"] in
+  let expect_undo =
+    [ ["Amon"; "Asami"; "Bolin"; "Mako"; "Tenzin"];
+      ["Amon"; "Asami"; "Bolin"; "Korra"; "Mako"; "Tenzin"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"; "Tenzin"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      ["Asami"; "Korra"; "Mako"];
+      ["Korra"; "Mako"];
+      ["Mako"];
+      [];
+      [];
+      ["Bolin"];
+      [];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:297"; msg=msg; code="264:  (* Undolist.add_elem and remove_elem several times *)\n265:  Undolist.reset_all ();\n266:  Undolist.add_elem \"Korra\";\n267:  Undolist.remove_elem \"Korra\";\n268:  Undolist.add_elem \"Bolin\";\n269:  Undolist.remove_elem \"Bolin\";\n270:  Undolist.remove_elem \"Mako\";\n271:  Undolist.add_elem \"Mako\";\n272:  Undolist.add_elem \"Korra\";\n273:  Undolist.add_elem \"Asami\";\n274:  Undolist.add_elem \"Bolin\";\n275:  Undolist.add_elem \"Tenzin\";\n276:  Undolist.add_elem \"Amon\";\n277:  Undolist.remove_elem \"Korra\";\n278:  Undolist.remove_elem \"Tenzin\";\n279:  let expect_curr = [\"Amon\"; \"Asami\"; \"Bolin\"; \"Mako\"] in\n280:  let expect_undo =\n281:    [ [\"Amon\"; \"Asami\"; \"Bolin\"; \"Mako\"; \"Tenzin\"];\n282:      [\"Amon\"; \"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Tenzin\"];\n283:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Tenzin\"];\n284:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n285:      [\"Asami\"; \"Korra\"; \"Mako\"];\n286:      [\"Korra\"; \"Mako\"];\n287:      [\"Mako\"];\n288:      [];\n289:      [];\n290:      [\"Bolin\"];\n291:      [];\n292:      [\"Korra\"];\n293:      [] ]\n294:  in\n295:  let expect_redo = [] in\n296:  let msg = make_msg expect_curr expect_undo expect_redo in\n297:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.merge_with_list *)
+  Undolist.reset_all ();
+  Undolist.merge_with_list ["Korra"];
+  let expect_curr = ["Korra"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:313"; msg=msg; code="304:  (* Undolist.merge_with_list *)\n305:  Undolist.reset_all ();\n306:  Undolist.merge_with_list [\"Korra\"];\n307:  let expect_curr = [\"Korra\"] in\n308:  let expect_undo =\n309:    [ [] ]\n310:  in\n311:  let expect_redo = [] in\n312:  let msg = make_msg expect_curr expect_undo expect_redo in\n313:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.merge_with_list *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  Undolist.merge_with_list ["Bolin";"Mako"];
+  let expect_curr = ["Bolin"; "Korra"; "Mako"] in
+  let expect_undo =
+    [ ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:328"; msg=msg; code="317:  (* Undolist.merge_with_list *)\n318:  Undolist.reset_all ();\n319:  Undolist.set_to_list [\"Korra\"];\n320:  Undolist.merge_with_list [\"Bolin\";\"Mako\"];\n321:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Mako\"] in\n322:  let expect_undo =\n323:    [ [\"Korra\"];\n324:      [] ]\n325:  in\n326:  let expect_redo = [] in\n327:  let msg = make_msg expect_curr expect_undo expect_redo in\n328:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.merge_with_list *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  Undolist.merge_with_list ["Bolin";"Mako"];
+  Undolist.merge_with_list ["Asami";"Kuvira";"Tenzin";"Zahir";];
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Tenzin"; "Zahir"] in
+  let expect_undo =
+    [ ["Bolin"; "Korra"; "Mako"];
+      ["Korra"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:345"; msg=msg; code="332:  (* Undolist.merge_with_list *)\n333:  Undolist.reset_all ();\n334:  Undolist.set_to_list [\"Korra\"];\n335:  Undolist.merge_with_list [\"Bolin\";\"Mako\"];\n336:  Undolist.merge_with_list [\"Asami\";\"Kuvira\";\"Tenzin\";\"Zahir\";];\n337:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Tenzin\"; \"Zahir\"] in\n338:  let expect_undo =\n339:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n340:      [\"Korra\"];\n341:      [] ]\n342:  in\n343:  let expect_redo = [] in\n344:  let msg = make_msg expect_curr expect_undo expect_redo in\n345:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.merge_with_list *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Korra";"Kuvira";"Mako";"Tenzin";"Zahir";];
+  Undolist.merge_with_list ["Asami";"Kuvira";"Tenzin";"Zahir";];
+  let expect_curr = ["Asami"; "Korra"; "Kuvira"; "Mako"; "Tenzin"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Korra"; "Kuvira"; "Mako"; "Tenzin"; "Zahir"];
+      [] ]
+  in
+  let expect_redo = [] in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:360"; msg=msg; code="349:  (* Undolist.merge_with_list *)\n350:  Undolist.reset_all ();\n351:  Undolist.set_to_list [\"Asami\";\"Korra\";\"Kuvira\";\"Mako\";\"Tenzin\";\"Zahir\";];\n352:  Undolist.merge_with_list [\"Asami\";\"Kuvira\";\"Tenzin\";\"Zahir\";];\n353:  let expect_curr = [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Tenzin\"; \"Zahir\"] in\n354:  let expect_undo =\n355:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Tenzin\"; \"Zahir\"];\n356:      [] ]\n357:  in\n358:  let expect_redo = [] in\n359:  let msg = make_msg expect_curr expect_undo expect_redo in\n360:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  
+  (* BEG_TEST *)
+  (* Undolist.undo operations then undos *)
+  Undolist.reset_all ();
+  let actual_ret = Undolist.undo () in
+  let expect_ret = false in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:379"; msg=msg; code="367:  (* Undolist.undo operations then undos *)\n368:  Undolist.reset_all ();\n369:  let actual_ret = Undolist.undo () in\n370:  let expect_ret = false in\n371:  let expect_curr = [] in\n372:  let expect_undo =\n373:    [ ]\n374:  in\n375:  let expect_redo =\n376:    [ ]\n377:  in\n378:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n379:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.undo operations then undos *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Korra"];
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ["Korra"]; ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:396"; msg=msg; code="383:  (* Undolist.undo operations then undos *)\n384:  Undolist.reset_all ();\n385:  Undolist.set_to_list [\"Korra\"];\n386:  let actual_ret = Undolist.undo () in\n387:  let expect_ret = true in\n388:  let expect_curr = [] in\n389:  let expect_undo =\n390:    [ ]\n391:  in\n392:  let expect_redo =\n393:    [ [\"Korra\"]; ]\n394:  in\n395:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n396:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+  
+  (* BEG_TEST *)
+  (* Undolist.undo operations then undos *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Bolin";"Korra";"Mako"];
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ["Bolin"; "Korra"; "Mako"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:413"; msg=msg; code="400:  (* Undolist.undo operations then undos *)\n401:  Undolist.reset_all ();\n402:  Undolist.set_to_list [\"Bolin\";\"Korra\";\"Mako\"];\n403:  let actual_ret = Undolist.undo () in\n404:  let expect_ret = true in\n405:  let expect_curr = [] in\n406:  let expect_undo =\n407:    [ ]\n408:  in\n409:  let expect_redo =\n410:    [ [\"Bolin\"; \"Korra\"; \"Mako\"] ]\n411:  in\n412:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n413:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist.undo times 4 *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Bolin";"Korra";"Mako"];
+  Undolist.add_elem "Kuvira";
+  Undolist.add_elem "Meelo";
+  (* FIRST undo *)
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = ["Bolin"; "Korra"; "Kuvira"; "Mako"] in
+  let expect_undo =
+    [ ["Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ["Bolin"; "Korra"; "Kuvira"; "Mako"; "Meelo"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:434"; msg=msg; code="417:  (* Undolist.undo times 4 *)\n418:  Undolist.reset_all ();\n419:  Undolist.set_to_list [\"Bolin\";\"Korra\";\"Mako\"];\n420:  Undolist.add_elem \"Kuvira\";\n421:  Undolist.add_elem \"Meelo\";\n422:  (* FIRST undo *)\n423:  let actual_ret = Undolist.undo () in\n424:  let expect_ret = true in\n425:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"] in\n426:  let expect_undo =\n427:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n428:      [] ]\n429:  in\n430:  let expect_redo =\n431:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n432:  in\n433:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n434:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* SECOND undo *)
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = ["Bolin"; "Korra"; "Mako"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo =
+    [ ["Bolin"; "Korra"; "Kuvira"; "Mako"];
+      ["Bolin"; "Korra"; "Kuvira"; "Mako"; "Meelo"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:447"; msg=msg; code="417:  (* Undolist.undo times 4 *)\n418:  Undolist.reset_all ();\n419:  Undolist.set_to_list [\"Bolin\";\"Korra\";\"Mako\"];\n420:  Undolist.add_elem \"Kuvira\";\n421:  Undolist.add_elem \"Meelo\";\n422:  (* FIRST undo *)\n423:  let actual_ret = Undolist.undo () in\n424:  let expect_ret = true in\n425:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"] in\n426:  let expect_undo =\n427:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n428:      [] ]\n429:  in\n430:  let expect_redo =\n431:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n432:  in\n433:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n434:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n435:  (* SECOND undo *)\n436:  let actual_ret = Undolist.undo () in\n437:  let expect_ret = true in\n438:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Mako\"] in\n439:  let expect_undo =\n440:    [ [] ]\n441:  in\n442:  let expect_redo =\n443:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n444:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n445:  in\n446:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n447:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* THIRD undo *)
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ["Bolin"; "Korra"; "Mako"];
+      ["Bolin"; "Korra"; "Kuvira"; "Mako"];
+      ["Bolin"; "Korra"; "Kuvira"; "Mako"; "Meelo"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:461"; msg=msg; code="417:  (* Undolist.undo times 4 *)\n418:  Undolist.reset_all ();\n419:  Undolist.set_to_list [\"Bolin\";\"Korra\";\"Mako\"];\n420:  Undolist.add_elem \"Kuvira\";\n421:  Undolist.add_elem \"Meelo\";\n422:  (* FIRST undo *)\n423:  let actual_ret = Undolist.undo () in\n424:  let expect_ret = true in\n425:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"] in\n426:  let expect_undo =\n427:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n428:      [] ]\n429:  in\n430:  let expect_redo =\n431:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n432:  in\n433:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n434:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n435:  (* SECOND undo *)\n436:  let actual_ret = Undolist.undo () in\n437:  let expect_ret = true in\n438:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Mako\"] in\n439:  let expect_undo =\n440:    [ [] ]\n441:  in\n442:  let expect_redo =\n443:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n444:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n445:  in\n446:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n447:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n448:  (* THIRD undo *)\n449:  let actual_ret = Undolist.undo () in\n450:  let expect_ret = true in\n451:  let expect_curr = [] in\n452:  let expect_undo =\n453:    [ ]\n454:  in\n455:  let expect_redo =\n456:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n457:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n458:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n459:  in\n460:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n461:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* FOURTH undo fails *)
+  let actual_ret = Undolist.undo () in
+  let expect_ret = false in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ["Bolin"; "Korra"; "Mako"];
+      ["Bolin"; "Korra"; "Kuvira"; "Mako"];
+      ["Bolin"; "Korra"; "Kuvira"; "Mako"; "Meelo"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:475"; msg=msg; code="417:  (* Undolist.undo times 4 *)\n418:  Undolist.reset_all ();\n419:  Undolist.set_to_list [\"Bolin\";\"Korra\";\"Mako\"];\n420:  Undolist.add_elem \"Kuvira\";\n421:  Undolist.add_elem \"Meelo\";\n422:  (* FIRST undo *)\n423:  let actual_ret = Undolist.undo () in\n424:  let expect_ret = true in\n425:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"] in\n426:  let expect_undo =\n427:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n428:      [] ]\n429:  in\n430:  let expect_redo =\n431:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n432:  in\n433:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n434:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n435:  (* SECOND undo *)\n436:  let actual_ret = Undolist.undo () in\n437:  let expect_ret = true in\n438:  let expect_curr = [\"Bolin\"; \"Korra\"; \"Mako\"] in\n439:  let expect_undo =\n440:    [ [] ]\n441:  in\n442:  let expect_redo =\n443:    [ [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n444:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n445:  in\n446:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n447:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n448:  (* THIRD undo *)\n449:  let actual_ret = Undolist.undo () in\n450:  let expect_ret = true in\n451:  let expect_curr = [] in\n452:  let expect_undo =\n453:    [ ]\n454:  in\n455:  let expect_redo =\n456:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n457:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n458:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n459:  in\n460:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n461:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n462:  (* FOURTH undo fails *)\n463:  let actual_ret = Undolist.undo () in\n464:  let expect_ret = false in\n465:  let expect_curr = [] in\n466:  let expect_undo =\n467:    [ ]\n468:  in\n469:  let expect_redo =\n470:    [ [\"Bolin\"; \"Korra\"; \"Mako\"];\n471:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"];\n472:      [\"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"] ]\n473:  in\n474:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n475:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+
+  (* BEG_TEST *)
+  (* Undolist.undo then redo *)
+  Undolist.reset_all ();
+  let actual_ret = Undolist.redo () in
+  let expect_ret = false in
+  let expect_curr = [] in
+  let expect_undo =
+    [ ]
+  in
+  let expect_redo =
+    [ ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:494"; msg=msg; code="482:  (* Undolist.undo then redo *)\n483:  Undolist.reset_all ();\n484:  let actual_ret = Undolist.redo () in\n485:  let expect_ret = false in\n486:  let expect_curr = [] in\n487:  let expect_undo =\n488:    [ ]\n489:  in\n490:  let expect_redo =\n491:    [ ]\n492:  in\n493:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n494:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist.undo then redo *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  let _          = Undolist.undo () in
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami";"Bolin";"Korra";"Mako"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo =
+    [ ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:512"; msg=msg; code="498:  (* Undolist.undo then redo *)\n499:  Undolist.reset_all ();\n500:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n501:  let _          = Undolist.undo () in\n502:  let actual_ret = Undolist.redo () in\n503:  let expect_ret = true in\n504:  let expect_curr = [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"] in\n505:  let expect_undo =\n506:    [ [] ]\n507:  in\n508:  let expect_redo =\n509:    [ ]\n510:  in\n511:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n512:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist.undo times 4 then redo times 4 *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.merge_with_list ["Asami";"Bolin";"Kuvira";"Zahir"];
+  Undolist.remove_elem "Bolin";
+  let _          = Undolist.undo () in
+  let _          = Undolist.undo () in
+  let _          = Undolist.undo () in
+  (* FIRST REDO *)
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo =
+    [ ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:536"; msg=msg; code="516:  (* Undolist.undo times 4 then redo times 4 *)\n517:  Undolist.reset_all ();\n518:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n519:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n520:  Undolist.remove_elem \"Bolin\";\n521:  let _          = Undolist.undo () in\n522:  let _          = Undolist.undo () in\n523:  let _          = Undolist.undo () in\n524:  (* FIRST REDO *)\n525:  let actual_ret = Undolist.redo () in\n526:  let expect_ret = true in\n527:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n528:  let expect_undo =\n529:    [ [] ]\n530:  in\n531:  let expect_redo =\n532:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n533:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n534:  in\n535:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n536:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* SECOND REDO *)
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:549"; msg=msg; code="516:  (* Undolist.undo times 4 then redo times 4 *)\n517:  Undolist.reset_all ();\n518:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n519:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n520:  Undolist.remove_elem \"Bolin\";\n521:  let _          = Undolist.undo () in\n522:  let _          = Undolist.undo () in\n523:  let _          = Undolist.undo () in\n524:  (* FIRST REDO *)\n525:  let actual_ret = Undolist.redo () in\n526:  let expect_ret = true in\n527:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n528:  let expect_undo =\n529:    [ [] ]\n530:  in\n531:  let expect_redo =\n532:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n533:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n534:  in\n535:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n536:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n537:  (* SECOND REDO *)\n538:  let actual_ret = Undolist.redo () in\n539:  let expect_ret = true in\n540:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n541:  let expect_undo =\n542:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n543:      [] ]\n544:  in\n545:  let expect_redo =\n546:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n547:  in\n548:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n549:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* THIRD REDO *)
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:563"; msg=msg; code="516:  (* Undolist.undo times 4 then redo times 4 *)\n517:  Undolist.reset_all ();\n518:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n519:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n520:  Undolist.remove_elem \"Bolin\";\n521:  let _          = Undolist.undo () in\n522:  let _          = Undolist.undo () in\n523:  let _          = Undolist.undo () in\n524:  (* FIRST REDO *)\n525:  let actual_ret = Undolist.redo () in\n526:  let expect_ret = true in\n527:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n528:  let expect_undo =\n529:    [ [] ]\n530:  in\n531:  let expect_redo =\n532:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n533:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n534:  in\n535:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n536:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n537:  (* SECOND REDO *)\n538:  let actual_ret = Undolist.redo () in\n539:  let expect_ret = true in\n540:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n541:  let expect_undo =\n542:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n543:      [] ]\n544:  in\n545:  let expect_redo =\n546:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n547:  in\n548:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n549:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n550:  (* THIRD REDO *)\n551:  let actual_ret = Undolist.redo () in\n552:  let expect_ret = true in\n553:  let expect_curr = [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n554:  let expect_undo =\n555:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n556:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n557:      [] ]\n558:  in\n559:  let expect_redo =\n560:    [ ]\n561:  in\n562:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n563:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* FOURTH REDO fails *)
+  let actual_ret = Undolist.redo () in
+  let expect_ret = false in
+  let expect_curr = ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:577"; msg=msg; code="516:  (* Undolist.undo times 4 then redo times 4 *)\n517:  Undolist.reset_all ();\n518:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n519:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n520:  Undolist.remove_elem \"Bolin\";\n521:  let _          = Undolist.undo () in\n522:  let _          = Undolist.undo () in\n523:  let _          = Undolist.undo () in\n524:  (* FIRST REDO *)\n525:  let actual_ret = Undolist.redo () in\n526:  let expect_ret = true in\n527:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n528:  let expect_undo =\n529:    [ [] ]\n530:  in\n531:  let expect_redo =\n532:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n533:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n534:  in\n535:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n536:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n537:  (* SECOND REDO *)\n538:  let actual_ret = Undolist.redo () in\n539:  let expect_ret = true in\n540:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n541:  let expect_undo =\n542:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n543:      [] ]\n544:  in\n545:  let expect_redo =\n546:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] ]\n547:  in\n548:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n549:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n550:  (* THIRD REDO *)\n551:  let actual_ret = Undolist.redo () in\n552:  let expect_ret = true in\n553:  let expect_curr = [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n554:  let expect_undo =\n555:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n556:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n557:      [] ]\n558:  in\n559:  let expect_redo =\n560:    [ ]\n561:  in\n562:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n563:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n564:  (* FOURTH REDO fails *)\n565:  let actual_ret = Undolist.redo () in\n566:  let expect_ret = false in\n567:  let expect_curr = [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n568:  let expect_undo =\n569:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n570:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n571:      [] ]\n572:  in\n573:  let expect_redo =\n574:    [ ]\n575:  in\n576:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n577:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.merge_with_list ["Asami";"Bolin";"Kuvira";"Zahir"];
+  Undolist.remove_elem "Bolin";
+  Undolist.add_elem "Meelo";
+  Undolist.remove_elem "Tenzin";
+  Undolist.merge_with_list ["Ikki";"Jinora";"Korra";"Pema";"Tenzin"];
+  (* 4 undos *)
+  for i=1 to 3 do
+    ignore (Undolist.undo ());
+  done;
+  let actual_ret = Undolist.undo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Ikki"; "Jinora"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Pema"; "Tenzin"; "Zahir"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:611"; msg=msg; code="585:  (* Undolist undo / redo mixed *)\n586:  Undolist.reset_all ();\n587:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n588:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n589:  Undolist.remove_elem \"Bolin\";\n590:  Undolist.add_elem \"Meelo\";\n591:  Undolist.remove_elem \"Tenzin\";\n592:  Undolist.merge_with_list [\"Ikki\";\"Jinora\";\"Korra\";\"Pema\";\"Tenzin\"];\n593:  (* 4 undos *)\n594:  for i=1 to 3 do\n595:    ignore (Undolist.undo ());\n596:  done;\n597:  let actual_ret = Undolist.undo () in\n598:  let expect_ret = true in\n599:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n600:  let expect_undo =\n601:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n602:      [] ]\n603:  in\n604:  let expect_redo =\n605:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n606:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n607:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n608:      [\"Asami\"; \"Ikki\"; \"Jinora\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Pema\"; \"Tenzin\"; \"Zahir\"] ]\n609:  in\n610:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n611:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.merge_with_list ["Asami";"Bolin";"Kuvira";"Zahir"];
+  Undolist.remove_elem "Bolin";
+  Undolist.add_elem "Meelo";
+  Undolist.remove_elem "Tenzin";
+  Undolist.merge_with_list ["Ikki";"Jinora";"Korra";"Pema";"Tenzin"];
+  (* 5 undos *)
+  for i=1 to 5 do
+    ignore (Undolist.undo ());
+  done;
+  (* 4 redos *)
+  for i=1 to 3 do
+    ignore (Undolist.undo ());
+  done;
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo =
+    [ ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Ikki"; "Jinora"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Pema"; "Tenzin"; "Zahir"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:645"; msg=msg; code="615:  (* Undolist undo / redo mixed *)\n616:  Undolist.reset_all ();\n617:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n618:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n619:  Undolist.remove_elem \"Bolin\";\n620:  Undolist.add_elem \"Meelo\";\n621:  Undolist.remove_elem \"Tenzin\";\n622:  Undolist.merge_with_list [\"Ikki\";\"Jinora\";\"Korra\";\"Pema\";\"Tenzin\"];\n623:  (* 5 undos *)\n624:  for i=1 to 5 do\n625:    ignore (Undolist.undo ());\n626:  done;\n627:  (* 4 redos *)\n628:  for i=1 to 3 do\n629:    ignore (Undolist.undo ());\n630:  done;\n631:  let actual_ret = Undolist.redo () in\n632:  let expect_ret = true in\n633:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"] in\n634:  let expect_undo =\n635:    [ [] ]\n636:  in\n637:  let expect_redo =\n638:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n639:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n640:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n641:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n642:      [\"Asami\"; \"Ikki\"; \"Jinora\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Pema\"; \"Tenzin\"; \"Zahir\"] ]\n643:  in\n644:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n645:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.merge_with_list ["Asami";"Bolin";"Kuvira";"Zahir"];
+  Undolist.remove_elem "Bolin";
+  Undolist.add_elem "Meelo";
+  Undolist.remove_elem "Tenzin";
+  Undolist.merge_with_list ["Ikki";"Jinora";"Korra";"Pema";"Tenzin"];
+  for i=1 to 5 do
+    ignore (Undolist.undo ());
+  done;
+  for i=1 to 3 do
+    ignore (Undolist.redo ());
+  done;
+  for i=1 to 2 do
+    ignore (Undolist.undo ());
+  done;
+  let actual_ret = Undolist.redo () in
+  let expect_ret = true in
+  let expect_curr = ["Asami"; "Korra"; "Kuvira"; "Mako"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Kuvira"; "Mako"; "Zahir"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [ ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Zahir"];
+      ["Asami"; "Ikki"; "Jinora"; "Korra"; "Kuvira"; "Mako"; "Meelo"; "Pema"; "Tenzin"; "Zahir"] ]
+  in
+  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in
+if not ( ( expect_ret = actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:680"; msg=msg; code="649:  (* Undolist undo / redo mixed *)\n650:  Undolist.reset_all ();\n651:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n652:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n653:  Undolist.remove_elem \"Bolin\";\n654:  Undolist.add_elem \"Meelo\";\n655:  Undolist.remove_elem \"Tenzin\";\n656:  Undolist.merge_with_list [\"Ikki\";\"Jinora\";\"Korra\";\"Pema\";\"Tenzin\"];\n657:  for i=1 to 5 do\n658:    ignore (Undolist.undo ());\n659:  done;\n660:  for i=1 to 3 do\n661:    ignore (Undolist.redo ());\n662:  done;\n663:  for i=1 to 2 do\n664:    ignore (Undolist.undo ());\n665:  done;\n666:  let actual_ret = Undolist.redo () in\n667:  let expect_ret = true in\n668:  let expect_curr = [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"] in\n669:  let expect_undo =\n670:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Zahir\"];\n671:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n672:      [] ]\n673:  in\n674:  let expect_redo =\n675:    [ [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n676:      [\"Asami\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Zahir\"];\n677:      [\"Asami\"; \"Ikki\"; \"Jinora\"; \"Korra\"; \"Kuvira\"; \"Mako\"; \"Meelo\"; \"Pema\"; \"Tenzin\"; \"Zahir\"] ]\n678:  in\n679:  let msg = make_msg_ret expect_ret actual_ret expect_curr expect_undo expect_redo in\n680:  __check__ ( expect_ret  =  actual_ret && expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.merge_with_list ["Asami";"Bolin";"Kuvira";"Zahir"];
+  ignore (Undolist.undo ());
+  Undolist.add_elem "Meelo";
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:703"; msg=msg; code="688:  (* Undolist undo / redo mixed with modifications *)\n689:  Undolist.reset_all ();\n690:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n691:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Kuvira\";\"Zahir\"];\n692:  ignore (Undolist.undo ());\n693:  Undolist.add_elem \"Meelo\";\n694:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"] in\n695:  let expect_undo =\n696:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n697:      [] ]\n698:  in\n699:  let expect_redo =\n700:    [  ]\n701:  in\n702:  let msg = make_msg expect_curr expect_undo expect_redo in\n703:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.remove_elem "Tenzin";
+  ignore (Undolist.undo ());
+  Undolist.add_elem "Meelo";
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:722"; msg=msg; code="707:  (* Undolist undo / redo mixed with modifications *)\n708:  Undolist.reset_all ();\n709:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n710:  Undolist.remove_elem \"Tenzin\";\n711:  ignore (Undolist.undo ());\n712:  Undolist.add_elem \"Meelo\";\n713:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"] in\n714:  let expect_undo =\n715:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n716:      [] ]\n717:  in\n718:  let expect_redo =\n719:    [  ]\n720:  in\n721:  let msg = make_msg expect_curr expect_undo expect_redo in\n722:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.remove_elem "Tenzin";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  Undolist.add_elem "Meelo";
+  let expect_curr = ["Meelo"] in
+  let expect_undo =
+    [ [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:741"; msg=msg; code="726:  (* Undolist undo / redo mixed with modifications *)\n727:  Undolist.reset_all ();\n728:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n729:  Undolist.remove_elem \"Tenzin\";\n730:  ignore (Undolist.undo ());\n731:  ignore (Undolist.undo ());\n732:  Undolist.add_elem \"Meelo\";\n733:  let expect_curr = [\"Meelo\"] in\n734:  let expect_undo =\n735:    [ [] ]\n736:  in\n737:  let expect_redo =\n738:    [  ]\n739:  in\n740:  let msg = make_msg expect_curr expect_undo expect_redo in\n741:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.remove_elem "Tenzin";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  Undolist.add_elem "Meelo";
+  ignore (Undolist.redo ());
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:763"; msg=msg; code="745:  (* Undolist undo / redo mixed with modifications *)\n746:  Undolist.reset_all ();\n747:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n748:  Undolist.remove_elem \"Tenzin\";\n749:  ignore (Undolist.undo ());\n750:  ignore (Undolist.undo ());\n751:  ignore (Undolist.redo ());\n752:  Undolist.add_elem \"Meelo\";\n753:  ignore (Undolist.redo ());\n754:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"] in\n755:  let expect_undo =\n756:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n757:      [] ]\n758:  in\n759:  let expect_redo =\n760:    [  ]\n761:  in\n762:  let msg = make_msg expect_curr expect_undo expect_redo in\n763:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.remove_elem "Tenzin";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  Undolist.add_elem "Meelo";
+  Undolist.merge_with_list ["Asami";"Bolin";"Korra";"Tenzin";"Zahir"];
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"; "Tenzin"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:788"; msg=msg; code="767:  (* Undolist undo / redo mixed with modifications *)\n768:  Undolist.reset_all ();\n769:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n770:  Undolist.remove_elem \"Tenzin\";\n771:  ignore (Undolist.undo ());\n772:  ignore (Undolist.undo ());\n773:  ignore (Undolist.redo ());\n774:  Undolist.add_elem \"Meelo\";\n775:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Korra\";\"Tenzin\";\"Zahir\"];\n776:  ignore (Undolist.undo ());\n777:  ignore (Undolist.redo ());\n778:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"; \"Tenzin\"; \"Zahir\"] in\n779:  let expect_undo =\n780:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"];\n781:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n782:      [] ]\n783:  in\n784:  let expect_redo =\n785:    [  ]\n786:  in\n787:  let msg = make_msg expect_curr expect_undo expect_redo in\n788:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* Undolist undo / redo mixed with modifications *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["Asami";"Bolin";"Korra";"Mako"];
+  Undolist.remove_elem "Tenzin";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  Undolist.add_elem "Meelo";
+  Undolist.merge_with_list ["Asami";"Bolin";"Korra";"Tenzin";"Zahir"];
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  ignore (Undolist.redo ());
+  let expect_curr = ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"; "Tenzin"; "Zahir"] in
+  let expect_undo =
+    [ ["Asami"; "Bolin"; "Korra"; "Mako"; "Meelo"];
+      ["Asami"; "Bolin"; "Korra"; "Mako"];
+      [] ]
+  in
+  let expect_redo =
+    [  ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:814"; msg=msg; code="792:  (* Undolist undo / redo mixed with modifications *)\n793:  Undolist.reset_all ();\n794:  Undolist.set_to_list [\"Asami\";\"Bolin\";\"Korra\";\"Mako\"];\n795:  Undolist.remove_elem \"Tenzin\";\n796:  ignore (Undolist.undo ());\n797:  ignore (Undolist.undo ());\n798:  ignore (Undolist.redo ());\n799:  Undolist.add_elem \"Meelo\";\n800:  Undolist.merge_with_list [\"Asami\";\"Bolin\";\"Korra\";\"Tenzin\";\"Zahir\"];\n801:  ignore (Undolist.undo ());\n802:  ignore (Undolist.redo ());\n803:  ignore (Undolist.redo ());\n804:  let expect_curr = [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"; \"Tenzin\"; \"Zahir\"] in\n805:  let expect_undo =\n806:    [ [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"; \"Meelo\"];\n807:      [\"Asami\"; \"Bolin\"; \"Korra\"; \"Mako\"];\n808:      [] ]\n809:  in\n810:  let expect_redo =\n811:    [  ]\n812:  in\n813:  let msg = make_msg expect_curr expect_undo expect_redo in\n814:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+
+  (* BEG_TEST *)
+  (* Undolist stress tests *)
+  Undolist.reset_all ();
+  Undolist.set_to_list ["baby";"college";"computer";"enough";"he";"mention";"sure";"table";"usually";"weight";];
+  Undolist.merge_with_list ["administration";"agent";"ago";"argue";"brother";"degree";"end";"fish";"great";"need";"project";"red";"result";"same";"scene";"send";"service";"sound";"special";"suddenly";"suggest";"through";"throughout";"vote";"who";];
+  Undolist.add_elem "flab";
+  Undolist.add_elem "zebra";
+  ignore (Undolist.undo ());
+  Undolist.remove_elem "enough";
+  Undolist.remove_elem "weight";
+  Undolist.remove_elem "red";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  Undolist.merge_with_list ["else";"meeting";"per";"person";"position";];
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  ignore (Undolist.redo ());
+  Undolist.add_elem "red";
+  Undolist.remove_elem "brother";
+  Undolist.remove_elem "he";
+  Undolist.add_elem "great";
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  Undolist.merge_with_list ["administration";"agent";"ago";"argue";"brother";"degree";"end";"fish";"great";"need";"project";"red";"result";"same";"scene";"send";"service";"sound";"special";"suddenly";"suggest";"through";"throughout";"vote";"who";];
+  Undolist.add_elem "sister";
+  Undolist.add_elem "mass";
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.undo ());
+  ignore (Undolist.redo ());
+  let expect_curr = ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"] in
+  let expect_undo =
+    [ ["administration"; "agent"; "ago"; "argue"; "baby"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "he"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "he"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "he"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "enough"; "fish"; "flab"; "great"; "he"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "enough"; "fish"; "great"; "he"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["baby"; "college"; "computer"; "enough"; "he"; "mention"; "sure"; "table"; "usually"; "weight"];
+      [] ]
+  in
+  let expect_redo =
+    [ ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sister"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"];
+      ["administration"; "agent"; "ago"; "argue"; "baby"; "brother"; "college"; "computer"; "degree"; "end"; "fish"; "flab"; "great"; "mass"; "mention"; "need"; "project"; "red"; "result"; "same"; "scene"; "send"; "service"; "sister"; "sound"; "special"; "suddenly"; "suggest"; "sure"; "table"; "through"; "throughout"; "usually"; "vote"; "weight"; "who"] ]
+  in
+  let msg = make_msg expect_curr expect_undo expect_redo in
+if not ( ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack )) then raise (TestFail {loc="test_undolist.ml:872"; msg=msg; code="822:  (* Undolist stress tests *)\n823:  Undolist.reset_all ();\n824:  Undolist.set_to_list [\"baby\";\"college\";\"computer\";\"enough\";\"he\";\"mention\";\"sure\";\"table\";\"usually\";\"weight\";];\n825:  Undolist.merge_with_list [\"administration\";\"agent\";\"ago\";\"argue\";\"brother\";\"degree\";\"end\";\"fish\";\"great\";\"need\";\"project\";\"red\";\"result\";\"same\";\"scene\";\"send\";\"service\";\"sound\";\"special\";\"suddenly\";\"suggest\";\"through\";\"throughout\";\"vote\";\"who\";];\n826:  Undolist.add_elem \"flab\";\n827:  Undolist.add_elem \"zebra\";\n828:  ignore (Undolist.undo ());\n829:  Undolist.remove_elem \"enough\";\n830:  Undolist.remove_elem \"weight\";\n831:  Undolist.remove_elem \"red\";\n832:  ignore (Undolist.undo ());\n833:  ignore (Undolist.undo ());\n834:  ignore (Undolist.redo ());\n835:  Undolist.merge_with_list [\"else\";\"meeting\";\"per\";\"person\";\"position\";];\n836:  ignore (Undolist.undo ());\n837:  ignore (Undolist.undo ());\n838:  ignore (Undolist.undo ());\n839:  ignore (Undolist.undo ());\n840:  ignore (Undolist.redo ());\n841:  ignore (Undolist.redo ());\n842:  Undolist.add_elem \"red\";\n843:  Undolist.remove_elem \"brother\";\n844:  Undolist.remove_elem \"he\";\n845:  Undolist.add_elem \"great\";\n846:  ignore (Undolist.undo ());\n847:  ignore (Undolist.redo ());\n848:  Undolist.merge_with_list [\"administration\";\"agent\";\"ago\";\"argue\";\"brother\";\"degree\";\"end\";\"fish\";\"great\";\"need\";\"project\";\"red\";\"result\";\"same\";\"scene\";\"send\";\"service\";\"sound\";\"special\";\"suddenly\";\"suggest\";\"through\";\"throughout\";\"vote\";\"who\";];\n849:  Undolist.add_elem \"sister\";\n850:  Undolist.add_elem \"mass\";\n851:  ignore (Undolist.undo ());\n852:  ignore (Undolist.undo ());\n853:  ignore (Undolist.undo ());\n854:  ignore (Undolist.redo ());\n855:  let expect_curr = [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"] in\n856:  let expect_undo =\n857:    [ [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n858:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n859:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"he\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n860:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"he\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n861:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"he\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n862:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"enough\"; \"fish\"; \"flab\"; \"great\"; \"he\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n863:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"enough\"; \"fish\"; \"great\"; \"he\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n864:      [\"baby\"; \"college\"; \"computer\"; \"enough\"; \"he\"; \"mention\"; \"sure\"; \"table\"; \"usually\"; \"weight\"];\n865:      [] ]\n866:  in\n867:  let expect_redo =\n868:    [ [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sister\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"];\n869:      [\"administration\"; \"agent\"; \"ago\"; \"argue\"; \"baby\"; \"brother\"; \"college\"; \"computer\"; \"degree\"; \"end\"; \"fish\"; \"flab\"; \"great\"; \"mass\"; \"mention\"; \"need\"; \"project\"; \"red\"; \"result\"; \"same\"; \"scene\"; \"send\"; \"service\"; \"sister\"; \"sound\"; \"special\"; \"suddenly\"; \"suggest\"; \"sure\"; \"table\"; \"through\"; \"throughout\"; \"usually\"; \"vote\"; \"weight\"; \"who\"] ]\n870:  in\n871:  let msg = make_msg expect_curr expect_undo expect_redo in\n872:  __check__ ( expect_curr = !curr_list && expect_undo = !undo_stack && expect_redo = !redo_stack );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+|];;    

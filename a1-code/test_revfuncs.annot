@@ -1,0 +1,4819 @@
+"test_revfuncs.mlt" 5 100 100 "test_revfuncs.mlt" 5 100 111
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  int_ref Mltest.main "mltest.ml" 93 2654 2658 "mltest.ml" 93 2654 2662
+)
+"test_revfuncs.mlt" 8 182 187 "test_revfuncs.mlt" 8 182 189
+type(
+  unit
+)
+"test_revfuncs.mlt" 11 255 261 "test_revfuncs.mlt" 11 255 267
+type(
+  int array
+)
+ident(
+  def actual "test_revfuncs.mlt" 12 286 288 "test_revfuncs.mlt" 23 1066 1477
+)
+"test_revfuncs.mlt" 11 255 272 "test_revfuncs.mlt" 11 255 273
+type(
+  int
+)
+"test_revfuncs.mlt" 11 255 275 "test_revfuncs.mlt" 11 255 276
+type(
+  int
+)
+"test_revfuncs.mlt" 11 255 278 "test_revfuncs.mlt" 11 255 279
+type(
+  int
+)
+"test_revfuncs.mlt" 11 255 270 "test_revfuncs.mlt" 11 255 282
+type(
+  int array
+)
+"test_revfuncs.mlt" 12 286 288 "test_revfuncs.mlt" 12 286 297
+type(
+  int array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 12 286 298 "test_revfuncs.mlt" 12 286 304
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 11 255 261 "test_revfuncs.mlt" 11 255 267
+)
+"test_revfuncs.mlt" 12 286 288 "test_revfuncs.mlt" 12 286 304
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 13 306 312 "test_revfuncs.mlt" 13 306 318
+type(
+  int array
+)
+ident(
+  def expect "test_revfuncs.mlt" 14 337 339 "test_revfuncs.mlt" 23 1066 1477
+)
+"test_revfuncs.mlt" 13 306 323 "test_revfuncs.mlt" 13 306 324
+type(
+  int
+)
+"test_revfuncs.mlt" 13 306 326 "test_revfuncs.mlt" 13 306 327
+type(
+  int
+)
+"test_revfuncs.mlt" 13 306 329 "test_revfuncs.mlt" 13 306 330
+type(
+  int
+)
+"test_revfuncs.mlt" 13 306 321 "test_revfuncs.mlt" 13 306 333
+type(
+  int array
+)
+"test_revfuncs.mlt" 14 337 343 "test_revfuncs.mlt" 14 337 346
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 15 425 425 "test_revfuncs.mlt" 23 1066 1477
+)
+"test_revfuncs.mlt" 14 337 349 "test_revfuncs.mlt" 14 337 356
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 14 337 357 "test_revfuncs.mlt" 14 337 381
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 14 337 383 "test_revfuncs.mlt" 14 337 393
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 14 337 394 "test_revfuncs.mlt" 14 337 400
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 13 306 312 "test_revfuncs.mlt" 13 306 318
+)
+"test_revfuncs.mlt" 14 337 382 "test_revfuncs.mlt" 14 337 401
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 14 337 403 "test_revfuncs.mlt" 14 337 413
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 14 337 414 "test_revfuncs.mlt" 14 337 420
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 11 255 261 "test_revfuncs.mlt" 11 255 267
+)
+"test_revfuncs.mlt" 14 337 402 "test_revfuncs.mlt" 14 337 421
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 14 337 349 "test_revfuncs.mlt" 14 337 421
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 15 425 428 "test_revfuncs.mlt" 15 425 431
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 15 425 435 "test_revfuncs.mlt" 15 425 441
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 11 255 261 "test_revfuncs.mlt" 11 255 267
+)
+"test_revfuncs.mlt" 15 425 442 "test_revfuncs.mlt" 15 425 443
+type(
+  int array -> int array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 15 425 444 "test_revfuncs.mlt" 15 425 450
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 13 306 312 "test_revfuncs.mlt" 13 306 318
+)
+"test_revfuncs.mlt" 15 425 432 "test_revfuncs.mlt" 15 425 452
+type(
+  bool
+)
+"test_revfuncs.mlt" 15 425 428 "test_revfuncs.mlt" 15 425 452
+type(
+  bool
+)
+"test_revfuncs.mlt" 15 425 458 "test_revfuncs.mlt" 15 425 463
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 15 425 474 "test_revfuncs.mlt" 15 425 495
+type(
+  string
+)
+"test_revfuncs.mlt" 15 425 496 "test_revfuncs.mlt" 15 425 499
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 14 337 343 "test_revfuncs.mlt" 14 337 346
+)
+"test_revfuncs.mlt" 15 425 500 "test_revfuncs.mlt" 15 425 775
+type(
+  string
+)
+"test_revfuncs.mlt" 15 425 464 "test_revfuncs.mlt" 15 425 777
+type(
+  exn
+)
+"test_revfuncs.mlt" 15 425 458 "test_revfuncs.mlt" 15 425 777
+type(
+  unit
+)
+"test_revfuncs.mlt" 15 425 783 "test_revfuncs.mlt" 15 425 785
+type(
+  unit
+)
+"test_revfuncs.mlt" 15 425 425 "test_revfuncs.mlt" 15 425 785
+type(
+  unit
+)
+"test_revfuncs.mlt" 19 866 872 "test_revfuncs.mlt" 19 866 878
+type(
+  string array
+)
+ident(
+  def actual "test_revfuncs.mlt" 20 912 914 "test_revfuncs.mlt" 23 1066 1477
+)
+"test_revfuncs.mlt" 19 866 883 "test_revfuncs.mlt" 19 866 886
+type(
+  string
+)
+"test_revfuncs.mlt" 19 866 888 "test_revfuncs.mlt" 19 866 891
+type(
+  string
+)
+"test_revfuncs.mlt" 19 866 893 "test_revfuncs.mlt" 19 866 896
+type(
+  string
+)
+"test_revfuncs.mlt" 19 866 898 "test_revfuncs.mlt" 19 866 901
+type(
+  string
+)
+"test_revfuncs.mlt" 19 866 903 "test_revfuncs.mlt" 19 866 906
+type(
+  string
+)
+"test_revfuncs.mlt" 19 866 881 "test_revfuncs.mlt" 19 866 908
+type(
+  string array
+)
+"test_revfuncs.mlt" 20 912 914 "test_revfuncs.mlt" 20 912 923
+type(
+  string array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 20 912 924 "test_revfuncs.mlt" 20 912 930
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 19 866 872 "test_revfuncs.mlt" 19 866 878
+)
+"test_revfuncs.mlt" 20 912 914 "test_revfuncs.mlt" 20 912 930
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 21 932 938 "test_revfuncs.mlt" 21 932 944
+type(
+  string array
+)
+ident(
+  def expect "test_revfuncs.mlt" 22 978 980 "test_revfuncs.mlt" 23 1066 1477
+)
+"test_revfuncs.mlt" 21 932 949 "test_revfuncs.mlt" 21 932 952
+type(
+  string
+)
+"test_revfuncs.mlt" 21 932 954 "test_revfuncs.mlt" 21 932 957
+type(
+  string
+)
+"test_revfuncs.mlt" 21 932 959 "test_revfuncs.mlt" 21 932 962
+type(
+  string
+)
+"test_revfuncs.mlt" 21 932 964 "test_revfuncs.mlt" 21 932 967
+type(
+  string
+)
+"test_revfuncs.mlt" 21 932 969 "test_revfuncs.mlt" 21 932 972
+type(
+  string
+)
+"test_revfuncs.mlt" 21 932 947 "test_revfuncs.mlt" 21 932 974
+type(
+  string array
+)
+"test_revfuncs.mlt" 22 978 984 "test_revfuncs.mlt" 22 978 987
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 23 1066 1066 "test_revfuncs.mlt" 23 1066 1476
+)
+"test_revfuncs.mlt" 22 978 990 "test_revfuncs.mlt" 22 978 997
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 22 978 998 "test_revfuncs.mlt" 22 978 1022
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 22 978 1024 "test_revfuncs.mlt" 22 978 1034
+type(
+  string array -> string
+)
+ident(
+  int_ref Mltest.strarr2str "mltest.ml" 55 1471 1475 "mltest.ml" 55 1471 1485
+)
+"test_revfuncs.mlt" 22 978 1035 "test_revfuncs.mlt" 22 978 1041
+type(
+  string array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 21 932 938 "test_revfuncs.mlt" 21 932 944
+)
+"test_revfuncs.mlt" 22 978 1023 "test_revfuncs.mlt" 22 978 1042
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 22 978 1044 "test_revfuncs.mlt" 22 978 1054
+type(
+  string array -> string
+)
+ident(
+  int_ref Mltest.strarr2str "mltest.ml" 55 1471 1475 "mltest.ml" 55 1471 1485
+)
+"test_revfuncs.mlt" 22 978 1055 "test_revfuncs.mlt" 22 978 1061
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 19 866 872 "test_revfuncs.mlt" 19 866 878
+)
+"test_revfuncs.mlt" 22 978 1043 "test_revfuncs.mlt" 22 978 1062
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 22 978 990 "test_revfuncs.mlt" 22 978 1062
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 23 1066 1069 "test_revfuncs.mlt" 23 1066 1072
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 23 1066 1076 "test_revfuncs.mlt" 23 1066 1082
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 19 866 872 "test_revfuncs.mlt" 19 866 878
+)
+"test_revfuncs.mlt" 23 1066 1083 "test_revfuncs.mlt" 23 1066 1084
+type(
+  string array -> string array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 23 1066 1085 "test_revfuncs.mlt" 23 1066 1091
+type(
+  string array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 21 932 938 "test_revfuncs.mlt" 21 932 944
+)
+"test_revfuncs.mlt" 23 1066 1073 "test_revfuncs.mlt" 23 1066 1093
+type(
+  bool
+)
+"test_revfuncs.mlt" 23 1066 1069 "test_revfuncs.mlt" 23 1066 1093
+type(
+  bool
+)
+"test_revfuncs.mlt" 23 1066 1099 "test_revfuncs.mlt" 23 1066 1104
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 23 1066 1115 "test_revfuncs.mlt" 23 1066 1136
+type(
+  string
+)
+"test_revfuncs.mlt" 23 1066 1137 "test_revfuncs.mlt" 23 1066 1140
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 22 978 984 "test_revfuncs.mlt" 22 978 987
+)
+"test_revfuncs.mlt" 23 1066 1141 "test_revfuncs.mlt" 23 1066 1466
+type(
+  string
+)
+"test_revfuncs.mlt" 23 1066 1105 "test_revfuncs.mlt" 23 1066 1468
+type(
+  exn
+)
+"test_revfuncs.mlt" 23 1066 1099 "test_revfuncs.mlt" 23 1066 1468
+type(
+  unit
+)
+"test_revfuncs.mlt" 23 1066 1474 "test_revfuncs.mlt" 23 1066 1476
+type(
+  unit
+)
+"test_revfuncs.mlt" 23 1066 1066 "test_revfuncs.mlt" 23 1066 1476
+type(
+  unit
+)
+"test_revfuncs.mlt" 22 978 980 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 21 932 934 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 20 912 914 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 19 866 868 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 15 425 425 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 14 337 339 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 13 306 308 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 12 286 288 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 11 255 257 "test_revfuncs.mlt" 23 1066 1477
+type(
+  unit
+)
+"test_revfuncs.mlt" 8 182 182 "test_revfuncs.mlt" 25 1495 1496
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 26 1498 1503 "test_revfuncs.mlt" 26 1498 1505
+type(
+  unit
+)
+"test_revfuncs.mlt" 29 1572 1578 "test_revfuncs.mlt" 29 1572 1584
+type(
+  int array
+)
+ident(
+  def actual "test_revfuncs.mlt" 30 1605 1607 "test_revfuncs.mlt" 41 2445 2927
+)
+"test_revfuncs.mlt" 29 1572 1589 "test_revfuncs.mlt" 29 1572 1590
+type(
+  int
+)
+"test_revfuncs.mlt" 29 1572 1592 "test_revfuncs.mlt" 29 1572 1593
+type(
+  int
+)
+"test_revfuncs.mlt" 29 1572 1595 "test_revfuncs.mlt" 29 1572 1596
+type(
+  int
+)
+"test_revfuncs.mlt" 29 1572 1598 "test_revfuncs.mlt" 29 1572 1599
+type(
+  int
+)
+"test_revfuncs.mlt" 29 1572 1587 "test_revfuncs.mlt" 29 1572 1601
+type(
+  int array
+)
+"test_revfuncs.mlt" 30 1605 1607 "test_revfuncs.mlt" 30 1605 1616
+type(
+  int array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 30 1605 1617 "test_revfuncs.mlt" 30 1605 1623
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 29 1572 1578 "test_revfuncs.mlt" 29 1572 1584
+)
+"test_revfuncs.mlt" 30 1605 1607 "test_revfuncs.mlt" 30 1605 1623
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 31 1625 1631 "test_revfuncs.mlt" 31 1625 1637
+type(
+  int array
+)
+ident(
+  def expect "test_revfuncs.mlt" 32 1659 1661 "test_revfuncs.mlt" 41 2445 2927
+)
+"test_revfuncs.mlt" 31 1625 1642 "test_revfuncs.mlt" 31 1625 1643
+type(
+  int
+)
+"test_revfuncs.mlt" 31 1625 1645 "test_revfuncs.mlt" 31 1625 1646
+type(
+  int
+)
+"test_revfuncs.mlt" 31 1625 1648 "test_revfuncs.mlt" 31 1625 1649
+type(
+  int
+)
+"test_revfuncs.mlt" 31 1625 1651 "test_revfuncs.mlt" 31 1625 1652
+type(
+  int
+)
+"test_revfuncs.mlt" 31 1625 1640 "test_revfuncs.mlt" 31 1625 1655
+type(
+  int array
+)
+"test_revfuncs.mlt" 32 1659 1665 "test_revfuncs.mlt" 32 1659 1668
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 33 1747 1747 "test_revfuncs.mlt" 41 2445 2927
+)
+"test_revfuncs.mlt" 32 1659 1671 "test_revfuncs.mlt" 32 1659 1678
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 32 1659 1679 "test_revfuncs.mlt" 32 1659 1703
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 32 1659 1705 "test_revfuncs.mlt" 32 1659 1715
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 32 1659 1716 "test_revfuncs.mlt" 32 1659 1722
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 31 1625 1631 "test_revfuncs.mlt" 31 1625 1637
+)
+"test_revfuncs.mlt" 32 1659 1704 "test_revfuncs.mlt" 32 1659 1723
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 32 1659 1725 "test_revfuncs.mlt" 32 1659 1735
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 32 1659 1736 "test_revfuncs.mlt" 32 1659 1742
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 29 1572 1578 "test_revfuncs.mlt" 29 1572 1584
+)
+"test_revfuncs.mlt" 32 1659 1724 "test_revfuncs.mlt" 32 1659 1743
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 32 1659 1671 "test_revfuncs.mlt" 32 1659 1743
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 33 1747 1750 "test_revfuncs.mlt" 33 1747 1753
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 33 1747 1757 "test_revfuncs.mlt" 33 1747 1763
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 29 1572 1578 "test_revfuncs.mlt" 29 1572 1584
+)
+"test_revfuncs.mlt" 33 1747 1764 "test_revfuncs.mlt" 33 1747 1765
+type(
+  int array -> int array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 33 1747 1766 "test_revfuncs.mlt" 33 1747 1772
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 31 1625 1631 "test_revfuncs.mlt" 31 1625 1637
+)
+"test_revfuncs.mlt" 33 1747 1754 "test_revfuncs.mlt" 33 1747 1774
+type(
+  bool
+)
+"test_revfuncs.mlt" 33 1747 1750 "test_revfuncs.mlt" 33 1747 1774
+type(
+  bool
+)
+"test_revfuncs.mlt" 33 1747 1780 "test_revfuncs.mlt" 33 1747 1785
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 33 1747 1796 "test_revfuncs.mlt" 33 1747 1817
+type(
+  string
+)
+"test_revfuncs.mlt" 33 1747 1818 "test_revfuncs.mlt" 33 1747 1821
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 32 1659 1665 "test_revfuncs.mlt" 32 1659 1668
+)
+"test_revfuncs.mlt" 33 1747 1822 "test_revfuncs.mlt" 33 1747 2103
+type(
+  string
+)
+"test_revfuncs.mlt" 33 1747 1786 "test_revfuncs.mlt" 33 1747 2105
+type(
+  exn
+)
+"test_revfuncs.mlt" 33 1747 1780 "test_revfuncs.mlt" 33 1747 2105
+type(
+  unit
+)
+"test_revfuncs.mlt" 33 1747 2111 "test_revfuncs.mlt" 33 1747 2113
+type(
+  unit
+)
+"test_revfuncs.mlt" 33 1747 1747 "test_revfuncs.mlt" 33 1747 2113
+type(
+  unit
+)
+"test_revfuncs.mlt" 37 2195 2201 "test_revfuncs.mlt" 37 2195 2207
+type(
+  string array
+)
+ident(
+  def actual "test_revfuncs.mlt" 38 2266 2268 "test_revfuncs.mlt" 41 2445 2927
+)
+"test_revfuncs.mlt" 37 2195 2212 "test_revfuncs.mlt" 37 2195 2215
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2217 "test_revfuncs.mlt" 37 2195 2220
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2222 "test_revfuncs.mlt" 37 2195 2225
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2227 "test_revfuncs.mlt" 37 2195 2230
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2232 "test_revfuncs.mlt" 37 2195 2235
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2237 "test_revfuncs.mlt" 37 2195 2240
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2242 "test_revfuncs.mlt" 37 2195 2245
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2247 "test_revfuncs.mlt" 37 2195 2250
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2252 "test_revfuncs.mlt" 37 2195 2255
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2257 "test_revfuncs.mlt" 37 2195 2260
+type(
+  string
+)
+"test_revfuncs.mlt" 37 2195 2210 "test_revfuncs.mlt" 37 2195 2262
+type(
+  string array
+)
+"test_revfuncs.mlt" 38 2266 2268 "test_revfuncs.mlt" 38 2266 2277
+type(
+  string array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 38 2266 2278 "test_revfuncs.mlt" 38 2266 2284
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 37 2195 2201 "test_revfuncs.mlt" 37 2195 2207
+)
+"test_revfuncs.mlt" 38 2266 2268 "test_revfuncs.mlt" 38 2266 2284
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 39 2286 2292 "test_revfuncs.mlt" 39 2286 2298
+type(
+  string array
+)
+ident(
+  def expect "test_revfuncs.mlt" 40 2357 2359 "test_revfuncs.mlt" 41 2445 2927
+)
+"test_revfuncs.mlt" 39 2286 2303 "test_revfuncs.mlt" 39 2286 2306
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2308 "test_revfuncs.mlt" 39 2286 2311
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2313 "test_revfuncs.mlt" 39 2286 2316
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2318 "test_revfuncs.mlt" 39 2286 2321
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2323 "test_revfuncs.mlt" 39 2286 2326
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2328 "test_revfuncs.mlt" 39 2286 2331
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2333 "test_revfuncs.mlt" 39 2286 2336
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2338 "test_revfuncs.mlt" 39 2286 2341
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2343 "test_revfuncs.mlt" 39 2286 2346
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2348 "test_revfuncs.mlt" 39 2286 2351
+type(
+  string
+)
+"test_revfuncs.mlt" 39 2286 2301 "test_revfuncs.mlt" 39 2286 2353
+type(
+  string array
+)
+"test_revfuncs.mlt" 40 2357 2363 "test_revfuncs.mlt" 40 2357 2366
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 41 2445 2445 "test_revfuncs.mlt" 41 2445 2926
+)
+"test_revfuncs.mlt" 40 2357 2369 "test_revfuncs.mlt" 40 2357 2376
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 40 2357 2377 "test_revfuncs.mlt" 40 2357 2401
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 40 2357 2403 "test_revfuncs.mlt" 40 2357 2413
+type(
+  string array -> string
+)
+ident(
+  int_ref Mltest.strarr2str "mltest.ml" 55 1471 1475 "mltest.ml" 55 1471 1485
+)
+"test_revfuncs.mlt" 40 2357 2414 "test_revfuncs.mlt" 40 2357 2420
+type(
+  string array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 39 2286 2292 "test_revfuncs.mlt" 39 2286 2298
+)
+"test_revfuncs.mlt" 40 2357 2402 "test_revfuncs.mlt" 40 2357 2421
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 40 2357 2423 "test_revfuncs.mlt" 40 2357 2433
+type(
+  string array -> string
+)
+ident(
+  int_ref Mltest.strarr2str "mltest.ml" 55 1471 1475 "mltest.ml" 55 1471 1485
+)
+"test_revfuncs.mlt" 40 2357 2434 "test_revfuncs.mlt" 40 2357 2440
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 37 2195 2201 "test_revfuncs.mlt" 37 2195 2207
+)
+"test_revfuncs.mlt" 40 2357 2422 "test_revfuncs.mlt" 40 2357 2441
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 40 2357 2369 "test_revfuncs.mlt" 40 2357 2441
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 41 2445 2448 "test_revfuncs.mlt" 41 2445 2451
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 41 2445 2455 "test_revfuncs.mlt" 41 2445 2461
+type(
+  string array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 37 2195 2201 "test_revfuncs.mlt" 37 2195 2207
+)
+"test_revfuncs.mlt" 41 2445 2462 "test_revfuncs.mlt" 41 2445 2463
+type(
+  string array -> string array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 41 2445 2464 "test_revfuncs.mlt" 41 2445 2470
+type(
+  string array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 39 2286 2292 "test_revfuncs.mlt" 39 2286 2298
+)
+"test_revfuncs.mlt" 41 2445 2452 "test_revfuncs.mlt" 41 2445 2472
+type(
+  bool
+)
+"test_revfuncs.mlt" 41 2445 2448 "test_revfuncs.mlt" 41 2445 2472
+type(
+  bool
+)
+"test_revfuncs.mlt" 41 2445 2478 "test_revfuncs.mlt" 41 2445 2483
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 41 2445 2494 "test_revfuncs.mlt" 41 2445 2515
+type(
+  string
+)
+"test_revfuncs.mlt" 41 2445 2516 "test_revfuncs.mlt" 41 2445 2519
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 40 2357 2363 "test_revfuncs.mlt" 40 2357 2366
+)
+"test_revfuncs.mlt" 41 2445 2520 "test_revfuncs.mlt" 41 2445 2916
+type(
+  string
+)
+"test_revfuncs.mlt" 41 2445 2484 "test_revfuncs.mlt" 41 2445 2918
+type(
+  exn
+)
+"test_revfuncs.mlt" 41 2445 2478 "test_revfuncs.mlt" 41 2445 2918
+type(
+  unit
+)
+"test_revfuncs.mlt" 41 2445 2924 "test_revfuncs.mlt" 41 2445 2926
+type(
+  unit
+)
+"test_revfuncs.mlt" 41 2445 2445 "test_revfuncs.mlt" 41 2445 2926
+type(
+  unit
+)
+"test_revfuncs.mlt" 40 2357 2359 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 39 2286 2288 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 38 2266 2268 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 37 2195 2197 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 33 1747 1747 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 32 1659 1661 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 31 1625 1627 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 30 1605 1607 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 29 1572 1574 "test_revfuncs.mlt" 41 2445 2927
+type(
+  unit
+)
+"test_revfuncs.mlt" 26 1498 1498 "test_revfuncs.mlt" 43 2945 2946
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 44 2948 2953 "test_revfuncs.mlt" 44 2948 2955
+type(
+  unit
+)
+"test_revfuncs.mlt" 47 3009 3015 "test_revfuncs.mlt" 47 3009 3021
+type(
+  'a array
+)
+ident(
+  def actual "test_revfuncs.mlt" 48 3032 3034 "test_revfuncs.mlt" 51 3163 3496
+)
+"test_revfuncs.mlt" 47 3009 3024 "test_revfuncs.mlt" 47 3009 3028
+type(
+  'a array
+)
+"test_revfuncs.mlt" 48 3032 3034 "test_revfuncs.mlt" 48 3032 3043
+type(
+  '_weak1 array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 48 3032 3044 "test_revfuncs.mlt" 48 3032 3050
+type(
+  '_weak1 array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 47 3009 3015 "test_revfuncs.mlt" 47 3009 3021
+)
+"test_revfuncs.mlt" 48 3032 3034 "test_revfuncs.mlt" 48 3032 3050
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 49 3052 3058 "test_revfuncs.mlt" 49 3052 3064
+type(
+  'b array
+)
+ident(
+  def expect "test_revfuncs.mlt" 50 3075 3077 "test_revfuncs.mlt" 51 3163 3496
+)
+"test_revfuncs.mlt" 49 3052 3067 "test_revfuncs.mlt" 49 3052 3071
+type(
+  'b array
+)
+"test_revfuncs.mlt" 50 3075 3081 "test_revfuncs.mlt" 50 3075 3084
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 51 3163 3163 "test_revfuncs.mlt" 51 3163 3495
+)
+"test_revfuncs.mlt" 50 3075 3087 "test_revfuncs.mlt" 50 3075 3094
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 50 3075 3095 "test_revfuncs.mlt" 50 3075 3119
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 50 3075 3121 "test_revfuncs.mlt" 50 3075 3131
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 50 3075 3132 "test_revfuncs.mlt" 50 3075 3138
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 49 3052 3058 "test_revfuncs.mlt" 49 3052 3064
+)
+"test_revfuncs.mlt" 50 3075 3120 "test_revfuncs.mlt" 50 3075 3139
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 50 3075 3141 "test_revfuncs.mlt" 50 3075 3151
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 50 3075 3152 "test_revfuncs.mlt" 50 3075 3158
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 47 3009 3015 "test_revfuncs.mlt" 47 3009 3021
+)
+"test_revfuncs.mlt" 50 3075 3140 "test_revfuncs.mlt" 50 3075 3159
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 50 3075 3087 "test_revfuncs.mlt" 50 3075 3159
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 51 3163 3166 "test_revfuncs.mlt" 51 3163 3169
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 51 3163 3173 "test_revfuncs.mlt" 51 3163 3179
+type(
+  '_weak2 array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 47 3009 3015 "test_revfuncs.mlt" 47 3009 3021
+)
+"test_revfuncs.mlt" 51 3163 3180 "test_revfuncs.mlt" 51 3163 3181
+type(
+  '_weak2 array -> '_weak2 array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 51 3163 3182 "test_revfuncs.mlt" 51 3163 3188
+type(
+  '_weak2 array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 49 3052 3058 "test_revfuncs.mlt" 49 3052 3064
+)
+"test_revfuncs.mlt" 51 3163 3170 "test_revfuncs.mlt" 51 3163 3190
+type(
+  bool
+)
+"test_revfuncs.mlt" 51 3163 3166 "test_revfuncs.mlt" 51 3163 3190
+type(
+  bool
+)
+"test_revfuncs.mlt" 51 3163 3196 "test_revfuncs.mlt" 51 3163 3201
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 51 3163 3212 "test_revfuncs.mlt" 51 3163 3233
+type(
+  string
+)
+"test_revfuncs.mlt" 51 3163 3234 "test_revfuncs.mlt" 51 3163 3237
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 50 3075 3081 "test_revfuncs.mlt" 50 3075 3084
+)
+"test_revfuncs.mlt" 51 3163 3238 "test_revfuncs.mlt" 51 3163 3485
+type(
+  string
+)
+"test_revfuncs.mlt" 51 3163 3202 "test_revfuncs.mlt" 51 3163 3487
+type(
+  exn
+)
+"test_revfuncs.mlt" 51 3163 3196 "test_revfuncs.mlt" 51 3163 3487
+type(
+  unit
+)
+"test_revfuncs.mlt" 51 3163 3493 "test_revfuncs.mlt" 51 3163 3495
+type(
+  unit
+)
+"test_revfuncs.mlt" 51 3163 3163 "test_revfuncs.mlt" 51 3163 3495
+type(
+  unit
+)
+"test_revfuncs.mlt" 50 3075 3077 "test_revfuncs.mlt" 51 3163 3496
+type(
+  unit
+)
+"test_revfuncs.mlt" 49 3052 3054 "test_revfuncs.mlt" 51 3163 3496
+type(
+  unit
+)
+"test_revfuncs.mlt" 48 3032 3034 "test_revfuncs.mlt" 51 3163 3496
+type(
+  unit
+)
+"test_revfuncs.mlt" 47 3009 3011 "test_revfuncs.mlt" 51 3163 3496
+type(
+  unit
+)
+"test_revfuncs.mlt" 44 2948 2948 "test_revfuncs.mlt" 53 3514 3515
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 54 3517 3522 "test_revfuncs.mlt" 54 3517 3524
+type(
+  unit
+)
+"test_revfuncs.mlt" 57 3581 3587 "test_revfuncs.mlt" 57 3581 3593
+type(
+  bool array
+)
+ident(
+  def actual "test_revfuncs.mlt" 58 3609 3611 "test_revfuncs.mlt" 61 3747 4095
+)
+"test_revfuncs.mlt" 57 3581 3598 "test_revfuncs.mlt" 57 3581 3603
+type(
+  bool
+)
+"test_revfuncs.mlt" 57 3581 3596 "test_revfuncs.mlt" 57 3581 3605
+type(
+  bool array
+)
+"test_revfuncs.mlt" 58 3609 3611 "test_revfuncs.mlt" 58 3609 3620
+type(
+  bool array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 58 3609 3621 "test_revfuncs.mlt" 58 3609 3627
+type(
+  bool array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 57 3581 3587 "test_revfuncs.mlt" 57 3581 3593
+)
+"test_revfuncs.mlt" 58 3609 3611 "test_revfuncs.mlt" 58 3609 3627
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 59 3629 3635 "test_revfuncs.mlt" 59 3629 3641
+type(
+  bool array
+)
+ident(
+  def expect "test_revfuncs.mlt" 60 3657 3659 "test_revfuncs.mlt" 61 3747 4095
+)
+"test_revfuncs.mlt" 59 3629 3646 "test_revfuncs.mlt" 59 3629 3651
+type(
+  bool
+)
+"test_revfuncs.mlt" 59 3629 3644 "test_revfuncs.mlt" 59 3629 3653
+type(
+  bool array
+)
+"test_revfuncs.mlt" 60 3657 3663 "test_revfuncs.mlt" 60 3657 3666
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 61 3747 3747 "test_revfuncs.mlt" 61 3747 4094
+)
+"test_revfuncs.mlt" 60 3657 3669 "test_revfuncs.mlt" 60 3657 3676
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 60 3657 3677 "test_revfuncs.mlt" 60 3657 3701
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 60 3657 3703 "test_revfuncs.mlt" 60 3657 3714
+type(
+  bool array -> string
+)
+ident(
+  int_ref Mltest.boolarr2str "mltest.ml" 58 1594 1598 "mltest.ml" 58 1594 1609
+)
+"test_revfuncs.mlt" 60 3657 3715 "test_revfuncs.mlt" 60 3657 3721
+type(
+  bool array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 59 3629 3635 "test_revfuncs.mlt" 59 3629 3641
+)
+"test_revfuncs.mlt" 60 3657 3702 "test_revfuncs.mlt" 60 3657 3722
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 60 3657 3724 "test_revfuncs.mlt" 60 3657 3735
+type(
+  bool array -> string
+)
+ident(
+  int_ref Mltest.boolarr2str "mltest.ml" 58 1594 1598 "mltest.ml" 58 1594 1609
+)
+"test_revfuncs.mlt" 60 3657 3736 "test_revfuncs.mlt" 60 3657 3742
+type(
+  bool array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 57 3581 3587 "test_revfuncs.mlt" 57 3581 3593
+)
+"test_revfuncs.mlt" 60 3657 3723 "test_revfuncs.mlt" 60 3657 3743
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 60 3657 3669 "test_revfuncs.mlt" 60 3657 3743
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 61 3747 3750 "test_revfuncs.mlt" 61 3747 3753
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 61 3747 3757 "test_revfuncs.mlt" 61 3747 3763
+type(
+  bool array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 57 3581 3587 "test_revfuncs.mlt" 57 3581 3593
+)
+"test_revfuncs.mlt" 61 3747 3764 "test_revfuncs.mlt" 61 3747 3765
+type(
+  bool array -> bool array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 61 3747 3766 "test_revfuncs.mlt" 61 3747 3772
+type(
+  bool array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 59 3629 3635 "test_revfuncs.mlt" 59 3629 3641
+)
+"test_revfuncs.mlt" 61 3747 3754 "test_revfuncs.mlt" 61 3747 3774
+type(
+  bool
+)
+"test_revfuncs.mlt" 61 3747 3750 "test_revfuncs.mlt" 61 3747 3774
+type(
+  bool
+)
+"test_revfuncs.mlt" 61 3747 3780 "test_revfuncs.mlt" 61 3747 3785
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 61 3747 3796 "test_revfuncs.mlt" 61 3747 3817
+type(
+  string
+)
+"test_revfuncs.mlt" 61 3747 3818 "test_revfuncs.mlt" 61 3747 3821
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 60 3657 3663 "test_revfuncs.mlt" 60 3657 3666
+)
+"test_revfuncs.mlt" 61 3747 3822 "test_revfuncs.mlt" 61 3747 4084
+type(
+  string
+)
+"test_revfuncs.mlt" 61 3747 3786 "test_revfuncs.mlt" 61 3747 4086
+type(
+  exn
+)
+"test_revfuncs.mlt" 61 3747 3780 "test_revfuncs.mlt" 61 3747 4086
+type(
+  unit
+)
+"test_revfuncs.mlt" 61 3747 4092 "test_revfuncs.mlt" 61 3747 4094
+type(
+  unit
+)
+"test_revfuncs.mlt" 61 3747 3747 "test_revfuncs.mlt" 61 3747 4094
+type(
+  unit
+)
+"test_revfuncs.mlt" 60 3657 3659 "test_revfuncs.mlt" 61 3747 4095
+type(
+  unit
+)
+"test_revfuncs.mlt" 59 3629 3631 "test_revfuncs.mlt" 61 3747 4095
+type(
+  unit
+)
+"test_revfuncs.mlt" 58 3609 3611 "test_revfuncs.mlt" 61 3747 4095
+type(
+  unit
+)
+"test_revfuncs.mlt" 57 3581 3583 "test_revfuncs.mlt" 61 3747 4095
+type(
+  unit
+)
+"test_revfuncs.mlt" 54 3517 3517 "test_revfuncs.mlt" 63 4113 4114
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 64 4116 4121 "test_revfuncs.mlt" 64 4116 4123
+type(
+  unit
+)
+"test_revfuncs.mlt" 67 4176 4182 "test_revfuncs.mlt" 67 4176 4188
+type(
+  int array
+)
+ident(
+  def actual "test_revfuncs.mlt" 68 4590 4592 "test_revfuncs.mlt" 71 5111 6224
+)
+"test_revfuncs.mlt" 67 4176 4193 "test_revfuncs.mlt" 67 4176 4195
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4197 "test_revfuncs.mlt" 67 4176 4199
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4201 "test_revfuncs.mlt" 67 4176 4203
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4205 "test_revfuncs.mlt" 67 4176 4207
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4209 "test_revfuncs.mlt" 67 4176 4211
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4213 "test_revfuncs.mlt" 67 4176 4215
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4217 "test_revfuncs.mlt" 67 4176 4219
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4221 "test_revfuncs.mlt" 67 4176 4223
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4225 "test_revfuncs.mlt" 67 4176 4227
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4229 "test_revfuncs.mlt" 67 4176 4231
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4233 "test_revfuncs.mlt" 67 4176 4234
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4236 "test_revfuncs.mlt" 67 4176 4238
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4240 "test_revfuncs.mlt" 67 4176 4242
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4244 "test_revfuncs.mlt" 67 4176 4246
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4248 "test_revfuncs.mlt" 67 4176 4250
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4252 "test_revfuncs.mlt" 67 4176 4254
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4256 "test_revfuncs.mlt" 67 4176 4257
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4259 "test_revfuncs.mlt" 67 4176 4261
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4263 "test_revfuncs.mlt" 67 4176 4264
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4266 "test_revfuncs.mlt" 67 4176 4269
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4271 "test_revfuncs.mlt" 67 4176 4273
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4275 "test_revfuncs.mlt" 67 4176 4276
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4278 "test_revfuncs.mlt" 67 4176 4280
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4282 "test_revfuncs.mlt" 67 4176 4284
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4286 "test_revfuncs.mlt" 67 4176 4288
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4290 "test_revfuncs.mlt" 67 4176 4292
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4294 "test_revfuncs.mlt" 67 4176 4296
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4298 "test_revfuncs.mlt" 67 4176 4300
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4302 "test_revfuncs.mlt" 67 4176 4304
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4306 "test_revfuncs.mlt" 67 4176 4308
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4310 "test_revfuncs.mlt" 67 4176 4312
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4314 "test_revfuncs.mlt" 67 4176 4316
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4318 "test_revfuncs.mlt" 67 4176 4320
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4322 "test_revfuncs.mlt" 67 4176 4324
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4326 "test_revfuncs.mlt" 67 4176 4328
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4330 "test_revfuncs.mlt" 67 4176 4332
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4334 "test_revfuncs.mlt" 67 4176 4336
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4338 "test_revfuncs.mlt" 67 4176 4340
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4342 "test_revfuncs.mlt" 67 4176 4344
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4346 "test_revfuncs.mlt" 67 4176 4348
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4350 "test_revfuncs.mlt" 67 4176 4352
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4354 "test_revfuncs.mlt" 67 4176 4356
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4358 "test_revfuncs.mlt" 67 4176 4360
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4362 "test_revfuncs.mlt" 67 4176 4364
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4366 "test_revfuncs.mlt" 67 4176 4368
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4370 "test_revfuncs.mlt" 67 4176 4372
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4374 "test_revfuncs.mlt" 67 4176 4376
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4378 "test_revfuncs.mlt" 67 4176 4380
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4382 "test_revfuncs.mlt" 67 4176 4384
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4386 "test_revfuncs.mlt" 67 4176 4388
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4390 "test_revfuncs.mlt" 67 4176 4392
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4394 "test_revfuncs.mlt" 67 4176 4396
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4398 "test_revfuncs.mlt" 67 4176 4400
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4402 "test_revfuncs.mlt" 67 4176 4404
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4406 "test_revfuncs.mlt" 67 4176 4408
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4410 "test_revfuncs.mlt" 67 4176 4412
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4414 "test_revfuncs.mlt" 67 4176 4416
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4418 "test_revfuncs.mlt" 67 4176 4420
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4422 "test_revfuncs.mlt" 67 4176 4424
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4426 "test_revfuncs.mlt" 67 4176 4428
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4430 "test_revfuncs.mlt" 67 4176 4432
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4434 "test_revfuncs.mlt" 67 4176 4436
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4438 "test_revfuncs.mlt" 67 4176 4440
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4442 "test_revfuncs.mlt" 67 4176 4444
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4446 "test_revfuncs.mlt" 67 4176 4448
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4450 "test_revfuncs.mlt" 67 4176 4452
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4454 "test_revfuncs.mlt" 67 4176 4456
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4458 "test_revfuncs.mlt" 67 4176 4460
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4462 "test_revfuncs.mlt" 67 4176 4464
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4466 "test_revfuncs.mlt" 67 4176 4468
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4470 "test_revfuncs.mlt" 67 4176 4472
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4474 "test_revfuncs.mlt" 67 4176 4476
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4478 "test_revfuncs.mlt" 67 4176 4480
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4482 "test_revfuncs.mlt" 67 4176 4484
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4486 "test_revfuncs.mlt" 67 4176 4488
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4490 "test_revfuncs.mlt" 67 4176 4491
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4493 "test_revfuncs.mlt" 67 4176 4495
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4497 "test_revfuncs.mlt" 67 4176 4499
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4501 "test_revfuncs.mlt" 67 4176 4503
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4505 "test_revfuncs.mlt" 67 4176 4507
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4509 "test_revfuncs.mlt" 67 4176 4511
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4513 "test_revfuncs.mlt" 67 4176 4515
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4517 "test_revfuncs.mlt" 67 4176 4519
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4521 "test_revfuncs.mlt" 67 4176 4522
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4524 "test_revfuncs.mlt" 67 4176 4526
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4528 "test_revfuncs.mlt" 67 4176 4530
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4532 "test_revfuncs.mlt" 67 4176 4534
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4536 "test_revfuncs.mlt" 67 4176 4537
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4539 "test_revfuncs.mlt" 67 4176 4541
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4543 "test_revfuncs.mlt" 67 4176 4545
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4547 "test_revfuncs.mlt" 67 4176 4549
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4551 "test_revfuncs.mlt" 67 4176 4553
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4555 "test_revfuncs.mlt" 67 4176 4557
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4559 "test_revfuncs.mlt" 67 4176 4561
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4563 "test_revfuncs.mlt" 67 4176 4565
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4567 "test_revfuncs.mlt" 67 4176 4568
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4570 "test_revfuncs.mlt" 67 4176 4572
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4574 "test_revfuncs.mlt" 67 4176 4576
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4578 "test_revfuncs.mlt" 67 4176 4579
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4581 "test_revfuncs.mlt" 67 4176 4583
+type(
+  int
+)
+"test_revfuncs.mlt" 67 4176 4191 "test_revfuncs.mlt" 67 4176 4586
+type(
+  int array
+)
+"test_revfuncs.mlt" 68 4590 4592 "test_revfuncs.mlt" 68 4590 4601
+type(
+  int array -> unit
+)
+ident(
+  int_ref Revfuncs.array_rev "revfuncs.ml" 1 0 4 "revfuncs.ml" 1 0 13
+)
+"test_revfuncs.mlt" 68 4590 4602 "test_revfuncs.mlt" 68 4590 4608
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 67 4176 4182 "test_revfuncs.mlt" 67 4176 4188
+)
+"test_revfuncs.mlt" 68 4590 4592 "test_revfuncs.mlt" 68 4590 4608
+call(
+  stack
+)
+type(
+  unit
+)
+"test_revfuncs.mlt" 69 4610 4616 "test_revfuncs.mlt" 69 4610 4622
+type(
+  int array
+)
+ident(
+  def expect "test_revfuncs.mlt" 70 5023 5025 "test_revfuncs.mlt" 71 5111 6224
+)
+"test_revfuncs.mlt" 69 4610 4627 "test_revfuncs.mlt" 69 4610 4629
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4631 "test_revfuncs.mlt" 69 4610 4632
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4634 "test_revfuncs.mlt" 69 4610 4636
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4638 "test_revfuncs.mlt" 69 4610 4640
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4642 "test_revfuncs.mlt" 69 4610 4643
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4645 "test_revfuncs.mlt" 69 4610 4647
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4649 "test_revfuncs.mlt" 69 4610 4651
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4653 "test_revfuncs.mlt" 69 4610 4655
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4657 "test_revfuncs.mlt" 69 4610 4659
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4661 "test_revfuncs.mlt" 69 4610 4663
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4665 "test_revfuncs.mlt" 69 4610 4667
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4669 "test_revfuncs.mlt" 69 4610 4671
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4673 "test_revfuncs.mlt" 69 4610 4674
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4676 "test_revfuncs.mlt" 69 4610 4678
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4680 "test_revfuncs.mlt" 69 4610 4682
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4684 "test_revfuncs.mlt" 69 4610 4686
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4688 "test_revfuncs.mlt" 69 4610 4689
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4691 "test_revfuncs.mlt" 69 4610 4693
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4695 "test_revfuncs.mlt" 69 4610 4697
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4699 "test_revfuncs.mlt" 69 4610 4701
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4703 "test_revfuncs.mlt" 69 4610 4705
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4707 "test_revfuncs.mlt" 69 4610 4709
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4711 "test_revfuncs.mlt" 69 4610 4713
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4715 "test_revfuncs.mlt" 69 4610 4717
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4719 "test_revfuncs.mlt" 69 4610 4720
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4722 "test_revfuncs.mlt" 69 4610 4724
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4726 "test_revfuncs.mlt" 69 4610 4728
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4730 "test_revfuncs.mlt" 69 4610 4732
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4734 "test_revfuncs.mlt" 69 4610 4736
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4738 "test_revfuncs.mlt" 69 4610 4740
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4742 "test_revfuncs.mlt" 69 4610 4744
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4746 "test_revfuncs.mlt" 69 4610 4748
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4750 "test_revfuncs.mlt" 69 4610 4752
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4754 "test_revfuncs.mlt" 69 4610 4756
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4758 "test_revfuncs.mlt" 69 4610 4760
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4762 "test_revfuncs.mlt" 69 4610 4764
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4766 "test_revfuncs.mlt" 69 4610 4768
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4770 "test_revfuncs.mlt" 69 4610 4772
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4774 "test_revfuncs.mlt" 69 4610 4776
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4778 "test_revfuncs.mlt" 69 4610 4780
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4782 "test_revfuncs.mlt" 69 4610 4784
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4786 "test_revfuncs.mlt" 69 4610 4788
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4790 "test_revfuncs.mlt" 69 4610 4792
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4794 "test_revfuncs.mlt" 69 4610 4796
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4798 "test_revfuncs.mlt" 69 4610 4800
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4802 "test_revfuncs.mlt" 69 4610 4804
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4806 "test_revfuncs.mlt" 69 4610 4808
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4810 "test_revfuncs.mlt" 69 4610 4812
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4814 "test_revfuncs.mlt" 69 4610 4816
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4818 "test_revfuncs.mlt" 69 4610 4820
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4822 "test_revfuncs.mlt" 69 4610 4824
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4826 "test_revfuncs.mlt" 69 4610 4828
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4830 "test_revfuncs.mlt" 69 4610 4832
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4834 "test_revfuncs.mlt" 69 4610 4836
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4838 "test_revfuncs.mlt" 69 4610 4840
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4842 "test_revfuncs.mlt" 69 4610 4844
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4846 "test_revfuncs.mlt" 69 4610 4848
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4850 "test_revfuncs.mlt" 69 4610 4852
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4854 "test_revfuncs.mlt" 69 4610 4856
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4858 "test_revfuncs.mlt" 69 4610 4860
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4862 "test_revfuncs.mlt" 69 4610 4864
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4866 "test_revfuncs.mlt" 69 4610 4868
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4870 "test_revfuncs.mlt" 69 4610 4872
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4874 "test_revfuncs.mlt" 69 4610 4876
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4878 "test_revfuncs.mlt" 69 4610 4880
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4882 "test_revfuncs.mlt" 69 4610 4884
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4886 "test_revfuncs.mlt" 69 4610 4888
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4890 "test_revfuncs.mlt" 69 4610 4892
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4894 "test_revfuncs.mlt" 69 4610 4896
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4898 "test_revfuncs.mlt" 69 4610 4900
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4902 "test_revfuncs.mlt" 69 4610 4904
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4906 "test_revfuncs.mlt" 69 4610 4908
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4910 "test_revfuncs.mlt" 69 4610 4912
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4914 "test_revfuncs.mlt" 69 4610 4916
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4918 "test_revfuncs.mlt" 69 4610 4920
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4922 "test_revfuncs.mlt" 69 4610 4924
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4926 "test_revfuncs.mlt" 69 4610 4928
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4930 "test_revfuncs.mlt" 69 4610 4932
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4934 "test_revfuncs.mlt" 69 4610 4935
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4937 "test_revfuncs.mlt" 69 4610 4939
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4941 "test_revfuncs.mlt" 69 4610 4944
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4946 "test_revfuncs.mlt" 69 4610 4947
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4949 "test_revfuncs.mlt" 69 4610 4951
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4953 "test_revfuncs.mlt" 69 4610 4954
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4956 "test_revfuncs.mlt" 69 4610 4958
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4960 "test_revfuncs.mlt" 69 4610 4962
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4964 "test_revfuncs.mlt" 69 4610 4966
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4968 "test_revfuncs.mlt" 69 4610 4970
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4972 "test_revfuncs.mlt" 69 4610 4974
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4976 "test_revfuncs.mlt" 69 4610 4977
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4979 "test_revfuncs.mlt" 69 4610 4981
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4983 "test_revfuncs.mlt" 69 4610 4985
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4987 "test_revfuncs.mlt" 69 4610 4989
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4991 "test_revfuncs.mlt" 69 4610 4993
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4995 "test_revfuncs.mlt" 69 4610 4997
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4999 "test_revfuncs.mlt" 69 4610 5001
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 5003 "test_revfuncs.mlt" 69 4610 5005
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 5007 "test_revfuncs.mlt" 69 4610 5009
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 5011 "test_revfuncs.mlt" 69 4610 5013
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 5015 "test_revfuncs.mlt" 69 4610 5017
+type(
+  int
+)
+"test_revfuncs.mlt" 69 4610 4625 "test_revfuncs.mlt" 69 4610 5019
+type(
+  int array
+)
+"test_revfuncs.mlt" 70 5023 5029 "test_revfuncs.mlt" 70 5023 5032
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 71 5111 5111 "test_revfuncs.mlt" 71 5111 6223
+)
+"test_revfuncs.mlt" 70 5023 5035 "test_revfuncs.mlt" 70 5023 5042
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 70 5023 5043 "test_revfuncs.mlt" 70 5023 5067
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 70 5023 5069 "test_revfuncs.mlt" 70 5023 5079
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 70 5023 5080 "test_revfuncs.mlt" 70 5023 5086
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 69 4610 4616 "test_revfuncs.mlt" 69 4610 4622
+)
+"test_revfuncs.mlt" 70 5023 5068 "test_revfuncs.mlt" 70 5023 5087
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 70 5023 5089 "test_revfuncs.mlt" 70 5023 5099
+type(
+  int array -> string
+)
+ident(
+  int_ref Mltest.intarr2str "mltest.ml" 56 1508 1512 "mltest.ml" 56 1508 1522
+)
+"test_revfuncs.mlt" 70 5023 5100 "test_revfuncs.mlt" 70 5023 5106
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 67 4176 4182 "test_revfuncs.mlt" 67 4176 4188
+)
+"test_revfuncs.mlt" 70 5023 5088 "test_revfuncs.mlt" 70 5023 5107
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 70 5023 5035 "test_revfuncs.mlt" 70 5023 5107
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 71 5111 5114 "test_revfuncs.mlt" 71 5111 5117
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 71 5111 5121 "test_revfuncs.mlt" 71 5111 5127
+type(
+  int array
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 67 4176 4182 "test_revfuncs.mlt" 67 4176 4188
+)
+"test_revfuncs.mlt" 71 5111 5128 "test_revfuncs.mlt" 71 5111 5129
+type(
+  int array -> int array -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 71 5111 5130 "test_revfuncs.mlt" 71 5111 5136
+type(
+  int array
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 69 4610 4616 "test_revfuncs.mlt" 69 4610 4622
+)
+"test_revfuncs.mlt" 71 5111 5118 "test_revfuncs.mlt" 71 5111 5138
+type(
+  bool
+)
+"test_revfuncs.mlt" 71 5111 5114 "test_revfuncs.mlt" 71 5111 5138
+type(
+  bool
+)
+"test_revfuncs.mlt" 71 5111 5144 "test_revfuncs.mlt" 71 5111 5149
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 71 5111 5160 "test_revfuncs.mlt" 71 5111 5181
+type(
+  string
+)
+"test_revfuncs.mlt" 71 5111 5182 "test_revfuncs.mlt" 71 5111 5185
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 70 5023 5029 "test_revfuncs.mlt" 70 5023 5032
+)
+"test_revfuncs.mlt" 71 5111 5186 "test_revfuncs.mlt" 71 5111 6213
+type(
+  string
+)
+"test_revfuncs.mlt" 71 5111 5150 "test_revfuncs.mlt" 71 5111 6215
+type(
+  exn
+)
+"test_revfuncs.mlt" 71 5111 5144 "test_revfuncs.mlt" 71 5111 6215
+type(
+  unit
+)
+"test_revfuncs.mlt" 71 5111 6221 "test_revfuncs.mlt" 71 5111 6223
+type(
+  unit
+)
+"test_revfuncs.mlt" 71 5111 5111 "test_revfuncs.mlt" 71 5111 6223
+type(
+  unit
+)
+"test_revfuncs.mlt" 70 5023 5025 "test_revfuncs.mlt" 71 5111 6224
+type(
+  unit
+)
+"test_revfuncs.mlt" 69 4610 4612 "test_revfuncs.mlt" 71 5111 6224
+type(
+  unit
+)
+"test_revfuncs.mlt" 68 4590 4592 "test_revfuncs.mlt" 71 5111 6224
+type(
+  unit
+)
+"test_revfuncs.mlt" 67 4176 4178 "test_revfuncs.mlt" 71 5111 6224
+type(
+  unit
+)
+"test_revfuncs.mlt" 64 4116 4116 "test_revfuncs.mlt" 73 6242 6243
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 77 6312 6317 "test_revfuncs.mlt" 77 6312 6319
+type(
+  unit
+)
+"test_revfuncs.mlt" 80 6383 6389 "test_revfuncs.mlt" 80 6383 6395
+type(
+  int list
+)
+ident(
+  def actual "test_revfuncs.mlt" 81 6421 6423 "test_revfuncs.mlt" 90 7147 7539
+)
+"test_revfuncs.mlt" 80 6383 6398 "test_revfuncs.mlt" 80 6383 6406
+type(
+  int list -> int list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 80 6383 6408 "test_revfuncs.mlt" 80 6383 6409
+type(
+  int
+)
+"test_revfuncs.mlt" 80 6383 6411 "test_revfuncs.mlt" 80 6383 6412
+type(
+  int
+)
+"test_revfuncs.mlt" 80 6383 6414 "test_revfuncs.mlt" 80 6383 6415
+type(
+  int
+)
+"test_revfuncs.mlt" 80 6383 6407 "test_revfuncs.mlt" 80 6383 6417
+type(
+  int list
+)
+"test_revfuncs.mlt" 80 6383 6398 "test_revfuncs.mlt" 80 6383 6417
+call(
+  stack
+)
+type(
+  int list
+)
+"test_revfuncs.mlt" 81 6421 6427 "test_revfuncs.mlt" 81 6421 6433
+type(
+  int list
+)
+ident(
+  def expect "test_revfuncs.mlt" 82 6450 6452 "test_revfuncs.mlt" 90 7147 7539
+)
+"test_revfuncs.mlt" 81 6421 6437 "test_revfuncs.mlt" 81 6421 6438
+type(
+  int
+)
+"test_revfuncs.mlt" 81 6421 6440 "test_revfuncs.mlt" 81 6421 6441
+type(
+  int
+)
+"test_revfuncs.mlt" 81 6421 6443 "test_revfuncs.mlt" 81 6421 6444
+type(
+  int
+)
+"test_revfuncs.mlt" 81 6421 6436 "test_revfuncs.mlt" 81 6421 6446
+type(
+  int list
+)
+"test_revfuncs.mlt" 82 6450 6456 "test_revfuncs.mlt" 82 6450 6459
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 83 6540 6540 "test_revfuncs.mlt" 90 7147 7539
+)
+"test_revfuncs.mlt" 82 6450 6462 "test_revfuncs.mlt" 82 6450 6469
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 82 6450 6470 "test_revfuncs.mlt" 82 6450 6494
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 82 6450 6496 "test_revfuncs.mlt" 82 6450 6507
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 82 6450 6508 "test_revfuncs.mlt" 82 6450 6514
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 81 6421 6427 "test_revfuncs.mlt" 81 6421 6433
+)
+"test_revfuncs.mlt" 82 6450 6495 "test_revfuncs.mlt" 82 6450 6515
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 82 6450 6517 "test_revfuncs.mlt" 82 6450 6528
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 82 6450 6529 "test_revfuncs.mlt" 82 6450 6535
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 80 6383 6389 "test_revfuncs.mlt" 80 6383 6395
+)
+"test_revfuncs.mlt" 82 6450 6516 "test_revfuncs.mlt" 82 6450 6536
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 82 6450 6462 "test_revfuncs.mlt" 82 6450 6536
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 83 6540 6543 "test_revfuncs.mlt" 83 6540 6546
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 83 6540 6550 "test_revfuncs.mlt" 83 6540 6556
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 80 6383 6389 "test_revfuncs.mlt" 80 6383 6395
+)
+"test_revfuncs.mlt" 83 6540 6557 "test_revfuncs.mlt" 83 6540 6558
+type(
+  int list -> int list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 83 6540 6559 "test_revfuncs.mlt" 83 6540 6565
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 81 6421 6427 "test_revfuncs.mlt" 81 6421 6433
+)
+"test_revfuncs.mlt" 83 6540 6547 "test_revfuncs.mlt" 83 6540 6567
+type(
+  bool
+)
+"test_revfuncs.mlt" 83 6540 6543 "test_revfuncs.mlt" 83 6540 6567
+type(
+  bool
+)
+"test_revfuncs.mlt" 83 6540 6573 "test_revfuncs.mlt" 83 6540 6578
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 83 6540 6589 "test_revfuncs.mlt" 83 6540 6610
+type(
+  string
+)
+"test_revfuncs.mlt" 83 6540 6611 "test_revfuncs.mlt" 83 6540 6614
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 82 6450 6456 "test_revfuncs.mlt" 82 6450 6459
+)
+"test_revfuncs.mlt" 83 6540 6615 "test_revfuncs.mlt" 83 6540 6871
+type(
+  string
+)
+"test_revfuncs.mlt" 83 6540 6579 "test_revfuncs.mlt" 83 6540 6873
+type(
+  exn
+)
+"test_revfuncs.mlt" 83 6540 6573 "test_revfuncs.mlt" 83 6540 6873
+type(
+  unit
+)
+"test_revfuncs.mlt" 83 6540 6879 "test_revfuncs.mlt" 83 6540 6881
+type(
+  unit
+)
+"test_revfuncs.mlt" 83 6540 6540 "test_revfuncs.mlt" 83 6540 6881
+type(
+  unit
+)
+"test_revfuncs.mlt" 87 6960 6966 "test_revfuncs.mlt" 87 6960 6972
+type(
+  string list
+)
+ident(
+  def actual "test_revfuncs.mlt" 88 7013 7015 "test_revfuncs.mlt" 90 7147 7539
+)
+"test_revfuncs.mlt" 87 6960 6975 "test_revfuncs.mlt" 87 6960 6983
+type(
+  string list -> string list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 87 6960 6985 "test_revfuncs.mlt" 87 6960 6988
+type(
+  string
+)
+"test_revfuncs.mlt" 87 6960 6990 "test_revfuncs.mlt" 87 6960 6993
+type(
+  string
+)
+"test_revfuncs.mlt" 87 6960 6995 "test_revfuncs.mlt" 87 6960 6998
+type(
+  string
+)
+"test_revfuncs.mlt" 87 6960 7000 "test_revfuncs.mlt" 87 6960 7003
+type(
+  string
+)
+"test_revfuncs.mlt" 87 6960 7005 "test_revfuncs.mlt" 87 6960 7008
+type(
+  string
+)
+"test_revfuncs.mlt" 87 6960 6984 "test_revfuncs.mlt" 87 6960 7009
+type(
+  string list
+)
+"test_revfuncs.mlt" 87 6960 6975 "test_revfuncs.mlt" 87 6960 7009
+call(
+  stack
+)
+type(
+  string list
+)
+"test_revfuncs.mlt" 88 7013 7019 "test_revfuncs.mlt" 88 7013 7025
+type(
+  string list
+)
+ident(
+  def expect "test_revfuncs.mlt" 89 7057 7059 "test_revfuncs.mlt" 90 7147 7539
+)
+"test_revfuncs.mlt" 88 7013 7029 "test_revfuncs.mlt" 88 7013 7032
+type(
+  string
+)
+"test_revfuncs.mlt" 88 7013 7034 "test_revfuncs.mlt" 88 7013 7037
+type(
+  string
+)
+"test_revfuncs.mlt" 88 7013 7039 "test_revfuncs.mlt" 88 7013 7042
+type(
+  string
+)
+"test_revfuncs.mlt" 88 7013 7044 "test_revfuncs.mlt" 88 7013 7047
+type(
+  string
+)
+"test_revfuncs.mlt" 88 7013 7049 "test_revfuncs.mlt" 88 7013 7052
+type(
+  string
+)
+"test_revfuncs.mlt" 88 7013 7028 "test_revfuncs.mlt" 88 7013 7053
+type(
+  string list
+)
+"test_revfuncs.mlt" 89 7057 7063 "test_revfuncs.mlt" 89 7057 7066
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 90 7147 7147 "test_revfuncs.mlt" 90 7147 7538
+)
+"test_revfuncs.mlt" 89 7057 7069 "test_revfuncs.mlt" 89 7057 7076
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 89 7057 7077 "test_revfuncs.mlt" 89 7057 7101
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 89 7057 7103 "test_revfuncs.mlt" 89 7057 7114
+type(
+  string list -> string
+)
+ident(
+  int_ref Mltest.strlist2str "mltest.ml" 33 848 852 "mltest.ml" 33 848 863
+)
+"test_revfuncs.mlt" 89 7057 7115 "test_revfuncs.mlt" 89 7057 7121
+type(
+  string list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 88 7013 7019 "test_revfuncs.mlt" 88 7013 7025
+)
+"test_revfuncs.mlt" 89 7057 7102 "test_revfuncs.mlt" 89 7057 7122
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 89 7057 7124 "test_revfuncs.mlt" 89 7057 7135
+type(
+  string list -> string
+)
+ident(
+  int_ref Mltest.strlist2str "mltest.ml" 33 848 852 "mltest.ml" 33 848 863
+)
+"test_revfuncs.mlt" 89 7057 7136 "test_revfuncs.mlt" 89 7057 7142
+type(
+  string list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 87 6960 6966 "test_revfuncs.mlt" 87 6960 6972
+)
+"test_revfuncs.mlt" 89 7057 7123 "test_revfuncs.mlt" 89 7057 7143
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 89 7057 7069 "test_revfuncs.mlt" 89 7057 7143
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 90 7147 7150 "test_revfuncs.mlt" 90 7147 7153
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 90 7147 7157 "test_revfuncs.mlt" 90 7147 7163
+type(
+  string list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 87 6960 6966 "test_revfuncs.mlt" 87 6960 6972
+)
+"test_revfuncs.mlt" 90 7147 7164 "test_revfuncs.mlt" 90 7147 7165
+type(
+  string list -> string list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 90 7147 7166 "test_revfuncs.mlt" 90 7147 7172
+type(
+  string list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 88 7013 7019 "test_revfuncs.mlt" 88 7013 7025
+)
+"test_revfuncs.mlt" 90 7147 7154 "test_revfuncs.mlt" 90 7147 7174
+type(
+  bool
+)
+"test_revfuncs.mlt" 90 7147 7150 "test_revfuncs.mlt" 90 7147 7174
+type(
+  bool
+)
+"test_revfuncs.mlt" 90 7147 7180 "test_revfuncs.mlt" 90 7147 7185
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 90 7147 7196 "test_revfuncs.mlt" 90 7147 7217
+type(
+  string
+)
+"test_revfuncs.mlt" 90 7147 7218 "test_revfuncs.mlt" 90 7147 7221
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 89 7057 7063 "test_revfuncs.mlt" 89 7057 7066
+)
+"test_revfuncs.mlt" 90 7147 7222 "test_revfuncs.mlt" 90 7147 7528
+type(
+  string
+)
+"test_revfuncs.mlt" 90 7147 7186 "test_revfuncs.mlt" 90 7147 7530
+type(
+  exn
+)
+"test_revfuncs.mlt" 90 7147 7180 "test_revfuncs.mlt" 90 7147 7530
+type(
+  unit
+)
+"test_revfuncs.mlt" 90 7147 7536 "test_revfuncs.mlt" 90 7147 7538
+type(
+  unit
+)
+"test_revfuncs.mlt" 90 7147 7147 "test_revfuncs.mlt" 90 7147 7538
+type(
+  unit
+)
+"test_revfuncs.mlt" 89 7057 7059 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 88 7013 7015 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 87 6960 6962 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 83 6540 6540 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 82 6450 6452 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 81 6421 6423 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 80 6383 6385 "test_revfuncs.mlt" 90 7147 7539
+type(
+  unit
+)
+"test_revfuncs.mlt" 77 6312 6312 "test_revfuncs.mlt" 92 7557 7558
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 93 7560 7565 "test_revfuncs.mlt" 93 7560 7567
+type(
+  unit
+)
+"test_revfuncs.mlt" 96 7632 7638 "test_revfuncs.mlt" 96 7632 7644
+type(
+  int list
+)
+ident(
+  def actual "test_revfuncs.mlt" 97 7672 7674 "test_revfuncs.mlt" 106 8458 8927
+)
+"test_revfuncs.mlt" 96 7632 7647 "test_revfuncs.mlt" 96 7632 7655
+type(
+  int list -> int list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 96 7632 7657 "test_revfuncs.mlt" 96 7632 7658
+type(
+  int
+)
+"test_revfuncs.mlt" 96 7632 7660 "test_revfuncs.mlt" 96 7632 7661
+type(
+  int
+)
+"test_revfuncs.mlt" 96 7632 7663 "test_revfuncs.mlt" 96 7632 7664
+type(
+  int
+)
+"test_revfuncs.mlt" 96 7632 7666 "test_revfuncs.mlt" 96 7632 7667
+type(
+  int
+)
+"test_revfuncs.mlt" 96 7632 7656 "test_revfuncs.mlt" 96 7632 7668
+type(
+  int list
+)
+"test_revfuncs.mlt" 96 7632 7647 "test_revfuncs.mlt" 96 7632 7668
+call(
+  stack
+)
+type(
+  int list
+)
+"test_revfuncs.mlt" 97 7672 7678 "test_revfuncs.mlt" 97 7672 7684
+type(
+  int list
+)
+ident(
+  def expect "test_revfuncs.mlt" 98 7704 7706 "test_revfuncs.mlt" 106 8458 8927
+)
+"test_revfuncs.mlt" 97 7672 7688 "test_revfuncs.mlt" 97 7672 7689
+type(
+  int
+)
+"test_revfuncs.mlt" 97 7672 7691 "test_revfuncs.mlt" 97 7672 7692
+type(
+  int
+)
+"test_revfuncs.mlt" 97 7672 7694 "test_revfuncs.mlt" 97 7672 7695
+type(
+  int
+)
+"test_revfuncs.mlt" 97 7672 7697 "test_revfuncs.mlt" 97 7672 7698
+type(
+  int
+)
+"test_revfuncs.mlt" 97 7672 7687 "test_revfuncs.mlt" 97 7672 7700
+type(
+  int list
+)
+"test_revfuncs.mlt" 98 7704 7710 "test_revfuncs.mlt" 98 7704 7713
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 99 7794 7794 "test_revfuncs.mlt" 106 8458 8927
+)
+"test_revfuncs.mlt" 98 7704 7716 "test_revfuncs.mlt" 98 7704 7723
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 98 7704 7724 "test_revfuncs.mlt" 98 7704 7748
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 98 7704 7750 "test_revfuncs.mlt" 98 7704 7761
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 98 7704 7762 "test_revfuncs.mlt" 98 7704 7768
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 97 7672 7678 "test_revfuncs.mlt" 97 7672 7684
+)
+"test_revfuncs.mlt" 98 7704 7749 "test_revfuncs.mlt" 98 7704 7769
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 98 7704 7771 "test_revfuncs.mlt" 98 7704 7782
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 98 7704 7783 "test_revfuncs.mlt" 98 7704 7789
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 96 7632 7638 "test_revfuncs.mlt" 96 7632 7644
+)
+"test_revfuncs.mlt" 98 7704 7770 "test_revfuncs.mlt" 98 7704 7790
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 98 7704 7716 "test_revfuncs.mlt" 98 7704 7790
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 99 7794 7797 "test_revfuncs.mlt" 99 7794 7800
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 99 7794 7804 "test_revfuncs.mlt" 99 7794 7810
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 96 7632 7638 "test_revfuncs.mlt" 96 7632 7644
+)
+"test_revfuncs.mlt" 99 7794 7811 "test_revfuncs.mlt" 99 7794 7812
+type(
+  int list -> int list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 99 7794 7813 "test_revfuncs.mlt" 99 7794 7819
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 97 7672 7678 "test_revfuncs.mlt" 97 7672 7684
+)
+"test_revfuncs.mlt" 99 7794 7801 "test_revfuncs.mlt" 99 7794 7821
+type(
+  bool
+)
+"test_revfuncs.mlt" 99 7794 7797 "test_revfuncs.mlt" 99 7794 7821
+type(
+  bool
+)
+"test_revfuncs.mlt" 99 7794 7827 "test_revfuncs.mlt" 99 7794 7832
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 99 7794 7843 "test_revfuncs.mlt" 99 7794 7864
+type(
+  string
+)
+"test_revfuncs.mlt" 99 7794 7865 "test_revfuncs.mlt" 99 7794 7868
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 98 7704 7710 "test_revfuncs.mlt" 98 7704 7713
+)
+"test_revfuncs.mlt" 99 7794 7869 "test_revfuncs.mlt" 99 7794 8131
+type(
+  string
+)
+"test_revfuncs.mlt" 99 7794 7833 "test_revfuncs.mlt" 99 7794 8133
+type(
+  exn
+)
+"test_revfuncs.mlt" 99 7794 7827 "test_revfuncs.mlt" 99 7794 8133
+type(
+  unit
+)
+"test_revfuncs.mlt" 99 7794 8139 "test_revfuncs.mlt" 99 7794 8141
+type(
+  unit
+)
+"test_revfuncs.mlt" 99 7794 7794 "test_revfuncs.mlt" 99 7794 8141
+type(
+  unit
+)
+"test_revfuncs.mlt" 103 8221 8227 "test_revfuncs.mlt" 103 8221 8233
+type(
+  string list
+)
+ident(
+  def actual "test_revfuncs.mlt" 104 8299 8301 "test_revfuncs.mlt" 106 8458 8927
+)
+"test_revfuncs.mlt" 103 8221 8236 "test_revfuncs.mlt" 103 8221 8244
+type(
+  string list -> string list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 103 8221 8246 "test_revfuncs.mlt" 103 8221 8249
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8251 "test_revfuncs.mlt" 103 8221 8254
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8256 "test_revfuncs.mlt" 103 8221 8259
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8261 "test_revfuncs.mlt" 103 8221 8264
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8266 "test_revfuncs.mlt" 103 8221 8269
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8271 "test_revfuncs.mlt" 103 8221 8274
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8276 "test_revfuncs.mlt" 103 8221 8279
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8281 "test_revfuncs.mlt" 103 8221 8284
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8286 "test_revfuncs.mlt" 103 8221 8289
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8291 "test_revfuncs.mlt" 103 8221 8294
+type(
+  string
+)
+"test_revfuncs.mlt" 103 8221 8245 "test_revfuncs.mlt" 103 8221 8295
+type(
+  string list
+)
+"test_revfuncs.mlt" 103 8221 8236 "test_revfuncs.mlt" 103 8221 8295
+call(
+  stack
+)
+type(
+  string list
+)
+"test_revfuncs.mlt" 104 8299 8305 "test_revfuncs.mlt" 104 8299 8311
+type(
+  string list
+)
+ident(
+  def expect "test_revfuncs.mlt" 105 8368 8370 "test_revfuncs.mlt" 106 8458 8927
+)
+"test_revfuncs.mlt" 104 8299 8315 "test_revfuncs.mlt" 104 8299 8318
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8320 "test_revfuncs.mlt" 104 8299 8323
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8325 "test_revfuncs.mlt" 104 8299 8328
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8330 "test_revfuncs.mlt" 104 8299 8333
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8335 "test_revfuncs.mlt" 104 8299 8338
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8340 "test_revfuncs.mlt" 104 8299 8343
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8345 "test_revfuncs.mlt" 104 8299 8348
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8350 "test_revfuncs.mlt" 104 8299 8353
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8355 "test_revfuncs.mlt" 104 8299 8358
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8360 "test_revfuncs.mlt" 104 8299 8363
+type(
+  string
+)
+"test_revfuncs.mlt" 104 8299 8314 "test_revfuncs.mlt" 104 8299 8364
+type(
+  string list
+)
+"test_revfuncs.mlt" 105 8368 8374 "test_revfuncs.mlt" 105 8368 8377
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 106 8458 8458 "test_revfuncs.mlt" 106 8458 8926
+)
+"test_revfuncs.mlt" 105 8368 8380 "test_revfuncs.mlt" 105 8368 8387
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 105 8368 8388 "test_revfuncs.mlt" 105 8368 8412
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 105 8368 8414 "test_revfuncs.mlt" 105 8368 8425
+type(
+  string list -> string
+)
+ident(
+  int_ref Mltest.strlist2str "mltest.ml" 33 848 852 "mltest.ml" 33 848 863
+)
+"test_revfuncs.mlt" 105 8368 8426 "test_revfuncs.mlt" 105 8368 8432
+type(
+  string list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 104 8299 8305 "test_revfuncs.mlt" 104 8299 8311
+)
+"test_revfuncs.mlt" 105 8368 8413 "test_revfuncs.mlt" 105 8368 8433
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 105 8368 8435 "test_revfuncs.mlt" 105 8368 8446
+type(
+  string list -> string
+)
+ident(
+  int_ref Mltest.strlist2str "mltest.ml" 33 848 852 "mltest.ml" 33 848 863
+)
+"test_revfuncs.mlt" 105 8368 8447 "test_revfuncs.mlt" 105 8368 8453
+type(
+  string list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 103 8221 8227 "test_revfuncs.mlt" 103 8221 8233
+)
+"test_revfuncs.mlt" 105 8368 8434 "test_revfuncs.mlt" 105 8368 8454
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 105 8368 8380 "test_revfuncs.mlt" 105 8368 8454
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 106 8458 8461 "test_revfuncs.mlt" 106 8458 8464
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 106 8458 8468 "test_revfuncs.mlt" 106 8458 8474
+type(
+  string list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 103 8221 8227 "test_revfuncs.mlt" 103 8221 8233
+)
+"test_revfuncs.mlt" 106 8458 8475 "test_revfuncs.mlt" 106 8458 8476
+type(
+  string list -> string list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 106 8458 8477 "test_revfuncs.mlt" 106 8458 8483
+type(
+  string list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 104 8299 8305 "test_revfuncs.mlt" 104 8299 8311
+)
+"test_revfuncs.mlt" 106 8458 8465 "test_revfuncs.mlt" 106 8458 8485
+type(
+  bool
+)
+"test_revfuncs.mlt" 106 8458 8461 "test_revfuncs.mlt" 106 8458 8485
+type(
+  bool
+)
+"test_revfuncs.mlt" 106 8458 8491 "test_revfuncs.mlt" 106 8458 8496
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 106 8458 8507 "test_revfuncs.mlt" 106 8458 8529
+type(
+  string
+)
+"test_revfuncs.mlt" 106 8458 8530 "test_revfuncs.mlt" 106 8458 8533
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 105 8368 8374 "test_revfuncs.mlt" 105 8368 8377
+)
+"test_revfuncs.mlt" 106 8458 8534 "test_revfuncs.mlt" 106 8458 8916
+type(
+  string
+)
+"test_revfuncs.mlt" 106 8458 8497 "test_revfuncs.mlt" 106 8458 8918
+type(
+  exn
+)
+"test_revfuncs.mlt" 106 8458 8491 "test_revfuncs.mlt" 106 8458 8918
+type(
+  unit
+)
+"test_revfuncs.mlt" 106 8458 8924 "test_revfuncs.mlt" 106 8458 8926
+type(
+  unit
+)
+"test_revfuncs.mlt" 106 8458 8458 "test_revfuncs.mlt" 106 8458 8926
+type(
+  unit
+)
+"test_revfuncs.mlt" 105 8368 8370 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 104 8299 8301 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 103 8221 8223 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 99 7794 7794 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 98 7704 7706 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 97 7672 7674 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 96 7632 7634 "test_revfuncs.mlt" 106 8458 8927
+type(
+  unit
+)
+"test_revfuncs.mlt" 93 7560 7560 "test_revfuncs.mlt" 108 8945 8946
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 109 8948 8953 "test_revfuncs.mlt" 109 8948 8955
+type(
+  unit
+)
+"test_revfuncs.mlt" 112 9007 9013 "test_revfuncs.mlt" 112 9007 9019
+type(
+  'c list
+)
+ident(
+  def actual "test_revfuncs.mlt" 113 9037 9039 "test_revfuncs.mlt" 115 9148 9468
+)
+"test_revfuncs.mlt" 112 9007 9022 "test_revfuncs.mlt" 112 9007 9030
+type(
+  'c list -> 'c list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 112 9007 9031 "test_revfuncs.mlt" 112 9007 9033
+type(
+  'c list
+)
+"test_revfuncs.mlt" 112 9007 9022 "test_revfuncs.mlt" 112 9007 9033
+call(
+  stack
+)
+type(
+  'c list
+)
+"test_revfuncs.mlt" 113 9037 9043 "test_revfuncs.mlt" 113 9037 9049
+type(
+  'd list
+)
+ident(
+  def expect "test_revfuncs.mlt" 114 9058 9060 "test_revfuncs.mlt" 115 9148 9468
+)
+"test_revfuncs.mlt" 113 9037 9052 "test_revfuncs.mlt" 113 9037 9054
+type(
+  'd list
+)
+"test_revfuncs.mlt" 114 9058 9064 "test_revfuncs.mlt" 114 9058 9067
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 115 9148 9148 "test_revfuncs.mlt" 115 9148 9467
+)
+"test_revfuncs.mlt" 114 9058 9070 "test_revfuncs.mlt" 114 9058 9077
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 114 9058 9078 "test_revfuncs.mlt" 114 9058 9102
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 114 9058 9104 "test_revfuncs.mlt" 114 9058 9115
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 114 9058 9116 "test_revfuncs.mlt" 114 9058 9122
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 113 9037 9043 "test_revfuncs.mlt" 113 9037 9049
+)
+"test_revfuncs.mlt" 114 9058 9103 "test_revfuncs.mlt" 114 9058 9123
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 114 9058 9125 "test_revfuncs.mlt" 114 9058 9136
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 114 9058 9137 "test_revfuncs.mlt" 114 9058 9143
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 112 9007 9013 "test_revfuncs.mlt" 112 9007 9019
+)
+"test_revfuncs.mlt" 114 9058 9124 "test_revfuncs.mlt" 114 9058 9144
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 114 9058 9070 "test_revfuncs.mlt" 114 9058 9144
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 115 9148 9151 "test_revfuncs.mlt" 115 9148 9154
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 115 9148 9158 "test_revfuncs.mlt" 115 9148 9164
+type(
+  '_weak3 list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 112 9007 9013 "test_revfuncs.mlt" 112 9007 9019
+)
+"test_revfuncs.mlt" 115 9148 9165 "test_revfuncs.mlt" 115 9148 9166
+type(
+  '_weak3 list -> '_weak3 list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 115 9148 9167 "test_revfuncs.mlt" 115 9148 9173
+type(
+  '_weak3 list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 113 9037 9043 "test_revfuncs.mlt" 113 9037 9049
+)
+"test_revfuncs.mlt" 115 9148 9155 "test_revfuncs.mlt" 115 9148 9175
+type(
+  bool
+)
+"test_revfuncs.mlt" 115 9148 9151 "test_revfuncs.mlt" 115 9148 9175
+type(
+  bool
+)
+"test_revfuncs.mlt" 115 9148 9181 "test_revfuncs.mlt" 115 9148 9186
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 115 9148 9197 "test_revfuncs.mlt" 115 9148 9219
+type(
+  string
+)
+"test_revfuncs.mlt" 115 9148 9220 "test_revfuncs.mlt" 115 9148 9223
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 114 9058 9064 "test_revfuncs.mlt" 114 9058 9067
+)
+"test_revfuncs.mlt" 115 9148 9224 "test_revfuncs.mlt" 115 9148 9457
+type(
+  string
+)
+"test_revfuncs.mlt" 115 9148 9187 "test_revfuncs.mlt" 115 9148 9459
+type(
+  exn
+)
+"test_revfuncs.mlt" 115 9148 9181 "test_revfuncs.mlt" 115 9148 9459
+type(
+  unit
+)
+"test_revfuncs.mlt" 115 9148 9465 "test_revfuncs.mlt" 115 9148 9467
+type(
+  unit
+)
+"test_revfuncs.mlt" 115 9148 9148 "test_revfuncs.mlt" 115 9148 9467
+type(
+  unit
+)
+"test_revfuncs.mlt" 114 9058 9060 "test_revfuncs.mlt" 115 9148 9468
+type(
+  unit
+)
+"test_revfuncs.mlt" 113 9037 9039 "test_revfuncs.mlt" 115 9148 9468
+type(
+  unit
+)
+"test_revfuncs.mlt" 112 9007 9009 "test_revfuncs.mlt" 115 9148 9468
+type(
+  unit
+)
+"test_revfuncs.mlt" 109 8948 8948 "test_revfuncs.mlt" 117 9486 9487
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 118 9489 9494 "test_revfuncs.mlt" 118 9489 9496
+type(
+  unit
+)
+"test_revfuncs.mlt" 121 9551 9557 "test_revfuncs.mlt" 121 9551 9563
+type(
+  bool list
+)
+ident(
+  def actual "test_revfuncs.mlt" 122 9586 9588 "test_revfuncs.mlt" 124 9704 10039
+)
+"test_revfuncs.mlt" 121 9551 9566 "test_revfuncs.mlt" 121 9551 9574
+type(
+  bool list -> bool list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 121 9551 9576 "test_revfuncs.mlt" 121 9551 9581
+type(
+  bool
+)
+"test_revfuncs.mlt" 121 9551 9575 "test_revfuncs.mlt" 121 9551 9582
+type(
+  bool list
+)
+"test_revfuncs.mlt" 121 9551 9566 "test_revfuncs.mlt" 121 9551 9582
+call(
+  stack
+)
+type(
+  bool list
+)
+"test_revfuncs.mlt" 122 9586 9592 "test_revfuncs.mlt" 122 9586 9598
+type(
+  bool list
+)
+ident(
+  def expect "test_revfuncs.mlt" 123 9612 9614 "test_revfuncs.mlt" 124 9704 10039
+)
+"test_revfuncs.mlt" 122 9586 9602 "test_revfuncs.mlt" 122 9586 9607
+type(
+  bool
+)
+"test_revfuncs.mlt" 122 9586 9601 "test_revfuncs.mlt" 122 9586 9608
+type(
+  bool list
+)
+"test_revfuncs.mlt" 123 9612 9618 "test_revfuncs.mlt" 123 9612 9621
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 124 9704 9704 "test_revfuncs.mlt" 124 9704 10038
+)
+"test_revfuncs.mlt" 123 9612 9624 "test_revfuncs.mlt" 123 9612 9631
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 123 9612 9632 "test_revfuncs.mlt" 123 9612 9656
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 123 9612 9658 "test_revfuncs.mlt" 123 9612 9670
+type(
+  bool list -> string
+)
+ident(
+  int_ref Mltest.boollist2str "mltest.ml" 36 977 981 "mltest.ml" 36 977 993
+)
+"test_revfuncs.mlt" 123 9612 9671 "test_revfuncs.mlt" 123 9612 9677
+type(
+  bool list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 122 9586 9592 "test_revfuncs.mlt" 122 9586 9598
+)
+"test_revfuncs.mlt" 123 9612 9657 "test_revfuncs.mlt" 123 9612 9678
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 123 9612 9680 "test_revfuncs.mlt" 123 9612 9692
+type(
+  bool list -> string
+)
+ident(
+  int_ref Mltest.boollist2str "mltest.ml" 36 977 981 "mltest.ml" 36 977 993
+)
+"test_revfuncs.mlt" 123 9612 9693 "test_revfuncs.mlt" 123 9612 9699
+type(
+  bool list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 121 9551 9557 "test_revfuncs.mlt" 121 9551 9563
+)
+"test_revfuncs.mlt" 123 9612 9679 "test_revfuncs.mlt" 123 9612 9700
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 123 9612 9624 "test_revfuncs.mlt" 123 9612 9700
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 124 9704 9707 "test_revfuncs.mlt" 124 9704 9710
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 124 9704 9714 "test_revfuncs.mlt" 124 9704 9720
+type(
+  bool list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 121 9551 9557 "test_revfuncs.mlt" 121 9551 9563
+)
+"test_revfuncs.mlt" 124 9704 9721 "test_revfuncs.mlt" 124 9704 9722
+type(
+  bool list -> bool list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 124 9704 9723 "test_revfuncs.mlt" 124 9704 9729
+type(
+  bool list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 122 9586 9592 "test_revfuncs.mlt" 122 9586 9598
+)
+"test_revfuncs.mlt" 124 9704 9711 "test_revfuncs.mlt" 124 9704 9731
+type(
+  bool
+)
+"test_revfuncs.mlt" 124 9704 9707 "test_revfuncs.mlt" 124 9704 9731
+type(
+  bool
+)
+"test_revfuncs.mlt" 124 9704 9737 "test_revfuncs.mlt" 124 9704 9742
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 124 9704 9753 "test_revfuncs.mlt" 124 9704 9775
+type(
+  string
+)
+"test_revfuncs.mlt" 124 9704 9776 "test_revfuncs.mlt" 124 9704 9779
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 123 9612 9618 "test_revfuncs.mlt" 123 9612 9621
+)
+"test_revfuncs.mlt" 124 9704 9780 "test_revfuncs.mlt" 124 9704 10028
+type(
+  string
+)
+"test_revfuncs.mlt" 124 9704 9743 "test_revfuncs.mlt" 124 9704 10030
+type(
+  exn
+)
+"test_revfuncs.mlt" 124 9704 9737 "test_revfuncs.mlt" 124 9704 10030
+type(
+  unit
+)
+"test_revfuncs.mlt" 124 9704 10036 "test_revfuncs.mlt" 124 9704 10038
+type(
+  unit
+)
+"test_revfuncs.mlt" 124 9704 9704 "test_revfuncs.mlt" 124 9704 10038
+type(
+  unit
+)
+"test_revfuncs.mlt" 123 9612 9614 "test_revfuncs.mlt" 124 9704 10039
+type(
+  unit
+)
+"test_revfuncs.mlt" 122 9586 9588 "test_revfuncs.mlt" 124 9704 10039
+type(
+  unit
+)
+"test_revfuncs.mlt" 121 9551 9553 "test_revfuncs.mlt" 124 9704 10039
+type(
+  unit
+)
+"test_revfuncs.mlt" 118 9489 9489 "test_revfuncs.mlt" 126 10057 10058
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 127 10060 10065 "test_revfuncs.mlt" 127 10060 10067
+type(
+  unit
+)
+"test_revfuncs.mlt" 130 10118 10124 "test_revfuncs.mlt" 130 10118 10130
+type(
+  int list
+)
+ident(
+  def actual "test_revfuncs.mlt" 131 10539 10541 "test_revfuncs.mlt" 133 11040 12140
+)
+"test_revfuncs.mlt" 130 10118 10133 "test_revfuncs.mlt" 130 10118 10141
+type(
+  int list -> int list
+)
+ident(
+  int_ref Revfuncs.list_rev "revfuncs.ml" 27 559 567 "revfuncs.ml" 27 559 575
+)
+"test_revfuncs.mlt" 130 10118 10143 "test_revfuncs.mlt" 130 10118 10145
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10147 "test_revfuncs.mlt" 130 10118 10149
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10151 "test_revfuncs.mlt" 130 10118 10153
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10155 "test_revfuncs.mlt" 130 10118 10157
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10159 "test_revfuncs.mlt" 130 10118 10161
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10163 "test_revfuncs.mlt" 130 10118 10165
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10167 "test_revfuncs.mlt" 130 10118 10169
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10171 "test_revfuncs.mlt" 130 10118 10173
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10175 "test_revfuncs.mlt" 130 10118 10177
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10179 "test_revfuncs.mlt" 130 10118 10181
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10183 "test_revfuncs.mlt" 130 10118 10184
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10186 "test_revfuncs.mlt" 130 10118 10188
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10190 "test_revfuncs.mlt" 130 10118 10192
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10194 "test_revfuncs.mlt" 130 10118 10196
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10198 "test_revfuncs.mlt" 130 10118 10200
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10202 "test_revfuncs.mlt" 130 10118 10204
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10206 "test_revfuncs.mlt" 130 10118 10207
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10209 "test_revfuncs.mlt" 130 10118 10211
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10213 "test_revfuncs.mlt" 130 10118 10214
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10216 "test_revfuncs.mlt" 130 10118 10219
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10221 "test_revfuncs.mlt" 130 10118 10223
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10225 "test_revfuncs.mlt" 130 10118 10226
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10228 "test_revfuncs.mlt" 130 10118 10230
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10232 "test_revfuncs.mlt" 130 10118 10234
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10236 "test_revfuncs.mlt" 130 10118 10238
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10240 "test_revfuncs.mlt" 130 10118 10242
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10244 "test_revfuncs.mlt" 130 10118 10246
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10248 "test_revfuncs.mlt" 130 10118 10250
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10252 "test_revfuncs.mlt" 130 10118 10254
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10256 "test_revfuncs.mlt" 130 10118 10258
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10260 "test_revfuncs.mlt" 130 10118 10262
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10264 "test_revfuncs.mlt" 130 10118 10266
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10268 "test_revfuncs.mlt" 130 10118 10270
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10272 "test_revfuncs.mlt" 130 10118 10274
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10276 "test_revfuncs.mlt" 130 10118 10278
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10280 "test_revfuncs.mlt" 130 10118 10282
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10284 "test_revfuncs.mlt" 130 10118 10286
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10288 "test_revfuncs.mlt" 130 10118 10290
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10292 "test_revfuncs.mlt" 130 10118 10294
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10296 "test_revfuncs.mlt" 130 10118 10298
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10300 "test_revfuncs.mlt" 130 10118 10302
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10304 "test_revfuncs.mlt" 130 10118 10306
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10308 "test_revfuncs.mlt" 130 10118 10310
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10312 "test_revfuncs.mlt" 130 10118 10314
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10316 "test_revfuncs.mlt" 130 10118 10318
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10320 "test_revfuncs.mlt" 130 10118 10322
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10324 "test_revfuncs.mlt" 130 10118 10326
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10328 "test_revfuncs.mlt" 130 10118 10330
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10332 "test_revfuncs.mlt" 130 10118 10334
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10336 "test_revfuncs.mlt" 130 10118 10338
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10340 "test_revfuncs.mlt" 130 10118 10342
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10344 "test_revfuncs.mlt" 130 10118 10346
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10348 "test_revfuncs.mlt" 130 10118 10350
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10352 "test_revfuncs.mlt" 130 10118 10354
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10356 "test_revfuncs.mlt" 130 10118 10358
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10360 "test_revfuncs.mlt" 130 10118 10362
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10364 "test_revfuncs.mlt" 130 10118 10366
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10368 "test_revfuncs.mlt" 130 10118 10370
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10372 "test_revfuncs.mlt" 130 10118 10374
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10376 "test_revfuncs.mlt" 130 10118 10378
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10380 "test_revfuncs.mlt" 130 10118 10382
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10384 "test_revfuncs.mlt" 130 10118 10386
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10388 "test_revfuncs.mlt" 130 10118 10390
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10392 "test_revfuncs.mlt" 130 10118 10394
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10396 "test_revfuncs.mlt" 130 10118 10398
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10400 "test_revfuncs.mlt" 130 10118 10402
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10404 "test_revfuncs.mlt" 130 10118 10406
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10408 "test_revfuncs.mlt" 130 10118 10410
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10412 "test_revfuncs.mlt" 130 10118 10414
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10416 "test_revfuncs.mlt" 130 10118 10418
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10420 "test_revfuncs.mlt" 130 10118 10422
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10424 "test_revfuncs.mlt" 130 10118 10426
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10428 "test_revfuncs.mlt" 130 10118 10430
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10432 "test_revfuncs.mlt" 130 10118 10434
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10436 "test_revfuncs.mlt" 130 10118 10438
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10440 "test_revfuncs.mlt" 130 10118 10441
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10443 "test_revfuncs.mlt" 130 10118 10445
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10447 "test_revfuncs.mlt" 130 10118 10449
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10451 "test_revfuncs.mlt" 130 10118 10453
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10455 "test_revfuncs.mlt" 130 10118 10457
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10459 "test_revfuncs.mlt" 130 10118 10461
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10463 "test_revfuncs.mlt" 130 10118 10465
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10467 "test_revfuncs.mlt" 130 10118 10469
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10471 "test_revfuncs.mlt" 130 10118 10472
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10474 "test_revfuncs.mlt" 130 10118 10476
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10478 "test_revfuncs.mlt" 130 10118 10480
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10482 "test_revfuncs.mlt" 130 10118 10484
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10486 "test_revfuncs.mlt" 130 10118 10487
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10489 "test_revfuncs.mlt" 130 10118 10491
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10493 "test_revfuncs.mlt" 130 10118 10495
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10497 "test_revfuncs.mlt" 130 10118 10499
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10501 "test_revfuncs.mlt" 130 10118 10503
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10505 "test_revfuncs.mlt" 130 10118 10507
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10509 "test_revfuncs.mlt" 130 10118 10511
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10513 "test_revfuncs.mlt" 130 10118 10515
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10517 "test_revfuncs.mlt" 130 10118 10518
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10520 "test_revfuncs.mlt" 130 10118 10522
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10524 "test_revfuncs.mlt" 130 10118 10526
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10528 "test_revfuncs.mlt" 130 10118 10529
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10531 "test_revfuncs.mlt" 130 10118 10533
+type(
+  int
+)
+"test_revfuncs.mlt" 130 10118 10142 "test_revfuncs.mlt" 130 10118 10535
+type(
+  int list
+)
+"test_revfuncs.mlt" 130 10118 10133 "test_revfuncs.mlt" 130 10118 10535
+call(
+  stack
+)
+type(
+  int list
+)
+"test_revfuncs.mlt" 131 10539 10545 "test_revfuncs.mlt" 131 10539 10551
+type(
+  int list
+)
+ident(
+  def expect "test_revfuncs.mlt" 132 10950 10952 "test_revfuncs.mlt" 133 11040 12140
+)
+"test_revfuncs.mlt" 131 10539 10555 "test_revfuncs.mlt" 131 10539 10557
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10559 "test_revfuncs.mlt" 131 10539 10560
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10562 "test_revfuncs.mlt" 131 10539 10564
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10566 "test_revfuncs.mlt" 131 10539 10568
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10570 "test_revfuncs.mlt" 131 10539 10571
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10573 "test_revfuncs.mlt" 131 10539 10575
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10577 "test_revfuncs.mlt" 131 10539 10579
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10581 "test_revfuncs.mlt" 131 10539 10583
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10585 "test_revfuncs.mlt" 131 10539 10587
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10589 "test_revfuncs.mlt" 131 10539 10591
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10593 "test_revfuncs.mlt" 131 10539 10595
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10597 "test_revfuncs.mlt" 131 10539 10599
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10601 "test_revfuncs.mlt" 131 10539 10602
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10604 "test_revfuncs.mlt" 131 10539 10606
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10608 "test_revfuncs.mlt" 131 10539 10610
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10612 "test_revfuncs.mlt" 131 10539 10614
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10616 "test_revfuncs.mlt" 131 10539 10617
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10619 "test_revfuncs.mlt" 131 10539 10621
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10623 "test_revfuncs.mlt" 131 10539 10625
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10627 "test_revfuncs.mlt" 131 10539 10629
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10631 "test_revfuncs.mlt" 131 10539 10633
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10635 "test_revfuncs.mlt" 131 10539 10637
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10639 "test_revfuncs.mlt" 131 10539 10641
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10643 "test_revfuncs.mlt" 131 10539 10645
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10647 "test_revfuncs.mlt" 131 10539 10648
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10650 "test_revfuncs.mlt" 131 10539 10652
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10654 "test_revfuncs.mlt" 131 10539 10656
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10658 "test_revfuncs.mlt" 131 10539 10660
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10662 "test_revfuncs.mlt" 131 10539 10664
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10666 "test_revfuncs.mlt" 131 10539 10668
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10670 "test_revfuncs.mlt" 131 10539 10672
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10674 "test_revfuncs.mlt" 131 10539 10676
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10678 "test_revfuncs.mlt" 131 10539 10680
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10682 "test_revfuncs.mlt" 131 10539 10684
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10686 "test_revfuncs.mlt" 131 10539 10688
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10690 "test_revfuncs.mlt" 131 10539 10692
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10694 "test_revfuncs.mlt" 131 10539 10696
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10698 "test_revfuncs.mlt" 131 10539 10700
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10702 "test_revfuncs.mlt" 131 10539 10704
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10706 "test_revfuncs.mlt" 131 10539 10708
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10710 "test_revfuncs.mlt" 131 10539 10712
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10714 "test_revfuncs.mlt" 131 10539 10716
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10718 "test_revfuncs.mlt" 131 10539 10720
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10722 "test_revfuncs.mlt" 131 10539 10724
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10726 "test_revfuncs.mlt" 131 10539 10728
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10730 "test_revfuncs.mlt" 131 10539 10732
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10734 "test_revfuncs.mlt" 131 10539 10736
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10738 "test_revfuncs.mlt" 131 10539 10740
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10742 "test_revfuncs.mlt" 131 10539 10744
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10746 "test_revfuncs.mlt" 131 10539 10748
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10750 "test_revfuncs.mlt" 131 10539 10752
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10754 "test_revfuncs.mlt" 131 10539 10756
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10758 "test_revfuncs.mlt" 131 10539 10760
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10762 "test_revfuncs.mlt" 131 10539 10764
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10766 "test_revfuncs.mlt" 131 10539 10768
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10770 "test_revfuncs.mlt" 131 10539 10772
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10774 "test_revfuncs.mlt" 131 10539 10776
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10778 "test_revfuncs.mlt" 131 10539 10780
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10782 "test_revfuncs.mlt" 131 10539 10784
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10786 "test_revfuncs.mlt" 131 10539 10788
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10790 "test_revfuncs.mlt" 131 10539 10792
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10794 "test_revfuncs.mlt" 131 10539 10796
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10798 "test_revfuncs.mlt" 131 10539 10800
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10802 "test_revfuncs.mlt" 131 10539 10804
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10806 "test_revfuncs.mlt" 131 10539 10808
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10810 "test_revfuncs.mlt" 131 10539 10812
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10814 "test_revfuncs.mlt" 131 10539 10816
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10818 "test_revfuncs.mlt" 131 10539 10820
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10822 "test_revfuncs.mlt" 131 10539 10824
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10826 "test_revfuncs.mlt" 131 10539 10828
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10830 "test_revfuncs.mlt" 131 10539 10832
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10834 "test_revfuncs.mlt" 131 10539 10836
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10838 "test_revfuncs.mlt" 131 10539 10840
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10842 "test_revfuncs.mlt" 131 10539 10844
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10846 "test_revfuncs.mlt" 131 10539 10848
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10850 "test_revfuncs.mlt" 131 10539 10852
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10854 "test_revfuncs.mlt" 131 10539 10856
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10858 "test_revfuncs.mlt" 131 10539 10860
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10862 "test_revfuncs.mlt" 131 10539 10863
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10865 "test_revfuncs.mlt" 131 10539 10867
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10869 "test_revfuncs.mlt" 131 10539 10872
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10874 "test_revfuncs.mlt" 131 10539 10875
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10877 "test_revfuncs.mlt" 131 10539 10879
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10881 "test_revfuncs.mlt" 131 10539 10882
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10884 "test_revfuncs.mlt" 131 10539 10886
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10888 "test_revfuncs.mlt" 131 10539 10890
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10892 "test_revfuncs.mlt" 131 10539 10894
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10896 "test_revfuncs.mlt" 131 10539 10898
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10900 "test_revfuncs.mlt" 131 10539 10902
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10904 "test_revfuncs.mlt" 131 10539 10905
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10907 "test_revfuncs.mlt" 131 10539 10909
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10911 "test_revfuncs.mlt" 131 10539 10913
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10915 "test_revfuncs.mlt" 131 10539 10917
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10919 "test_revfuncs.mlt" 131 10539 10921
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10923 "test_revfuncs.mlt" 131 10539 10925
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10927 "test_revfuncs.mlt" 131 10539 10929
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10931 "test_revfuncs.mlt" 131 10539 10933
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10935 "test_revfuncs.mlt" 131 10539 10937
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10939 "test_revfuncs.mlt" 131 10539 10941
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10943 "test_revfuncs.mlt" 131 10539 10945
+type(
+  int
+)
+"test_revfuncs.mlt" 131 10539 10554 "test_revfuncs.mlt" 131 10539 10946
+type(
+  int list
+)
+"test_revfuncs.mlt" 132 10950 10956 "test_revfuncs.mlt" 132 10950 10959
+type(
+  string
+)
+ident(
+  def msg "test_revfuncs.mlt" 133 11040 11040 "test_revfuncs.mlt" 133 11040 12139
+)
+"test_revfuncs.mlt" 132 10950 10962 "test_revfuncs.mlt" 132 10950 10969
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_revfuncs.mlt" 132 10950 10970 "test_revfuncs.mlt" 132 10950 10994
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_revfuncs.mlt" 132 10950 10996 "test_revfuncs.mlt" 132 10950 11007
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 132 10950 11008 "test_revfuncs.mlt" 132 10950 11014
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 131 10539 10545 "test_revfuncs.mlt" 131 10539 10551
+)
+"test_revfuncs.mlt" 132 10950 10995 "test_revfuncs.mlt" 132 10950 11015
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 132 10950 11017 "test_revfuncs.mlt" 132 10950 11028
+type(
+  int list -> string
+)
+ident(
+  int_ref Mltest.intlist2str "mltest.ml" 34 887 891 "mltest.ml" 34 887 902
+)
+"test_revfuncs.mlt" 132 10950 11029 "test_revfuncs.mlt" 132 10950 11035
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 130 10118 10124 "test_revfuncs.mlt" 130 10118 10130
+)
+"test_revfuncs.mlt" 132 10950 11016 "test_revfuncs.mlt" 132 10950 11036
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 132 10950 10962 "test_revfuncs.mlt" 132 10950 11036
+call(
+  stack
+)
+type(
+  string
+)
+"test_revfuncs.mlt" 133 11040 11043 "test_revfuncs.mlt" 133 11040 11046
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_revfuncs.mlt" 133 11040 11050 "test_revfuncs.mlt" 133 11040 11056
+type(
+  int list
+)
+ident(
+  int_ref actual "test_revfuncs.mlt" 130 10118 10124 "test_revfuncs.mlt" 130 10118 10130
+)
+"test_revfuncs.mlt" 133 11040 11057 "test_revfuncs.mlt" 133 11040 11058
+type(
+  int list -> int list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_revfuncs.mlt" 133 11040 11059 "test_revfuncs.mlt" 133 11040 11065
+type(
+  int list
+)
+ident(
+  int_ref expect "test_revfuncs.mlt" 131 10539 10545 "test_revfuncs.mlt" 131 10539 10551
+)
+"test_revfuncs.mlt" 133 11040 11047 "test_revfuncs.mlt" 133 11040 11067
+type(
+  bool
+)
+"test_revfuncs.mlt" 133 11040 11043 "test_revfuncs.mlt" 133 11040 11067
+type(
+  bool
+)
+"test_revfuncs.mlt" 133 11040 11073 "test_revfuncs.mlt" 133 11040 11078
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_revfuncs.mlt" 133 11040 11089 "test_revfuncs.mlt" 133 11040 11111
+type(
+  string
+)
+"test_revfuncs.mlt" 133 11040 11112 "test_revfuncs.mlt" 133 11040 11115
+type(
+  string
+)
+ident(
+  int_ref msg "test_revfuncs.mlt" 132 10950 10956 "test_revfuncs.mlt" 132 10950 10959
+)
+"test_revfuncs.mlt" 133 11040 11116 "test_revfuncs.mlt" 133 11040 12129
+type(
+  string
+)
+"test_revfuncs.mlt" 133 11040 11079 "test_revfuncs.mlt" 133 11040 12131
+type(
+  exn
+)
+"test_revfuncs.mlt" 133 11040 11073 "test_revfuncs.mlt" 133 11040 12131
+type(
+  unit
+)
+"test_revfuncs.mlt" 133 11040 12137 "test_revfuncs.mlt" 133 11040 12139
+type(
+  unit
+)
+"test_revfuncs.mlt" 133 11040 11040 "test_revfuncs.mlt" 133 11040 12139
+type(
+  unit
+)
+"test_revfuncs.mlt" 132 10950 10952 "test_revfuncs.mlt" 133 11040 12140
+type(
+  unit
+)
+"test_revfuncs.mlt" 131 10539 10541 "test_revfuncs.mlt" 133 11040 12140
+type(
+  unit
+)
+"test_revfuncs.mlt" 130 10118 10120 "test_revfuncs.mlt" 133 11040 12140
+type(
+  unit
+)
+"test_revfuncs.mlt" 127 10060 10060 "test_revfuncs.mlt" 135 12158 12159
+type(
+  unit -> unit
+)
+"test_revfuncs.mlt" 5 100 112 "test_revfuncs.mlt" 137 12162 12164
+type(
+  (unit -> unit) array
+)
+"test_revfuncs.mlt" 5 100 100 "test_revfuncs.mlt" 137 12162 12164
+call(
+  stack
+)
+type(
+  unit
+)

@@ -1,0 +1,182 @@
+LM> load test-data/villains.txt
+LM> mergein test-data/heros.txt
+LM> add Korra
+LM> add Bolin
+LM> add Mako
+LM> undo
+LM> undo
+LM> show
+--BEG LIST--
+Amon
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kuvira
+Kya
+Mako
+Ming-Hua
+P-li
+Tenzin
+Tonraq
+Zaheer
+--END LIST--
+LM> undo
+LM> undo
+LM> show
+--BEG LIST--
+Amon
+Hiroshi
+Kuvira
+Ming-Hua
+P-li
+Tonraq
+Zaheer
+--END LIST--
+LM> redo
+LM> remove Amon
+LM> remove Zaheer
+LM> remove Void
+LM> remove Null
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kuvira
+Kya
+Mako
+Ming-Hua
+P-li
+Tenzin
+Tonraq
+--END LIST--
+LM> save test-data/x.tmp
+LM> remove Tenzin
+LM> remove Pema
+LM> remove Meelo
+LM> remove Mako
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kuvira
+Kya
+Ming-Hua
+P-li
+Tonraq
+--END LIST--
+LM> mergein test-data/x.tmp
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kuvira
+Kya
+Mako
+Ming-Hua
+P-li
+Tenzin
+Tonraq
+--END LIST--
+LM> undo
+LM> undo
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kuvira
+Kya
+Mako
+Ming-Hua
+P-li
+Tonraq
+--END LIST--
+LM> redo
+LM> clear
+LM> load test-data/villains.txt
+LM> add Korra
+LM> add Bumi
+LM> remove Kuvira
+LM> load test-data/heros.txt
+LM> undo
+LM> mergein test-data/heros.txt
+LM> show
+--BEG LIST--
+Amon
+Asami
+Bumi
+Bolin
+Hiroshi
+Jinora
+Korra
+Kya
+Mako
+Ming-Hua
+P-li
+Tenzin
+Tonraq
+Zaheer
+--END LIST--
+LM> undo
+LM> show
+--BEG LIST--
+Amon
+Bumi
+Hiroshi
+Korra
+Ming-Hua
+P-li
+Tonraq
+Zaheer
+--END LIST--
+LM> redo
+LM> redo
+WARNING: redo list empty, no changes made
+LM> remove Kuvira
+LM> add Eska
+LM> save test-data/y.tmp
+LM> load test-data/heros.txt
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Jinora
+Korra
+Kya
+Mako
+Tenzin
+--END LIST--
+LM> mergein y.tmp
+Error with 'mergein y.tmp': Sys_error("y.tmp: No such file or directory")
+LM> show
+--BEG LIST--
+Asami
+Bumi
+Bolin
+Jinora
+Korra
+Kya
+Mako
+Tenzin
+--END LIST--
+LM> 
+List managed!

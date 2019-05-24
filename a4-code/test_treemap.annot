@@ -1,0 +1,6465 @@
+"test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+type(
+  string
+)
+ident(
+  def actual_file "test_treemap.mlt" 7 97 97 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 6 54 72 "test_treemap.mlt" 6 54 94
+type(
+  string
+)
+"test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+type(
+  string
+)
+ident(
+  def expect_file "test_treemap.mlt" 8 140 140 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 7 97 115 "test_treemap.mlt" 7 97 137
+type(
+  string
+)
+"test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+type(
+  string
+)
+ident(
+  def diff_file "test_treemap.mlt" 9 183 183 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 8 140 158 "test_treemap.mlt" 8 140 178
+type(
+  string
+)
+"test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+type(
+  string ref
+)
+ident(
+  def msgref "test_treemap.mlt" 11 206 206 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 9 183 196 "test_treemap.mlt" 9 183 199
+type(
+  string -> string ref
+)
+ident(
+  int_ref Pervasives.ref "pervasives.mli" 1063 41160 41160 "pervasives.mli" 1063 41160 41204
+)
+"test_treemap.mlt" 9 183 200 "test_treemap.mlt" 9 183 202
+type(
+  string
+)
+"test_treemap.mlt" 9 183 196 "test_treemap.mlt" 9 183 202
+type(
+  string ref
+)
+"test_treemap.mlt" 11 206 210 "test_treemap.mlt" 11 206 220
+type(
+  ('a -> string) -> 'a option -> string
+)
+ident(
+  def str_of_opt "test_treemap.mlt" 17 319 319 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 11 206 221 "test_treemap.mlt" 11 206 230
+type(
+  'a -> string
+)
+ident(
+  def to_string "test_treemap.mlt" 11 206 231 "test_treemap.mlt" 14 269 314
+)
+"test_treemap.mlt" 11 206 231 "test_treemap.mlt" 11 206 232
+type(
+  'a option
+)
+ident(
+  def o "test_treemap.mlt" 12 235 237 "test_treemap.mlt" 14 269 314
+)
+"test_treemap.mlt" 12 235 243 "test_treemap.mlt" 12 235 244
+type(
+  'a option
+)
+ident(
+  int_ref o "test_treemap.mlt" 11 206 231 "test_treemap.mlt" 11 206 232
+)
+"test_treemap.mlt" 13 250 254 "test_treemap.mlt" 13 250 258
+type(
+  'a option
+)
+"test_treemap.mlt" 13 250 262 "test_treemap.mlt" 13 250 268
+type(
+  string
+)
+"test_treemap.mlt" 14 269 278 "test_treemap.mlt" 14 269 279
+type(
+  'a
+)
+ident(
+  def x "test_treemap.mlt" 14 269 283 "test_treemap.mlt" 14 269 314
+)
+"test_treemap.mlt" 14 269 273 "test_treemap.mlt" 14 269 279
+type(
+  'a option
+)
+"test_treemap.mlt" 14 269 283 "test_treemap.mlt" 14 269 290
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 14 269 291 "test_treemap.mlt" 14 269 300
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 14 269 302 "test_treemap.mlt" 14 269 311
+type(
+  'a -> string
+)
+ident(
+  int_ref to_string "test_treemap.mlt" 11 206 221 "test_treemap.mlt" 11 206 230
+)
+"test_treemap.mlt" 14 269 312 "test_treemap.mlt" 14 269 313
+type(
+  'a
+)
+ident(
+  int_ref x "test_treemap.mlt" 14 269 278 "test_treemap.mlt" 14 269 279
+)
+"test_treemap.mlt" 14 269 301 "test_treemap.mlt" 14 269 314
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 14 269 283 "test_treemap.mlt" 14 269 314
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 12 235 237 "test_treemap.mlt" 14 269 314
+type(
+  string
+)
+"test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+type(
+  bool option -> string
+)
+ident(
+  def str_of_boolopt "test_treemap.mlt" 19 369 369 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 17 319 340 "test_treemap.mlt" 17 319 350
+type(
+  (bool -> string) -> bool option -> string
+)
+ident(
+  int_ref str_of_opt "test_treemap.mlt" 11 206 210 "test_treemap.mlt" 11 206 220
+)
+"test_treemap.mlt" 17 319 351 "test_treemap.mlt" 17 319 365
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treemap.mlt" 17 319 340 "test_treemap.mlt" 17 319 365
+call(
+  stack
+)
+type(
+  bool option -> string
+)
+"test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  def make_getopt_msg "test_treemap.mlt" 30 625 625 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 19 369 389 "test_treemap.mlt" 19 369 392
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 19 369 393 "test_treemap.mlt" 27 594 620
+)
+"test_treemap.mlt" 19 369 393 "test_treemap.mlt" 19 369 399
+type(
+  string
+)
+ident(
+  def mapstr "test_treemap.mlt" 19 369 400 "test_treemap.mlt" 27 594 620
+)
+"test_treemap.mlt" 19 369 400 "test_treemap.mlt" 19 369 406
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 19 369 407 "test_treemap.mlt" 27 594 620
+)
+"test_treemap.mlt" 19 369 407 "test_treemap.mlt" 19 369 413
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 20 416 418 "test_treemap.mlt" 27 594 620
+)
+"test_treemap.mlt" 20 416 422 "test_treemap.mlt" 20 416 427
+type(
+  string list
+)
+ident(
+  def lines "test_treemap.mlt" 27 594 596 "test_treemap.mlt" 27 594 620
+)
+"test_treemap.mlt" 21 432 438 "test_treemap.mlt" 21 432 445
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 21 432 446 "test_treemap.mlt" 21 432 458
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 21 432 459 "test_treemap.mlt" 21 432 462
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 19 369 389 "test_treemap.mlt" 19 369 392
+)
+"test_treemap.mlt" 21 432 438 "test_treemap.mlt" 21 432 462
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 22 464 470 "test_treemap.mlt" 22 464 477
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 22 464 478 "test_treemap.mlt" 22 464 490
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 22 464 491 "test_treemap.mlt" 22 464 497
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 19 369 400 "test_treemap.mlt" 19 369 406
+)
+"test_treemap.mlt" 22 464 470 "test_treemap.mlt" 22 464 497
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 23 499 505 "test_treemap.mlt" 23 499 512
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 23 499 513 "test_treemap.mlt" 23 499 525
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 23 499 526 "test_treemap.mlt" 23 499 532
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 19 369 407 "test_treemap.mlt" 19 369 413
+)
+"test_treemap.mlt" 23 499 505 "test_treemap.mlt" 23 499 532
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 24 534 540 "test_treemap.mlt" 24 534 547
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 24 534 548 "test_treemap.mlt" 24 534 574
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 24 534 575 "test_treemap.mlt" 24 534 581
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treemap.mlt" 19 369 393 "test_treemap.mlt" 19 369 399
+)
+"test_treemap.mlt" 24 534 540 "test_treemap.mlt" 24 534 581
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 20 416 430 "test_treemap.mlt" 25 583 588
+type(
+  string list
+)
+"test_treemap.mlt" 27 594 596 "test_treemap.mlt" 27 594 609
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treemap.mlt" 27 594 610 "test_treemap.mlt" 27 594 614
+type(
+  string
+)
+"test_treemap.mlt" 27 594 615 "test_treemap.mlt" 27 594 620
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treemap.mlt" 20 416 422 "test_treemap.mlt" 20 416 427
+)
+"test_treemap.mlt" 27 594 596 "test_treemap.mlt" 27 594 620
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 20 416 418 "test_treemap.mlt" 27 594 620
+type(
+  string
+)
+"test_treemap.mlt" 30 625 629 "test_treemap.mlt" 30 625 646
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  def make_iterfold_msg "test_treemap.mlt" 41 883 883 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 30 625 647 "test_treemap.mlt" 30 625 653
+type(
+  string
+)
+ident(
+  def mapstr "test_treemap.mlt" 30 625 654 "test_treemap.mlt" 38 852 878
+)
+"test_treemap.mlt" 30 625 654 "test_treemap.mlt" 30 625 661
+type(
+  string
+)
+ident(
+  def funcstr "test_treemap.mlt" 30 625 662 "test_treemap.mlt" 38 852 878
+)
+"test_treemap.mlt" 30 625 662 "test_treemap.mlt" 30 625 668
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 30 625 669 "test_treemap.mlt" 38 852 878
+)
+"test_treemap.mlt" 30 625 669 "test_treemap.mlt" 30 625 675
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 31 678 680 "test_treemap.mlt" 38 852 878
+)
+"test_treemap.mlt" 31 678 684 "test_treemap.mlt" 31 678 689
+type(
+  string list
+)
+ident(
+  def lines "test_treemap.mlt" 38 852 854 "test_treemap.mlt" 38 852 878
+)
+"test_treemap.mlt" 32 694 700 "test_treemap.mlt" 32 694 707
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 32 694 708 "test_treemap.mlt" 32 694 712
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 32 694 713 "test_treemap.mlt" 32 694 720
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treemap.mlt" 30 625 654 "test_treemap.mlt" 30 625 661
+)
+"test_treemap.mlt" 32 694 700 "test_treemap.mlt" 32 694 720
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 33 722 728 "test_treemap.mlt" 33 722 735
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 33 722 736 "test_treemap.mlt" 33 722 748
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 33 722 749 "test_treemap.mlt" 33 722 755
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 30 625 662 "test_treemap.mlt" 30 625 668
+)
+"test_treemap.mlt" 33 722 728 "test_treemap.mlt" 33 722 755
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 34 757 763 "test_treemap.mlt" 34 757 770
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 34 757 771 "test_treemap.mlt" 34 757 783
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 34 757 784 "test_treemap.mlt" 34 757 790
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 30 625 669 "test_treemap.mlt" 30 625 675
+)
+"test_treemap.mlt" 34 757 763 "test_treemap.mlt" 34 757 790
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 35 792 798 "test_treemap.mlt" 35 792 805
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 35 792 806 "test_treemap.mlt" 35 792 832
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 35 792 833 "test_treemap.mlt" 35 792 839
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treemap.mlt" 30 625 647 "test_treemap.mlt" 30 625 653
+)
+"test_treemap.mlt" 35 792 798 "test_treemap.mlt" 35 792 839
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 31 678 692 "test_treemap.mlt" 36 841 846
+type(
+  string list
+)
+"test_treemap.mlt" 38 852 854 "test_treemap.mlt" 38 852 867
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treemap.mlt" 38 852 868 "test_treemap.mlt" 38 852 872
+type(
+  string
+)
+"test_treemap.mlt" 38 852 873 "test_treemap.mlt" 38 852 878
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treemap.mlt" 31 678 684 "test_treemap.mlt" 31 678 689
+)
+"test_treemap.mlt" 38 852 854 "test_treemap.mlt" 38 852 878
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 31 678 680 "test_treemap.mlt" 38 852 878
+type(
+  string
+)
+"test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+type(
+  string -> string -> string
+)
+ident(
+  def make_remove_msg "test_treemap.mlt" 51 1130 1130 "test_treemap.mlt" 1 0 -1
+)
+"test_treemap.mlt" 41 883 903 "test_treemap.mlt" 41 883 906
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 41 883 907 "test_treemap.mlt" 48 1099 1125
+)
+"test_treemap.mlt" 41 883 907 "test_treemap.mlt" 41 883 919
+type(
+  string
+)
+ident(
+  def original_str "test_treemap.mlt" 42 922 924 "test_treemap.mlt" 48 1099 1125
+)
+"test_treemap.mlt" 42 922 928 "test_treemap.mlt" 42 922 933
+type(
+  string list
+)
+ident(
+  def lines "test_treemap.mlt" 48 1099 1101 "test_treemap.mlt" 48 1099 1125
+)
+"test_treemap.mlt" 43 938 944 "test_treemap.mlt" 43 938 951
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 43 938 952 "test_treemap.mlt" 43 938 981
+type(
+  (string, unit, string) format
+)
+"test_treemap.mlt" 43 938 944 "test_treemap.mlt" 43 938 981
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 44 983 989 "test_treemap.mlt" 44 983 996
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 44 983 997 "test_treemap.mlt" 44 983 1015
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 44 983 1016 "test_treemap.mlt" 44 983 1019
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 41 883 903 "test_treemap.mlt" 41 883 906
+)
+"test_treemap.mlt" 44 983 989 "test_treemap.mlt" 44 983 1019
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 45 1021 1027 "test_treemap.mlt" 45 1021 1034
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 45 1021 1035 "test_treemap.mlt" 45 1021 1053
+type(
+  (string, unit, string) format
+)
+"test_treemap.mlt" 45 1021 1027 "test_treemap.mlt" 45 1021 1053
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 46 1055 1061 "test_treemap.mlt" 46 1055 1068
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 46 1055 1069 "test_treemap.mlt" 46 1055 1075
+type(
+  (string -> string, unit, string) format
+)
+"test_treemap.mlt" 46 1055 1076 "test_treemap.mlt" 46 1055 1088
+type(
+  string
+)
+ident(
+  int_ref original_str "test_treemap.mlt" 41 883 907 "test_treemap.mlt" 41 883 919
+)
+"test_treemap.mlt" 46 1055 1061 "test_treemap.mlt" 46 1055 1088
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 42 922 936 "test_treemap.mlt" 47 1090 1095
+type(
+  string list
+)
+"test_treemap.mlt" 48 1099 1101 "test_treemap.mlt" 48 1099 1114
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treemap.mlt" 48 1099 1115 "test_treemap.mlt" 48 1099 1119
+type(
+  string
+)
+"test_treemap.mlt" 48 1099 1120 "test_treemap.mlt" 48 1099 1125
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treemap.mlt" 42 922 928 "test_treemap.mlt" 42 922 933
+)
+"test_treemap.mlt" 48 1099 1101 "test_treemap.mlt" 48 1099 1125
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 42 922 924 "test_treemap.mlt" 48 1099 1125
+type(
+  string
+)
+"test_treemap.mlt" 51 1130 1130 "test_treemap.mlt" 51 1130 1141
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  int_ref Mltest.main "mltest.ml" 220 6783 6787 "mltest.ml" 220 6783 6791
+)
+"test_treemap.mlt" 55 1214 1219 "test_treemap.mlt" 55 1214 1221
+type(
+  unit
+)
+"test_treemap.mlt" 60 1360 1370 "test_treemap.mlt" 60 1360 1382
+type(
+  int -> int -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 61 1391 1397 "test_treemap.mlt" 62 1446 1453
+)
+"test_treemap.mlt" 60 1360 1385 "test_treemap.mlt" 60 1360 1388
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"test_treemap.mlt" 61 1391 1401 "test_treemap.mlt" 61 1391 1414
+type(
+  int -> bool -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 61 1391 1443 "test_treemap.mlt" 62 1446 1453
+)
+"test_treemap.mlt" 61 1391 1415 "test_treemap.mlt" 61 1391 1416
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 61 1391 1417 "test_treemap.mlt" 61 1391 1443
+)
+"test_treemap.mlt" 61 1391 1417 "test_treemap.mlt" 61 1391 1418
+type(
+  bool
+)
+ident(
+  def b "test_treemap.mlt" 61 1391 1421 "test_treemap.mlt" 61 1391 1443
+)
+"test_treemap.mlt" 61 1391 1421 "test_treemap.mlt" 61 1391 1428
+type(
+  (int -> bool -> string, unit, string) format -> int -> bool -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 61 1391 1429 "test_treemap.mlt" 61 1391 1439
+type(
+  (int -> bool -> string, unit, string) format
+)
+"test_treemap.mlt" 61 1391 1440 "test_treemap.mlt" 61 1391 1441
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 61 1391 1415 "test_treemap.mlt" 61 1391 1416
+)
+"test_treemap.mlt" 61 1391 1442 "test_treemap.mlt" 61 1391 1443
+type(
+  bool
+)
+ident(
+  int_ref b "test_treemap.mlt" 61 1391 1417 "test_treemap.mlt" 61 1391 1418
+)
+"test_treemap.mlt" 61 1391 1421 "test_treemap.mlt" 61 1391 1443
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 64 1459 1480 "test_treemap.mlt" 64 1459 1498
+call(
+  stack
+)
+"test_treemap.mlt" 67 1520 1526 "test_treemap.mlt" 67 1520 1529
+type(
+  IBMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 68 1547 1549 "test_treemap.mlt" 74 1672 2130
+)
+"test_treemap.mlt" 67 1520 1532 "test_treemap.mlt" 67 1520 1543
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref IBMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 68 1547 1553 "test_treemap.mlt" 68 1547 1556
+type(
+  IBMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 69 1584 1586 "test_treemap.mlt" 74 1672 2130
+)
+"test_treemap.mlt" 68 1547 1559 "test_treemap.mlt" 68 1547 1568
+type(
+  IBMap.treemap -> IBKV.key_t -> IBKV.value_t -> IBMap.treemap
+)
+ident(
+  int_ref IBMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 68 1547 1569 "test_treemap.mlt" 68 1547 1572
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 67 1520 1526 "test_treemap.mlt" 67 1520 1529
+)
+"test_treemap.mlt" 68 1547 1573 "test_treemap.mlt" 68 1547 1574
+type(
+  IBKV.key_t
+)
+"test_treemap.mlt" 68 1547 1575 "test_treemap.mlt" 68 1547 1580
+type(
+  IBKV.value_t
+)
+"test_treemap.mlt" 68 1547 1559 "test_treemap.mlt" 68 1547 1580
+call(
+  stack
+)
+type(
+  IBMap.treemap
+)
+"test_treemap.mlt" 69 1584 1590 "test_treemap.mlt" 69 1584 1600
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 70 1628 1630 "test_treemap.mlt" 74 1672 2130
+)
+"test_treemap.mlt" 69 1584 1603 "test_treemap.mlt" 69 1584 1620
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 69 1584 1621 "test_treemap.mlt" 69 1584 1624
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 68 1547 1553 "test_treemap.mlt" 68 1547 1556
+)
+"test_treemap.mlt" 69 1584 1603 "test_treemap.mlt" 69 1584 1624
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 70 1628 1634 "test_treemap.mlt" 70 1628 1644
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 74 1672 1672 "test_treemap.mlt" 74 1672 2129
+)
+"test_treemap.mlt" 70 1628 1647 "test_treemap.mlt" 72 1664 1665
+type(
+  string
+)
+"test_treemap.mlt" 74 1672 1675 "test_treemap.mlt" 74 1672 1678
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 74 1672 1683 "test_treemap.mlt" 74 1672 1693
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 74 1672 1695 "test_treemap.mlt" 74 1672 1705
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 70 1628 1634 "test_treemap.mlt" 70 1628 1644
+)
+"test_treemap.mlt" 74 1672 1706 "test_treemap.mlt" 74 1672 1717
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 74 1672 1719 "test_treemap.mlt" 74 1672 1729
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 69 1584 1590 "test_treemap.mlt" 69 1584 1600
+)
+"test_treemap.mlt" 74 1672 1730 "test_treemap.mlt" 74 1672 1741
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 74 1672 1742 "test_treemap.mlt" 74 1672 1751
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 74 1672 1752 "test_treemap.mlt" 74 1672 1758
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 74 1672 1679 "test_treemap.mlt" 74 1672 1761
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 74 1672 1675 "test_treemap.mlt" 74 1672 1761
+type(
+  bool
+)
+"test_treemap.mlt" 74 1672 1767 "test_treemap.mlt" 74 1672 1772
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 74 1672 1788 "test_treemap.mlt" 74 1672 1808
+type(
+  string
+)
+"test_treemap.mlt" 74 1672 1815 "test_treemap.mlt" 74 1672 1816
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 74 1672 1816 "test_treemap.mlt" 74 1672 1822
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 74 1672 1814 "test_treemap.mlt" 74 1672 1823
+type(
+  string
+)
+"test_treemap.mlt" 74 1672 1830 "test_treemap.mlt" 74 1672 2119
+type(
+  string
+)
+"test_treemap.mlt" 74 1672 1783 "test_treemap.mlt" 74 1672 2120
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 74 1672 1773 "test_treemap.mlt" 74 1672 2121
+type(
+  exn
+)
+"test_treemap.mlt" 74 1672 1767 "test_treemap.mlt" 74 1672 2121
+type(
+  unit
+)
+"test_treemap.mlt" 74 1672 2127 "test_treemap.mlt" 74 1672 2129
+type(
+  unit
+)
+"test_treemap.mlt" 74 1672 1672 "test_treemap.mlt" 74 1672 2129
+type(
+  unit
+)
+"test_treemap.mlt" 70 1628 1630 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 69 1584 1586 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 68 1547 1549 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 67 1520 1522 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 64 1459 1461 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 57 1280 1282 "test_treemap.mlt" 74 1672 2130
+type(
+  unit
+)
+"test_treemap.mlt" 55 1214 1214 "test_treemap.mlt" 76 2148 2149
+type(
+  unit -> unit
+)
+"test_treemap.mlt" 78 2152 2157 "test_treemap.mlt" 78 2152 2159
+type(
+  unit
+)
+"test_treemap.mlt" 83 2298 2308 "test_treemap.mlt" 83 2298 2320
+type(
+  int -> int -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 84 2329 2335 "test_treemap.mlt" 85 2384 2391
+)
+"test_treemap.mlt" 83 2298 2323 "test_treemap.mlt" 83 2298 2326
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"test_treemap.mlt" 84 2329 2339 "test_treemap.mlt" 84 2329 2352
+type(
+  int -> bool -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 84 2329 2381 "test_treemap.mlt" 85 2384 2391
+)
+"test_treemap.mlt" 84 2329 2353 "test_treemap.mlt" 84 2329 2354
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 84 2329 2355 "test_treemap.mlt" 84 2329 2381
+)
+"test_treemap.mlt" 84 2329 2355 "test_treemap.mlt" 84 2329 2356
+type(
+  bool
+)
+ident(
+  def b "test_treemap.mlt" 84 2329 2359 "test_treemap.mlt" 84 2329 2381
+)
+"test_treemap.mlt" 84 2329 2359 "test_treemap.mlt" 84 2329 2366
+type(
+  (int -> bool -> string, unit, string) format -> int -> bool -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 84 2329 2367 "test_treemap.mlt" 84 2329 2377
+type(
+  (int -> bool -> string, unit, string) format
+)
+"test_treemap.mlt" 84 2329 2378 "test_treemap.mlt" 84 2329 2379
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 84 2329 2353 "test_treemap.mlt" 84 2329 2354
+)
+"test_treemap.mlt" 84 2329 2380 "test_treemap.mlt" 84 2329 2381
+type(
+  bool
+)
+ident(
+  int_ref b "test_treemap.mlt" 84 2329 2355 "test_treemap.mlt" 84 2329 2356
+)
+"test_treemap.mlt" 84 2329 2359 "test_treemap.mlt" 84 2329 2381
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 87 2397 2418 "test_treemap.mlt" 87 2397 2436
+call(
+  stack
+)
+"test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+type(
+  IBMap.treemap
+)
+ident(
+  def ibmap "test_treemap.mlt" 95 2652 2654 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 89 2454 2462 "test_treemap.mlt" 89 2454 2465
+type(
+  (int * bool) list
+)
+ident(
+  def kvs "test_treemap.mlt" 90 2541 2545 "test_treemap.mlt" 91 2588 2628
+)
+"test_treemap.mlt" 89 2454 2469 "test_treemap.mlt" 89 2454 2470
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2471 "test_treemap.mlt" 89 2454 2476
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2469 "test_treemap.mlt" 89 2454 2476
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2478 "test_treemap.mlt" 89 2454 2479
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2480 "test_treemap.mlt" 89 2454 2484
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2478 "test_treemap.mlt" 89 2454 2484
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2486 "test_treemap.mlt" 89 2454 2488
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2489 "test_treemap.mlt" 89 2454 2493
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2486 "test_treemap.mlt" 89 2454 2493
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2495 "test_treemap.mlt" 89 2454 2496
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2497 "test_treemap.mlt" 89 2454 2502
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2495 "test_treemap.mlt" 89 2454 2502
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2504 "test_treemap.mlt" 89 2454 2505
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2506 "test_treemap.mlt" 89 2454 2510
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2504 "test_treemap.mlt" 89 2454 2510
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2512 "test_treemap.mlt" 89 2454 2513
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2514 "test_treemap.mlt" 89 2454 2518
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2512 "test_treemap.mlt" 89 2454 2518
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2520 "test_treemap.mlt" 89 2454 2521
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2522 "test_treemap.mlt" 89 2454 2527
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2520 "test_treemap.mlt" 89 2454 2527
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2529 "test_treemap.mlt" 89 2454 2530
+type(
+  int
+)
+"test_treemap.mlt" 89 2454 2531 "test_treemap.mlt" 89 2454 2536
+type(
+  bool
+)
+"test_treemap.mlt" 89 2454 2529 "test_treemap.mlt" 89 2454 2536
+type(
+  int * bool
+)
+"test_treemap.mlt" 89 2454 2468 "test_treemap.mlt" 89 2454 2537
+type(
+  (int * bool) list
+)
+"test_treemap.mlt" 90 2541 2549 "test_treemap.mlt" 90 2541 2554
+type(
+  IBMap.treemap -> IBKV.key_t * IBKV.value_t -> IBMap.treemap
+)
+ident(
+  def addkv "test_treemap.mlt" 91 2588 2592 "test_treemap.mlt" 91 2588 2628
+)
+"test_treemap.mlt" 90 2541 2555 "test_treemap.mlt" 90 2541 2558
+type(
+  IBMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 90 2541 2559 "test_treemap.mlt" 90 2541 2584
+)
+"test_treemap.mlt" 90 2541 2560 "test_treemap.mlt" 90 2541 2561
+type(
+  IBKV.key_t
+)
+ident(
+  def k "test_treemap.mlt" 90 2541 2567 "test_treemap.mlt" 90 2541 2584
+)
+"test_treemap.mlt" 90 2541 2562 "test_treemap.mlt" 90 2541 2563
+type(
+  IBKV.value_t
+)
+ident(
+  def v "test_treemap.mlt" 90 2541 2567 "test_treemap.mlt" 90 2541 2584
+)
+"test_treemap.mlt" 90 2541 2559 "test_treemap.mlt" 90 2541 2564
+type(
+  IBKV.key_t * IBKV.value_t
+)
+"test_treemap.mlt" 90 2541 2567 "test_treemap.mlt" 90 2541 2576
+type(
+  IBMap.treemap -> IBKV.key_t -> IBKV.value_t -> IBMap.treemap
+)
+ident(
+  int_ref IBMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 90 2541 2577 "test_treemap.mlt" 90 2541 2580
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 90 2541 2555 "test_treemap.mlt" 90 2541 2558
+)
+"test_treemap.mlt" 90 2541 2581 "test_treemap.mlt" 90 2541 2582
+type(
+  IBKV.key_t
+)
+ident(
+  int_ref k "test_treemap.mlt" 90 2541 2560 "test_treemap.mlt" 90 2541 2561
+)
+"test_treemap.mlt" 90 2541 2583 "test_treemap.mlt" 90 2541 2584
+type(
+  IBKV.value_t
+)
+ident(
+  int_ref v "test_treemap.mlt" 90 2541 2562 "test_treemap.mlt" 90 2541 2563
+)
+"test_treemap.mlt" 90 2541 2567 "test_treemap.mlt" 90 2541 2584
+call(
+  tail
+)
+type(
+  IBMap.treemap
+)
+"test_treemap.mlt" 91 2588 2592 "test_treemap.mlt" 91 2588 2606
+type(
+  (IBMap.treemap -> IBKV.key_t * IBKV.value_t -> IBMap.treemap) ->
+  IBMap.treemap -> (IBKV.key_t * IBKV.value_t) list -> IBMap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treemap.mlt" 91 2588 2607 "test_treemap.mlt" 91 2588 2612
+type(
+  IBMap.treemap -> IBKV.key_t * IBKV.value_t -> IBMap.treemap
+)
+ident(
+  int_ref addkv "test_treemap.mlt" 90 2541 2549 "test_treemap.mlt" 90 2541 2554
+)
+"test_treemap.mlt" 91 2588 2613 "test_treemap.mlt" 91 2588 2624
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref IBMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 91 2588 2625 "test_treemap.mlt" 91 2588 2628
+type(
+  (IBKV.key_t * IBKV.value_t) list
+)
+ident(
+  int_ref kvs "test_treemap.mlt" 89 2454 2462 "test_treemap.mlt" 89 2454 2465
+)
+"test_treemap.mlt" 91 2588 2592 "test_treemap.mlt" 91 2588 2628
+call(
+  stack
+)
+type(
+  IBMap.treemap
+)
+"test_treemap.mlt" 90 2541 2545 "test_treemap.mlt" 91 2588 2628
+type(
+  IBMap.treemap
+)
+"test_treemap.mlt" 89 2454 2458 "test_treemap.mlt" 91 2588 2628
+type(
+  IBMap.treemap
+)
+"test_treemap.mlt" 95 2652 2658 "test_treemap.mlt" 95 2652 2661
+type(
+  int
+)
+ident(
+  def key "test_treemap.mlt" 96 2669 2671 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 95 2652 2664 "test_treemap.mlt" 95 2652 2665
+type(
+  int
+)
+"test_treemap.mlt" 96 2669 2675 "test_treemap.mlt" 96 2669 2681
+type(
+  IBKV.value_t option
+)
+ident(
+  def actual "test_treemap.mlt" 97 2710 2712 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 96 2669 2684 "test_treemap.mlt" 96 2669 2696
+type(
+  IBMap.treemap -> IBKV.key_t -> IBKV.value_t option
+)
+ident(
+  int_ref IBMap.getopt "treemap.ml" 39 1121 1123 "treemap.ml" 39 1121 1182
+)
+"test_treemap.mlt" 96 2669 2697 "test_treemap.mlt" 96 2669 2702
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 96 2669 2703 "test_treemap.mlt" 96 2669 2706
+type(
+  IBKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 95 2652 2658 "test_treemap.mlt" 95 2652 2661
+)
+"test_treemap.mlt" 96 2669 2684 "test_treemap.mlt" 96 2669 2706
+call(
+  stack
+)
+type(
+  IBKV.value_t option
+)
+"test_treemap.mlt" 97 2710 2716 "test_treemap.mlt" 97 2710 2722
+type(
+  bool option
+)
+ident(
+  def expect "test_treemap.mlt" 98 2739 2741 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 97 2710 2730 "test_treemap.mlt" 97 2710 2735
+type(
+  bool
+)
+"test_treemap.mlt" 97 2710 2725 "test_treemap.mlt" 97 2710 2735
+type(
+  bool option
+)
+"test_treemap.mlt" 98 2739 2745 "test_treemap.mlt" 98 2739 2748
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 99 2864 2864 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 98 2739 2751 "test_treemap.mlt" 98 2739 2766
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+)
+"test_treemap.mlt" 98 2739 2768 "test_treemap.mlt" 98 2739 2781
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 98 2739 2782 "test_treemap.mlt" 98 2739 2785
+type(
+  int
+)
+ident(
+  int_ref key "test_treemap.mlt" 95 2652 2658 "test_treemap.mlt" 95 2652 2661
+)
+"test_treemap.mlt" 98 2739 2767 "test_treemap.mlt" 98 2739 2786
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 98 2739 2788 "test_treemap.mlt" 98 2739 2805
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 98 2739 2806 "test_treemap.mlt" 98 2739 2811
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 98 2739 2787 "test_treemap.mlt" 98 2739 2812
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 98 2739 2814 "test_treemap.mlt" 98 2739 2828
+type(
+  bool option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 98 2739 2829 "test_treemap.mlt" 98 2739 2835
+type(
+  bool option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 97 2710 2716 "test_treemap.mlt" 97 2710 2722
+)
+"test_treemap.mlt" 98 2739 2813 "test_treemap.mlt" 98 2739 2836
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 98 2739 2838 "test_treemap.mlt" 98 2739 2852
+type(
+  IBKV.value_t option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 98 2739 2853 "test_treemap.mlt" 98 2739 2859
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 96 2669 2675 "test_treemap.mlt" 96 2669 2681
+)
+"test_treemap.mlt" 98 2739 2837 "test_treemap.mlt" 98 2739 2860
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 98 2739 2751 "test_treemap.mlt" 98 2739 2860
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 99 2864 2867 "test_treemap.mlt" 99 2864 2870
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 99 2864 2875 "test_treemap.mlt" 99 2864 2881
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 97 2710 2716 "test_treemap.mlt" 97 2710 2722
+)
+"test_treemap.mlt" 99 2864 2882 "test_treemap.mlt" 99 2864 2883
+type(
+  IBKV.value_t option -> IBKV.value_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 99 2864 2884 "test_treemap.mlt" 99 2864 2890
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 96 2669 2675 "test_treemap.mlt" 96 2669 2681
+)
+"test_treemap.mlt" 99 2864 2871 "test_treemap.mlt" 99 2864 2893
+type(
+  bool
+)
+"test_treemap.mlt" 99 2864 2867 "test_treemap.mlt" 99 2864 2893
+type(
+  bool
+)
+"test_treemap.mlt" 99 2864 2899 "test_treemap.mlt" 99 2864 2904
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 99 2864 2920 "test_treemap.mlt" 99 2864 2940
+type(
+  string
+)
+"test_treemap.mlt" 99 2864 2946 "test_treemap.mlt" 99 2864 2949
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 98 2739 2745 "test_treemap.mlt" 98 2739 2748
+)
+"test_treemap.mlt" 99 2864 2956 "test_treemap.mlt" 99 2864 3223
+type(
+  string
+)
+"test_treemap.mlt" 99 2864 2915 "test_treemap.mlt" 99 2864 3224
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 99 2864 2905 "test_treemap.mlt" 99 2864 3225
+type(
+  exn
+)
+"test_treemap.mlt" 99 2864 2899 "test_treemap.mlt" 99 2864 3225
+type(
+  unit
+)
+"test_treemap.mlt" 99 2864 3231 "test_treemap.mlt" 99 2864 3233
+type(
+  unit
+)
+"test_treemap.mlt" 99 2864 2864 "test_treemap.mlt" 99 2864 3233
+type(
+  unit
+)
+"test_treemap.mlt" 103 3270 3276 "test_treemap.mlt" 103 3270 3279
+type(
+  int
+)
+ident(
+  def key "test_treemap.mlt" 104 3287 3289 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 103 3270 3282 "test_treemap.mlt" 103 3270 3283
+type(
+  int
+)
+"test_treemap.mlt" 104 3287 3293 "test_treemap.mlt" 104 3287 3299
+type(
+  IBKV.value_t option
+)
+ident(
+  def actual "test_treemap.mlt" 105 3328 3330 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 104 3287 3302 "test_treemap.mlt" 104 3287 3314
+type(
+  IBMap.treemap -> IBKV.key_t -> IBKV.value_t option
+)
+ident(
+  int_ref IBMap.getopt "treemap.ml" 39 1121 1123 "treemap.ml" 39 1121 1182
+)
+"test_treemap.mlt" 104 3287 3315 "test_treemap.mlt" 104 3287 3320
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 104 3287 3321 "test_treemap.mlt" 104 3287 3324
+type(
+  IBKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 103 3270 3276 "test_treemap.mlt" 103 3270 3279
+)
+"test_treemap.mlt" 104 3287 3302 "test_treemap.mlt" 104 3287 3324
+call(
+  stack
+)
+type(
+  IBKV.value_t option
+)
+"test_treemap.mlt" 105 3328 3334 "test_treemap.mlt" 105 3328 3340
+type(
+  bool option
+)
+ident(
+  def expect "test_treemap.mlt" 106 3356 3358 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 105 3328 3348 "test_treemap.mlt" 105 3328 3352
+type(
+  bool
+)
+"test_treemap.mlt" 105 3328 3343 "test_treemap.mlt" 105 3328 3352
+type(
+  bool option
+)
+"test_treemap.mlt" 106 3356 3362 "test_treemap.mlt" 106 3356 3365
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 107 3481 3481 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 106 3356 3368 "test_treemap.mlt" 106 3356 3383
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+)
+"test_treemap.mlt" 106 3356 3385 "test_treemap.mlt" 106 3356 3398
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 106 3356 3399 "test_treemap.mlt" 106 3356 3402
+type(
+  int
+)
+ident(
+  int_ref key "test_treemap.mlt" 103 3270 3276 "test_treemap.mlt" 103 3270 3279
+)
+"test_treemap.mlt" 106 3356 3384 "test_treemap.mlt" 106 3356 3403
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 106 3356 3405 "test_treemap.mlt" 106 3356 3422
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 106 3356 3423 "test_treemap.mlt" 106 3356 3428
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 106 3356 3404 "test_treemap.mlt" 106 3356 3429
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 106 3356 3431 "test_treemap.mlt" 106 3356 3445
+type(
+  bool option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 106 3356 3446 "test_treemap.mlt" 106 3356 3452
+type(
+  bool option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 105 3328 3334 "test_treemap.mlt" 105 3328 3340
+)
+"test_treemap.mlt" 106 3356 3430 "test_treemap.mlt" 106 3356 3453
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 106 3356 3455 "test_treemap.mlt" 106 3356 3469
+type(
+  IBKV.value_t option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 106 3356 3470 "test_treemap.mlt" 106 3356 3476
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 104 3287 3293 "test_treemap.mlt" 104 3287 3299
+)
+"test_treemap.mlt" 106 3356 3454 "test_treemap.mlt" 106 3356 3477
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 106 3356 3368 "test_treemap.mlt" 106 3356 3477
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 107 3481 3484 "test_treemap.mlt" 107 3481 3487
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 107 3481 3492 "test_treemap.mlt" 107 3481 3498
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 105 3328 3334 "test_treemap.mlt" 105 3328 3340
+)
+"test_treemap.mlt" 107 3481 3499 "test_treemap.mlt" 107 3481 3500
+type(
+  IBKV.value_t option -> IBKV.value_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 107 3481 3501 "test_treemap.mlt" 107 3481 3507
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 104 3287 3293 "test_treemap.mlt" 104 3287 3299
+)
+"test_treemap.mlt" 107 3481 3488 "test_treemap.mlt" 107 3481 3510
+type(
+  bool
+)
+"test_treemap.mlt" 107 3481 3484 "test_treemap.mlt" 107 3481 3510
+type(
+  bool
+)
+"test_treemap.mlt" 107 3481 3516 "test_treemap.mlt" 107 3481 3521
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 107 3481 3537 "test_treemap.mlt" 107 3481 3558
+type(
+  string
+)
+"test_treemap.mlt" 107 3481 3564 "test_treemap.mlt" 107 3481 3567
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 106 3356 3362 "test_treemap.mlt" 106 3356 3365
+)
+"test_treemap.mlt" 107 3481 3574 "test_treemap.mlt" 107 3481 3845
+type(
+  string
+)
+"test_treemap.mlt" 107 3481 3532 "test_treemap.mlt" 107 3481 3846
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 107 3481 3522 "test_treemap.mlt" 107 3481 3847
+type(
+  exn
+)
+"test_treemap.mlt" 107 3481 3516 "test_treemap.mlt" 107 3481 3847
+type(
+  unit
+)
+"test_treemap.mlt" 107 3481 3853 "test_treemap.mlt" 107 3481 3855
+type(
+  unit
+)
+"test_treemap.mlt" 107 3481 3481 "test_treemap.mlt" 107 3481 3855
+type(
+  unit
+)
+"test_treemap.mlt" 111 3892 3898 "test_treemap.mlt" 111 3892 3901
+type(
+  int
+)
+ident(
+  def key "test_treemap.mlt" 112 3909 3911 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 111 3892 3904 "test_treemap.mlt" 111 3892 3905
+type(
+  int
+)
+"test_treemap.mlt" 112 3909 3915 "test_treemap.mlt" 112 3909 3921
+type(
+  IBKV.value_t option
+)
+ident(
+  def actual "test_treemap.mlt" 113 3950 3952 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 112 3909 3924 "test_treemap.mlt" 112 3909 3936
+type(
+  IBMap.treemap -> IBKV.key_t -> IBKV.value_t option
+)
+ident(
+  int_ref IBMap.getopt "treemap.ml" 39 1121 1123 "treemap.ml" 39 1121 1182
+)
+"test_treemap.mlt" 112 3909 3937 "test_treemap.mlt" 112 3909 3942
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 112 3909 3943 "test_treemap.mlt" 112 3909 3946
+type(
+  IBKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 111 3892 3898 "test_treemap.mlt" 111 3892 3901
+)
+"test_treemap.mlt" 112 3909 3924 "test_treemap.mlt" 112 3909 3946
+call(
+  stack
+)
+type(
+  IBKV.value_t option
+)
+"test_treemap.mlt" 113 3950 3956 "test_treemap.mlt" 113 3950 3962
+type(
+  'a option
+)
+ident(
+  def expect "test_treemap.mlt" 114 3973 3975 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 113 3950 3965 "test_treemap.mlt" 113 3950 3969
+type(
+  'a option
+)
+"test_treemap.mlt" 114 3973 3979 "test_treemap.mlt" 114 3973 3982
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 115 4098 4098 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 114 3973 3985 "test_treemap.mlt" 114 3973 4000
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+)
+"test_treemap.mlt" 114 3973 4002 "test_treemap.mlt" 114 3973 4015
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 114 3973 4016 "test_treemap.mlt" 114 3973 4019
+type(
+  int
+)
+ident(
+  int_ref key "test_treemap.mlt" 111 3892 3898 "test_treemap.mlt" 111 3892 3901
+)
+"test_treemap.mlt" 114 3973 4001 "test_treemap.mlt" 114 3973 4020
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 114 3973 4022 "test_treemap.mlt" 114 3973 4039
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 114 3973 4040 "test_treemap.mlt" 114 3973 4045
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 114 3973 4021 "test_treemap.mlt" 114 3973 4046
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 114 3973 4048 "test_treemap.mlt" 114 3973 4062
+type(
+  bool option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 114 3973 4063 "test_treemap.mlt" 114 3973 4069
+type(
+  bool option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 113 3950 3956 "test_treemap.mlt" 113 3950 3962
+)
+"test_treemap.mlt" 114 3973 4047 "test_treemap.mlt" 114 3973 4070
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 114 3973 4072 "test_treemap.mlt" 114 3973 4086
+type(
+  IBKV.value_t option -> string
+)
+ident(
+  int_ref str_of_boolopt "test_treemap.mlt" 17 319 323 "test_treemap.mlt" 17 319 337
+)
+"test_treemap.mlt" 114 3973 4087 "test_treemap.mlt" 114 3973 4093
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 112 3909 3915 "test_treemap.mlt" 112 3909 3921
+)
+"test_treemap.mlt" 114 3973 4071 "test_treemap.mlt" 114 3973 4094
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 114 3973 3985 "test_treemap.mlt" 114 3973 4094
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 115 4098 4101 "test_treemap.mlt" 115 4098 4104
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 115 4098 4109 "test_treemap.mlt" 115 4098 4115
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref expect "test_treemap.mlt" 113 3950 3956 "test_treemap.mlt" 113 3950 3962
+)
+"test_treemap.mlt" 115 4098 4116 "test_treemap.mlt" 115 4098 4117
+type(
+  IBKV.value_t option -> IBKV.value_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 115 4098 4118 "test_treemap.mlt" 115 4098 4124
+type(
+  IBKV.value_t option
+)
+ident(
+  int_ref actual "test_treemap.mlt" 112 3909 3915 "test_treemap.mlt" 112 3909 3921
+)
+"test_treemap.mlt" 115 4098 4105 "test_treemap.mlt" 115 4098 4127
+type(
+  bool
+)
+"test_treemap.mlt" 115 4098 4101 "test_treemap.mlt" 115 4098 4127
+type(
+  bool
+)
+"test_treemap.mlt" 115 4098 4133 "test_treemap.mlt" 115 4098 4138
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 115 4098 4154 "test_treemap.mlt" 115 4098 4175
+type(
+  string
+)
+"test_treemap.mlt" 115 4098 4181 "test_treemap.mlt" 115 4098 4184
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 114 3973 3979 "test_treemap.mlt" 114 3973 3982
+)
+"test_treemap.mlt" 115 4098 4191 "test_treemap.mlt" 115 4098 4457
+type(
+  string
+)
+"test_treemap.mlt" 115 4098 4149 "test_treemap.mlt" 115 4098 4458
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 115 4098 4139 "test_treemap.mlt" 115 4098 4459
+type(
+  exn
+)
+"test_treemap.mlt" 115 4098 4133 "test_treemap.mlt" 115 4098 4459
+type(
+  unit
+)
+"test_treemap.mlt" 115 4098 4465 "test_treemap.mlt" 115 4098 4467
+type(
+  unit
+)
+"test_treemap.mlt" 115 4098 4098 "test_treemap.mlt" 115 4098 4467
+type(
+  unit
+)
+"test_treemap.mlt" 119 4504 4510 "test_treemap.mlt" 119 4504 4513
+type(
+  int
+)
+ident(
+  def key "test_treemap.mlt" 120 4521 4523 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 119 4504 4516 "test_treemap.mlt" 119 4504 4517
+type(
+  int
+)
+"test_treemap.mlt" 120 4521 4527 "test_treemap.mlt" 120 4521 4533
+type(
+  bool
+)
+ident(
+  def actual "test_treemap.mlt" 121 4567 4569 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 120 4521 4536 "test_treemap.mlt" 120 4521 4554
+type(
+  IBMap.treemap -> IBKV.key_t -> bool
+)
+ident(
+  int_ref IBMap.contains_key "treemap.ml" 41 1184 1186 "treemap.ml" 41 1184 1235
+)
+"test_treemap.mlt" 120 4521 4555 "test_treemap.mlt" 120 4521 4560
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 120 4521 4561 "test_treemap.mlt" 120 4521 4563
+type(
+  IBKV.key_t
+)
+"test_treemap.mlt" 120 4521 4536 "test_treemap.mlt" 120 4521 4563
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 121 4567 4573 "test_treemap.mlt" 121 4567 4579
+type(
+  bool
+)
+ident(
+  def expect "test_treemap.mlt" 122 4590 4592 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 121 4567 4582 "test_treemap.mlt" 121 4567 4586
+type(
+  bool
+)
+"test_treemap.mlt" 122 4590 4596 "test_treemap.mlt" 122 4590 4599
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 123 4715 4715 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 122 4590 4602 "test_treemap.mlt" 122 4590 4617
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+)
+"test_treemap.mlt" 122 4590 4619 "test_treemap.mlt" 122 4590 4632
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 122 4590 4633 "test_treemap.mlt" 122 4590 4636
+type(
+  int
+)
+ident(
+  int_ref key "test_treemap.mlt" 119 4504 4510 "test_treemap.mlt" 119 4504 4513
+)
+"test_treemap.mlt" 122 4590 4618 "test_treemap.mlt" 122 4590 4637
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 122 4590 4639 "test_treemap.mlt" 122 4590 4656
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 122 4590 4657 "test_treemap.mlt" 122 4590 4662
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 122 4590 4638 "test_treemap.mlt" 122 4590 4663
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 122 4590 4665 "test_treemap.mlt" 122 4590 4679
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treemap.mlt" 122 4590 4680 "test_treemap.mlt" 122 4590 4686
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treemap.mlt" 121 4567 4573 "test_treemap.mlt" 121 4567 4579
+)
+"test_treemap.mlt" 122 4590 4664 "test_treemap.mlt" 122 4590 4687
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 122 4590 4689 "test_treemap.mlt" 122 4590 4703
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treemap.mlt" 122 4590 4704 "test_treemap.mlt" 122 4590 4710
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treemap.mlt" 120 4521 4527 "test_treemap.mlt" 120 4521 4533
+)
+"test_treemap.mlt" 122 4590 4688 "test_treemap.mlt" 122 4590 4711
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 122 4590 4602 "test_treemap.mlt" 122 4590 4711
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 123 4715 4718 "test_treemap.mlt" 123 4715 4721
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 123 4715 4726 "test_treemap.mlt" 123 4715 4732
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treemap.mlt" 121 4567 4573 "test_treemap.mlt" 121 4567 4579
+)
+"test_treemap.mlt" 123 4715 4733 "test_treemap.mlt" 123 4715 4734
+type(
+  bool -> bool -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 123 4715 4735 "test_treemap.mlt" 123 4715 4741
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treemap.mlt" 120 4521 4527 "test_treemap.mlt" 120 4521 4533
+)
+"test_treemap.mlt" 123 4715 4722 "test_treemap.mlt" 123 4715 4744
+type(
+  bool
+)
+"test_treemap.mlt" 123 4715 4718 "test_treemap.mlt" 123 4715 4744
+type(
+  bool
+)
+"test_treemap.mlt" 123 4715 4750 "test_treemap.mlt" 123 4715 4755
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 123 4715 4771 "test_treemap.mlt" 123 4715 4792
+type(
+  string
+)
+"test_treemap.mlt" 123 4715 4798 "test_treemap.mlt" 123 4715 4801
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 122 4590 4596 "test_treemap.mlt" 122 4590 4599
+)
+"test_treemap.mlt" 123 4715 4808 "test_treemap.mlt" 123 4715 5079
+type(
+  string
+)
+"test_treemap.mlt" 123 4715 4766 "test_treemap.mlt" 123 4715 5080
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 123 4715 4756 "test_treemap.mlt" 123 4715 5081
+type(
+  exn
+)
+"test_treemap.mlt" 123 4715 4750 "test_treemap.mlt" 123 4715 5081
+type(
+  unit
+)
+"test_treemap.mlt" 123 4715 5087 "test_treemap.mlt" 123 4715 5089
+type(
+  unit
+)
+"test_treemap.mlt" 123 4715 4715 "test_treemap.mlt" 123 4715 5089
+type(
+  unit
+)
+"test_treemap.mlt" 127 5126 5132 "test_treemap.mlt" 127 5126 5135
+type(
+  int
+)
+ident(
+  def key "test_treemap.mlt" 128 5143 5145 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 127 5126 5138 "test_treemap.mlt" 127 5126 5139
+type(
+  int
+)
+"test_treemap.mlt" 128 5143 5149 "test_treemap.mlt" 128 5143 5155
+type(
+  bool
+)
+ident(
+  def actual "test_treemap.mlt" 129 5189 5191 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 128 5143 5158 "test_treemap.mlt" 128 5143 5176
+type(
+  IBMap.treemap -> IBKV.key_t -> bool
+)
+ident(
+  int_ref IBMap.contains_key "treemap.ml" 41 1184 1186 "treemap.ml" 41 1184 1235
+)
+"test_treemap.mlt" 128 5143 5177 "test_treemap.mlt" 128 5143 5182
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 128 5143 5183 "test_treemap.mlt" 128 5143 5185
+type(
+  IBKV.key_t
+)
+"test_treemap.mlt" 128 5143 5158 "test_treemap.mlt" 128 5143 5185
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 129 5189 5195 "test_treemap.mlt" 129 5189 5201
+type(
+  bool
+)
+ident(
+  def expect "test_treemap.mlt" 130 5212 5214 "test_treemap.mlt" 131 5337 5712
+)
+"test_treemap.mlt" 129 5189 5204 "test_treemap.mlt" 129 5189 5208
+type(
+  bool
+)
+"test_treemap.mlt" 130 5212 5218 "test_treemap.mlt" 130 5212 5221
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 131 5337 5337 "test_treemap.mlt" 131 5337 5711
+)
+"test_treemap.mlt" 130 5212 5224 "test_treemap.mlt" 130 5212 5239
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treemap.mlt" 19 369 373 "test_treemap.mlt" 19 369 388
+)
+"test_treemap.mlt" 130 5212 5241 "test_treemap.mlt" 130 5212 5254
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 130 5212 5255 "test_treemap.mlt" 130 5212 5258
+type(
+  int
+)
+ident(
+  int_ref key "test_treemap.mlt" 127 5126 5132 "test_treemap.mlt" 127 5126 5135
+)
+"test_treemap.mlt" 130 5212 5240 "test_treemap.mlt" 130 5212 5259
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 130 5212 5261 "test_treemap.mlt" 130 5212 5278
+type(
+  IBMap.treemap -> string
+)
+ident(
+  int_ref IBMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 130 5212 5279 "test_treemap.mlt" 130 5212 5284
+type(
+  IBMap.treemap
+)
+ident(
+  int_ref ibmap "test_treemap.mlt" 88 2440 2446 "test_treemap.mlt" 88 2440 2451
+)
+"test_treemap.mlt" 130 5212 5260 "test_treemap.mlt" 130 5212 5285
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 130 5212 5287 "test_treemap.mlt" 130 5212 5301
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treemap.mlt" 130 5212 5302 "test_treemap.mlt" 130 5212 5308
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treemap.mlt" 129 5189 5195 "test_treemap.mlt" 129 5189 5201
+)
+"test_treemap.mlt" 130 5212 5286 "test_treemap.mlt" 130 5212 5309
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 130 5212 5311 "test_treemap.mlt" 130 5212 5325
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treemap.mlt" 130 5212 5326 "test_treemap.mlt" 130 5212 5332
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treemap.mlt" 128 5143 5149 "test_treemap.mlt" 128 5143 5155
+)
+"test_treemap.mlt" 130 5212 5310 "test_treemap.mlt" 130 5212 5333
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 130 5212 5224 "test_treemap.mlt" 130 5212 5333
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 131 5337 5340 "test_treemap.mlt" 131 5337 5343
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 131 5337 5348 "test_treemap.mlt" 131 5337 5354
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treemap.mlt" 129 5189 5195 "test_treemap.mlt" 129 5189 5201
+)
+"test_treemap.mlt" 131 5337 5355 "test_treemap.mlt" 131 5337 5356
+type(
+  bool -> bool -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 131 5337 5357 "test_treemap.mlt" 131 5337 5363
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treemap.mlt" 128 5143 5149 "test_treemap.mlt" 128 5143 5155
+)
+"test_treemap.mlt" 131 5337 5344 "test_treemap.mlt" 131 5337 5366
+type(
+  bool
+)
+"test_treemap.mlt" 131 5337 5340 "test_treemap.mlt" 131 5337 5366
+type(
+  bool
+)
+"test_treemap.mlt" 131 5337 5372 "test_treemap.mlt" 131 5337 5377
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 131 5337 5393 "test_treemap.mlt" 131 5337 5414
+type(
+  string
+)
+"test_treemap.mlt" 131 5337 5420 "test_treemap.mlt" 131 5337 5423
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 130 5212 5218 "test_treemap.mlt" 130 5212 5221
+)
+"test_treemap.mlt" 131 5337 5430 "test_treemap.mlt" 131 5337 5701
+type(
+  string
+)
+"test_treemap.mlt" 131 5337 5388 "test_treemap.mlt" 131 5337 5702
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 131 5337 5378 "test_treemap.mlt" 131 5337 5703
+type(
+  exn
+)
+"test_treemap.mlt" 131 5337 5372 "test_treemap.mlt" 131 5337 5703
+type(
+  unit
+)
+"test_treemap.mlt" 131 5337 5709 "test_treemap.mlt" 131 5337 5711
+type(
+  unit
+)
+"test_treemap.mlt" 131 5337 5337 "test_treemap.mlt" 131 5337 5711
+type(
+  unit
+)
+"test_treemap.mlt" 130 5212 5214 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 129 5189 5191 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 128 5143 5145 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 127 5126 5128 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 123 4715 4715 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 122 4590 4592 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 121 4567 4569 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 120 4521 4523 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 119 4504 4506 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 115 4098 4098 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 114 3973 3975 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 113 3950 3952 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 112 3909 3911 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 111 3892 3894 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 107 3481 3481 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 106 3356 3358 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 105 3328 3330 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 104 3287 3289 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 103 3270 3272 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 99 2864 2864 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 98 2739 2741 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 97 2710 2712 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 96 2669 2671 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 95 2652 2654 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 88 2440 2442 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 87 2397 2399 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 80 2218 2220 "test_treemap.mlt" 131 5337 5712
+type(
+  unit
+)
+"test_treemap.mlt" 78 2152 2152 "test_treemap.mlt" 134 5731 5732
+type(
+  unit -> unit
+)
+"test_treemap.mlt" 136 5735 5740 "test_treemap.mlt" 136 5735 5742
+type(
+  unit
+)
+"test_treemap.mlt" 141 5841 5851 "test_treemap.mlt" 141 5841 5863
+type(
+  int -> int -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 142 5872 5878 "test_treemap.mlt" 143 5927 5934
+)
+"test_treemap.mlt" 141 5841 5866 "test_treemap.mlt" 141 5841 5869
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"test_treemap.mlt" 142 5872 5882 "test_treemap.mlt" 142 5872 5895
+type(
+  int -> string -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 142 5872 5924 "test_treemap.mlt" 143 5927 5934
+)
+"test_treemap.mlt" 142 5872 5896 "test_treemap.mlt" 142 5872 5897
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 142 5872 5898 "test_treemap.mlt" 142 5872 5924
+)
+"test_treemap.mlt" 142 5872 5898 "test_treemap.mlt" 142 5872 5899
+type(
+  string
+)
+ident(
+  def s "test_treemap.mlt" 142 5872 5902 "test_treemap.mlt" 142 5872 5924
+)
+"test_treemap.mlt" 142 5872 5902 "test_treemap.mlt" 142 5872 5909
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 142 5872 5910 "test_treemap.mlt" 142 5872 5920
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treemap.mlt" 142 5872 5921 "test_treemap.mlt" 142 5872 5922
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 142 5872 5896 "test_treemap.mlt" 142 5872 5897
+)
+"test_treemap.mlt" 142 5872 5923 "test_treemap.mlt" 142 5872 5924
+type(
+  string
+)
+ident(
+  int_ref s "test_treemap.mlt" 142 5872 5898 "test_treemap.mlt" 142 5872 5899
+)
+"test_treemap.mlt" 142 5872 5902 "test_treemap.mlt" 142 5872 5924
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 145 5940 5961 "test_treemap.mlt" 145 5940 5979
+call(
+  stack
+)
+"test_treemap.mlt" 146 5983 5989 "test_treemap.mlt" 146 5983 5994
+type(
+  ISMap.treemap
+)
+ident(
+  def ismap "test_treemap.mlt" 153 6203 6205 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 147 5997 6005 "test_treemap.mlt" 147 5997 6008
+type(
+  (int * string) list
+)
+ident(
+  def kvs "test_treemap.mlt" 148 6092 6096 "test_treemap.mlt" 149 6139 6179
+)
+"test_treemap.mlt" 147 5997 6012 "test_treemap.mlt" 147 5997 6013
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6014 "test_treemap.mlt" 147 5997 6019
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6012 "test_treemap.mlt" 147 5997 6019
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6021 "test_treemap.mlt" 147 5997 6022
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6023 "test_treemap.mlt" 147 5997 6029
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6021 "test_treemap.mlt" 147 5997 6029
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6031 "test_treemap.mlt" 147 5997 6033
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6034 "test_treemap.mlt" 147 5997 6040
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6031 "test_treemap.mlt" 147 5997 6040
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6042 "test_treemap.mlt" 147 5997 6043
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6044 "test_treemap.mlt" 147 5997 6049
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6042 "test_treemap.mlt" 147 5997 6049
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6051 "test_treemap.mlt" 147 5997 6052
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6053 "test_treemap.mlt" 147 5997 6059
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6051 "test_treemap.mlt" 147 5997 6059
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6061 "test_treemap.mlt" 147 5997 6062
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6063 "test_treemap.mlt" 147 5997 6069
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6061 "test_treemap.mlt" 147 5997 6069
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6071 "test_treemap.mlt" 147 5997 6072
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6073 "test_treemap.mlt" 147 5997 6078
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6071 "test_treemap.mlt" 147 5997 6078
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6080 "test_treemap.mlt" 147 5997 6081
+type(
+  int
+)
+"test_treemap.mlt" 147 5997 6082 "test_treemap.mlt" 147 5997 6087
+type(
+  string
+)
+"test_treemap.mlt" 147 5997 6080 "test_treemap.mlt" 147 5997 6087
+type(
+  int * string
+)
+"test_treemap.mlt" 147 5997 6011 "test_treemap.mlt" 147 5997 6088
+type(
+  (int * string) list
+)
+"test_treemap.mlt" 148 6092 6100 "test_treemap.mlt" 148 6092 6105
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  def addkv "test_treemap.mlt" 149 6139 6143 "test_treemap.mlt" 149 6139 6179
+)
+"test_treemap.mlt" 148 6092 6106 "test_treemap.mlt" 148 6092 6109
+type(
+  ISMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 148 6092 6110 "test_treemap.mlt" 148 6092 6135
+)
+"test_treemap.mlt" 148 6092 6111 "test_treemap.mlt" 148 6092 6112
+type(
+  ISKV.key_t
+)
+ident(
+  def k "test_treemap.mlt" 148 6092 6118 "test_treemap.mlt" 148 6092 6135
+)
+"test_treemap.mlt" 148 6092 6113 "test_treemap.mlt" 148 6092 6114
+type(
+  ISKV.value_t
+)
+ident(
+  def v "test_treemap.mlt" 148 6092 6118 "test_treemap.mlt" 148 6092 6135
+)
+"test_treemap.mlt" 148 6092 6110 "test_treemap.mlt" 148 6092 6115
+type(
+  ISKV.key_t * ISKV.value_t
+)
+"test_treemap.mlt" 148 6092 6118 "test_treemap.mlt" 148 6092 6127
+type(
+  ISMap.treemap -> ISKV.key_t -> ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref ISMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 148 6092 6128 "test_treemap.mlt" 148 6092 6131
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 148 6092 6106 "test_treemap.mlt" 148 6092 6109
+)
+"test_treemap.mlt" 148 6092 6132 "test_treemap.mlt" 148 6092 6133
+type(
+  ISKV.key_t
+)
+ident(
+  int_ref k "test_treemap.mlt" 148 6092 6111 "test_treemap.mlt" 148 6092 6112
+)
+"test_treemap.mlt" 148 6092 6134 "test_treemap.mlt" 148 6092 6135
+type(
+  ISKV.value_t
+)
+ident(
+  int_ref v "test_treemap.mlt" 148 6092 6113 "test_treemap.mlt" 148 6092 6114
+)
+"test_treemap.mlt" 148 6092 6118 "test_treemap.mlt" 148 6092 6135
+call(
+  tail
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 149 6139 6143 "test_treemap.mlt" 149 6139 6157
+type(
+  (ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap) ->
+  ISMap.treemap -> (ISKV.key_t * ISKV.value_t) list -> ISMap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treemap.mlt" 149 6139 6158 "test_treemap.mlt" 149 6139 6163
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref addkv "test_treemap.mlt" 148 6092 6100 "test_treemap.mlt" 148 6092 6105
+)
+"test_treemap.mlt" 149 6139 6164 "test_treemap.mlt" 149 6139 6175
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ISMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 149 6139 6176 "test_treemap.mlt" 149 6139 6179
+type(
+  (ISKV.key_t * ISKV.value_t) list
+)
+ident(
+  int_ref kvs "test_treemap.mlt" 147 5997 6005 "test_treemap.mlt" 147 5997 6008
+)
+"test_treemap.mlt" 149 6139 6143 "test_treemap.mlt" 149 6139 6179
+call(
+  stack
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 148 6092 6096 "test_treemap.mlt" 149 6139 6179
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 147 5997 6001 "test_treemap.mlt" 149 6139 6179
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 153 6203 6209 "test_treemap.mlt" 153 6203 6212
+type(
+  string ref
+)
+ident(
+  def str "test_treemap.mlt" 154 6225 6227 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 153 6203 6215 "test_treemap.mlt" 153 6203 6218
+type(
+  string -> string ref
+)
+ident(
+  int_ref Pervasives.ref "pervasives.mli" 1063 41160 41160 "pervasives.mli" 1063 41160 41204
+)
+"test_treemap.mlt" 153 6203 6219 "test_treemap.mlt" 153 6203 6221
+type(
+  string
+)
+"test_treemap.mlt" 153 6203 6215 "test_treemap.mlt" 153 6203 6221
+type(
+  string ref
+)
+"test_treemap.mlt" 154 6225 6231 "test_treemap.mlt" 154 6225 6244
+type(
+  'b -> string -> unit
+)
+ident(
+  def concat_values "test_treemap.mlt" 155 6276 6278 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 154 6225 6245 "test_treemap.mlt" 154 6225 6246
+type(
+  'b
+)
+ident(
+  def k "test_treemap.mlt" 154 6225 6247 "test_treemap.mlt" 154 6225 6272
+)
+"test_treemap.mlt" 154 6225 6247 "test_treemap.mlt" 154 6225 6248
+type(
+  string
+)
+ident(
+  def v "test_treemap.mlt" 154 6225 6251 "test_treemap.mlt" 154 6225 6272
+)
+"test_treemap.mlt" 154 6225 6251 "test_treemap.mlt" 154 6225 6254
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treemap.mlt" 153 6203 6209 "test_treemap.mlt" 153 6203 6212
+)
+"test_treemap.mlt" 154 6225 6255 "test_treemap.mlt" 154 6225 6257
+type(
+  string ref -> string -> unit
+)
+ident(
+  int_ref Pervasives.( := ) "pervasives.mli" 1071 41452 41452 "pervasives.mli" 1071 41452 41505
+)
+"test_treemap.mlt" 154 6225 6258 "test_treemap.mlt" 154 6225 6259
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 154 6225 6259 "test_treemap.mlt" 154 6225 6262
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treemap.mlt" 153 6203 6209 "test_treemap.mlt" 153 6203 6212
+)
+"test_treemap.mlt" 154 6225 6258 "test_treemap.mlt" 154 6225 6262
+type(
+  string
+)
+"test_treemap.mlt" 154 6225 6263 "test_treemap.mlt" 154 6225 6264
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treemap.mlt" 154 6225 6265 "test_treemap.mlt" 154 6225 6266
+type(
+  string
+)
+ident(
+  int_ref v "test_treemap.mlt" 154 6225 6247 "test_treemap.mlt" 154 6225 6248
+)
+"test_treemap.mlt" 154 6225 6267 "test_treemap.mlt" 154 6225 6268
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treemap.mlt" 154 6225 6269 "test_treemap.mlt" 154 6225 6272
+type(
+  string
+)
+"test_treemap.mlt" 154 6225 6265 "test_treemap.mlt" 154 6225 6272
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 154 6225 6258 "test_treemap.mlt" 154 6225 6272
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 154 6225 6251 "test_treemap.mlt" 154 6225 6272
+type(
+  unit
+)
+"test_treemap.mlt" 155 6276 6282 "test_treemap.mlt" 155 6276 6289
+type(
+  string
+)
+ident(
+  def funcstr "test_treemap.mlt" 156 6336 6338 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 155 6276 6292 "test_treemap.mlt" 155 6276 6332
+type(
+  string
+)
+"test_treemap.mlt" 156 6336 6338 "test_treemap.mlt" 156 6336 6348
+type(
+  (ISKV.key_t -> ISKV.value_t -> unit) -> ISMap.treemap -> unit
+)
+ident(
+  int_ref ISMap.iter "treemap.ml" 43 1237 1239 "treemap.ml" 43 1237 1305
+)
+"test_treemap.mlt" 156 6336 6349 "test_treemap.mlt" 156 6336 6362
+type(
+  ISKV.key_t -> ISKV.value_t -> unit
+)
+ident(
+  int_ref concat_values "test_treemap.mlt" 154 6225 6231 "test_treemap.mlt" 154 6225 6244
+)
+"test_treemap.mlt" 156 6336 6363 "test_treemap.mlt" 156 6336 6368
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ismap "test_treemap.mlt" 146 5983 5989 "test_treemap.mlt" 146 5983 5994
+)
+"test_treemap.mlt" 156 6336 6338 "test_treemap.mlt" 156 6336 6368
+call(
+  stack
+)
+type(
+  unit
+)
+"test_treemap.mlt" 157 6370 6376 "test_treemap.mlt" 157 6370 6382
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 158 6427 6429 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 157 6370 6385 "test_treemap.mlt" 157 6370 6423
+type(
+  string
+)
+"test_treemap.mlt" 158 6427 6433 "test_treemap.mlt" 158 6427 6439
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 159 6450 6452 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 158 6427 6442 "test_treemap.mlt" 158 6427 6443
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 158 6427 6443 "test_treemap.mlt" 158 6427 6446
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treemap.mlt" 153 6203 6209 "test_treemap.mlt" 153 6203 6212
+)
+"test_treemap.mlt" 158 6427 6442 "test_treemap.mlt" 158 6427 6446
+type(
+  string
+)
+"test_treemap.mlt" 159 6450 6456 "test_treemap.mlt" 159 6450 6459
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 160 6531 6531 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 159 6450 6462 "test_treemap.mlt" 159 6450 6479
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treemap.mlt" 30 625 629 "test_treemap.mlt" 30 625 646
+)
+"test_treemap.mlt" 159 6450 6481 "test_treemap.mlt" 159 6450 6498
+type(
+  ISMap.treemap -> string
+)
+ident(
+  int_ref ISMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 159 6450 6499 "test_treemap.mlt" 159 6450 6504
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ismap "test_treemap.mlt" 146 5983 5989 "test_treemap.mlt" 146 5983 5994
+)
+"test_treemap.mlt" 159 6450 6480 "test_treemap.mlt" 159 6450 6505
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 159 6450 6506 "test_treemap.mlt" 159 6450 6513
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treemap.mlt" 155 6276 6282 "test_treemap.mlt" 155 6276 6289
+)
+"test_treemap.mlt" 159 6450 6514 "test_treemap.mlt" 159 6450 6520
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 157 6370 6376 "test_treemap.mlt" 157 6370 6382
+)
+"test_treemap.mlt" 159 6450 6521 "test_treemap.mlt" 159 6450 6527
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 158 6427 6433 "test_treemap.mlt" 158 6427 6439
+)
+"test_treemap.mlt" 159 6450 6462 "test_treemap.mlt" 159 6450 6527
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 160 6531 6534 "test_treemap.mlt" 160 6531 6537
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 160 6531 6542 "test_treemap.mlt" 160 6531 6548
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 157 6370 6376 "test_treemap.mlt" 157 6370 6382
+)
+"test_treemap.mlt" 160 6531 6549 "test_treemap.mlt" 160 6531 6550
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 160 6531 6551 "test_treemap.mlt" 160 6531 6557
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 158 6427 6433 "test_treemap.mlt" 158 6427 6439
+)
+"test_treemap.mlt" 160 6531 6538 "test_treemap.mlt" 160 6531 6560
+type(
+  bool
+)
+"test_treemap.mlt" 160 6531 6534 "test_treemap.mlt" 160 6531 6560
+type(
+  bool
+)
+"test_treemap.mlt" 160 6531 6566 "test_treemap.mlt" 160 6531 6571
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 160 6531 6587 "test_treemap.mlt" 160 6531 6608
+type(
+  string
+)
+"test_treemap.mlt" 160 6531 6614 "test_treemap.mlt" 160 6531 6617
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 159 6450 6456 "test_treemap.mlt" 159 6450 6459
+)
+"test_treemap.mlt" 160 6531 6624 "test_treemap.mlt" 160 6531 7035
+type(
+  string
+)
+"test_treemap.mlt" 160 6531 6582 "test_treemap.mlt" 160 6531 7036
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 160 6531 6572 "test_treemap.mlt" 160 6531 7037
+type(
+  exn
+)
+"test_treemap.mlt" 160 6531 6566 "test_treemap.mlt" 160 6531 7037
+type(
+  unit
+)
+"test_treemap.mlt" 160 6531 7043 "test_treemap.mlt" 160 6531 7045
+type(
+  unit
+)
+"test_treemap.mlt" 160 6531 6531 "test_treemap.mlt" 160 6531 7045
+type(
+  unit
+)
+"test_treemap.mlt" 167 7160 7170 "test_treemap.mlt" 167 7160 7182
+type(
+  int -> int -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 168 7191 7197 "test_treemap.mlt" 169 7246 7253
+)
+"test_treemap.mlt" 167 7160 7185 "test_treemap.mlt" 167 7160 7188
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"test_treemap.mlt" 168 7191 7201 "test_treemap.mlt" 168 7191 7214
+type(
+  int -> string -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 168 7191 7243 "test_treemap.mlt" 169 7246 7253
+)
+"test_treemap.mlt" 168 7191 7215 "test_treemap.mlt" 168 7191 7216
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 168 7191 7217 "test_treemap.mlt" 168 7191 7243
+)
+"test_treemap.mlt" 168 7191 7217 "test_treemap.mlt" 168 7191 7218
+type(
+  string
+)
+ident(
+  def s "test_treemap.mlt" 168 7191 7221 "test_treemap.mlt" 168 7191 7243
+)
+"test_treemap.mlt" 168 7191 7221 "test_treemap.mlt" 168 7191 7228
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 168 7191 7229 "test_treemap.mlt" 168 7191 7239
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treemap.mlt" 168 7191 7240 "test_treemap.mlt" 168 7191 7241
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 168 7191 7215 "test_treemap.mlt" 168 7191 7216
+)
+"test_treemap.mlt" 168 7191 7242 "test_treemap.mlt" 168 7191 7243
+type(
+  string
+)
+ident(
+  int_ref s "test_treemap.mlt" 168 7191 7217 "test_treemap.mlt" 168 7191 7218
+)
+"test_treemap.mlt" 168 7191 7221 "test_treemap.mlt" 168 7191 7243
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 171 7259 7280 "test_treemap.mlt" 171 7259 7298
+call(
+  stack
+)
+"test_treemap.mlt" 172 7302 7308 "test_treemap.mlt" 172 7302 7313
+type(
+  ISMap.treemap
+)
+ident(
+  def ismap "test_treemap.mlt" 179 7522 7524 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 173 7316 7324 "test_treemap.mlt" 173 7316 7327
+type(
+  (int * string) list
+)
+ident(
+  def kvs "test_treemap.mlt" 174 7411 7415 "test_treemap.mlt" 175 7458 7498
+)
+"test_treemap.mlt" 173 7316 7331 "test_treemap.mlt" 173 7316 7332
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7333 "test_treemap.mlt" 173 7316 7338
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7331 "test_treemap.mlt" 173 7316 7338
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7340 "test_treemap.mlt" 173 7316 7341
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7342 "test_treemap.mlt" 173 7316 7348
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7340 "test_treemap.mlt" 173 7316 7348
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7350 "test_treemap.mlt" 173 7316 7352
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7353 "test_treemap.mlt" 173 7316 7359
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7350 "test_treemap.mlt" 173 7316 7359
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7361 "test_treemap.mlt" 173 7316 7362
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7363 "test_treemap.mlt" 173 7316 7368
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7361 "test_treemap.mlt" 173 7316 7368
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7370 "test_treemap.mlt" 173 7316 7371
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7372 "test_treemap.mlt" 173 7316 7378
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7370 "test_treemap.mlt" 173 7316 7378
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7380 "test_treemap.mlt" 173 7316 7381
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7382 "test_treemap.mlt" 173 7316 7388
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7380 "test_treemap.mlt" 173 7316 7388
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7390 "test_treemap.mlt" 173 7316 7391
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7392 "test_treemap.mlt" 173 7316 7397
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7390 "test_treemap.mlt" 173 7316 7397
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7399 "test_treemap.mlt" 173 7316 7400
+type(
+  int
+)
+"test_treemap.mlt" 173 7316 7401 "test_treemap.mlt" 173 7316 7406
+type(
+  string
+)
+"test_treemap.mlt" 173 7316 7399 "test_treemap.mlt" 173 7316 7406
+type(
+  int * string
+)
+"test_treemap.mlt" 173 7316 7330 "test_treemap.mlt" 173 7316 7407
+type(
+  (int * string) list
+)
+"test_treemap.mlt" 174 7411 7419 "test_treemap.mlt" 174 7411 7424
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  def addkv "test_treemap.mlt" 175 7458 7462 "test_treemap.mlt" 175 7458 7498
+)
+"test_treemap.mlt" 174 7411 7425 "test_treemap.mlt" 174 7411 7428
+type(
+  ISMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 174 7411 7429 "test_treemap.mlt" 174 7411 7454
+)
+"test_treemap.mlt" 174 7411 7430 "test_treemap.mlt" 174 7411 7431
+type(
+  ISKV.key_t
+)
+ident(
+  def k "test_treemap.mlt" 174 7411 7437 "test_treemap.mlt" 174 7411 7454
+)
+"test_treemap.mlt" 174 7411 7432 "test_treemap.mlt" 174 7411 7433
+type(
+  ISKV.value_t
+)
+ident(
+  def v "test_treemap.mlt" 174 7411 7437 "test_treemap.mlt" 174 7411 7454
+)
+"test_treemap.mlt" 174 7411 7429 "test_treemap.mlt" 174 7411 7434
+type(
+  ISKV.key_t * ISKV.value_t
+)
+"test_treemap.mlt" 174 7411 7437 "test_treemap.mlt" 174 7411 7446
+type(
+  ISMap.treemap -> ISKV.key_t -> ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref ISMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 174 7411 7447 "test_treemap.mlt" 174 7411 7450
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 174 7411 7425 "test_treemap.mlt" 174 7411 7428
+)
+"test_treemap.mlt" 174 7411 7451 "test_treemap.mlt" 174 7411 7452
+type(
+  ISKV.key_t
+)
+ident(
+  int_ref k "test_treemap.mlt" 174 7411 7430 "test_treemap.mlt" 174 7411 7431
+)
+"test_treemap.mlt" 174 7411 7453 "test_treemap.mlt" 174 7411 7454
+type(
+  ISKV.value_t
+)
+ident(
+  int_ref v "test_treemap.mlt" 174 7411 7432 "test_treemap.mlt" 174 7411 7433
+)
+"test_treemap.mlt" 174 7411 7437 "test_treemap.mlt" 174 7411 7454
+call(
+  tail
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 175 7458 7462 "test_treemap.mlt" 175 7458 7476
+type(
+  (ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap) ->
+  ISMap.treemap -> (ISKV.key_t * ISKV.value_t) list -> ISMap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treemap.mlt" 175 7458 7477 "test_treemap.mlt" 175 7458 7482
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref addkv "test_treemap.mlt" 174 7411 7419 "test_treemap.mlt" 174 7411 7424
+)
+"test_treemap.mlt" 175 7458 7483 "test_treemap.mlt" 175 7458 7494
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ISMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 175 7458 7495 "test_treemap.mlt" 175 7458 7498
+type(
+  (ISKV.key_t * ISKV.value_t) list
+)
+ident(
+  int_ref kvs "test_treemap.mlt" 173 7316 7324 "test_treemap.mlt" 173 7316 7327
+)
+"test_treemap.mlt" 175 7458 7462 "test_treemap.mlt" 175 7458 7498
+call(
+  stack
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 174 7411 7415 "test_treemap.mlt" 175 7458 7498
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 173 7316 7320 "test_treemap.mlt" 175 7458 7498
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 179 7522 7528 "test_treemap.mlt" 179 7522 7536
+type(
+  int * string -> int -> string -> int * string
+)
+ident(
+  def accum_kv "test_treemap.mlt" 180 7581 7583 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 179 7522 7538 "test_treemap.mlt" 179 7522 7542
+type(
+  int
+)
+ident(
+  def ksum "test_treemap.mlt" 179 7522 7549 "test_treemap.mlt" 179 7522 7577
+)
+"test_treemap.mlt" 179 7522 7543 "test_treemap.mlt" 179 7522 7547
+type(
+  string
+)
+ident(
+  def vcat "test_treemap.mlt" 179 7522 7549 "test_treemap.mlt" 179 7522 7577
+)
+"test_treemap.mlt" 179 7522 7537 "test_treemap.mlt" 179 7522 7548
+type(
+  int * string
+)
+"test_treemap.mlt" 179 7522 7549 "test_treemap.mlt" 179 7522 7550
+type(
+  int
+)
+ident(
+  def k "test_treemap.mlt" 179 7522 7551 "test_treemap.mlt" 179 7522 7577
+)
+"test_treemap.mlt" 179 7522 7551 "test_treemap.mlt" 179 7522 7552
+type(
+  string
+)
+ident(
+  def v "test_treemap.mlt" 179 7522 7555 "test_treemap.mlt" 179 7522 7577
+)
+"test_treemap.mlt" 179 7522 7556 "test_treemap.mlt" 179 7522 7560
+type(
+  int
+)
+ident(
+  int_ref ksum "test_treemap.mlt" 179 7522 7538 "test_treemap.mlt" 179 7522 7542
+)
+"test_treemap.mlt" 179 7522 7560 "test_treemap.mlt" 179 7522 7561
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( + ) "pervasives.mli" 261 10267 10267 "pervasives.mli" 261 10267 10313
+)
+"test_treemap.mlt" 179 7522 7561 "test_treemap.mlt" 179 7522 7562
+type(
+  int
+)
+ident(
+  int_ref k "test_treemap.mlt" 179 7522 7549 "test_treemap.mlt" 179 7522 7550
+)
+"test_treemap.mlt" 179 7522 7556 "test_treemap.mlt" 179 7522 7562
+type(
+  int
+)
+"test_treemap.mlt" 179 7522 7565 "test_treemap.mlt" 179 7522 7569
+type(
+  string
+)
+ident(
+  int_ref vcat "test_treemap.mlt" 179 7522 7543 "test_treemap.mlt" 179 7522 7547
+)
+"test_treemap.mlt" 179 7522 7569 "test_treemap.mlt" 179 7522 7570
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treemap.mlt" 179 7522 7570 "test_treemap.mlt" 179 7522 7571
+type(
+  string
+)
+ident(
+  int_ref v "test_treemap.mlt" 179 7522 7551 "test_treemap.mlt" 179 7522 7552
+)
+"test_treemap.mlt" 179 7522 7571 "test_treemap.mlt" 179 7522 7572
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treemap.mlt" 179 7522 7572 "test_treemap.mlt" 179 7522 7575
+type(
+  string
+)
+"test_treemap.mlt" 179 7522 7570 "test_treemap.mlt" 179 7522 7575
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 179 7522 7564 "test_treemap.mlt" 179 7522 7576
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 179 7522 7555 "test_treemap.mlt" 179 7522 7577
+type(
+  int * string
+)
+"test_treemap.mlt" 180 7581 7587 "test_treemap.mlt" 180 7581 7594
+type(
+  string
+)
+ident(
+  def funcstr "test_treemap.mlt" 181 7640 7642 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 180 7581 7597 "test_treemap.mlt" 180 7581 7636
+type(
+  string
+)
+"test_treemap.mlt" 181 7640 7647 "test_treemap.mlt" 181 7640 7651
+type(
+  int
+)
+ident(
+  def ksum "test_treemap.mlt" 182 7696 7698 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 181 7640 7652 "test_treemap.mlt" 181 7640 7656
+type(
+  string
+)
+ident(
+  def vcat "test_treemap.mlt" 182 7696 7698 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 181 7640 7646 "test_treemap.mlt" 181 7640 7657
+type(
+  int * string
+)
+"test_treemap.mlt" 181 7640 7660 "test_treemap.mlt" 181 7640 7670
+type(
+  (int * string -> ISKV.key_t -> ISKV.value_t -> int * string) ->
+  int * string -> ISMap.treemap -> int * string
+)
+ident(
+  int_ref ISMap.fold "treemap.ml" 45 1307 1309 "treemap.ml" 45 1307 1385
+)
+"test_treemap.mlt" 181 7640 7671 "test_treemap.mlt" 181 7640 7679
+type(
+  int * string -> ISKV.key_t -> ISKV.value_t -> int * string
+)
+ident(
+  int_ref accum_kv "test_treemap.mlt" 179 7522 7528 "test_treemap.mlt" 179 7522 7536
+)
+"test_treemap.mlt" 181 7640 7681 "test_treemap.mlt" 181 7640 7682
+type(
+  int
+)
+"test_treemap.mlt" 181 7640 7683 "test_treemap.mlt" 181 7640 7685
+type(
+  string
+)
+"test_treemap.mlt" 181 7640 7680 "test_treemap.mlt" 181 7640 7686
+type(
+  int * string
+)
+"test_treemap.mlt" 181 7640 7687 "test_treemap.mlt" 181 7640 7692
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ismap "test_treemap.mlt" 172 7302 7308 "test_treemap.mlt" 172 7302 7313
+)
+"test_treemap.mlt" 181 7640 7660 "test_treemap.mlt" 181 7640 7692
+call(
+  stack
+)
+type(
+  int * string
+)
+"test_treemap.mlt" 182 7696 7702 "test_treemap.mlt" 182 7696 7708
+type(
+  string
+)
+ident(
+  def mapstr "test_treemap.mlt" 183 7738 7740 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 182 7696 7711 "test_treemap.mlt" 182 7696 7728
+type(
+  ISMap.treemap -> string
+)
+ident(
+  int_ref ISMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 182 7696 7729 "test_treemap.mlt" 182 7696 7734
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ismap "test_treemap.mlt" 172 7302 7308 "test_treemap.mlt" 172 7302 7313
+)
+"test_treemap.mlt" 182 7696 7711 "test_treemap.mlt" 182 7696 7734
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 183 7738 7744 "test_treemap.mlt" 183 7738 7750
+type(
+  int
+)
+ident(
+  def actual "test_treemap.mlt" 184 7761 7763 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 183 7738 7753 "test_treemap.mlt" 183 7738 7757
+type(
+  int
+)
+ident(
+  int_ref ksum "test_treemap.mlt" 181 7640 7647 "test_treemap.mlt" 181 7640 7651
+)
+"test_treemap.mlt" 184 7761 7767 "test_treemap.mlt" 184 7761 7773
+type(
+  int
+)
+ident(
+  def expect "test_treemap.mlt" 185 7782 7784 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 184 7761 7776 "test_treemap.mlt" 184 7761 7778
+type(
+  int
+)
+"test_treemap.mlt" 185 7782 7788 "test_treemap.mlt" 185 7782 7791
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 186 7876 7876 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 185 7782 7794 "test_treemap.mlt" 185 7782 7811
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treemap.mlt" 30 625 629 "test_treemap.mlt" 30 625 646
+)
+"test_treemap.mlt" 185 7782 7812 "test_treemap.mlt" 185 7782 7818
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treemap.mlt" 182 7696 7702 "test_treemap.mlt" 182 7696 7708
+)
+"test_treemap.mlt" 185 7782 7819 "test_treemap.mlt" 185 7782 7826
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treemap.mlt" 180 7581 7587 "test_treemap.mlt" 180 7581 7594
+)
+"test_treemap.mlt" 185 7782 7828 "test_treemap.mlt" 185 7782 7841
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 185 7782 7842 "test_treemap.mlt" 185 7782 7848
+type(
+  int
+)
+ident(
+  int_ref expect "test_treemap.mlt" 184 7761 7767 "test_treemap.mlt" 184 7761 7773
+)
+"test_treemap.mlt" 185 7782 7827 "test_treemap.mlt" 185 7782 7849
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 185 7782 7851 "test_treemap.mlt" 185 7782 7864
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treemap.mlt" 185 7782 7865 "test_treemap.mlt" 185 7782 7871
+type(
+  int
+)
+ident(
+  int_ref actual "test_treemap.mlt" 183 7738 7744 "test_treemap.mlt" 183 7738 7750
+)
+"test_treemap.mlt" 185 7782 7850 "test_treemap.mlt" 185 7782 7872
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 185 7782 7794 "test_treemap.mlt" 185 7782 7872
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 186 7876 7879 "test_treemap.mlt" 186 7876 7882
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 186 7876 7887 "test_treemap.mlt" 186 7876 7893
+type(
+  int
+)
+ident(
+  int_ref expect "test_treemap.mlt" 184 7761 7767 "test_treemap.mlt" 184 7761 7773
+)
+"test_treemap.mlt" 186 7876 7894 "test_treemap.mlt" 186 7876 7895
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 186 7876 7896 "test_treemap.mlt" 186 7876 7902
+type(
+  int
+)
+ident(
+  int_ref actual "test_treemap.mlt" 183 7738 7744 "test_treemap.mlt" 183 7738 7750
+)
+"test_treemap.mlt" 186 7876 7883 "test_treemap.mlt" 186 7876 7905
+type(
+  bool
+)
+"test_treemap.mlt" 186 7876 7879 "test_treemap.mlt" 186 7876 7905
+type(
+  bool
+)
+"test_treemap.mlt" 186 7876 7911 "test_treemap.mlt" 186 7876 7916
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 186 7876 7932 "test_treemap.mlt" 186 7876 7953
+type(
+  string
+)
+"test_treemap.mlt" 186 7876 7959 "test_treemap.mlt" 186 7876 7962
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 185 7782 7788 "test_treemap.mlt" 185 7782 7791
+)
+"test_treemap.mlt" 186 7876 7969 "test_treemap.mlt" 186 7876 8404
+type(
+  string
+)
+"test_treemap.mlt" 186 7876 7927 "test_treemap.mlt" 186 7876 8405
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 186 7876 7917 "test_treemap.mlt" 186 7876 8406
+type(
+  exn
+)
+"test_treemap.mlt" 186 7876 7911 "test_treemap.mlt" 186 7876 8406
+type(
+  unit
+)
+"test_treemap.mlt" 186 7876 8412 "test_treemap.mlt" 186 7876 8414
+type(
+  unit
+)
+"test_treemap.mlt" 186 7876 7876 "test_treemap.mlt" 186 7876 8414
+type(
+  unit
+)
+"test_treemap.mlt" 187 8416 8422 "test_treemap.mlt" 187 8416 8428
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 188 8439 8441 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 187 8416 8431 "test_treemap.mlt" 187 8416 8435
+type(
+  string
+)
+ident(
+  int_ref vcat "test_treemap.mlt" 181 7640 7652 "test_treemap.mlt" 181 7640 7656
+)
+"test_treemap.mlt" 188 8439 8445 "test_treemap.mlt" 188 8439 8451
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 189 8496 8498 "test_treemap.mlt" 190 8558 9294
+)
+"test_treemap.mlt" 188 8439 8454 "test_treemap.mlt" 188 8439 8492
+type(
+  string
+)
+"test_treemap.mlt" 189 8496 8502 "test_treemap.mlt" 189 8496 8505
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 190 8558 8558 "test_treemap.mlt" 190 8558 9293
+)
+"test_treemap.mlt" 189 8496 8508 "test_treemap.mlt" 189 8496 8525
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treemap.mlt" 30 625 629 "test_treemap.mlt" 30 625 646
+)
+"test_treemap.mlt" 189 8496 8526 "test_treemap.mlt" 189 8496 8532
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treemap.mlt" 182 7696 7702 "test_treemap.mlt" 182 7696 7708
+)
+"test_treemap.mlt" 189 8496 8533 "test_treemap.mlt" 189 8496 8540
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treemap.mlt" 180 7581 7587 "test_treemap.mlt" 180 7581 7594
+)
+"test_treemap.mlt" 189 8496 8541 "test_treemap.mlt" 189 8496 8547
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 188 8439 8445 "test_treemap.mlt" 188 8439 8451
+)
+"test_treemap.mlt" 189 8496 8548 "test_treemap.mlt" 189 8496 8554
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 187 8416 8422 "test_treemap.mlt" 187 8416 8428
+)
+"test_treemap.mlt" 189 8496 8508 "test_treemap.mlt" 189 8496 8554
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 190 8558 8561 "test_treemap.mlt" 190 8558 8564
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 190 8558 8569 "test_treemap.mlt" 190 8558 8575
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 188 8439 8445 "test_treemap.mlt" 188 8439 8451
+)
+"test_treemap.mlt" 190 8558 8576 "test_treemap.mlt" 190 8558 8577
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 190 8558 8578 "test_treemap.mlt" 190 8558 8584
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 187 8416 8422 "test_treemap.mlt" 187 8416 8428
+)
+"test_treemap.mlt" 190 8558 8565 "test_treemap.mlt" 190 8558 8587
+type(
+  bool
+)
+"test_treemap.mlt" 190 8558 8561 "test_treemap.mlt" 190 8558 8587
+type(
+  bool
+)
+"test_treemap.mlt" 190 8558 8593 "test_treemap.mlt" 190 8558 8598
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 190 8558 8614 "test_treemap.mlt" 190 8558 8635
+type(
+  string
+)
+"test_treemap.mlt" 190 8558 8641 "test_treemap.mlt" 190 8558 8644
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 189 8496 8502 "test_treemap.mlt" 189 8496 8505
+)
+"test_treemap.mlt" 190 8558 8651 "test_treemap.mlt" 190 8558 9283
+type(
+  string
+)
+"test_treemap.mlt" 190 8558 8609 "test_treemap.mlt" 190 8558 9284
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 190 8558 8599 "test_treemap.mlt" 190 8558 9285
+type(
+  exn
+)
+"test_treemap.mlt" 190 8558 8593 "test_treemap.mlt" 190 8558 9285
+type(
+  unit
+)
+"test_treemap.mlt" 190 8558 9291 "test_treemap.mlt" 190 8558 9293
+type(
+  unit
+)
+"test_treemap.mlt" 190 8558 8558 "test_treemap.mlt" 190 8558 9293
+type(
+  unit
+)
+"test_treemap.mlt" 189 8496 8498 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 188 8439 8441 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 187 8416 8418 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 186 7876 7876 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 185 7782 7784 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 184 7761 7763 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 183 7738 7740 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 182 7696 7698 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 181 7640 7642 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 180 7581 7583 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 179 7522 7524 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 172 7302 7304 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 171 7259 7261 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 164 7078 7080 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 160 6531 6531 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 159 6450 6452 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 158 6427 6429 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 157 6370 6372 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 156 6336 6338 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 155 6276 6278 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 154 6225 6227 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 153 6203 6205 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 146 5983 5985 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 145 5940 5942 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 138 5759 5761 "test_treemap.mlt" 190 8558 9294
+type(
+  unit
+)
+"test_treemap.mlt" 136 5735 5735 "test_treemap.mlt" 192 9312 9313
+type(
+  unit -> unit
+)
+"test_treemap.mlt" 194 9316 9321 "test_treemap.mlt" 194 9316 9323
+type(
+  unit
+)
+"test_treemap.mlt" 199 9427 9437 "test_treemap.mlt" 199 9427 9449
+type(
+  int -> int -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 200 9458 9464 "test_treemap.mlt" 201 9513 9520
+)
+"test_treemap.mlt" 199 9427 9452 "test_treemap.mlt" 199 9427 9455
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"test_treemap.mlt" 200 9458 9468 "test_treemap.mlt" 200 9458 9481
+type(
+  int -> string -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 200 9458 9510 "test_treemap.mlt" 201 9513 9520
+)
+"test_treemap.mlt" 200 9458 9482 "test_treemap.mlt" 200 9458 9483
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 200 9458 9484 "test_treemap.mlt" 200 9458 9510
+)
+"test_treemap.mlt" 200 9458 9484 "test_treemap.mlt" 200 9458 9485
+type(
+  string
+)
+ident(
+  def s "test_treemap.mlt" 200 9458 9488 "test_treemap.mlt" 200 9458 9510
+)
+"test_treemap.mlt" 200 9458 9488 "test_treemap.mlt" 200 9458 9495
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 200 9458 9496 "test_treemap.mlt" 200 9458 9506
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treemap.mlt" 200 9458 9507 "test_treemap.mlt" 200 9458 9508
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 200 9458 9482 "test_treemap.mlt" 200 9458 9483
+)
+"test_treemap.mlt" 200 9458 9509 "test_treemap.mlt" 200 9458 9510
+type(
+  string
+)
+ident(
+  int_ref s "test_treemap.mlt" 200 9458 9484 "test_treemap.mlt" 200 9458 9485
+)
+"test_treemap.mlt" 200 9458 9488 "test_treemap.mlt" 200 9458 9510
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 203 9526 9547 "test_treemap.mlt" 203 9526 9565
+call(
+  stack
+)
+"test_treemap.mlt" 204 9569 9575 "test_treemap.mlt" 204 9569 9580
+type(
+  ISMap.treemap
+)
+ident(
+  def ismap "test_treemap.mlt" 211 9789 9791 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 205 9583 9591 "test_treemap.mlt" 205 9583 9594
+type(
+  (int * string) list
+)
+ident(
+  def kvs "test_treemap.mlt" 206 9678 9682 "test_treemap.mlt" 207 9725 9765
+)
+"test_treemap.mlt" 205 9583 9598 "test_treemap.mlt" 205 9583 9599
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9600 "test_treemap.mlt" 205 9583 9605
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9598 "test_treemap.mlt" 205 9583 9605
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9607 "test_treemap.mlt" 205 9583 9608
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9609 "test_treemap.mlt" 205 9583 9615
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9607 "test_treemap.mlt" 205 9583 9615
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9617 "test_treemap.mlt" 205 9583 9619
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9620 "test_treemap.mlt" 205 9583 9626
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9617 "test_treemap.mlt" 205 9583 9626
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9628 "test_treemap.mlt" 205 9583 9629
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9630 "test_treemap.mlt" 205 9583 9635
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9628 "test_treemap.mlt" 205 9583 9635
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9637 "test_treemap.mlt" 205 9583 9638
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9639 "test_treemap.mlt" 205 9583 9645
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9637 "test_treemap.mlt" 205 9583 9645
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9647 "test_treemap.mlt" 205 9583 9648
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9649 "test_treemap.mlt" 205 9583 9655
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9647 "test_treemap.mlt" 205 9583 9655
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9657 "test_treemap.mlt" 205 9583 9658
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9659 "test_treemap.mlt" 205 9583 9664
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9657 "test_treemap.mlt" 205 9583 9664
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9666 "test_treemap.mlt" 205 9583 9667
+type(
+  int
+)
+"test_treemap.mlt" 205 9583 9668 "test_treemap.mlt" 205 9583 9673
+type(
+  string
+)
+"test_treemap.mlt" 205 9583 9666 "test_treemap.mlt" 205 9583 9673
+type(
+  int * string
+)
+"test_treemap.mlt" 205 9583 9597 "test_treemap.mlt" 205 9583 9674
+type(
+  (int * string) list
+)
+"test_treemap.mlt" 206 9678 9686 "test_treemap.mlt" 206 9678 9691
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  def addkv "test_treemap.mlt" 207 9725 9729 "test_treemap.mlt" 207 9725 9765
+)
+"test_treemap.mlt" 206 9678 9692 "test_treemap.mlt" 206 9678 9695
+type(
+  ISMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 206 9678 9696 "test_treemap.mlt" 206 9678 9721
+)
+"test_treemap.mlt" 206 9678 9697 "test_treemap.mlt" 206 9678 9698
+type(
+  ISKV.key_t
+)
+ident(
+  def k "test_treemap.mlt" 206 9678 9704 "test_treemap.mlt" 206 9678 9721
+)
+"test_treemap.mlt" 206 9678 9699 "test_treemap.mlt" 206 9678 9700
+type(
+  ISKV.value_t
+)
+ident(
+  def v "test_treemap.mlt" 206 9678 9704 "test_treemap.mlt" 206 9678 9721
+)
+"test_treemap.mlt" 206 9678 9696 "test_treemap.mlt" 206 9678 9701
+type(
+  ISKV.key_t * ISKV.value_t
+)
+"test_treemap.mlt" 206 9678 9704 "test_treemap.mlt" 206 9678 9713
+type(
+  ISMap.treemap -> ISKV.key_t -> ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref ISMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 206 9678 9714 "test_treemap.mlt" 206 9678 9717
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 206 9678 9692 "test_treemap.mlt" 206 9678 9695
+)
+"test_treemap.mlt" 206 9678 9718 "test_treemap.mlt" 206 9678 9719
+type(
+  ISKV.key_t
+)
+ident(
+  int_ref k "test_treemap.mlt" 206 9678 9697 "test_treemap.mlt" 206 9678 9698
+)
+"test_treemap.mlt" 206 9678 9720 "test_treemap.mlt" 206 9678 9721
+type(
+  ISKV.value_t
+)
+ident(
+  int_ref v "test_treemap.mlt" 206 9678 9699 "test_treemap.mlt" 206 9678 9700
+)
+"test_treemap.mlt" 206 9678 9704 "test_treemap.mlt" 206 9678 9721
+call(
+  tail
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 207 9725 9729 "test_treemap.mlt" 207 9725 9743
+type(
+  (ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap) ->
+  ISMap.treemap -> (ISKV.key_t * ISKV.value_t) list -> ISMap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treemap.mlt" 207 9725 9744 "test_treemap.mlt" 207 9725 9749
+type(
+  ISMap.treemap -> ISKV.key_t * ISKV.value_t -> ISMap.treemap
+)
+ident(
+  int_ref addkv "test_treemap.mlt" 206 9678 9686 "test_treemap.mlt" 206 9678 9691
+)
+"test_treemap.mlt" 207 9725 9750 "test_treemap.mlt" 207 9725 9761
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ISMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 207 9725 9762 "test_treemap.mlt" 207 9725 9765
+type(
+  (ISKV.key_t * ISKV.value_t) list
+)
+ident(
+  int_ref kvs "test_treemap.mlt" 205 9583 9591 "test_treemap.mlt" 205 9583 9594
+)
+"test_treemap.mlt" 207 9725 9729 "test_treemap.mlt" 207 9725 9765
+call(
+  stack
+)
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 206 9678 9682 "test_treemap.mlt" 207 9725 9765
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 205 9583 9587 "test_treemap.mlt" 207 9725 9765
+type(
+  ISMap.treemap
+)
+"test_treemap.mlt" 211 9789 9795 "test_treemap.mlt" 211 9789 9801
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 212 9835 9837 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 211 9789 9804 "test_treemap.mlt" 211 9789 9819
+type(
+  ISMap.treemap -> string
+)
+ident(
+  int_ref ISMap.to_string "treemap.ml" 47 1387 1389 "treemap.ml" 47 1387 1422
+)
+"test_treemap.mlt" 211 9789 9820 "test_treemap.mlt" 211 9789 9831
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ISMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 211 9789 9804 "test_treemap.mlt" 211 9789 9831
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 212 9835 9841 "test_treemap.mlt" 212 9835 9847
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 213 9858 9860 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 212 9835 9850 "test_treemap.mlt" 212 9835 9854
+type(
+  string
+)
+"test_treemap.mlt" 213 9858 9864 "test_treemap.mlt" 213 9858 9867
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 214 9943 9943 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 213 9858 9870 "test_treemap.mlt" 213 9858 9877
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 213 9858 9878 "test_treemap.mlt" 213 9858 9925
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_treemap.mlt" 213 9858 9926 "test_treemap.mlt" 213 9858 9932
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 212 9835 9841 "test_treemap.mlt" 212 9835 9847
+)
+"test_treemap.mlt" 213 9858 9933 "test_treemap.mlt" 213 9858 9939
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 211 9789 9795 "test_treemap.mlt" 211 9789 9801
+)
+"test_treemap.mlt" 213 9858 9870 "test_treemap.mlt" 213 9858 9939
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 214 9943 9946 "test_treemap.mlt" 214 9943 9949
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 214 9943 9954 "test_treemap.mlt" 214 9943 9960
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 212 9835 9841 "test_treemap.mlt" 212 9835 9847
+)
+"test_treemap.mlt" 214 9943 9961 "test_treemap.mlt" 214 9943 9962
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 214 9943 9963 "test_treemap.mlt" 214 9943 9969
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 211 9789 9795 "test_treemap.mlt" 211 9789 9801
+)
+"test_treemap.mlt" 214 9943 9950 "test_treemap.mlt" 214 9943 9972
+type(
+  bool
+)
+"test_treemap.mlt" 214 9943 9946 "test_treemap.mlt" 214 9943 9972
+type(
+  bool
+)
+"test_treemap.mlt" 214 9943 9978 "test_treemap.mlt" 214 9943 9983
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 214 9943 9999 "test_treemap.mlt" 214 9943 10020
+type(
+  string
+)
+"test_treemap.mlt" 214 9943 10026 "test_treemap.mlt" 214 9943 10029
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 213 9858 9864 "test_treemap.mlt" 213 9858 9867
+)
+"test_treemap.mlt" 214 9943 10036 "test_treemap.mlt" 214 9943 10252
+type(
+  string
+)
+"test_treemap.mlt" 214 9943 9994 "test_treemap.mlt" 214 9943 10253
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 214 9943 9984 "test_treemap.mlt" 214 9943 10254
+type(
+  exn
+)
+"test_treemap.mlt" 214 9943 9978 "test_treemap.mlt" 214 9943 10254
+type(
+  unit
+)
+"test_treemap.mlt" 214 9943 10260 "test_treemap.mlt" 214 9943 10262
+type(
+  unit
+)
+"test_treemap.mlt" 214 9943 9943 "test_treemap.mlt" 214 9943 10262
+type(
+  unit
+)
+"test_treemap.mlt" 218 10299 10305 "test_treemap.mlt" 218 10299 10311
+type(
+  string
+)
+ident(
+  def actual "test_treemap.mlt" 219 10339 10341 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 218 10299 10314 "test_treemap.mlt" 218 10299 10329
+type(
+  ISMap.treemap -> string
+)
+ident(
+  int_ref ISMap.to_string "treemap.ml" 47 1387 1389 "treemap.ml" 47 1387 1422
+)
+"test_treemap.mlt" 218 10299 10330 "test_treemap.mlt" 218 10299 10335
+type(
+  ISMap.treemap
+)
+ident(
+  int_ref ismap "test_treemap.mlt" 204 9569 9575 "test_treemap.mlt" 204 9569 9580
+)
+"test_treemap.mlt" 218 10299 10314 "test_treemap.mlt" 218 10299 10335
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 219 10339 10345 "test_treemap.mlt" 219 10339 10351
+type(
+  string
+)
+ident(
+  def expect "test_treemap.mlt" 220 10445 10447 "test_treemap.mlt" 221 10530 10927
+)
+"test_treemap.mlt" 219 10339 10354 "test_treemap.mlt" 219 10339 10441
+type(
+  string
+)
+"test_treemap.mlt" 220 10445 10451 "test_treemap.mlt" 220 10445 10454
+type(
+  string
+)
+ident(
+  def msg "test_treemap.mlt" 221 10530 10530 "test_treemap.mlt" 221 10530 10926
+)
+"test_treemap.mlt" 220 10445 10457 "test_treemap.mlt" 220 10445 10464
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 220 10445 10465 "test_treemap.mlt" 220 10445 10512
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_treemap.mlt" 220 10445 10513 "test_treemap.mlt" 220 10445 10519
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 219 10339 10345 "test_treemap.mlt" 219 10339 10351
+)
+"test_treemap.mlt" 220 10445 10520 "test_treemap.mlt" 220 10445 10526
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 218 10299 10305 "test_treemap.mlt" 218 10299 10311
+)
+"test_treemap.mlt" 220 10445 10457 "test_treemap.mlt" 220 10445 10526
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 221 10530 10533 "test_treemap.mlt" 221 10530 10536
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 221 10530 10541 "test_treemap.mlt" 221 10530 10547
+type(
+  string
+)
+ident(
+  int_ref expect "test_treemap.mlt" 219 10339 10345 "test_treemap.mlt" 219 10339 10351
+)
+"test_treemap.mlt" 221 10530 10548 "test_treemap.mlt" 221 10530 10549
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treemap.mlt" 221 10530 10550 "test_treemap.mlt" 221 10530 10556
+type(
+  string
+)
+ident(
+  int_ref actual "test_treemap.mlt" 218 10299 10305 "test_treemap.mlt" 218 10299 10311
+)
+"test_treemap.mlt" 221 10530 10537 "test_treemap.mlt" 221 10530 10559
+type(
+  bool
+)
+"test_treemap.mlt" 221 10530 10533 "test_treemap.mlt" 221 10530 10559
+type(
+  bool
+)
+"test_treemap.mlt" 221 10530 10565 "test_treemap.mlt" 221 10530 10570
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 221 10530 10586 "test_treemap.mlt" 221 10530 10607
+type(
+  string
+)
+"test_treemap.mlt" 221 10530 10613 "test_treemap.mlt" 221 10530 10616
+type(
+  string
+)
+ident(
+  int_ref msg "test_treemap.mlt" 220 10445 10451 "test_treemap.mlt" 220 10445 10454
+)
+"test_treemap.mlt" 221 10530 10623 "test_treemap.mlt" 221 10530 10916
+type(
+  string
+)
+"test_treemap.mlt" 221 10530 10581 "test_treemap.mlt" 221 10530 10917
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 221 10530 10571 "test_treemap.mlt" 221 10530 10918
+type(
+  exn
+)
+"test_treemap.mlt" 221 10530 10565 "test_treemap.mlt" 221 10530 10918
+type(
+  unit
+)
+"test_treemap.mlt" 221 10530 10924 "test_treemap.mlt" 221 10530 10926
+type(
+  unit
+)
+"test_treemap.mlt" 221 10530 10530 "test_treemap.mlt" 221 10530 10926
+type(
+  unit
+)
+"test_treemap.mlt" 220 10445 10447 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 219 10339 10341 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 218 10299 10301 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 214 9943 9943 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 213 9858 9860 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 212 9835 9837 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 211 9789 9791 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 204 9569 9571 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 203 9526 9528 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 196 9345 9347 "test_treemap.mlt" 221 10530 10927
+type(
+  unit
+)
+"test_treemap.mlt" 194 9316 9316 "test_treemap.mlt" 223 10945 10946
+type(
+  unit -> unit
+)
+"test_treemap.mlt" 225 10949 10954 "test_treemap.mlt" 225 10949 10956
+type(
+  unit
+)
+"test_treemap.mlt" 230 11061 11071 "test_treemap.mlt" 230 11061 11083
+type(
+  String.t -> String.t -> int
+)
+ident(
+  def compare_keys "test_treemap.mlt" 231 11103 11109 "test_treemap.mlt" 232 11158 11165
+)
+"test_treemap.mlt" 230 11061 11086 "test_treemap.mlt" 230 11061 11100
+type(
+  String.t -> String.t -> int
+)
+ident(
+  int_ref String.compare "string.mli" 311 12749 12749 "string.mli" 311 12749 12775
+)
+"test_treemap.mlt" 231 11103 11113 "test_treemap.mlt" 231 11103 11126
+type(
+  string -> int -> string
+)
+ident(
+  def keyval_string "test_treemap.mlt" 231 11103 11155 "test_treemap.mlt" 232 11158 11165
+)
+"test_treemap.mlt" 231 11103 11127 "test_treemap.mlt" 231 11103 11128
+type(
+  string
+)
+ident(
+  def s "test_treemap.mlt" 231 11103 11129 "test_treemap.mlt" 231 11103 11155
+)
+"test_treemap.mlt" 231 11103 11129 "test_treemap.mlt" 231 11103 11130
+type(
+  int
+)
+ident(
+  def i "test_treemap.mlt" 231 11103 11133 "test_treemap.mlt" 231 11103 11155
+)
+"test_treemap.mlt" 231 11103 11133 "test_treemap.mlt" 231 11103 11140
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treemap.mlt" 231 11103 11141 "test_treemap.mlt" 231 11103 11151
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treemap.mlt" 231 11103 11152 "test_treemap.mlt" 231 11103 11153
+type(
+  string
+)
+ident(
+  int_ref s "test_treemap.mlt" 231 11103 11127 "test_treemap.mlt" 231 11103 11128
+)
+"test_treemap.mlt" 231 11103 11154 "test_treemap.mlt" 231 11103 11155
+type(
+  int
+)
+ident(
+  int_ref i "test_treemap.mlt" 231 11103 11129 "test_treemap.mlt" 231 11103 11130
+)
+"test_treemap.mlt" 231 11103 11133 "test_treemap.mlt" 231 11103 11155
+call(
+  tail
+)
+type(
+  string
+)
+"test_treemap.mlt" 234 11171 11192 "test_treemap.mlt" 234 11171 11210
+call(
+  stack
+)
+"test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+type(
+  SIMap.treemap
+)
+ident(
+  def simap "test_treemap.mlt" 240 11412 11414 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 236 11228 11236 "test_treemap.mlt" 236 11228 11239
+type(
+  (string * int) list
+)
+ident(
+  def kvs "test_treemap.mlt" 237 11319 11323 "test_treemap.mlt" 238 11366 11406
+)
+"test_treemap.mlt" 236 11228 11243 "test_treemap.mlt" 236 11228 11250
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11251 "test_treemap.mlt" 236 11228 11252
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11243 "test_treemap.mlt" 236 11228 11252
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11254 "test_treemap.mlt" 236 11228 11259
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11260 "test_treemap.mlt" 236 11228 11261
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11254 "test_treemap.mlt" 236 11228 11261
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11263 "test_treemap.mlt" 236 11228 11269
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11270 "test_treemap.mlt" 236 11228 11271
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11263 "test_treemap.mlt" 236 11228 11271
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11273 "test_treemap.mlt" 236 11228 11278
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11279 "test_treemap.mlt" 236 11228 11280
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11273 "test_treemap.mlt" 236 11228 11280
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11282 "test_treemap.mlt" 236 11228 11288
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11289 "test_treemap.mlt" 236 11228 11290
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11282 "test_treemap.mlt" 236 11228 11290
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11292 "test_treemap.mlt" 236 11228 11300
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11301 "test_treemap.mlt" 236 11228 11303
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11292 "test_treemap.mlt" 236 11228 11303
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11305 "test_treemap.mlt" 236 11228 11312
+type(
+  string
+)
+"test_treemap.mlt" 236 11228 11313 "test_treemap.mlt" 236 11228 11314
+type(
+  int
+)
+"test_treemap.mlt" 236 11228 11305 "test_treemap.mlt" 236 11228 11314
+type(
+  string * int
+)
+"test_treemap.mlt" 236 11228 11242 "test_treemap.mlt" 236 11228 11315
+type(
+  (string * int) list
+)
+"test_treemap.mlt" 237 11319 11327 "test_treemap.mlt" 237 11319 11332
+type(
+  SIMap.treemap -> SIKV.key_t * SIKV.value_t -> SIMap.treemap
+)
+ident(
+  def addkv "test_treemap.mlt" 238 11366 11370 "test_treemap.mlt" 238 11366 11406
+)
+"test_treemap.mlt" 237 11319 11333 "test_treemap.mlt" 237 11319 11336
+type(
+  SIMap.treemap
+)
+ident(
+  def map "test_treemap.mlt" 237 11319 11337 "test_treemap.mlt" 237 11319 11362
+)
+"test_treemap.mlt" 237 11319 11338 "test_treemap.mlt" 237 11319 11339
+type(
+  SIKV.key_t
+)
+ident(
+  def k "test_treemap.mlt" 237 11319 11345 "test_treemap.mlt" 237 11319 11362
+)
+"test_treemap.mlt" 237 11319 11340 "test_treemap.mlt" 237 11319 11341
+type(
+  SIKV.value_t
+)
+ident(
+  def v "test_treemap.mlt" 237 11319 11345 "test_treemap.mlt" 237 11319 11362
+)
+"test_treemap.mlt" 237 11319 11337 "test_treemap.mlt" 237 11319 11342
+type(
+  SIKV.key_t * SIKV.value_t
+)
+"test_treemap.mlt" 237 11319 11345 "test_treemap.mlt" 237 11319 11354
+type(
+  SIMap.treemap -> SIKV.key_t -> SIKV.value_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.add "treemap.ml" 35 1018 1020 "treemap.ml" 35 1018 1080
+)
+"test_treemap.mlt" 237 11319 11355 "test_treemap.mlt" 237 11319 11358
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref map "test_treemap.mlt" 237 11319 11333 "test_treemap.mlt" 237 11319 11336
+)
+"test_treemap.mlt" 237 11319 11359 "test_treemap.mlt" 237 11319 11360
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref k "test_treemap.mlt" 237 11319 11338 "test_treemap.mlt" 237 11319 11339
+)
+"test_treemap.mlt" 237 11319 11361 "test_treemap.mlt" 237 11319 11362
+type(
+  SIKV.value_t
+)
+ident(
+  int_ref v "test_treemap.mlt" 237 11319 11340 "test_treemap.mlt" 237 11319 11341
+)
+"test_treemap.mlt" 237 11319 11345 "test_treemap.mlt" 237 11319 11362
+call(
+  tail
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 238 11366 11370 "test_treemap.mlt" 238 11366 11384
+type(
+  (SIMap.treemap -> SIKV.key_t * SIKV.value_t -> SIMap.treemap) ->
+  SIMap.treemap -> (SIKV.key_t * SIKV.value_t) list -> SIMap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treemap.mlt" 238 11366 11385 "test_treemap.mlt" 238 11366 11390
+type(
+  SIMap.treemap -> SIKV.key_t * SIKV.value_t -> SIMap.treemap
+)
+ident(
+  int_ref addkv "test_treemap.mlt" 237 11319 11327 "test_treemap.mlt" 237 11319 11332
+)
+"test_treemap.mlt" 238 11366 11391 "test_treemap.mlt" 238 11366 11402
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref SIMap.empty "treemap.ml" 33 995 997 "treemap.ml" 33 995 1016
+)
+"test_treemap.mlt" 238 11366 11403 "test_treemap.mlt" 238 11366 11406
+type(
+  (SIKV.key_t * SIKV.value_t) list
+)
+ident(
+  int_ref kvs "test_treemap.mlt" 236 11228 11236 "test_treemap.mlt" 236 11228 11239
+)
+"test_treemap.mlt" 238 11366 11370 "test_treemap.mlt" 238 11366 11406
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 237 11319 11323 "test_treemap.mlt" 238 11366 11406
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 236 11228 11232 "test_treemap.mlt" 238 11366 11406
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+type(
+  string
+)
+ident(
+  def simap_str "test_treemap.mlt" 243 11475 11477 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 240 11412 11430 "test_treemap.mlt" 240 11412 11447
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 240 11412 11448 "test_treemap.mlt" 240 11412 11453
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 240 11412 11430 "test_treemap.mlt" 240 11412 11453
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 243 11475 11481 "test_treemap.mlt" 243 11475 11484
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 244 11496 11498 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 243 11475 11487 "test_treemap.mlt" 243 11475 11492
+type(
+  string
+)
+"test_treemap.mlt" 244 11496 11502 "test_treemap.mlt" 244 11496 11509
+type(
+  string
+)
+ident(
+  def initmsg "test_treemap.mlt" 245 11545 11547 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 244 11496 11512 "test_treemap.mlt" 244 11496 11527
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+)
+"test_treemap.mlt" 244 11496 11528 "test_treemap.mlt" 244 11496 11531
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 243 11475 11481 "test_treemap.mlt" 243 11475 11484
+)
+"test_treemap.mlt" 244 11496 11532 "test_treemap.mlt" 244 11496 11541
+type(
+  string
+)
+ident(
+  int_ref simap_str "test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+)
+"test_treemap.mlt" 244 11496 11512 "test_treemap.mlt" 244 11496 11541
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 245 11545 11551 "test_treemap.mlt" 245 11545 11561
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 246 11616 11618 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 245 11545 11565 "test_treemap.mlt" 245 11545 11582
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 245 11545 11584 "test_treemap.mlt" 245 11545 11600
+type(
+  SIMap.treemap -> SIKV.key_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"test_treemap.mlt" 245 11545 11601 "test_treemap.mlt" 245 11545 11606
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 245 11545 11607 "test_treemap.mlt" 245 11545 11610
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 243 11475 11481 "test_treemap.mlt" 243 11475 11484
+)
+"test_treemap.mlt" 245 11545 11583 "test_treemap.mlt" 245 11545 11611
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 245 11545 11564 "test_treemap.mlt" 245 11545 11612
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 246 11616 11622 "test_treemap.mlt" 246 11616 11632
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 256 11767 11767 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 246 11616 11635 "test_treemap.mlt" 254 11760 11761
+type(
+  string
+)
+"test_treemap.mlt" 256 11767 11770 "test_treemap.mlt" 256 11767 11773
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 256 11767 11778 "test_treemap.mlt" 256 11767 11788
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 256 11767 11790 "test_treemap.mlt" 256 11767 11800
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 246 11616 11622 "test_treemap.mlt" 246 11616 11632
+)
+"test_treemap.mlt" 256 11767 11801 "test_treemap.mlt" 256 11767 11812
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 256 11767 11814 "test_treemap.mlt" 256 11767 11824
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 245 11545 11551 "test_treemap.mlt" 245 11545 11561
+)
+"test_treemap.mlt" 256 11767 11825 "test_treemap.mlt" 256 11767 11836
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 256 11767 11837 "test_treemap.mlt" 256 11767 11846
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 256 11767 11848 "test_treemap.mlt" 256 11767 11855
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treemap.mlt" 244 11496 11502 "test_treemap.mlt" 244 11496 11509
+)
+"test_treemap.mlt" 256 11767 11856 "test_treemap.mlt" 256 11767 11862
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 256 11767 11774 "test_treemap.mlt" 256 11767 11865
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 256 11767 11770 "test_treemap.mlt" 256 11767 11865
+type(
+  bool
+)
+"test_treemap.mlt" 256 11767 11871 "test_treemap.mlt" 256 11767 11876
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 256 11767 11892 "test_treemap.mlt" 256 11767 11913
+type(
+  string
+)
+"test_treemap.mlt" 256 11767 11920 "test_treemap.mlt" 256 11767 11921
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 256 11767 11921 "test_treemap.mlt" 256 11767 11927
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 256 11767 11919 "test_treemap.mlt" 256 11767 11928
+type(
+  string
+)
+"test_treemap.mlt" 256 11767 11935 "test_treemap.mlt" 256 11767 12413
+type(
+  string
+)
+"test_treemap.mlt" 256 11767 11887 "test_treemap.mlt" 256 11767 12414
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 256 11767 11877 "test_treemap.mlt" 256 11767 12415
+type(
+  exn
+)
+"test_treemap.mlt" 256 11767 11871 "test_treemap.mlt" 256 11767 12415
+type(
+  unit
+)
+"test_treemap.mlt" 256 11767 12421 "test_treemap.mlt" 256 11767 12423
+type(
+  unit
+)
+"test_treemap.mlt" 256 11767 11767 "test_treemap.mlt" 256 11767 12423
+type(
+  unit
+)
+"test_treemap.mlt" 260 12460 12466 "test_treemap.mlt" 260 12460 12469
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 261 12481 12483 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 260 12460 12472 "test_treemap.mlt" 260 12460 12477
+type(
+  string
+)
+"test_treemap.mlt" 261 12481 12487 "test_treemap.mlt" 261 12481 12494
+type(
+  string
+)
+ident(
+  def initmsg "test_treemap.mlt" 262 12530 12532 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 261 12481 12497 "test_treemap.mlt" 261 12481 12512
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+)
+"test_treemap.mlt" 261 12481 12513 "test_treemap.mlt" 261 12481 12516
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 260 12460 12466 "test_treemap.mlt" 260 12460 12469
+)
+"test_treemap.mlt" 261 12481 12517 "test_treemap.mlt" 261 12481 12526
+type(
+  string
+)
+ident(
+  int_ref simap_str "test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+)
+"test_treemap.mlt" 261 12481 12497 "test_treemap.mlt" 261 12481 12526
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 262 12530 12536 "test_treemap.mlt" 262 12530 12546
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 263 12601 12603 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 262 12530 12550 "test_treemap.mlt" 262 12530 12567
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 262 12530 12569 "test_treemap.mlt" 262 12530 12585
+type(
+  SIMap.treemap -> SIKV.key_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"test_treemap.mlt" 262 12530 12586 "test_treemap.mlt" 262 12530 12591
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 262 12530 12592 "test_treemap.mlt" 262 12530 12595
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 260 12460 12466 "test_treemap.mlt" 260 12460 12469
+)
+"test_treemap.mlt" 262 12530 12568 "test_treemap.mlt" 262 12530 12596
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 262 12530 12549 "test_treemap.mlt" 262 12530 12597
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 263 12601 12607 "test_treemap.mlt" 263 12601 12617
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 272 12733 12733 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 263 12601 12620 "test_treemap.mlt" 270 12726 12727
+type(
+  string
+)
+"test_treemap.mlt" 272 12733 12736 "test_treemap.mlt" 272 12733 12739
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 272 12733 12744 "test_treemap.mlt" 272 12733 12754
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 272 12733 12756 "test_treemap.mlt" 272 12733 12766
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 263 12601 12607 "test_treemap.mlt" 263 12601 12617
+)
+"test_treemap.mlt" 272 12733 12767 "test_treemap.mlt" 272 12733 12778
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 272 12733 12780 "test_treemap.mlt" 272 12733 12790
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 262 12530 12536 "test_treemap.mlt" 262 12530 12546
+)
+"test_treemap.mlt" 272 12733 12791 "test_treemap.mlt" 272 12733 12802
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 272 12733 12803 "test_treemap.mlt" 272 12733 12812
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 272 12733 12814 "test_treemap.mlt" 272 12733 12821
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treemap.mlt" 261 12481 12487 "test_treemap.mlt" 261 12481 12494
+)
+"test_treemap.mlt" 272 12733 12822 "test_treemap.mlt" 272 12733 12828
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 272 12733 12740 "test_treemap.mlt" 272 12733 12831
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 272 12733 12736 "test_treemap.mlt" 272 12733 12831
+type(
+  bool
+)
+"test_treemap.mlt" 272 12733 12837 "test_treemap.mlt" 272 12733 12842
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 272 12733 12858 "test_treemap.mlt" 272 12733 12879
+type(
+  string
+)
+"test_treemap.mlt" 272 12733 12886 "test_treemap.mlt" 272 12733 12887
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 272 12733 12887 "test_treemap.mlt" 272 12733 12893
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 272 12733 12885 "test_treemap.mlt" 272 12733 12894
+type(
+  string
+)
+"test_treemap.mlt" 272 12733 12901 "test_treemap.mlt" 272 12733 13355
+type(
+  string
+)
+"test_treemap.mlt" 272 12733 12853 "test_treemap.mlt" 272 12733 13356
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 272 12733 12843 "test_treemap.mlt" 272 12733 13357
+type(
+  exn
+)
+"test_treemap.mlt" 272 12733 12837 "test_treemap.mlt" 272 12733 13357
+type(
+  unit
+)
+"test_treemap.mlt" 272 12733 13363 "test_treemap.mlt" 272 12733 13365
+type(
+  unit
+)
+"test_treemap.mlt" 272 12733 12733 "test_treemap.mlt" 272 12733 13365
+type(
+  unit
+)
+"test_treemap.mlt" 276 13402 13408 "test_treemap.mlt" 276 13402 13411
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 277 13425 13427 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 276 13402 13414 "test_treemap.mlt" 276 13402 13421
+type(
+  string
+)
+"test_treemap.mlt" 277 13425 13431 "test_treemap.mlt" 277 13425 13438
+type(
+  string
+)
+ident(
+  def initmsg "test_treemap.mlt" 278 13474 13476 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 277 13425 13441 "test_treemap.mlt" 277 13425 13456
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+)
+"test_treemap.mlt" 277 13425 13457 "test_treemap.mlt" 277 13425 13460
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 276 13402 13408 "test_treemap.mlt" 276 13402 13411
+)
+"test_treemap.mlt" 277 13425 13461 "test_treemap.mlt" 277 13425 13470
+type(
+  string
+)
+ident(
+  int_ref simap_str "test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+)
+"test_treemap.mlt" 277 13425 13441 "test_treemap.mlt" 277 13425 13470
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 278 13474 13480 "test_treemap.mlt" 278 13474 13490
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 279 13545 13547 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 278 13474 13494 "test_treemap.mlt" 278 13474 13511
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 278 13474 13513 "test_treemap.mlt" 278 13474 13529
+type(
+  SIMap.treemap -> SIKV.key_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"test_treemap.mlt" 278 13474 13530 "test_treemap.mlt" 278 13474 13535
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 278 13474 13536 "test_treemap.mlt" 278 13474 13539
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 276 13402 13408 "test_treemap.mlt" 276 13402 13411
+)
+"test_treemap.mlt" 278 13474 13512 "test_treemap.mlt" 278 13474 13540
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 278 13474 13493 "test_treemap.mlt" 278 13474 13541
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 279 13545 13551 "test_treemap.mlt" 279 13545 13561
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 288 13677 13677 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 279 13545 13564 "test_treemap.mlt" 286 13670 13671
+type(
+  string
+)
+"test_treemap.mlt" 288 13677 13680 "test_treemap.mlt" 288 13677 13683
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 288 13677 13688 "test_treemap.mlt" 288 13677 13698
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 288 13677 13700 "test_treemap.mlt" 288 13677 13710
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 279 13545 13551 "test_treemap.mlt" 279 13545 13561
+)
+"test_treemap.mlt" 288 13677 13711 "test_treemap.mlt" 288 13677 13722
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 288 13677 13724 "test_treemap.mlt" 288 13677 13734
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 278 13474 13480 "test_treemap.mlt" 278 13474 13490
+)
+"test_treemap.mlt" 288 13677 13735 "test_treemap.mlt" 288 13677 13746
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 288 13677 13747 "test_treemap.mlt" 288 13677 13756
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 288 13677 13758 "test_treemap.mlt" 288 13677 13765
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treemap.mlt" 277 13425 13431 "test_treemap.mlt" 277 13425 13438
+)
+"test_treemap.mlt" 288 13677 13766 "test_treemap.mlt" 288 13677 13772
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 288 13677 13684 "test_treemap.mlt" 288 13677 13775
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 288 13677 13680 "test_treemap.mlt" 288 13677 13775
+type(
+  bool
+)
+"test_treemap.mlt" 288 13677 13781 "test_treemap.mlt" 288 13677 13786
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 288 13677 13802 "test_treemap.mlt" 288 13677 13823
+type(
+  string
+)
+"test_treemap.mlt" 288 13677 13830 "test_treemap.mlt" 288 13677 13831
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 288 13677 13831 "test_treemap.mlt" 288 13677 13837
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 288 13677 13829 "test_treemap.mlt" 288 13677 13838
+type(
+  string
+)
+"test_treemap.mlt" 288 13677 13845 "test_treemap.mlt" 288 13677 14301
+type(
+  string
+)
+"test_treemap.mlt" 288 13677 13797 "test_treemap.mlt" 288 13677 14302
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 288 13677 13787 "test_treemap.mlt" 288 13677 14303
+type(
+  exn
+)
+"test_treemap.mlt" 288 13677 13781 "test_treemap.mlt" 288 13677 14303
+type(
+  unit
+)
+"test_treemap.mlt" 288 13677 14309 "test_treemap.mlt" 288 13677 14311
+type(
+  unit
+)
+"test_treemap.mlt" 288 13677 13677 "test_treemap.mlt" 288 13677 14311
+type(
+  unit
+)
+"test_treemap.mlt" 292 14348 14354 "test_treemap.mlt" 292 14348 14357
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 293 14372 14374 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 292 14348 14360 "test_treemap.mlt" 292 14348 14368
+type(
+  string
+)
+"test_treemap.mlt" 293 14372 14378 "test_treemap.mlt" 293 14372 14385
+type(
+  string
+)
+ident(
+  def initmsg "test_treemap.mlt" 294 14421 14423 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 293 14372 14388 "test_treemap.mlt" 293 14372 14403
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+)
+"test_treemap.mlt" 293 14372 14404 "test_treemap.mlt" 293 14372 14407
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 292 14348 14354 "test_treemap.mlt" 292 14348 14357
+)
+"test_treemap.mlt" 293 14372 14408 "test_treemap.mlt" 293 14372 14417
+type(
+  string
+)
+ident(
+  int_ref simap_str "test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+)
+"test_treemap.mlt" 293 14372 14388 "test_treemap.mlt" 293 14372 14417
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 294 14421 14427 "test_treemap.mlt" 294 14421 14437
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 295 14492 14494 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 294 14421 14441 "test_treemap.mlt" 294 14421 14458
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 294 14421 14460 "test_treemap.mlt" 294 14421 14476
+type(
+  SIMap.treemap -> SIKV.key_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"test_treemap.mlt" 294 14421 14477 "test_treemap.mlt" 294 14421 14482
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 294 14421 14483 "test_treemap.mlt" 294 14421 14486
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 292 14348 14354 "test_treemap.mlt" 292 14348 14357
+)
+"test_treemap.mlt" 294 14421 14459 "test_treemap.mlt" 294 14421 14487
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 294 14421 14440 "test_treemap.mlt" 294 14421 14488
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 295 14492 14498 "test_treemap.mlt" 295 14492 14508
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 304 14622 14622 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 295 14492 14511 "test_treemap.mlt" 302 14615 14616
+type(
+  string
+)
+"test_treemap.mlt" 304 14622 14625 "test_treemap.mlt" 304 14622 14628
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 304 14622 14633 "test_treemap.mlt" 304 14622 14643
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 304 14622 14645 "test_treemap.mlt" 304 14622 14655
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 295 14492 14498 "test_treemap.mlt" 295 14492 14508
+)
+"test_treemap.mlt" 304 14622 14656 "test_treemap.mlt" 304 14622 14667
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 304 14622 14669 "test_treemap.mlt" 304 14622 14679
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 294 14421 14427 "test_treemap.mlt" 294 14421 14437
+)
+"test_treemap.mlt" 304 14622 14680 "test_treemap.mlt" 304 14622 14691
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 304 14622 14692 "test_treemap.mlt" 304 14622 14701
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 304 14622 14703 "test_treemap.mlt" 304 14622 14710
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treemap.mlt" 293 14372 14378 "test_treemap.mlt" 293 14372 14385
+)
+"test_treemap.mlt" 304 14622 14711 "test_treemap.mlt" 304 14622 14717
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 304 14622 14629 "test_treemap.mlt" 304 14622 14720
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 304 14622 14625 "test_treemap.mlt" 304 14622 14720
+type(
+  bool
+)
+"test_treemap.mlt" 304 14622 14726 "test_treemap.mlt" 304 14622 14731
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 304 14622 14747 "test_treemap.mlt" 304 14622 14768
+type(
+  string
+)
+"test_treemap.mlt" 304 14622 14775 "test_treemap.mlt" 304 14622 14776
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 304 14622 14776 "test_treemap.mlt" 304 14622 14782
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 304 14622 14774 "test_treemap.mlt" 304 14622 14783
+type(
+  string
+)
+"test_treemap.mlt" 304 14622 14790 "test_treemap.mlt" 304 14622 15245
+type(
+  string
+)
+"test_treemap.mlt" 304 14622 14742 "test_treemap.mlt" 304 14622 15246
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 304 14622 14732 "test_treemap.mlt" 304 14622 15247
+type(
+  exn
+)
+"test_treemap.mlt" 304 14622 14726 "test_treemap.mlt" 304 14622 15247
+type(
+  unit
+)
+"test_treemap.mlt" 304 14622 15253 "test_treemap.mlt" 304 14622 15255
+type(
+  unit
+)
+"test_treemap.mlt" 304 14622 14622 "test_treemap.mlt" 304 14622 15255
+type(
+  unit
+)
+"test_treemap.mlt" 309 15293 15299 "test_treemap.mlt" 309 15293 15302
+type(
+  string
+)
+ident(
+  def key "test_treemap.mlt" 310 15315 15317 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 309 15293 15305 "test_treemap.mlt" 309 15293 15311
+type(
+  string
+)
+"test_treemap.mlt" 310 15315 15321 "test_treemap.mlt" 310 15315 15328
+type(
+  string
+)
+ident(
+  def initmsg "test_treemap.mlt" 311 15364 15366 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 310 15315 15331 "test_treemap.mlt" 310 15315 15346
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treemap.mlt" 41 883 887 "test_treemap.mlt" 41 883 902
+)
+"test_treemap.mlt" 310 15315 15347 "test_treemap.mlt" 310 15315 15350
+type(
+  string
+)
+ident(
+  int_ref key "test_treemap.mlt" 309 15293 15299 "test_treemap.mlt" 309 15293 15302
+)
+"test_treemap.mlt" 310 15315 15351 "test_treemap.mlt" 310 15315 15360
+type(
+  string
+)
+ident(
+  int_ref simap_str "test_treemap.mlt" 240 11412 11418 "test_treemap.mlt" 240 11412 11427
+)
+"test_treemap.mlt" 310 15315 15331 "test_treemap.mlt" 310 15315 15360
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 311 15364 15370 "test_treemap.mlt" 311 15364 15380
+type(
+  string
+)
+ident(
+  def actual_str "test_treemap.mlt" 312 15435 15437 "test_treemap.mlt" 321 15566 16199
+)
+"test_treemap.mlt" 311 15364 15384 "test_treemap.mlt" 311 15364 15401
+type(
+  SIMap.treemap -> string
+)
+ident(
+  int_ref SIMap.tree_string "treemap.ml" 37 1082 1084 "treemap.ml" 37 1082 1119
+)
+"test_treemap.mlt" 311 15364 15403 "test_treemap.mlt" 311 15364 15419
+type(
+  SIMap.treemap -> SIKV.key_t -> SIMap.treemap
+)
+ident(
+  int_ref SIMap.remove_key "treemap.ml" 51 1487 1489 "treemap.ml" 51 1487 1539
+)
+"test_treemap.mlt" 311 15364 15420 "test_treemap.mlt" 311 15364 15425
+type(
+  SIMap.treemap
+)
+ident(
+  int_ref simap "test_treemap.mlt" 235 11214 11220 "test_treemap.mlt" 235 11214 11225
+)
+"test_treemap.mlt" 311 15364 15426 "test_treemap.mlt" 311 15364 15429
+type(
+  SIKV.key_t
+)
+ident(
+  int_ref key "test_treemap.mlt" 309 15293 15299 "test_treemap.mlt" 309 15293 15302
+)
+"test_treemap.mlt" 311 15364 15402 "test_treemap.mlt" 311 15364 15430
+call(
+  stack
+)
+type(
+  SIMap.treemap
+)
+"test_treemap.mlt" 311 15364 15383 "test_treemap.mlt" 311 15364 15431
+call(
+  stack
+)
+type(
+  string
+)
+"test_treemap.mlt" 312 15435 15441 "test_treemap.mlt" 312 15435 15451
+type(
+  string
+)
+ident(
+  def expect_str "test_treemap.mlt" 321 15566 15566 "test_treemap.mlt" 321 15566 16198
+)
+"test_treemap.mlt" 312 15435 15454 "test_treemap.mlt" 319 15559 15560
+type(
+  string
+)
+"test_treemap.mlt" 321 15566 15569 "test_treemap.mlt" 321 15566 15572
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treemap.mlt" 321 15566 15577 "test_treemap.mlt" 321 15566 15587
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treemap.mlt" 321 15566 15589 "test_treemap.mlt" 321 15566 15599
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treemap.mlt" 312 15435 15441 "test_treemap.mlt" 312 15435 15451
+)
+"test_treemap.mlt" 321 15566 15600 "test_treemap.mlt" 321 15566 15611
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treemap.mlt" 7 97 101 "test_treemap.mlt" 7 97 112
+)
+"test_treemap.mlt" 321 15566 15613 "test_treemap.mlt" 321 15566 15623
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treemap.mlt" 311 15364 15370 "test_treemap.mlt" 311 15364 15380
+)
+"test_treemap.mlt" 321 15566 15624 "test_treemap.mlt" 321 15566 15635
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treemap.mlt" 6 54 58 "test_treemap.mlt" 6 54 69
+)
+"test_treemap.mlt" 321 15566 15636 "test_treemap.mlt" 321 15566 15645
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treemap.mlt" 8 140 144 "test_treemap.mlt" 8 140 153
+)
+"test_treemap.mlt" 321 15566 15647 "test_treemap.mlt" 321 15566 15654
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treemap.mlt" 310 15315 15321 "test_treemap.mlt" 310 15315 15328
+)
+"test_treemap.mlt" 321 15566 15655 "test_treemap.mlt" 321 15566 15661
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 321 15566 15573 "test_treemap.mlt" 321 15566 15664
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treemap.mlt" 321 15566 15569 "test_treemap.mlt" 321 15566 15664
+type(
+  bool
+)
+"test_treemap.mlt" 321 15566 15670 "test_treemap.mlt" 321 15566 15675
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treemap.mlt" 321 15566 15691 "test_treemap.mlt" 321 15566 15712
+type(
+  string
+)
+"test_treemap.mlt" 321 15566 15719 "test_treemap.mlt" 321 15566 15720
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treemap.mlt" 321 15566 15720 "test_treemap.mlt" 321 15566 15726
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treemap.mlt" 9 183 187 "test_treemap.mlt" 9 183 193
+)
+"test_treemap.mlt" 321 15566 15718 "test_treemap.mlt" 321 15566 15727
+type(
+  string
+)
+"test_treemap.mlt" 321 15566 15734 "test_treemap.mlt" 321 15566 16188
+type(
+  string
+)
+"test_treemap.mlt" 321 15566 15686 "test_treemap.mlt" 321 15566 16189
+type(
+  Mltest.TestFail
+)
+"test_treemap.mlt" 321 15566 15676 "test_treemap.mlt" 321 15566 16190
+type(
+  exn
+)
+"test_treemap.mlt" 321 15566 15670 "test_treemap.mlt" 321 15566 16190
+type(
+  unit
+)
+"test_treemap.mlt" 321 15566 16196 "test_treemap.mlt" 321 15566 16198
+type(
+  unit
+)
+"test_treemap.mlt" 321 15566 15566 "test_treemap.mlt" 321 15566 16198
+type(
+  unit
+)
+"test_treemap.mlt" 312 15435 15437 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 311 15364 15366 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 310 15315 15317 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 309 15293 15295 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 304 14622 14622 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 295 14492 14494 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 294 14421 14423 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 293 14372 14374 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 292 14348 14350 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 288 13677 13677 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 279 13545 13547 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 278 13474 13476 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 277 13425 13427 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 276 13402 13404 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 272 12733 12733 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 263 12601 12603 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 262 12530 12532 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 261 12481 12483 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 260 12460 12462 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 256 11767 11767 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 246 11616 11618 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 245 11545 11547 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 244 11496 11498 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 243 11475 11477 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 240 11412 11414 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 235 11214 11216 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 234 11171 11173 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 227 10979 10981 "test_treemap.mlt" 321 15566 16199
+type(
+  unit
+)
+"test_treemap.mlt" 225 10949 10949 "test_treemap.mlt" 323 16217 16218
+type(
+  unit -> unit
+)
+"test_treemap.mlt" 51 1130 1142 "test_treemap.mlt" 325 16221 16223
+type(
+  (unit -> unit) array
+)
+"test_treemap.mlt" 51 1130 1130 "test_treemap.mlt" 325 16221 16223
+call(
+  stack
+)
+type(
+  unit
+)

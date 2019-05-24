@@ -1,0 +1,9 @@
+This directory contains files used by the tests. The come in the
+following categories
+|-----------+-----------------------------------+---------|
+|           |                                   | Can     |
+| Extension | Notes                             | Remove? |
+|-----------+-----------------------------------+---------|
+| .txt      | Sample input data                 | NO      |
+| .tmp      | data file generated during a test | Yes     |
+|-----------+-----------------------------------+---------|

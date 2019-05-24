@@ -1,0 +1,7301 @@
+"test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+type(
+  string
+)
+ident(
+  def actual_file "test_treeset.mlt" 7 97 97 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 6 54 72 "test_treeset.mlt" 6 54 94
+type(
+  string
+)
+"test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+type(
+  string
+)
+ident(
+  def expect_file "test_treeset.mlt" 8 140 140 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 7 97 115 "test_treeset.mlt" 7 97 137
+type(
+  string
+)
+"test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+type(
+  string
+)
+ident(
+  def diff_file "test_treeset.mlt" 9 183 183 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 8 140 158 "test_treeset.mlt" 8 140 178
+type(
+  string
+)
+"test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+type(
+  string ref
+)
+ident(
+  def msgref "test_treeset.mlt" 11 206 206 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 9 183 196 "test_treeset.mlt" 9 183 199
+type(
+  string -> string ref
+)
+ident(
+  int_ref Pervasives.ref "pervasives.mli" 1063 41160 41160 "pervasives.mli" 1063 41160 41204
+)
+"test_treeset.mlt" 9 183 200 "test_treeset.mlt" 9 183 202
+type(
+  string
+)
+"test_treeset.mlt" 9 183 196 "test_treeset.mlt" 9 183 202
+type(
+  string ref
+)
+"test_treeset.mlt" 11 206 210 "test_treeset.mlt" 11 206 220
+type(
+  ('a -> string) -> 'a option -> string
+)
+ident(
+  def str_of_opt "test_treeset.mlt" 17 319 319 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 11 206 221 "test_treeset.mlt" 11 206 230
+type(
+  'a -> string
+)
+ident(
+  def to_string "test_treeset.mlt" 11 206 231 "test_treeset.mlt" 14 269 314
+)
+"test_treeset.mlt" 11 206 231 "test_treeset.mlt" 11 206 232
+type(
+  'a option
+)
+ident(
+  def o "test_treeset.mlt" 12 235 237 "test_treeset.mlt" 14 269 314
+)
+"test_treeset.mlt" 12 235 243 "test_treeset.mlt" 12 235 244
+type(
+  'a option
+)
+ident(
+  int_ref o "test_treeset.mlt" 11 206 231 "test_treeset.mlt" 11 206 232
+)
+"test_treeset.mlt" 13 250 254 "test_treeset.mlt" 13 250 258
+type(
+  'a option
+)
+"test_treeset.mlt" 13 250 262 "test_treeset.mlt" 13 250 268
+type(
+  string
+)
+"test_treeset.mlt" 14 269 278 "test_treeset.mlt" 14 269 279
+type(
+  'a
+)
+ident(
+  def x "test_treeset.mlt" 14 269 283 "test_treeset.mlt" 14 269 314
+)
+"test_treeset.mlt" 14 269 273 "test_treeset.mlt" 14 269 279
+type(
+  'a option
+)
+"test_treeset.mlt" 14 269 283 "test_treeset.mlt" 14 269 290
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 14 269 291 "test_treeset.mlt" 14 269 300
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 14 269 302 "test_treeset.mlt" 14 269 311
+type(
+  'a -> string
+)
+ident(
+  int_ref to_string "test_treeset.mlt" 11 206 221 "test_treeset.mlt" 11 206 230
+)
+"test_treeset.mlt" 14 269 312 "test_treeset.mlt" 14 269 313
+type(
+  'a
+)
+ident(
+  int_ref x "test_treeset.mlt" 14 269 278 "test_treeset.mlt" 14 269 279
+)
+"test_treeset.mlt" 14 269 301 "test_treeset.mlt" 14 269 314
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 14 269 283 "test_treeset.mlt" 14 269 314
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 12 235 237 "test_treeset.mlt" 14 269 314
+type(
+  string
+)
+"test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+type(
+  float option -> string
+)
+ident(
+  def str_of_fopt "test_treeset.mlt" 19 367 367 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 17 319 337 "test_treeset.mlt" 17 319 347
+type(
+  (float -> string) -> float option -> string
+)
+ident(
+  int_ref str_of_opt "test_treeset.mlt" 11 206 210 "test_treeset.mlt" 11 206 220
+)
+"test_treeset.mlt" 17 319 348 "test_treeset.mlt" 17 319 363
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 17 319 337 "test_treeset.mlt" 17 319 363
+call(
+  stack
+)
+type(
+  float option -> string
+)
+"test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  def make_getopt_msg "test_treeset.mlt" 30 623 623 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 19 367 387 "test_treeset.mlt" 19 367 390
+type(
+  string
+)
+ident(
+  def key "test_treeset.mlt" 19 367 391 "test_treeset.mlt" 27 592 618
+)
+"test_treeset.mlt" 19 367 391 "test_treeset.mlt" 19 367 397
+type(
+  string
+)
+ident(
+  def mapstr "test_treeset.mlt" 19 367 398 "test_treeset.mlt" 27 592 618
+)
+"test_treeset.mlt" 19 367 398 "test_treeset.mlt" 19 367 404
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 19 367 405 "test_treeset.mlt" 27 592 618
+)
+"test_treeset.mlt" 19 367 405 "test_treeset.mlt" 19 367 411
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 20 414 416 "test_treeset.mlt" 27 592 618
+)
+"test_treeset.mlt" 20 414 420 "test_treeset.mlt" 20 414 425
+type(
+  string list
+)
+ident(
+  def lines "test_treeset.mlt" 27 592 594 "test_treeset.mlt" 27 592 618
+)
+"test_treeset.mlt" 21 430 436 "test_treeset.mlt" 21 430 443
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 21 430 444 "test_treeset.mlt" 21 430 456
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 21 430 457 "test_treeset.mlt" 21 430 460
+type(
+  string
+)
+ident(
+  int_ref key "test_treeset.mlt" 19 367 387 "test_treeset.mlt" 19 367 390
+)
+"test_treeset.mlt" 21 430 436 "test_treeset.mlt" 21 430 460
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 22 462 468 "test_treeset.mlt" 22 462 475
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 22 462 476 "test_treeset.mlt" 22 462 488
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 22 462 489 "test_treeset.mlt" 22 462 495
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 19 367 398 "test_treeset.mlt" 19 367 404
+)
+"test_treeset.mlt" 22 462 468 "test_treeset.mlt" 22 462 495
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 23 497 503 "test_treeset.mlt" 23 497 510
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 23 497 511 "test_treeset.mlt" 23 497 523
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 23 497 524 "test_treeset.mlt" 23 497 530
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 19 367 405 "test_treeset.mlt" 19 367 411
+)
+"test_treeset.mlt" 23 497 503 "test_treeset.mlt" 23 497 530
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 24 532 538 "test_treeset.mlt" 24 532 545
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 24 532 546 "test_treeset.mlt" 24 532 572
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 24 532 573 "test_treeset.mlt" 24 532 579
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treeset.mlt" 19 367 391 "test_treeset.mlt" 19 367 397
+)
+"test_treeset.mlt" 24 532 538 "test_treeset.mlt" 24 532 579
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 20 414 428 "test_treeset.mlt" 25 581 586
+type(
+  string list
+)
+"test_treeset.mlt" 27 592 594 "test_treeset.mlt" 27 592 607
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treeset.mlt" 27 592 608 "test_treeset.mlt" 27 592 612
+type(
+  string
+)
+"test_treeset.mlt" 27 592 613 "test_treeset.mlt" 27 592 618
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treeset.mlt" 20 414 420 "test_treeset.mlt" 20 414 425
+)
+"test_treeset.mlt" 27 592 594 "test_treeset.mlt" 27 592 618
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 20 414 416 "test_treeset.mlt" 27 592 618
+type(
+  string
+)
+"test_treeset.mlt" 30 623 627 "test_treeset.mlt" 30 623 644
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  def make_iterfold_msg "test_treeset.mlt" 41 881 881 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 30 623 645 "test_treeset.mlt" 30 623 651
+type(
+  string
+)
+ident(
+  def mapstr "test_treeset.mlt" 30 623 652 "test_treeset.mlt" 38 850 876
+)
+"test_treeset.mlt" 30 623 652 "test_treeset.mlt" 30 623 659
+type(
+  string
+)
+ident(
+  def funcstr "test_treeset.mlt" 30 623 660 "test_treeset.mlt" 38 850 876
+)
+"test_treeset.mlt" 30 623 660 "test_treeset.mlt" 30 623 666
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 30 623 667 "test_treeset.mlt" 38 850 876
+)
+"test_treeset.mlt" 30 623 667 "test_treeset.mlt" 30 623 673
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 31 676 678 "test_treeset.mlt" 38 850 876
+)
+"test_treeset.mlt" 31 676 682 "test_treeset.mlt" 31 676 687
+type(
+  string list
+)
+ident(
+  def lines "test_treeset.mlt" 38 850 852 "test_treeset.mlt" 38 850 876
+)
+"test_treeset.mlt" 32 692 698 "test_treeset.mlt" 32 692 705
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 32 692 706 "test_treeset.mlt" 32 692 710
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 32 692 711 "test_treeset.mlt" 32 692 718
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treeset.mlt" 30 623 652 "test_treeset.mlt" 30 623 659
+)
+"test_treeset.mlt" 32 692 698 "test_treeset.mlt" 32 692 718
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 33 720 726 "test_treeset.mlt" 33 720 733
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 33 720 734 "test_treeset.mlt" 33 720 746
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 33 720 747 "test_treeset.mlt" 33 720 753
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 30 623 660 "test_treeset.mlt" 30 623 666
+)
+"test_treeset.mlt" 33 720 726 "test_treeset.mlt" 33 720 753
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 34 755 761 "test_treeset.mlt" 34 755 768
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 34 755 769 "test_treeset.mlt" 34 755 781
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 34 755 782 "test_treeset.mlt" 34 755 788
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 30 623 667 "test_treeset.mlt" 30 623 673
+)
+"test_treeset.mlt" 34 755 761 "test_treeset.mlt" 34 755 788
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 35 790 796 "test_treeset.mlt" 35 790 803
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 35 790 804 "test_treeset.mlt" 35 790 830
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 35 790 831 "test_treeset.mlt" 35 790 837
+type(
+  string
+)
+ident(
+  int_ref mapstr "test_treeset.mlt" 30 623 645 "test_treeset.mlt" 30 623 651
+)
+"test_treeset.mlt" 35 790 796 "test_treeset.mlt" 35 790 837
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 31 676 690 "test_treeset.mlt" 36 839 844
+type(
+  string list
+)
+"test_treeset.mlt" 38 850 852 "test_treeset.mlt" 38 850 865
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treeset.mlt" 38 850 866 "test_treeset.mlt" 38 850 870
+type(
+  string
+)
+"test_treeset.mlt" 38 850 871 "test_treeset.mlt" 38 850 876
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treeset.mlt" 31 676 682 "test_treeset.mlt" 31 676 687
+)
+"test_treeset.mlt" 38 850 852 "test_treeset.mlt" 38 850 876
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 31 676 678 "test_treeset.mlt" 38 850 876
+type(
+  string
+)
+"test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+type(
+  string -> string -> string
+)
+ident(
+  def make_remove_msg "test_treeset.mlt" 51 1128 1128 "test_treeset.mlt" 1 0 -1
+)
+"test_treeset.mlt" 41 881 901 "test_treeset.mlt" 41 881 904
+type(
+  string
+)
+ident(
+  def key "test_treeset.mlt" 41 881 905 "test_treeset.mlt" 48 1097 1123
+)
+"test_treeset.mlt" 41 881 905 "test_treeset.mlt" 41 881 917
+type(
+  string
+)
+ident(
+  def original_str "test_treeset.mlt" 42 920 922 "test_treeset.mlt" 48 1097 1123
+)
+"test_treeset.mlt" 42 920 926 "test_treeset.mlt" 42 920 931
+type(
+  string list
+)
+ident(
+  def lines "test_treeset.mlt" 48 1097 1099 "test_treeset.mlt" 48 1097 1123
+)
+"test_treeset.mlt" 43 936 942 "test_treeset.mlt" 43 936 949
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 43 936 950 "test_treeset.mlt" 43 936 979
+type(
+  (string, unit, string) format
+)
+"test_treeset.mlt" 43 936 942 "test_treeset.mlt" 43 936 979
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 44 981 987 "test_treeset.mlt" 44 981 994
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 44 981 995 "test_treeset.mlt" 44 981 1013
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 44 981 1014 "test_treeset.mlt" 44 981 1017
+type(
+  string
+)
+ident(
+  int_ref key "test_treeset.mlt" 41 881 901 "test_treeset.mlt" 41 881 904
+)
+"test_treeset.mlt" 44 981 987 "test_treeset.mlt" 44 981 1017
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 45 1019 1025 "test_treeset.mlt" 45 1019 1032
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 45 1019 1033 "test_treeset.mlt" 45 1019 1051
+type(
+  (string, unit, string) format
+)
+"test_treeset.mlt" 45 1019 1025 "test_treeset.mlt" 45 1019 1051
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 46 1053 1059 "test_treeset.mlt" 46 1053 1066
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 46 1053 1067 "test_treeset.mlt" 46 1053 1073
+type(
+  (string -> string, unit, string) format
+)
+"test_treeset.mlt" 46 1053 1074 "test_treeset.mlt" 46 1053 1086
+type(
+  string
+)
+ident(
+  int_ref original_str "test_treeset.mlt" 41 881 905 "test_treeset.mlt" 41 881 917
+)
+"test_treeset.mlt" 46 1053 1059 "test_treeset.mlt" 46 1053 1086
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 42 920 934 "test_treeset.mlt" 47 1088 1093
+type(
+  string list
+)
+"test_treeset.mlt" 48 1097 1099 "test_treeset.mlt" 48 1097 1112
+type(
+  string -> string list -> string
+)
+ident(
+  int_ref String.concat "string.mli" 123 5313 5313 "string.mli" 123 5313 5357
+)
+"test_treeset.mlt" 48 1097 1113 "test_treeset.mlt" 48 1097 1117
+type(
+  string
+)
+"test_treeset.mlt" 48 1097 1118 "test_treeset.mlt" 48 1097 1123
+type(
+  string list
+)
+ident(
+  int_ref lines "test_treeset.mlt" 42 920 926 "test_treeset.mlt" 42 920 931
+)
+"test_treeset.mlt" 48 1097 1099 "test_treeset.mlt" 48 1097 1123
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 42 920 922 "test_treeset.mlt" 48 1097 1123
+type(
+  string
+)
+"test_treeset.mlt" 51 1128 1128 "test_treeset.mlt" 51 1128 1139
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  int_ref Mltest.main "mltest.ml" 220 6783 6787 "mltest.ml" 220 6783 6791
+)
+"test_treeset.mlt" 55 1212 1217 "test_treeset.mlt" 55 1212 1219
+type(
+  unit
+)
+"test_treeset.mlt" 59 1339 1349 "test_treeset.mlt" 59 1339 1356
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "test_treeset.mlt" 60 1380 1386 "test_treeset.mlt" 61 1425 1432
+)
+"test_treeset.mlt" 59 1339 1359 "test_treeset.mlt" 59 1339 1377
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 60 1380 1390 "test_treeset.mlt" 60 1380 1401
+type(
+  float -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 60 1380 1422 "test_treeset.mlt" 61 1425 1432
+)
+"test_treeset.mlt" 60 1380 1402 "test_treeset.mlt" 60 1380 1403
+type(
+  float
+)
+ident(
+  def f "test_treeset.mlt" 60 1380 1406 "test_treeset.mlt" 60 1380 1422
+)
+"test_treeset.mlt" 60 1380 1406 "test_treeset.mlt" 60 1380 1413
+type(
+  (float -> string, unit, string) format -> float -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 60 1380 1414 "test_treeset.mlt" 60 1380 1420
+type(
+  (float -> string, unit, string) format
+)
+"test_treeset.mlt" 60 1380 1421 "test_treeset.mlt" 60 1380 1422
+type(
+  float
+)
+ident(
+  int_ref f "test_treeset.mlt" 60 1380 1402 "test_treeset.mlt" 60 1380 1403
+)
+"test_treeset.mlt" 60 1380 1406 "test_treeset.mlt" 60 1380 1422
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 63 1438 1456 "test_treeset.mlt" 63 1438 1479
+call(
+  stack
+)
+"test_treeset.mlt" 66 1501 1507 "test_treeset.mlt" 66 1501 1510
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  def set "test_treeset.mlt" 67 1525 1527 "test_treeset.mlt" 73 1636 2077
+)
+"test_treeset.mlt" 66 1501 1513 "test_treeset.mlt" 66 1501 1521
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 67 1525 1531 "test_treeset.mlt" 67 1525 1534
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  def set "test_treeset.mlt" 68 1555 1557 "test_treeset.mlt" 73 1636 2077
+)
+"test_treeset.mlt" 67 1525 1537 "test_treeset.mlt" 67 1525 1543
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 67 1525 1544 "test_treeset.mlt" 67 1525 1547
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref set "test_treeset.mlt" 66 1501 1507 "test_treeset.mlt" 66 1501 1510
+)
+"test_treeset.mlt" 67 1525 1548 "test_treeset.mlt" 67 1525 1551
+type(
+  FS.ElemKeyVal.key_t
+)
+"test_treeset.mlt" 67 1525 1537 "test_treeset.mlt" 67 1525 1551
+call(
+  stack
+)
+type(
+  FS.ElTreemap.treemap
+)
+"test_treeset.mlt" 68 1555 1561 "test_treeset.mlt" 68 1555 1571
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 69 1596 1598 "test_treeset.mlt" 73 1636 2077
+)
+"test_treeset.mlt" 68 1555 1574 "test_treeset.mlt" 68 1555 1588
+type(
+  FS.ElTreemap.treemap -> string
+)
+ident(
+  int_ref FS.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 68 1555 1589 "test_treeset.mlt" 68 1555 1592
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref set "test_treeset.mlt" 67 1525 1531 "test_treeset.mlt" 67 1525 1534
+)
+"test_treeset.mlt" 68 1555 1574 "test_treeset.mlt" 68 1555 1592
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 69 1596 1602 "test_treeset.mlt" 69 1596 1612
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 73 1636 1636 "test_treeset.mlt" 73 1636 2076
+)
+"test_treeset.mlt" 69 1596 1615 "test_treeset.mlt" 71 1628 1629
+type(
+  string
+)
+"test_treeset.mlt" 73 1636 1639 "test_treeset.mlt" 73 1636 1642
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 73 1636 1647 "test_treeset.mlt" 73 1636 1657
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 73 1636 1659 "test_treeset.mlt" 73 1636 1669
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 69 1596 1602 "test_treeset.mlt" 69 1596 1612
+)
+"test_treeset.mlt" 73 1636 1670 "test_treeset.mlt" 73 1636 1681
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 73 1636 1683 "test_treeset.mlt" 73 1636 1693
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 68 1555 1561 "test_treeset.mlt" 68 1555 1571
+)
+"test_treeset.mlt" 73 1636 1694 "test_treeset.mlt" 73 1636 1705
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 73 1636 1706 "test_treeset.mlt" 73 1636 1715
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 73 1636 1716 "test_treeset.mlt" 73 1636 1722
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 73 1636 1643 "test_treeset.mlt" 73 1636 1725
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 73 1636 1639 "test_treeset.mlt" 73 1636 1725
+type(
+  bool
+)
+"test_treeset.mlt" 73 1636 1731 "test_treeset.mlt" 73 1636 1736
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 73 1636 1752 "test_treeset.mlt" 73 1636 1772
+type(
+  string
+)
+"test_treeset.mlt" 73 1636 1779 "test_treeset.mlt" 73 1636 1780
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 73 1636 1780 "test_treeset.mlt" 73 1636 1786
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 73 1636 1778 "test_treeset.mlt" 73 1636 1787
+type(
+  string
+)
+"test_treeset.mlt" 73 1636 1794 "test_treeset.mlt" 73 1636 2066
+type(
+  string
+)
+"test_treeset.mlt" 73 1636 1747 "test_treeset.mlt" 73 1636 2067
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 73 1636 1737 "test_treeset.mlt" 73 1636 2068
+type(
+  exn
+)
+"test_treeset.mlt" 73 1636 1731 "test_treeset.mlt" 73 1636 2068
+type(
+  unit
+)
+"test_treeset.mlt" 73 1636 2074 "test_treeset.mlt" 73 1636 2076
+type(
+  unit
+)
+"test_treeset.mlt" 73 1636 1636 "test_treeset.mlt" 73 1636 2076
+type(
+  unit
+)
+"test_treeset.mlt" 69 1596 1598 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 68 1555 1557 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 67 1525 1527 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 66 1501 1503 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 63 1438 1440 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 57 1278 1280 "test_treeset.mlt" 73 1636 2077
+type(
+  unit
+)
+"test_treeset.mlt" 55 1212 1212 "test_treeset.mlt" 75 2095 2096
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 77 2099 2104 "test_treeset.mlt" 77 2099 2106
+type(
+  unit
+)
+"test_treeset.mlt" 81 2226 2236 "test_treeset.mlt" 81 2226 2243
+type(
+  'b -> 'b -> int
+)
+ident(
+  def compare "test_treeset.mlt" 82 2267 2273 "test_treeset.mlt" 83 2309 2316
+)
+"test_treeset.mlt" 81 2226 2246 "test_treeset.mlt" 81 2226 2264
+type(
+  'b -> 'b -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 82 2267 2277 "test_treeset.mlt" 82 2267 2288
+type(
+  float -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 82 2267 2306 "test_treeset.mlt" 83 2309 2316
+)
+"test_treeset.mlt" 82 2267 2291 "test_treeset.mlt" 82 2267 2306
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 85 2322 2340 "test_treeset.mlt" 85 2322 2363
+call(
+  stack
+)
+"test_treeset.mlt" 86 2367 2373 "test_treeset.mlt" 86 2367 2377
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  def fset "test_treeset.mlt" 90 2513 2515 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 87 2380 2388 "test_treeset.mlt" 87 2380 2393
+type(
+  float list
+)
+ident(
+  def elems "test_treeset.mlt" 88 2467 2471 "test_treeset.mlt" 88 2467 2507
+)
+"test_treeset.mlt" 87 2380 2397 "test_treeset.mlt" 87 2380 2400
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2402 "test_treeset.mlt" 87 2380 2405
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2407 "test_treeset.mlt" 87 2380 2411
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2413 "test_treeset.mlt" 87 2380 2416
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2418 "test_treeset.mlt" 87 2380 2421
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2423 "test_treeset.mlt" 87 2380 2426
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2428 "test_treeset.mlt" 87 2380 2431
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2433 "test_treeset.mlt" 87 2380 2436
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2438 "test_treeset.mlt" 87 2380 2441
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2443 "test_treeset.mlt" 87 2380 2446
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2448 "test_treeset.mlt" 87 2380 2451
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2453 "test_treeset.mlt" 87 2380 2456
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2458 "test_treeset.mlt" 87 2380 2462
+type(
+  float
+)
+"test_treeset.mlt" 87 2380 2396 "test_treeset.mlt" 87 2380 2463
+type(
+  float list
+)
+"test_treeset.mlt" 88 2467 2471 "test_treeset.mlt" 88 2467 2485
+type(
+  (FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElTreemap.treemap) ->
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t list -> FS.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 88 2467 2486 "test_treeset.mlt" 88 2467 2492
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 88 2467 2493 "test_treeset.mlt" 88 2467 2501
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 88 2467 2502 "test_treeset.mlt" 88 2467 2507
+type(
+  FS.ElemKeyVal.key_t list
+)
+ident(
+  int_ref elems "test_treeset.mlt" 87 2380 2388 "test_treeset.mlt" 87 2380 2393
+)
+"test_treeset.mlt" 88 2467 2471 "test_treeset.mlt" 88 2467 2507
+call(
+  stack
+)
+type(
+  FS.ElTreemap.treemap
+)
+"test_treeset.mlt" 87 2380 2384 "test_treeset.mlt" 88 2467 2507
+type(
+  FS.ElTreemap.treemap
+)
+"test_treeset.mlt" 90 2513 2519 "test_treeset.mlt" 90 2513 2526
+type(
+  string
+)
+ident(
+  def fsetstr "test_treeset.mlt" 93 2570 2572 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 90 2513 2529 "test_treeset.mlt" 90 2513 2543
+type(
+  FS.ElTreemap.treemap -> string
+)
+ident(
+  int_ref FS.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 90 2513 2544 "test_treeset.mlt" 90 2513 2548
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 86 2367 2373 "test_treeset.mlt" 86 2367 2377
+)
+"test_treeset.mlt" 90 2513 2529 "test_treeset.mlt" 90 2513 2548
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 93 2570 2576 "test_treeset.mlt" 93 2570 2578
+type(
+  float
+)
+ident(
+  def el "test_treeset.mlt" 94 2588 2590 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 93 2570 2581 "test_treeset.mlt" 93 2570 2584
+type(
+  float
+)
+"test_treeset.mlt" 94 2588 2594 "test_treeset.mlt" 94 2588 2600
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  def actual "test_treeset.mlt" 95 2624 2626 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 94 2588 2603 "test_treeset.mlt" 94 2588 2612
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref FS.getopt "treeset.ml" 41 1243 1249 "treeset.ml" 41 1243 1255
+)
+"test_treeset.mlt" 94 2588 2613 "test_treeset.mlt" 94 2588 2617
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 86 2367 2373 "test_treeset.mlt" 86 2367 2377
+)
+"test_treeset.mlt" 94 2588 2618 "test_treeset.mlt" 94 2588 2620
+type(
+  FS.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 93 2570 2576 "test_treeset.mlt" 93 2570 2578
+)
+"test_treeset.mlt" 94 2588 2603 "test_treeset.mlt" 94 2588 2620
+call(
+  stack
+)
+type(
+  FS.ElemKeyVal.key_t option
+)
+"test_treeset.mlt" 95 2624 2630 "test_treeset.mlt" 95 2624 2636
+type(
+  float option
+)
+ident(
+  def expect "test_treeset.mlt" 96 2651 2653 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 95 2624 2644 "test_treeset.mlt" 95 2624 2647
+type(
+  float
+)
+"test_treeset.mlt" 95 2624 2639 "test_treeset.mlt" 95 2624 2647
+type(
+  float option
+)
+"test_treeset.mlt" 96 2651 2657 "test_treeset.mlt" 96 2651 2660
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 97 2753 2753 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 96 2651 2663 "test_treeset.mlt" 96 2651 2678
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+)
+"test_treeset.mlt" 96 2651 2680 "test_treeset.mlt" 96 2651 2695
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 96 2651 2696 "test_treeset.mlt" 96 2651 2698
+type(
+  float
+)
+ident(
+  int_ref el "test_treeset.mlt" 93 2570 2576 "test_treeset.mlt" 93 2570 2578
+)
+"test_treeset.mlt" 96 2651 2679 "test_treeset.mlt" 96 2651 2699
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 96 2651 2700 "test_treeset.mlt" 96 2651 2707
+type(
+  string
+)
+ident(
+  int_ref fsetstr "test_treeset.mlt" 90 2513 2519 "test_treeset.mlt" 90 2513 2526
+)
+"test_treeset.mlt" 96 2651 2709 "test_treeset.mlt" 96 2651 2720
+type(
+  float option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 96 2651 2721 "test_treeset.mlt" 96 2651 2727
+type(
+  float option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 95 2624 2630 "test_treeset.mlt" 95 2624 2636
+)
+"test_treeset.mlt" 96 2651 2708 "test_treeset.mlt" 96 2651 2728
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 96 2651 2730 "test_treeset.mlt" 96 2651 2741
+type(
+  FS.ElemKeyVal.key_t option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 96 2651 2742 "test_treeset.mlt" 96 2651 2748
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 94 2588 2594 "test_treeset.mlt" 94 2588 2600
+)
+"test_treeset.mlt" 96 2651 2729 "test_treeset.mlt" 96 2651 2749
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 96 2651 2663 "test_treeset.mlt" 96 2651 2749
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 97 2753 2756 "test_treeset.mlt" 97 2753 2759
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 97 2753 2764 "test_treeset.mlt" 97 2753 2770
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 95 2624 2630 "test_treeset.mlt" 95 2624 2636
+)
+"test_treeset.mlt" 97 2753 2771 "test_treeset.mlt" 97 2753 2772
+type(
+  FS.ElemKeyVal.key_t option -> FS.ElemKeyVal.key_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 97 2753 2773 "test_treeset.mlt" 97 2753 2779
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 94 2588 2594 "test_treeset.mlt" 94 2588 2600
+)
+"test_treeset.mlt" 97 2753 2760 "test_treeset.mlt" 97 2753 2782
+type(
+  bool
+)
+"test_treeset.mlt" 97 2753 2756 "test_treeset.mlt" 97 2753 2782
+type(
+  bool
+)
+"test_treeset.mlt" 97 2753 2788 "test_treeset.mlt" 97 2753 2793
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 97 2753 2809 "test_treeset.mlt" 97 2753 2829
+type(
+  string
+)
+"test_treeset.mlt" 97 2753 2835 "test_treeset.mlt" 97 2753 2838
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 96 2651 2657 "test_treeset.mlt" 96 2651 2660
+)
+"test_treeset.mlt" 97 2753 2845 "test_treeset.mlt" 97 2753 3083
+type(
+  string
+)
+"test_treeset.mlt" 97 2753 2804 "test_treeset.mlt" 97 2753 3084
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 97 2753 2794 "test_treeset.mlt" 97 2753 3085
+type(
+  exn
+)
+"test_treeset.mlt" 97 2753 2788 "test_treeset.mlt" 97 2753 3085
+type(
+  unit
+)
+"test_treeset.mlt" 97 2753 3091 "test_treeset.mlt" 97 2753 3093
+type(
+  unit
+)
+"test_treeset.mlt" 97 2753 2753 "test_treeset.mlt" 97 2753 3093
+type(
+  unit
+)
+"test_treeset.mlt" 101 3130 3136 "test_treeset.mlt" 101 3130 3138
+type(
+  float
+)
+ident(
+  def el "test_treeset.mlt" 102 3149 3151 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 101 3130 3141 "test_treeset.mlt" 101 3130 3145
+type(
+  float
+)
+"test_treeset.mlt" 102 3149 3155 "test_treeset.mlt" 102 3149 3161
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  def actual "test_treeset.mlt" 103 3185 3187 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 102 3149 3164 "test_treeset.mlt" 102 3149 3173
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref FS.getopt "treeset.ml" 41 1243 1249 "treeset.ml" 41 1243 1255
+)
+"test_treeset.mlt" 102 3149 3174 "test_treeset.mlt" 102 3149 3178
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 86 2367 2373 "test_treeset.mlt" 86 2367 2377
+)
+"test_treeset.mlt" 102 3149 3179 "test_treeset.mlt" 102 3149 3181
+type(
+  FS.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 101 3130 3136 "test_treeset.mlt" 101 3130 3138
+)
+"test_treeset.mlt" 102 3149 3164 "test_treeset.mlt" 102 3149 3181
+call(
+  stack
+)
+type(
+  FS.ElemKeyVal.key_t option
+)
+"test_treeset.mlt" 103 3185 3191 "test_treeset.mlt" 103 3185 3197
+type(
+  'c option
+)
+ident(
+  def expect "test_treeset.mlt" 104 3208 3210 "test_treeset.mlt" 105 3310 3654
+)
+"test_treeset.mlt" 103 3185 3200 "test_treeset.mlt" 103 3185 3204
+type(
+  'c option
+)
+"test_treeset.mlt" 104 3208 3214 "test_treeset.mlt" 104 3208 3217
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 105 3310 3310 "test_treeset.mlt" 105 3310 3653
+)
+"test_treeset.mlt" 104 3208 3220 "test_treeset.mlt" 104 3208 3235
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+)
+"test_treeset.mlt" 104 3208 3237 "test_treeset.mlt" 104 3208 3252
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 104 3208 3253 "test_treeset.mlt" 104 3208 3255
+type(
+  float
+)
+ident(
+  int_ref el "test_treeset.mlt" 101 3130 3136 "test_treeset.mlt" 101 3130 3138
+)
+"test_treeset.mlt" 104 3208 3236 "test_treeset.mlt" 104 3208 3256
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 104 3208 3257 "test_treeset.mlt" 104 3208 3264
+type(
+  string
+)
+ident(
+  int_ref fsetstr "test_treeset.mlt" 90 2513 2519 "test_treeset.mlt" 90 2513 2526
+)
+"test_treeset.mlt" 104 3208 3266 "test_treeset.mlt" 104 3208 3277
+type(
+  float option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 104 3208 3278 "test_treeset.mlt" 104 3208 3284
+type(
+  float option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 103 3185 3191 "test_treeset.mlt" 103 3185 3197
+)
+"test_treeset.mlt" 104 3208 3265 "test_treeset.mlt" 104 3208 3285
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 104 3208 3287 "test_treeset.mlt" 104 3208 3298
+type(
+  FS.ElemKeyVal.key_t option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 104 3208 3299 "test_treeset.mlt" 104 3208 3305
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 102 3149 3155 "test_treeset.mlt" 102 3149 3161
+)
+"test_treeset.mlt" 104 3208 3286 "test_treeset.mlt" 104 3208 3306
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 104 3208 3220 "test_treeset.mlt" 104 3208 3306
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 105 3310 3313 "test_treeset.mlt" 105 3310 3316
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 105 3310 3321 "test_treeset.mlt" 105 3310 3327
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 103 3185 3191 "test_treeset.mlt" 103 3185 3197
+)
+"test_treeset.mlt" 105 3310 3328 "test_treeset.mlt" 105 3310 3329
+type(
+  FS.ElemKeyVal.key_t option -> FS.ElemKeyVal.key_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 105 3310 3330 "test_treeset.mlt" 105 3310 3336
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 102 3149 3155 "test_treeset.mlt" 102 3149 3161
+)
+"test_treeset.mlt" 105 3310 3317 "test_treeset.mlt" 105 3310 3339
+type(
+  bool
+)
+"test_treeset.mlt" 105 3310 3313 "test_treeset.mlt" 105 3310 3339
+type(
+  bool
+)
+"test_treeset.mlt" 105 3310 3345 "test_treeset.mlt" 105 3310 3350
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 105 3310 3366 "test_treeset.mlt" 105 3310 3387
+type(
+  string
+)
+"test_treeset.mlt" 105 3310 3393 "test_treeset.mlt" 105 3310 3396
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 104 3208 3214 "test_treeset.mlt" 104 3208 3217
+)
+"test_treeset.mlt" 105 3310 3403 "test_treeset.mlt" 105 3310 3643
+type(
+  string
+)
+"test_treeset.mlt" 105 3310 3361 "test_treeset.mlt" 105 3310 3644
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 105 3310 3351 "test_treeset.mlt" 105 3310 3645
+type(
+  exn
+)
+"test_treeset.mlt" 105 3310 3345 "test_treeset.mlt" 105 3310 3645
+type(
+  unit
+)
+"test_treeset.mlt" 105 3310 3651 "test_treeset.mlt" 105 3310 3653
+type(
+  unit
+)
+"test_treeset.mlt" 105 3310 3310 "test_treeset.mlt" 105 3310 3653
+type(
+  unit
+)
+"test_treeset.mlt" 104 3208 3210 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 103 3185 3187 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 102 3149 3151 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 101 3130 3132 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 97 2753 2753 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 96 2651 2653 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 95 2624 2626 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 94 2588 2590 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 93 2570 2572 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 90 2513 2515 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 86 2367 2369 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 85 2322 2324 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 79 2165 2167 "test_treeset.mlt" 105 3310 3654
+type(
+  unit
+)
+"test_treeset.mlt" 77 2099 2099 "test_treeset.mlt" 108 3673 3674
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 110 3677 3682 "test_treeset.mlt" 110 3677 3684
+type(
+  unit
+)
+"test_treeset.mlt" 114 3804 3814 "test_treeset.mlt" 114 3804 3821
+type(
+  'd -> 'd -> int
+)
+ident(
+  def compare "test_treeset.mlt" 115 3845 3851 "test_treeset.mlt" 116 3887 3894
+)
+"test_treeset.mlt" 114 3804 3824 "test_treeset.mlt" 114 3804 3842
+type(
+  'd -> 'd -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 115 3845 3855 "test_treeset.mlt" 115 3845 3866
+type(
+  float -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 115 3845 3884 "test_treeset.mlt" 116 3887 3894
+)
+"test_treeset.mlt" 115 3845 3869 "test_treeset.mlt" 115 3845 3884
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 118 3900 3918 "test_treeset.mlt" 118 3900 3941
+call(
+  stack
+)
+"test_treeset.mlt" 119 3945 3951 "test_treeset.mlt" 119 3945 3955
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  def fset "test_treeset.mlt" 123 4091 4093 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 120 3958 3966 "test_treeset.mlt" 120 3958 3971
+type(
+  float list
+)
+ident(
+  def elems "test_treeset.mlt" 121 4045 4049 "test_treeset.mlt" 121 4045 4085
+)
+"test_treeset.mlt" 120 3958 3975 "test_treeset.mlt" 120 3958 3978
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 3980 "test_treeset.mlt" 120 3958 3983
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 3985 "test_treeset.mlt" 120 3958 3989
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 3991 "test_treeset.mlt" 120 3958 3994
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 3996 "test_treeset.mlt" 120 3958 3999
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4001 "test_treeset.mlt" 120 3958 4004
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4006 "test_treeset.mlt" 120 3958 4009
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4011 "test_treeset.mlt" 120 3958 4014
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4016 "test_treeset.mlt" 120 3958 4019
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4021 "test_treeset.mlt" 120 3958 4024
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4026 "test_treeset.mlt" 120 3958 4029
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4031 "test_treeset.mlt" 120 3958 4034
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 4036 "test_treeset.mlt" 120 3958 4040
+type(
+  float
+)
+"test_treeset.mlt" 120 3958 3974 "test_treeset.mlt" 120 3958 4041
+type(
+  float list
+)
+"test_treeset.mlt" 121 4045 4049 "test_treeset.mlt" 121 4045 4063
+type(
+  (FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElTreemap.treemap) ->
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t list -> FS.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 121 4045 4064 "test_treeset.mlt" 121 4045 4070
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 121 4045 4071 "test_treeset.mlt" 121 4045 4079
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref FS.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 121 4045 4080 "test_treeset.mlt" 121 4045 4085
+type(
+  FS.ElemKeyVal.key_t list
+)
+ident(
+  int_ref elems "test_treeset.mlt" 120 3958 3966 "test_treeset.mlt" 120 3958 3971
+)
+"test_treeset.mlt" 121 4045 4049 "test_treeset.mlt" 121 4045 4085
+call(
+  stack
+)
+type(
+  FS.ElTreemap.treemap
+)
+"test_treeset.mlt" 120 3958 3962 "test_treeset.mlt" 121 4045 4085
+type(
+  FS.ElTreemap.treemap
+)
+"test_treeset.mlt" 123 4091 4097 "test_treeset.mlt" 123 4091 4104
+type(
+  string
+)
+ident(
+  def fsetstr "test_treeset.mlt" 126 4148 4150 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 123 4091 4107 "test_treeset.mlt" 123 4091 4121
+type(
+  FS.ElTreemap.treemap -> string
+)
+ident(
+  int_ref FS.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 123 4091 4122 "test_treeset.mlt" 123 4091 4126
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 119 3945 3951 "test_treeset.mlt" 119 3945 3955
+)
+"test_treeset.mlt" 123 4091 4107 "test_treeset.mlt" 123 4091 4126
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 126 4148 4154 "test_treeset.mlt" 126 4148 4156
+type(
+  float
+)
+ident(
+  def el "test_treeset.mlt" 127 4167 4169 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 126 4148 4159 "test_treeset.mlt" 126 4148 4163
+type(
+  float
+)
+"test_treeset.mlt" 127 4167 4173 "test_treeset.mlt" 127 4167 4179
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  def actual "test_treeset.mlt" 128 4203 4205 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 127 4167 4182 "test_treeset.mlt" 127 4167 4191
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref FS.getopt "treeset.ml" 41 1243 1249 "treeset.ml" 41 1243 1255
+)
+"test_treeset.mlt" 127 4167 4192 "test_treeset.mlt" 127 4167 4196
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 119 3945 3951 "test_treeset.mlt" 119 3945 3955
+)
+"test_treeset.mlt" 127 4167 4197 "test_treeset.mlt" 127 4167 4199
+type(
+  FS.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 126 4148 4154 "test_treeset.mlt" 126 4148 4156
+)
+"test_treeset.mlt" 127 4167 4182 "test_treeset.mlt" 127 4167 4199
+call(
+  stack
+)
+type(
+  FS.ElemKeyVal.key_t option
+)
+"test_treeset.mlt" 128 4203 4209 "test_treeset.mlt" 128 4203 4215
+type(
+  float option
+)
+ident(
+  def expect "test_treeset.mlt" 129 4231 4233 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 128 4203 4223 "test_treeset.mlt" 128 4203 4227
+type(
+  float
+)
+"test_treeset.mlt" 128 4203 4218 "test_treeset.mlt" 128 4203 4227
+type(
+  float option
+)
+"test_treeset.mlt" 129 4231 4237 "test_treeset.mlt" 129 4231 4240
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 130 4333 4333 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 129 4231 4243 "test_treeset.mlt" 129 4231 4258
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+)
+"test_treeset.mlt" 129 4231 4260 "test_treeset.mlt" 129 4231 4275
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 129 4231 4276 "test_treeset.mlt" 129 4231 4278
+type(
+  float
+)
+ident(
+  int_ref el "test_treeset.mlt" 126 4148 4154 "test_treeset.mlt" 126 4148 4156
+)
+"test_treeset.mlt" 129 4231 4259 "test_treeset.mlt" 129 4231 4279
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 129 4231 4280 "test_treeset.mlt" 129 4231 4287
+type(
+  string
+)
+ident(
+  int_ref fsetstr "test_treeset.mlt" 123 4091 4097 "test_treeset.mlt" 123 4091 4104
+)
+"test_treeset.mlt" 129 4231 4289 "test_treeset.mlt" 129 4231 4300
+type(
+  float option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 129 4231 4301 "test_treeset.mlt" 129 4231 4307
+type(
+  float option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 128 4203 4209 "test_treeset.mlt" 128 4203 4215
+)
+"test_treeset.mlt" 129 4231 4288 "test_treeset.mlt" 129 4231 4308
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 129 4231 4310 "test_treeset.mlt" 129 4231 4321
+type(
+  FS.ElemKeyVal.key_t option -> string
+)
+ident(
+  int_ref str_of_fopt "test_treeset.mlt" 17 319 323 "test_treeset.mlt" 17 319 334
+)
+"test_treeset.mlt" 129 4231 4322 "test_treeset.mlt" 129 4231 4328
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 127 4167 4173 "test_treeset.mlt" 127 4167 4179
+)
+"test_treeset.mlt" 129 4231 4309 "test_treeset.mlt" 129 4231 4329
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 129 4231 4243 "test_treeset.mlt" 129 4231 4329
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 130 4333 4336 "test_treeset.mlt" 130 4333 4339
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 130 4333 4344 "test_treeset.mlt" 130 4333 4350
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref expect "test_treeset.mlt" 128 4203 4209 "test_treeset.mlt" 128 4203 4215
+)
+"test_treeset.mlt" 130 4333 4351 "test_treeset.mlt" 130 4333 4352
+type(
+  FS.ElemKeyVal.key_t option -> FS.ElemKeyVal.key_t option -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 130 4333 4353 "test_treeset.mlt" 130 4333 4359
+type(
+  FS.ElemKeyVal.key_t option
+)
+ident(
+  int_ref actual "test_treeset.mlt" 127 4167 4173 "test_treeset.mlt" 127 4167 4179
+)
+"test_treeset.mlt" 130 4333 4340 "test_treeset.mlt" 130 4333 4362
+type(
+  bool
+)
+"test_treeset.mlt" 130 4333 4336 "test_treeset.mlt" 130 4333 4362
+type(
+  bool
+)
+"test_treeset.mlt" 130 4333 4368 "test_treeset.mlt" 130 4333 4373
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 130 4333 4389 "test_treeset.mlt" 130 4333 4410
+type(
+  string
+)
+"test_treeset.mlt" 130 4333 4416 "test_treeset.mlt" 130 4333 4419
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 129 4231 4237 "test_treeset.mlt" 129 4231 4240
+)
+"test_treeset.mlt" 130 4333 4426 "test_treeset.mlt" 130 4333 4671
+type(
+  string
+)
+"test_treeset.mlt" 130 4333 4384 "test_treeset.mlt" 130 4333 4672
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 130 4333 4374 "test_treeset.mlt" 130 4333 4673
+type(
+  exn
+)
+"test_treeset.mlt" 130 4333 4368 "test_treeset.mlt" 130 4333 4673
+type(
+  unit
+)
+"test_treeset.mlt" 130 4333 4679 "test_treeset.mlt" 130 4333 4681
+type(
+  unit
+)
+"test_treeset.mlt" 130 4333 4333 "test_treeset.mlt" 130 4333 4681
+type(
+  unit
+)
+"test_treeset.mlt" 134 4718 4724 "test_treeset.mlt" 134 4718 4726
+type(
+  float
+)
+ident(
+  def el "test_treeset.mlt" 135 4736 4738 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 134 4718 4729 "test_treeset.mlt" 134 4718 4732
+type(
+  float
+)
+"test_treeset.mlt" 135 4736 4742 "test_treeset.mlt" 135 4736 4748
+type(
+  bool
+)
+ident(
+  def actual "test_treeset.mlt" 136 4774 4776 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 135 4736 4751 "test_treeset.mlt" 135 4736 4762
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> bool
+)
+ident(
+  int_ref FS.contains "treeset.ml" 46 1400 1406 "treeset.ml" 46 1400 1414
+)
+"test_treeset.mlt" 135 4736 4763 "test_treeset.mlt" 135 4736 4767
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 119 3945 3951 "test_treeset.mlt" 119 3945 3955
+)
+"test_treeset.mlt" 135 4736 4768 "test_treeset.mlt" 135 4736 4770
+type(
+  FS.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 134 4718 4724 "test_treeset.mlt" 134 4718 4726
+)
+"test_treeset.mlt" 135 4736 4751 "test_treeset.mlt" 135 4736 4770
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 136 4774 4780 "test_treeset.mlt" 136 4774 4786
+type(
+  bool
+)
+ident(
+  def expect "test_treeset.mlt" 137 4797 4799 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 136 4774 4789 "test_treeset.mlt" 136 4774 4793
+type(
+  bool
+)
+"test_treeset.mlt" 137 4797 4803 "test_treeset.mlt" 137 4797 4806
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 138 4905 4905 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 137 4797 4809 "test_treeset.mlt" 137 4797 4824
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+)
+"test_treeset.mlt" 137 4797 4826 "test_treeset.mlt" 137 4797 4841
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 137 4797 4842 "test_treeset.mlt" 137 4797 4844
+type(
+  float
+)
+ident(
+  int_ref el "test_treeset.mlt" 134 4718 4724 "test_treeset.mlt" 134 4718 4726
+)
+"test_treeset.mlt" 137 4797 4825 "test_treeset.mlt" 137 4797 4845
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 137 4797 4846 "test_treeset.mlt" 137 4797 4853
+type(
+  string
+)
+ident(
+  int_ref fsetstr "test_treeset.mlt" 123 4091 4097 "test_treeset.mlt" 123 4091 4104
+)
+"test_treeset.mlt" 137 4797 4855 "test_treeset.mlt" 137 4797 4869
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treeset.mlt" 137 4797 4870 "test_treeset.mlt" 137 4797 4876
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treeset.mlt" 136 4774 4780 "test_treeset.mlt" 136 4774 4786
+)
+"test_treeset.mlt" 137 4797 4854 "test_treeset.mlt" 137 4797 4877
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 137 4797 4879 "test_treeset.mlt" 137 4797 4893
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treeset.mlt" 137 4797 4894 "test_treeset.mlt" 137 4797 4900
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treeset.mlt" 135 4736 4742 "test_treeset.mlt" 135 4736 4748
+)
+"test_treeset.mlt" 137 4797 4878 "test_treeset.mlt" 137 4797 4901
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 137 4797 4809 "test_treeset.mlt" 137 4797 4901
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 138 4905 4908 "test_treeset.mlt" 138 4905 4911
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 138 4905 4916 "test_treeset.mlt" 138 4905 4922
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treeset.mlt" 136 4774 4780 "test_treeset.mlt" 136 4774 4786
+)
+"test_treeset.mlt" 138 4905 4923 "test_treeset.mlt" 138 4905 4924
+type(
+  bool -> bool -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 138 4905 4925 "test_treeset.mlt" 138 4905 4931
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treeset.mlt" 135 4736 4742 "test_treeset.mlt" 135 4736 4748
+)
+"test_treeset.mlt" 138 4905 4912 "test_treeset.mlt" 138 4905 4934
+type(
+  bool
+)
+"test_treeset.mlt" 138 4905 4908 "test_treeset.mlt" 138 4905 4934
+type(
+  bool
+)
+"test_treeset.mlt" 138 4905 4940 "test_treeset.mlt" 138 4905 4945
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 138 4905 4961 "test_treeset.mlt" 138 4905 4982
+type(
+  string
+)
+"test_treeset.mlt" 138 4905 4988 "test_treeset.mlt" 138 4905 4991
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 137 4797 4803 "test_treeset.mlt" 137 4797 4806
+)
+"test_treeset.mlt" 138 4905 4998 "test_treeset.mlt" 138 4905 5245
+type(
+  string
+)
+"test_treeset.mlt" 138 4905 4956 "test_treeset.mlt" 138 4905 5246
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 138 4905 4946 "test_treeset.mlt" 138 4905 5247
+type(
+  exn
+)
+"test_treeset.mlt" 138 4905 4940 "test_treeset.mlt" 138 4905 5247
+type(
+  unit
+)
+"test_treeset.mlt" 138 4905 5253 "test_treeset.mlt" 138 4905 5255
+type(
+  unit
+)
+"test_treeset.mlt" 138 4905 4905 "test_treeset.mlt" 138 4905 5255
+type(
+  unit
+)
+"test_treeset.mlt" 142 5292 5298 "test_treeset.mlt" 142 5292 5300
+type(
+  float
+)
+ident(
+  def el "test_treeset.mlt" 143 5311 5313 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 142 5292 5303 "test_treeset.mlt" 142 5292 5307
+type(
+  float
+)
+"test_treeset.mlt" 143 5311 5317 "test_treeset.mlt" 143 5311 5323
+type(
+  bool
+)
+ident(
+  def actual "test_treeset.mlt" 144 5349 5351 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 143 5311 5326 "test_treeset.mlt" 143 5311 5337
+type(
+  FS.ElTreemap.treemap -> FS.ElemKeyVal.key_t -> bool
+)
+ident(
+  int_ref FS.contains "treeset.ml" 46 1400 1406 "treeset.ml" 46 1400 1414
+)
+"test_treeset.mlt" 143 5311 5338 "test_treeset.mlt" 143 5311 5342
+type(
+  FS.ElTreemap.treemap
+)
+ident(
+  int_ref fset "test_treeset.mlt" 119 3945 3951 "test_treeset.mlt" 119 3945 3955
+)
+"test_treeset.mlt" 143 5311 5343 "test_treeset.mlt" 143 5311 5345
+type(
+  FS.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 142 5292 5298 "test_treeset.mlt" 142 5292 5300
+)
+"test_treeset.mlt" 143 5311 5326 "test_treeset.mlt" 143 5311 5345
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 144 5349 5355 "test_treeset.mlt" 144 5349 5361
+type(
+  bool
+)
+ident(
+  def expect "test_treeset.mlt" 145 5373 5375 "test_treeset.mlt" 146 5481 5834
+)
+"test_treeset.mlt" 144 5349 5364 "test_treeset.mlt" 144 5349 5369
+type(
+  bool
+)
+"test_treeset.mlt" 145 5373 5379 "test_treeset.mlt" 145 5373 5382
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 146 5481 5481 "test_treeset.mlt" 146 5481 5833
+)
+"test_treeset.mlt" 145 5373 5385 "test_treeset.mlt" 145 5373 5400
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_getopt_msg "test_treeset.mlt" 19 367 371 "test_treeset.mlt" 19 367 386
+)
+"test_treeset.mlt" 145 5373 5402 "test_treeset.mlt" 145 5373 5417
+type(
+  float -> string
+)
+ident(
+  int_ref Pervasives.string_of_float "pervasives.mli" 648 24531 24531 "pervasives.mli" 648 24531 24568
+)
+"test_treeset.mlt" 145 5373 5418 "test_treeset.mlt" 145 5373 5420
+type(
+  float
+)
+ident(
+  int_ref el "test_treeset.mlt" 142 5292 5298 "test_treeset.mlt" 142 5292 5300
+)
+"test_treeset.mlt" 145 5373 5401 "test_treeset.mlt" 145 5373 5421
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 145 5373 5422 "test_treeset.mlt" 145 5373 5429
+type(
+  string
+)
+ident(
+  int_ref fsetstr "test_treeset.mlt" 123 4091 4097 "test_treeset.mlt" 123 4091 4104
+)
+"test_treeset.mlt" 145 5373 5431 "test_treeset.mlt" 145 5373 5445
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treeset.mlt" 145 5373 5446 "test_treeset.mlt" 145 5373 5452
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treeset.mlt" 144 5349 5355 "test_treeset.mlt" 144 5349 5361
+)
+"test_treeset.mlt" 145 5373 5430 "test_treeset.mlt" 145 5373 5453
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 145 5373 5455 "test_treeset.mlt" 145 5373 5469
+type(
+  bool -> string
+)
+ident(
+  int_ref Pervasives.string_of_bool "pervasives.mli" 604 22943 22943 "pervasives.mli" 604 22943 22978
+)
+"test_treeset.mlt" 145 5373 5470 "test_treeset.mlt" 145 5373 5476
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treeset.mlt" 143 5311 5317 "test_treeset.mlt" 143 5311 5323
+)
+"test_treeset.mlt" 145 5373 5454 "test_treeset.mlt" 145 5373 5477
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 145 5373 5385 "test_treeset.mlt" 145 5373 5477
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 146 5481 5484 "test_treeset.mlt" 146 5481 5487
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 146 5481 5492 "test_treeset.mlt" 146 5481 5498
+type(
+  bool
+)
+ident(
+  int_ref expect "test_treeset.mlt" 144 5349 5355 "test_treeset.mlt" 144 5349 5361
+)
+"test_treeset.mlt" 146 5481 5499 "test_treeset.mlt" 146 5481 5500
+type(
+  bool -> bool -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 146 5481 5501 "test_treeset.mlt" 146 5481 5507
+type(
+  bool
+)
+ident(
+  int_ref actual "test_treeset.mlt" 143 5311 5317 "test_treeset.mlt" 143 5311 5323
+)
+"test_treeset.mlt" 146 5481 5488 "test_treeset.mlt" 146 5481 5510
+type(
+  bool
+)
+"test_treeset.mlt" 146 5481 5484 "test_treeset.mlt" 146 5481 5510
+type(
+  bool
+)
+"test_treeset.mlt" 146 5481 5516 "test_treeset.mlt" 146 5481 5521
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 146 5481 5537 "test_treeset.mlt" 146 5481 5558
+type(
+  string
+)
+"test_treeset.mlt" 146 5481 5564 "test_treeset.mlt" 146 5481 5567
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 145 5373 5379 "test_treeset.mlt" 145 5373 5382
+)
+"test_treeset.mlt" 146 5481 5574 "test_treeset.mlt" 146 5481 5823
+type(
+  string
+)
+"test_treeset.mlt" 146 5481 5532 "test_treeset.mlt" 146 5481 5824
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 146 5481 5522 "test_treeset.mlt" 146 5481 5825
+type(
+  exn
+)
+"test_treeset.mlt" 146 5481 5516 "test_treeset.mlt" 146 5481 5825
+type(
+  unit
+)
+"test_treeset.mlt" 146 5481 5831 "test_treeset.mlt" 146 5481 5833
+type(
+  unit
+)
+"test_treeset.mlt" 146 5481 5481 "test_treeset.mlt" 146 5481 5833
+type(
+  unit
+)
+"test_treeset.mlt" 145 5373 5375 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 144 5349 5351 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 143 5311 5313 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 142 5292 5294 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 138 4905 4905 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 137 4797 4799 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 136 4774 4776 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 135 4736 4738 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 134 4718 4720 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 130 4333 4333 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 129 4231 4233 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 128 4203 4205 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 127 4167 4169 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 126 4148 4150 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 123 4091 4093 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 119 3945 3947 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 118 3900 3902 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 112 3743 3745 "test_treeset.mlt" 146 5481 5834
+type(
+  unit
+)
+"test_treeset.mlt" 110 3677 3677 "test_treeset.mlt" 149 5853 5854
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 151 5857 5862 "test_treeset.mlt" 151 5857 5864
+type(
+  unit
+)
+"test_treeset.mlt" 155 5946 5956 "test_treeset.mlt" 155 5946 5963
+type(
+  'e -> 'e -> int
+)
+ident(
+  def compare "test_treeset.mlt" 156 5987 5993 "test_treeset.mlt" 157 6042 6049
+)
+"test_treeset.mlt" 155 5946 5966 "test_treeset.mlt" 155 5946 5984
+type(
+  'e -> 'e -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 156 5987 5997 "test_treeset.mlt" 156 5987 6008
+type(
+  int * string -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 156 5987 6039 "test_treeset.mlt" 157 6042 6049
+)
+"test_treeset.mlt" 156 5987 6010 "test_treeset.mlt" 156 5987 6011
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 156 5987 6017 "test_treeset.mlt" 156 5987 6039
+)
+"test_treeset.mlt" 156 5987 6012 "test_treeset.mlt" 156 5987 6013
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 156 5987 6017 "test_treeset.mlt" 156 5987 6039
+)
+"test_treeset.mlt" 156 5987 6009 "test_treeset.mlt" 156 5987 6014
+type(
+  int * string
+)
+"test_treeset.mlt" 156 5987 6017 "test_treeset.mlt" 156 5987 6024
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 156 5987 6025 "test_treeset.mlt" 156 5987 6035
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 156 5987 6036 "test_treeset.mlt" 156 5987 6037
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 156 5987 6010 "test_treeset.mlt" 156 5987 6011
+)
+"test_treeset.mlt" 156 5987 6038 "test_treeset.mlt" 156 5987 6039
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 156 5987 6012 "test_treeset.mlt" 156 5987 6013
+)
+"test_treeset.mlt" 156 5987 6017 "test_treeset.mlt" 156 5987 6039
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 159 6055 6076 "test_treeset.mlt" 159 6055 6096
+call(
+  stack
+)
+"test_treeset.mlt" 160 6100 6106 "test_treeset.mlt" 160 6100 6111
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  def isset "test_treeset.mlt" 164 6259 6261 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 161 6114 6122 "test_treeset.mlt" 161 6114 6125
+type(
+  (int * string) list
+)
+ident(
+  def els "test_treeset.mlt" 162 6209 6213 "test_treeset.mlt" 162 6209 6253
+)
+"test_treeset.mlt" 161 6114 6129 "test_treeset.mlt" 161 6114 6130
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6131 "test_treeset.mlt" 161 6114 6136
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6129 "test_treeset.mlt" 161 6114 6136
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6138 "test_treeset.mlt" 161 6114 6139
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6140 "test_treeset.mlt" 161 6114 6146
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6138 "test_treeset.mlt" 161 6114 6146
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6148 "test_treeset.mlt" 161 6114 6150
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6151 "test_treeset.mlt" 161 6114 6157
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6148 "test_treeset.mlt" 161 6114 6157
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6159 "test_treeset.mlt" 161 6114 6160
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6161 "test_treeset.mlt" 161 6114 6166
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6159 "test_treeset.mlt" 161 6114 6166
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6168 "test_treeset.mlt" 161 6114 6169
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6170 "test_treeset.mlt" 161 6114 6176
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6168 "test_treeset.mlt" 161 6114 6176
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6178 "test_treeset.mlt" 161 6114 6179
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6180 "test_treeset.mlt" 161 6114 6186
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6178 "test_treeset.mlt" 161 6114 6186
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6188 "test_treeset.mlt" 161 6114 6189
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6190 "test_treeset.mlt" 161 6114 6195
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6188 "test_treeset.mlt" 161 6114 6195
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6197 "test_treeset.mlt" 161 6114 6198
+type(
+  int
+)
+"test_treeset.mlt" 161 6114 6199 "test_treeset.mlt" 161 6114 6204
+type(
+  string
+)
+"test_treeset.mlt" 161 6114 6197 "test_treeset.mlt" 161 6114 6204
+type(
+  int * string
+)
+"test_treeset.mlt" 161 6114 6128 "test_treeset.mlt" 161 6114 6205
+type(
+  (int * string) list
+)
+"test_treeset.mlt" 162 6209 6213 "test_treeset.mlt" 162 6209 6227
+type(
+  (ISSet.ElTreemap.treemap ->
+   ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap) ->
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t list -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 162 6209 6228 "test_treeset.mlt" 162 6209 6237
+type(
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 162 6209 6238 "test_treeset.mlt" 162 6209 6249
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 162 6209 6250 "test_treeset.mlt" 162 6209 6253
+type(
+  ISSet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 161 6114 6122 "test_treeset.mlt" 161 6114 6125
+)
+"test_treeset.mlt" 162 6209 6213 "test_treeset.mlt" 162 6209 6253
+call(
+  stack
+)
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 161 6114 6118 "test_treeset.mlt" 162 6209 6253
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 164 6259 6265 "test_treeset.mlt" 164 6259 6273
+type(
+  string
+)
+ident(
+  def issetstr "test_treeset.mlt" 167 6321 6323 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 164 6259 6276 "test_treeset.mlt" 164 6259 6293
+type(
+  ISSet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref ISSet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 164 6259 6294 "test_treeset.mlt" 164 6259 6299
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref isset "test_treeset.mlt" 160 6100 6106 "test_treeset.mlt" 160 6100 6111
+)
+"test_treeset.mlt" 164 6259 6276 "test_treeset.mlt" 164 6259 6299
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 167 6321 6327 "test_treeset.mlt" 167 6321 6330
+type(
+  string ref
+)
+ident(
+  def str "test_treeset.mlt" 168 6343 6345 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 167 6321 6333 "test_treeset.mlt" 167 6321 6336
+type(
+  string -> string ref
+)
+ident(
+  int_ref Pervasives.ref "pervasives.mli" 1063 41160 41160 "pervasives.mli" 1063 41160 41204
+)
+"test_treeset.mlt" 167 6321 6337 "test_treeset.mlt" 167 6321 6339
+type(
+  string
+)
+"test_treeset.mlt" 167 6321 6333 "test_treeset.mlt" 167 6321 6339
+type(
+  string ref
+)
+"test_treeset.mlt" 168 6343 6349 "test_treeset.mlt" 168 6343 6359
+type(
+  int * string -> unit
+)
+ident(
+  def concat_els "test_treeset.mlt" 169 6411 6413 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 168 6343 6361 "test_treeset.mlt" 168 6343 6362
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 168 6343 6368 "test_treeset.mlt" 168 6343 6407
+)
+"test_treeset.mlt" 168 6343 6363 "test_treeset.mlt" 168 6343 6364
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 168 6343 6368 "test_treeset.mlt" 168 6343 6407
+)
+"test_treeset.mlt" 168 6343 6360 "test_treeset.mlt" 168 6343 6365
+type(
+  int * string
+)
+"test_treeset.mlt" 168 6343 6368 "test_treeset.mlt" 168 6343 6371
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treeset.mlt" 167 6321 6327 "test_treeset.mlt" 167 6321 6330
+)
+"test_treeset.mlt" 168 6343 6372 "test_treeset.mlt" 168 6343 6374
+type(
+  string ref -> string -> unit
+)
+ident(
+  int_ref Pervasives.( := ) "pervasives.mli" 1071 41452 41452 "pervasives.mli" 1071 41452 41505
+)
+"test_treeset.mlt" 168 6343 6375 "test_treeset.mlt" 168 6343 6376
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 168 6343 6376 "test_treeset.mlt" 168 6343 6379
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treeset.mlt" 167 6321 6327 "test_treeset.mlt" 167 6321 6330
+)
+"test_treeset.mlt" 168 6343 6375 "test_treeset.mlt" 168 6343 6379
+type(
+  string
+)
+"test_treeset.mlt" 168 6343 6380 "test_treeset.mlt" 168 6343 6381
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treeset.mlt" 168 6343 6383 "test_treeset.mlt" 168 6343 6390
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 168 6343 6391 "test_treeset.mlt" 168 6343 6402
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 168 6343 6403 "test_treeset.mlt" 168 6343 6404
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 168 6343 6361 "test_treeset.mlt" 168 6343 6362
+)
+"test_treeset.mlt" 168 6343 6405 "test_treeset.mlt" 168 6343 6406
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 168 6343 6363 "test_treeset.mlt" 168 6343 6364
+)
+"test_treeset.mlt" 168 6343 6382 "test_treeset.mlt" 168 6343 6407
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 168 6343 6375 "test_treeset.mlt" 168 6343 6407
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 168 6343 6368 "test_treeset.mlt" 168 6343 6407
+type(
+  unit
+)
+"test_treeset.mlt" 169 6411 6417 "test_treeset.mlt" 169 6411 6424
+type(
+  string
+)
+ident(
+  def funcstr "test_treeset.mlt" 170 6473 6475 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 169 6411 6427 "test_treeset.mlt" 169 6411 6469
+type(
+  string
+)
+"test_treeset.mlt" 170 6473 6475 "test_treeset.mlt" 170 6473 6485
+type(
+  (ISSet.ElemKeyVal.key_t -> unit) -> ISSet.ElTreemap.treemap -> unit
+)
+ident(
+  int_ref ISSet.iter "treeset.ml" 52 1590 1596 "treeset.ml" 52 1590 1600
+)
+"test_treeset.mlt" 170 6473 6486 "test_treeset.mlt" 170 6473 6496
+type(
+  ISSet.ElemKeyVal.key_t -> unit
+)
+ident(
+  int_ref concat_els "test_treeset.mlt" 168 6343 6349 "test_treeset.mlt" 168 6343 6359
+)
+"test_treeset.mlt" 170 6473 6497 "test_treeset.mlt" 170 6473 6502
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref isset "test_treeset.mlt" 160 6100 6106 "test_treeset.mlt" 160 6100 6111
+)
+"test_treeset.mlt" 170 6473 6475 "test_treeset.mlt" 170 6473 6502
+call(
+  stack
+)
+type(
+  unit
+)
+"test_treeset.mlt" 171 6504 6510 "test_treeset.mlt" 171 6504 6516
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 172 6602 6604 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 171 6504 6519 "test_treeset.mlt" 171 6504 6598
+type(
+  string
+)
+"test_treeset.mlt" 172 6602 6608 "test_treeset.mlt" 172 6602 6614
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 173 6625 6627 "test_treeset.mlt" 174 6689 7244
+)
+"test_treeset.mlt" 172 6602 6617 "test_treeset.mlt" 172 6602 6618
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 172 6602 6618 "test_treeset.mlt" 172 6602 6621
+type(
+  string ref
+)
+ident(
+  int_ref str "test_treeset.mlt" 167 6321 6327 "test_treeset.mlt" 167 6321 6330
+)
+"test_treeset.mlt" 172 6602 6617 "test_treeset.mlt" 172 6602 6621
+type(
+  string
+)
+"test_treeset.mlt" 173 6625 6631 "test_treeset.mlt" 173 6625 6634
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 174 6689 6689 "test_treeset.mlt" 174 6689 7243
+)
+"test_treeset.mlt" 173 6625 6637 "test_treeset.mlt" 173 6625 6654
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treeset.mlt" 30 623 627 "test_treeset.mlt" 30 623 644
+)
+"test_treeset.mlt" 173 6625 6655 "test_treeset.mlt" 173 6625 6663
+type(
+  string
+)
+ident(
+  int_ref issetstr "test_treeset.mlt" 164 6259 6265 "test_treeset.mlt" 164 6259 6273
+)
+"test_treeset.mlt" 173 6625 6664 "test_treeset.mlt" 173 6625 6671
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treeset.mlt" 169 6411 6417 "test_treeset.mlt" 169 6411 6424
+)
+"test_treeset.mlt" 173 6625 6672 "test_treeset.mlt" 173 6625 6678
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 171 6504 6510 "test_treeset.mlt" 171 6504 6516
+)
+"test_treeset.mlt" 173 6625 6679 "test_treeset.mlt" 173 6625 6685
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 172 6602 6608 "test_treeset.mlt" 172 6602 6614
+)
+"test_treeset.mlt" 173 6625 6637 "test_treeset.mlt" 173 6625 6685
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 174 6689 6692 "test_treeset.mlt" 174 6689 6695
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 174 6689 6700 "test_treeset.mlt" 174 6689 6706
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 171 6504 6510 "test_treeset.mlt" 171 6504 6516
+)
+"test_treeset.mlt" 174 6689 6707 "test_treeset.mlt" 174 6689 6708
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 174 6689 6709 "test_treeset.mlt" 174 6689 6715
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 172 6602 6608 "test_treeset.mlt" 172 6602 6614
+)
+"test_treeset.mlt" 174 6689 6696 "test_treeset.mlt" 174 6689 6718
+type(
+  bool
+)
+"test_treeset.mlt" 174 6689 6692 "test_treeset.mlt" 174 6689 6718
+type(
+  bool
+)
+"test_treeset.mlt" 174 6689 6724 "test_treeset.mlt" 174 6689 6729
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 174 6689 6745 "test_treeset.mlt" 174 6689 6766
+type(
+  string
+)
+"test_treeset.mlt" 174 6689 6772 "test_treeset.mlt" 174 6689 6775
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 173 6625 6631 "test_treeset.mlt" 173 6625 6634
+)
+"test_treeset.mlt" 174 6689 6782 "test_treeset.mlt" 174 6689 7233
+type(
+  string
+)
+"test_treeset.mlt" 174 6689 6740 "test_treeset.mlt" 174 6689 7234
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 174 6689 6730 "test_treeset.mlt" 174 6689 7235
+type(
+  exn
+)
+"test_treeset.mlt" 174 6689 6724 "test_treeset.mlt" 174 6689 7235
+type(
+  unit
+)
+"test_treeset.mlt" 174 6689 7241 "test_treeset.mlt" 174 6689 7243
+type(
+  unit
+)
+"test_treeset.mlt" 174 6689 6689 "test_treeset.mlt" 174 6689 7243
+type(
+  unit
+)
+"test_treeset.mlt" 173 6625 6627 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 172 6602 6604 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 171 6504 6506 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 170 6473 6475 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 169 6411 6413 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 168 6343 6345 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 167 6321 6323 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 164 6259 6261 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 160 6100 6102 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 159 6055 6057 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 153 5881 5883 "test_treeset.mlt" 174 6689 7244
+type(
+  unit
+)
+"test_treeset.mlt" 151 5857 5857 "test_treeset.mlt" 176 7262 7263
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 178 7266 7271 "test_treeset.mlt" 178 7266 7273
+type(
+  unit
+)
+"test_treeset.mlt" 182 7355 7365 "test_treeset.mlt" 182 7355 7372
+type(
+  'f -> 'f -> int
+)
+ident(
+  def compare "test_treeset.mlt" 183 7396 7402 "test_treeset.mlt" 184 7451 7458
+)
+"test_treeset.mlt" 182 7355 7375 "test_treeset.mlt" 182 7355 7393
+type(
+  'f -> 'f -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 183 7396 7406 "test_treeset.mlt" 183 7396 7417
+type(
+  int * string -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 183 7396 7448 "test_treeset.mlt" 184 7451 7458
+)
+"test_treeset.mlt" 183 7396 7419 "test_treeset.mlt" 183 7396 7420
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 183 7396 7426 "test_treeset.mlt" 183 7396 7448
+)
+"test_treeset.mlt" 183 7396 7421 "test_treeset.mlt" 183 7396 7422
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 183 7396 7426 "test_treeset.mlt" 183 7396 7448
+)
+"test_treeset.mlt" 183 7396 7418 "test_treeset.mlt" 183 7396 7423
+type(
+  int * string
+)
+"test_treeset.mlt" 183 7396 7426 "test_treeset.mlt" 183 7396 7433
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 183 7396 7434 "test_treeset.mlt" 183 7396 7444
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 183 7396 7445 "test_treeset.mlt" 183 7396 7446
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 183 7396 7419 "test_treeset.mlt" 183 7396 7420
+)
+"test_treeset.mlt" 183 7396 7447 "test_treeset.mlt" 183 7396 7448
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 183 7396 7421 "test_treeset.mlt" 183 7396 7422
+)
+"test_treeset.mlt" 183 7396 7426 "test_treeset.mlt" 183 7396 7448
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 186 7464 7485 "test_treeset.mlt" 186 7464 7505
+call(
+  stack
+)
+"test_treeset.mlt" 187 7509 7515 "test_treeset.mlt" 187 7509 7520
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  def isset "test_treeset.mlt" 191 7668 7670 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 188 7523 7531 "test_treeset.mlt" 188 7523 7534
+type(
+  (int * string) list
+)
+ident(
+  def els "test_treeset.mlt" 189 7618 7622 "test_treeset.mlt" 189 7618 7662
+)
+"test_treeset.mlt" 188 7523 7538 "test_treeset.mlt" 188 7523 7539
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7540 "test_treeset.mlt" 188 7523 7545
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7538 "test_treeset.mlt" 188 7523 7545
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7547 "test_treeset.mlt" 188 7523 7548
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7549 "test_treeset.mlt" 188 7523 7555
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7547 "test_treeset.mlt" 188 7523 7555
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7557 "test_treeset.mlt" 188 7523 7559
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7560 "test_treeset.mlt" 188 7523 7566
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7557 "test_treeset.mlt" 188 7523 7566
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7568 "test_treeset.mlt" 188 7523 7569
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7570 "test_treeset.mlt" 188 7523 7575
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7568 "test_treeset.mlt" 188 7523 7575
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7577 "test_treeset.mlt" 188 7523 7578
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7579 "test_treeset.mlt" 188 7523 7585
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7577 "test_treeset.mlt" 188 7523 7585
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7587 "test_treeset.mlt" 188 7523 7588
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7589 "test_treeset.mlt" 188 7523 7595
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7587 "test_treeset.mlt" 188 7523 7595
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7597 "test_treeset.mlt" 188 7523 7598
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7599 "test_treeset.mlt" 188 7523 7604
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7597 "test_treeset.mlt" 188 7523 7604
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7606 "test_treeset.mlt" 188 7523 7607
+type(
+  int
+)
+"test_treeset.mlt" 188 7523 7608 "test_treeset.mlt" 188 7523 7613
+type(
+  string
+)
+"test_treeset.mlt" 188 7523 7606 "test_treeset.mlt" 188 7523 7613
+type(
+  int * string
+)
+"test_treeset.mlt" 188 7523 7537 "test_treeset.mlt" 188 7523 7614
+type(
+  (int * string) list
+)
+"test_treeset.mlt" 189 7618 7622 "test_treeset.mlt" 189 7618 7636
+type(
+  (ISSet.ElTreemap.treemap ->
+   ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap) ->
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t list -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 189 7618 7637 "test_treeset.mlt" 189 7618 7646
+type(
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 189 7618 7647 "test_treeset.mlt" 189 7618 7658
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 189 7618 7659 "test_treeset.mlt" 189 7618 7662
+type(
+  ISSet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 188 7523 7531 "test_treeset.mlt" 188 7523 7534
+)
+"test_treeset.mlt" 189 7618 7622 "test_treeset.mlt" 189 7618 7662
+call(
+  stack
+)
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 188 7523 7527 "test_treeset.mlt" 189 7618 7662
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 191 7668 7674 "test_treeset.mlt" 191 7668 7682
+type(
+  string
+)
+ident(
+  def issetstr "test_treeset.mlt" 194 7730 7732 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 191 7668 7685 "test_treeset.mlt" 191 7668 7702
+type(
+  ISSet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref ISSet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 191 7668 7703 "test_treeset.mlt" 191 7668 7708
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref isset "test_treeset.mlt" 187 7509 7515 "test_treeset.mlt" 187 7509 7520
+)
+"test_treeset.mlt" 191 7668 7685 "test_treeset.mlt" 191 7668 7708
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 194 7730 7736 "test_treeset.mlt" 194 7730 7744
+type(
+  int * string -> int * string -> int * string
+)
+ident(
+  def accum_kv "test_treeset.mlt" 195 7791 7793 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 194 7730 7746 "test_treeset.mlt" 194 7730 7750
+type(
+  int
+)
+ident(
+  def ksum "test_treeset.mlt" 194 7730 7757 "test_treeset.mlt" 194 7730 7787
+)
+"test_treeset.mlt" 194 7730 7751 "test_treeset.mlt" 194 7730 7755
+type(
+  string
+)
+ident(
+  def vcat "test_treeset.mlt" 194 7730 7757 "test_treeset.mlt" 194 7730 7787
+)
+"test_treeset.mlt" 194 7730 7745 "test_treeset.mlt" 194 7730 7756
+type(
+  int * string
+)
+"test_treeset.mlt" 194 7730 7758 "test_treeset.mlt" 194 7730 7759
+type(
+  int
+)
+ident(
+  def k "test_treeset.mlt" 194 7730 7765 "test_treeset.mlt" 194 7730 7787
+)
+"test_treeset.mlt" 194 7730 7760 "test_treeset.mlt" 194 7730 7761
+type(
+  string
+)
+ident(
+  def v "test_treeset.mlt" 194 7730 7765 "test_treeset.mlt" 194 7730 7787
+)
+"test_treeset.mlt" 194 7730 7757 "test_treeset.mlt" 194 7730 7762
+type(
+  int * string
+)
+"test_treeset.mlt" 194 7730 7766 "test_treeset.mlt" 194 7730 7770
+type(
+  int
+)
+ident(
+  int_ref ksum "test_treeset.mlt" 194 7730 7746 "test_treeset.mlt" 194 7730 7750
+)
+"test_treeset.mlt" 194 7730 7770 "test_treeset.mlt" 194 7730 7771
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( + ) "pervasives.mli" 261 10267 10267 "pervasives.mli" 261 10267 10313
+)
+"test_treeset.mlt" 194 7730 7771 "test_treeset.mlt" 194 7730 7772
+type(
+  int
+)
+ident(
+  int_ref k "test_treeset.mlt" 194 7730 7758 "test_treeset.mlt" 194 7730 7759
+)
+"test_treeset.mlt" 194 7730 7766 "test_treeset.mlt" 194 7730 7772
+type(
+  int
+)
+"test_treeset.mlt" 194 7730 7775 "test_treeset.mlt" 194 7730 7779
+type(
+  string
+)
+ident(
+  int_ref vcat "test_treeset.mlt" 194 7730 7751 "test_treeset.mlt" 194 7730 7755
+)
+"test_treeset.mlt" 194 7730 7779 "test_treeset.mlt" 194 7730 7780
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treeset.mlt" 194 7730 7780 "test_treeset.mlt" 194 7730 7781
+type(
+  string
+)
+ident(
+  int_ref v "test_treeset.mlt" 194 7730 7760 "test_treeset.mlt" 194 7730 7761
+)
+"test_treeset.mlt" 194 7730 7781 "test_treeset.mlt" 194 7730 7782
+type(
+  string -> string -> string
+)
+ident(
+  int_ref Pervasives.( ^ ) "pervasives.mli" 572 22042 22042 "pervasives.mli" 572 22042 22080
+)
+"test_treeset.mlt" 194 7730 7782 "test_treeset.mlt" 194 7730 7785
+type(
+  string
+)
+"test_treeset.mlt" 194 7730 7780 "test_treeset.mlt" 194 7730 7785
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 194 7730 7774 "test_treeset.mlt" 194 7730 7786
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 194 7730 7765 "test_treeset.mlt" 194 7730 7787
+type(
+  int * string
+)
+"test_treeset.mlt" 195 7791 7797 "test_treeset.mlt" 195 7791 7804
+type(
+  string
+)
+ident(
+  def funcstr "test_treeset.mlt" 196 7850 7852 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 195 7791 7807 "test_treeset.mlt" 195 7791 7846
+type(
+  string
+)
+"test_treeset.mlt" 196 7850 7857 "test_treeset.mlt" 196 7850 7861
+type(
+  int
+)
+ident(
+  def ksum "test_treeset.mlt" 197 7906 7908 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 196 7850 7862 "test_treeset.mlt" 196 7850 7866
+type(
+  string
+)
+ident(
+  def vcat "test_treeset.mlt" 197 7906 7908 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 196 7850 7856 "test_treeset.mlt" 196 7850 7867
+type(
+  int * string
+)
+"test_treeset.mlt" 196 7850 7870 "test_treeset.mlt" 196 7850 7880
+type(
+  (int * string -> ISSet.ElemKeyVal.key_t -> int * string) ->
+  int * string -> ISSet.ElTreemap.treemap -> int * string
+)
+ident(
+  int_ref ISSet.fold "treeset.ml" 59 1814 1820 "treeset.ml" 59 1814 1824
+)
+"test_treeset.mlt" 196 7850 7881 "test_treeset.mlt" 196 7850 7889
+type(
+  int * string -> ISSet.ElemKeyVal.key_t -> int * string
+)
+ident(
+  int_ref accum_kv "test_treeset.mlt" 194 7730 7736 "test_treeset.mlt" 194 7730 7744
+)
+"test_treeset.mlt" 196 7850 7891 "test_treeset.mlt" 196 7850 7892
+type(
+  int
+)
+"test_treeset.mlt" 196 7850 7893 "test_treeset.mlt" 196 7850 7895
+type(
+  string
+)
+"test_treeset.mlt" 196 7850 7890 "test_treeset.mlt" 196 7850 7896
+type(
+  int * string
+)
+"test_treeset.mlt" 196 7850 7897 "test_treeset.mlt" 196 7850 7902
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref isset "test_treeset.mlt" 187 7509 7515 "test_treeset.mlt" 187 7509 7520
+)
+"test_treeset.mlt" 196 7850 7870 "test_treeset.mlt" 196 7850 7902
+call(
+  stack
+)
+type(
+  int * string
+)
+"test_treeset.mlt" 197 7906 7912 "test_treeset.mlt" 197 7906 7918
+type(
+  int
+)
+ident(
+  def actual "test_treeset.mlt" 198 7929 7931 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 197 7906 7921 "test_treeset.mlt" 197 7906 7925
+type(
+  int
+)
+ident(
+  int_ref ksum "test_treeset.mlt" 196 7850 7857 "test_treeset.mlt" 196 7850 7861
+)
+"test_treeset.mlt" 198 7929 7935 "test_treeset.mlt" 198 7929 7941
+type(
+  int
+)
+ident(
+  def expect "test_treeset.mlt" 199 7950 7952 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 198 7929 7944 "test_treeset.mlt" 198 7929 7946
+type(
+  int
+)
+"test_treeset.mlt" 199 7950 7956 "test_treeset.mlt" 199 7950 7959
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 200 8046 8046 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 199 7950 7962 "test_treeset.mlt" 199 7950 7979
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treeset.mlt" 30 623 627 "test_treeset.mlt" 30 623 644
+)
+"test_treeset.mlt" 199 7950 7980 "test_treeset.mlt" 199 7950 7988
+type(
+  string
+)
+ident(
+  int_ref issetstr "test_treeset.mlt" 191 7668 7674 "test_treeset.mlt" 191 7668 7682
+)
+"test_treeset.mlt" 199 7950 7989 "test_treeset.mlt" 199 7950 7996
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treeset.mlt" 195 7791 7797 "test_treeset.mlt" 195 7791 7804
+)
+"test_treeset.mlt" 199 7950 7998 "test_treeset.mlt" 199 7950 8011
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treeset.mlt" 199 7950 8012 "test_treeset.mlt" 199 7950 8018
+type(
+  int
+)
+ident(
+  int_ref expect "test_treeset.mlt" 198 7929 7935 "test_treeset.mlt" 198 7929 7941
+)
+"test_treeset.mlt" 199 7950 7997 "test_treeset.mlt" 199 7950 8019
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 199 7950 8021 "test_treeset.mlt" 199 7950 8034
+type(
+  int -> string
+)
+ident(
+  int_ref Pervasives.string_of_int "pervasives.mli" 621 23467 23467 "pervasives.mli" 621 23467 23500
+)
+"test_treeset.mlt" 199 7950 8035 "test_treeset.mlt" 199 7950 8041
+type(
+  int
+)
+ident(
+  int_ref actual "test_treeset.mlt" 197 7906 7912 "test_treeset.mlt" 197 7906 7918
+)
+"test_treeset.mlt" 199 7950 8020 "test_treeset.mlt" 199 7950 8042
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 199 7950 7962 "test_treeset.mlt" 199 7950 8042
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 200 8046 8049 "test_treeset.mlt" 200 8046 8052
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 200 8046 8057 "test_treeset.mlt" 200 8046 8063
+type(
+  int
+)
+ident(
+  int_ref expect "test_treeset.mlt" 198 7929 7935 "test_treeset.mlt" 198 7929 7941
+)
+"test_treeset.mlt" 200 8046 8064 "test_treeset.mlt" 200 8046 8065
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 200 8046 8066 "test_treeset.mlt" 200 8046 8072
+type(
+  int
+)
+ident(
+  int_ref actual "test_treeset.mlt" 197 7906 7912 "test_treeset.mlt" 197 7906 7918
+)
+"test_treeset.mlt" 200 8046 8053 "test_treeset.mlt" 200 8046 8075
+type(
+  bool
+)
+"test_treeset.mlt" 200 8046 8049 "test_treeset.mlt" 200 8046 8075
+type(
+  bool
+)
+"test_treeset.mlt" 200 8046 8081 "test_treeset.mlt" 200 8046 8086
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 200 8046 8102 "test_treeset.mlt" 200 8046 8123
+type(
+  string
+)
+"test_treeset.mlt" 200 8046 8129 "test_treeset.mlt" 200 8046 8132
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 199 7950 7956 "test_treeset.mlt" 199 7950 7959
+)
+"test_treeset.mlt" 200 8046 8139 "test_treeset.mlt" 200 8046 8531
+type(
+  string
+)
+"test_treeset.mlt" 200 8046 8097 "test_treeset.mlt" 200 8046 8532
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 200 8046 8087 "test_treeset.mlt" 200 8046 8533
+type(
+  exn
+)
+"test_treeset.mlt" 200 8046 8081 "test_treeset.mlt" 200 8046 8533
+type(
+  unit
+)
+"test_treeset.mlt" 200 8046 8539 "test_treeset.mlt" 200 8046 8541
+type(
+  unit
+)
+"test_treeset.mlt" 200 8046 8046 "test_treeset.mlt" 200 8046 8541
+type(
+  unit
+)
+"test_treeset.mlt" 201 8543 8549 "test_treeset.mlt" 201 8543 8555
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 202 8566 8568 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 201 8543 8558 "test_treeset.mlt" 201 8543 8562
+type(
+  string
+)
+ident(
+  int_ref vcat "test_treeset.mlt" 196 7850 7862 "test_treeset.mlt" 196 7850 7866
+)
+"test_treeset.mlt" 202 8566 8572 "test_treeset.mlt" 202 8566 8578
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 203 8623 8625 "test_treeset.mlt" 204 8687 9382
+)
+"test_treeset.mlt" 202 8566 8581 "test_treeset.mlt" 202 8566 8619
+type(
+  string
+)
+"test_treeset.mlt" 203 8623 8629 "test_treeset.mlt" 203 8623 8632
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 204 8687 8687 "test_treeset.mlt" 204 8687 9381
+)
+"test_treeset.mlt" 203 8623 8635 "test_treeset.mlt" 203 8623 8652
+type(
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref make_iterfold_msg "test_treeset.mlt" 30 623 627 "test_treeset.mlt" 30 623 644
+)
+"test_treeset.mlt" 203 8623 8653 "test_treeset.mlt" 203 8623 8661
+type(
+  string
+)
+ident(
+  int_ref issetstr "test_treeset.mlt" 191 7668 7674 "test_treeset.mlt" 191 7668 7682
+)
+"test_treeset.mlt" 203 8623 8662 "test_treeset.mlt" 203 8623 8669
+type(
+  string
+)
+ident(
+  int_ref funcstr "test_treeset.mlt" 195 7791 7797 "test_treeset.mlt" 195 7791 7804
+)
+"test_treeset.mlt" 203 8623 8670 "test_treeset.mlt" 203 8623 8676
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 202 8566 8572 "test_treeset.mlt" 202 8566 8578
+)
+"test_treeset.mlt" 203 8623 8677 "test_treeset.mlt" 203 8623 8683
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 201 8543 8549 "test_treeset.mlt" 201 8543 8555
+)
+"test_treeset.mlt" 203 8623 8635 "test_treeset.mlt" 203 8623 8683
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 204 8687 8690 "test_treeset.mlt" 204 8687 8693
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 204 8687 8698 "test_treeset.mlt" 204 8687 8704
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 202 8566 8572 "test_treeset.mlt" 202 8566 8578
+)
+"test_treeset.mlt" 204 8687 8705 "test_treeset.mlt" 204 8687 8706
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 204 8687 8707 "test_treeset.mlt" 204 8687 8713
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 201 8543 8549 "test_treeset.mlt" 201 8543 8555
+)
+"test_treeset.mlt" 204 8687 8694 "test_treeset.mlt" 204 8687 8716
+type(
+  bool
+)
+"test_treeset.mlt" 204 8687 8690 "test_treeset.mlt" 204 8687 8716
+type(
+  bool
+)
+"test_treeset.mlt" 204 8687 8722 "test_treeset.mlt" 204 8687 8727
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 204 8687 8743 "test_treeset.mlt" 204 8687 8764
+type(
+  string
+)
+"test_treeset.mlt" 204 8687 8770 "test_treeset.mlt" 204 8687 8773
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 203 8623 8629 "test_treeset.mlt" 203 8623 8632
+)
+"test_treeset.mlt" 204 8687 8780 "test_treeset.mlt" 204 8687 9371
+type(
+  string
+)
+"test_treeset.mlt" 204 8687 8738 "test_treeset.mlt" 204 8687 9372
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 204 8687 8728 "test_treeset.mlt" 204 8687 9373
+type(
+  exn
+)
+"test_treeset.mlt" 204 8687 8722 "test_treeset.mlt" 204 8687 9373
+type(
+  unit
+)
+"test_treeset.mlt" 204 8687 9379 "test_treeset.mlt" 204 8687 9381
+type(
+  unit
+)
+"test_treeset.mlt" 204 8687 8687 "test_treeset.mlt" 204 8687 9381
+type(
+  unit
+)
+"test_treeset.mlt" 203 8623 8625 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 202 8566 8568 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 201 8543 8545 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 200 8046 8046 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 199 7950 7952 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 198 7929 7931 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 197 7906 7908 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 196 7850 7852 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 195 7791 7793 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 194 7730 7732 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 191 7668 7670 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 187 7509 7511 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 186 7464 7466 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 180 7290 7292 "test_treeset.mlt" 204 8687 9382
+type(
+  unit
+)
+"test_treeset.mlt" 178 7266 7266 "test_treeset.mlt" 206 9400 9401
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 208 9404 9409 "test_treeset.mlt" 208 9404 9411
+type(
+  unit
+)
+"test_treeset.mlt" 212 9498 9508 "test_treeset.mlt" 212 9498 9515
+type(
+  'g -> 'g -> int
+)
+ident(
+  def compare "test_treeset.mlt" 213 9539 9545 "test_treeset.mlt" 214 9594 9601
+)
+"test_treeset.mlt" 212 9498 9518 "test_treeset.mlt" 212 9498 9536
+type(
+  'g -> 'g -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 213 9539 9549 "test_treeset.mlt" 213 9539 9560
+type(
+  int * string -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 213 9539 9591 "test_treeset.mlt" 214 9594 9601
+)
+"test_treeset.mlt" 213 9539 9562 "test_treeset.mlt" 213 9539 9563
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 213 9539 9569 "test_treeset.mlt" 213 9539 9591
+)
+"test_treeset.mlt" 213 9539 9564 "test_treeset.mlt" 213 9539 9565
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 213 9539 9569 "test_treeset.mlt" 213 9539 9591
+)
+"test_treeset.mlt" 213 9539 9561 "test_treeset.mlt" 213 9539 9566
+type(
+  int * string
+)
+"test_treeset.mlt" 213 9539 9569 "test_treeset.mlt" 213 9539 9576
+type(
+  (int -> string -> string, unit, string) format -> int -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 213 9539 9577 "test_treeset.mlt" 213 9539 9587
+type(
+  (int -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 213 9539 9588 "test_treeset.mlt" 213 9539 9589
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 213 9539 9562 "test_treeset.mlt" 213 9539 9563
+)
+"test_treeset.mlt" 213 9539 9590 "test_treeset.mlt" 213 9539 9591
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 213 9539 9564 "test_treeset.mlt" 213 9539 9565
+)
+"test_treeset.mlt" 213 9539 9569 "test_treeset.mlt" 213 9539 9591
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 216 9607 9628 "test_treeset.mlt" 216 9607 9648
+call(
+  stack
+)
+"test_treeset.mlt" 217 9652 9658 "test_treeset.mlt" 217 9652 9663
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  def isset "test_treeset.mlt" 223 9829 9831 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 218 9666 9674 "test_treeset.mlt" 218 9666 9677
+type(
+  (int * string) list
+)
+ident(
+  def els "test_treeset.mlt" 219 9761 9765 "test_treeset.mlt" 219 9761 9805
+)
+"test_treeset.mlt" 218 9666 9681 "test_treeset.mlt" 218 9666 9682
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9683 "test_treeset.mlt" 218 9666 9688
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9681 "test_treeset.mlt" 218 9666 9688
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9690 "test_treeset.mlt" 218 9666 9691
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9692 "test_treeset.mlt" 218 9666 9698
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9690 "test_treeset.mlt" 218 9666 9698
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9700 "test_treeset.mlt" 218 9666 9702
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9703 "test_treeset.mlt" 218 9666 9709
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9700 "test_treeset.mlt" 218 9666 9709
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9711 "test_treeset.mlt" 218 9666 9712
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9713 "test_treeset.mlt" 218 9666 9718
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9711 "test_treeset.mlt" 218 9666 9718
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9720 "test_treeset.mlt" 218 9666 9721
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9722 "test_treeset.mlt" 218 9666 9728
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9720 "test_treeset.mlt" 218 9666 9728
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9730 "test_treeset.mlt" 218 9666 9731
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9732 "test_treeset.mlt" 218 9666 9738
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9730 "test_treeset.mlt" 218 9666 9738
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9740 "test_treeset.mlt" 218 9666 9741
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9742 "test_treeset.mlt" 218 9666 9747
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9740 "test_treeset.mlt" 218 9666 9747
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9749 "test_treeset.mlt" 218 9666 9750
+type(
+  int
+)
+"test_treeset.mlt" 218 9666 9751 "test_treeset.mlt" 218 9666 9756
+type(
+  string
+)
+"test_treeset.mlt" 218 9666 9749 "test_treeset.mlt" 218 9666 9756
+type(
+  int * string
+)
+"test_treeset.mlt" 218 9666 9680 "test_treeset.mlt" 218 9666 9757
+type(
+  (int * string) list
+)
+"test_treeset.mlt" 219 9761 9765 "test_treeset.mlt" 219 9761 9779
+type(
+  (ISSet.ElTreemap.treemap ->
+   ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap) ->
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t list -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 219 9761 9780 "test_treeset.mlt" 219 9761 9789
+type(
+  ISSet.ElTreemap.treemap ->
+  ISSet.ElemKeyVal.key_t -> ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 219 9761 9790 "test_treeset.mlt" 219 9761 9801
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 219 9761 9802 "test_treeset.mlt" 219 9761 9805
+type(
+  ISSet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 218 9666 9674 "test_treeset.mlt" 218 9666 9677
+)
+"test_treeset.mlt" 219 9761 9765 "test_treeset.mlt" 219 9761 9805
+call(
+  stack
+)
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 218 9666 9670 "test_treeset.mlt" 219 9761 9805
+type(
+  ISSet.ElTreemap.treemap
+)
+"test_treeset.mlt" 223 9829 9835 "test_treeset.mlt" 223 9829 9841
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 224 9875 9877 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 223 9829 9844 "test_treeset.mlt" 223 9829 9859
+type(
+  ISSet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref ISSet.to_string "treeset.ml" 65 1972 1978 "treeset.ml" 65 1972 1987
+)
+"test_treeset.mlt" 223 9829 9860 "test_treeset.mlt" 223 9829 9871
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref ISSet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 223 9829 9844 "test_treeset.mlt" 223 9829 9871
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 224 9875 9881 "test_treeset.mlt" 224 9875 9887
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 225 9898 9900 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 224 9875 9890 "test_treeset.mlt" 224 9875 9894
+type(
+  string
+)
+"test_treeset.mlt" 225 9898 9904 "test_treeset.mlt" 225 9898 9907
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 226 9983 9983 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 225 9898 9910 "test_treeset.mlt" 225 9898 9917
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 225 9898 9918 "test_treeset.mlt" 225 9898 9965
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 225 9898 9966 "test_treeset.mlt" 225 9898 9972
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 224 9875 9881 "test_treeset.mlt" 224 9875 9887
+)
+"test_treeset.mlt" 225 9898 9973 "test_treeset.mlt" 225 9898 9979
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 223 9829 9835 "test_treeset.mlt" 223 9829 9841
+)
+"test_treeset.mlt" 225 9898 9910 "test_treeset.mlt" 225 9898 9979
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 226 9983 9986 "test_treeset.mlt" 226 9983 9989
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 226 9983 9994 "test_treeset.mlt" 226 9983 10000
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 224 9875 9881 "test_treeset.mlt" 224 9875 9887
+)
+"test_treeset.mlt" 226 9983 10001 "test_treeset.mlt" 226 9983 10002
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 226 9983 10003 "test_treeset.mlt" 226 9983 10009
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 223 9829 9835 "test_treeset.mlt" 223 9829 9841
+)
+"test_treeset.mlt" 226 9983 9990 "test_treeset.mlt" 226 9983 10012
+type(
+  bool
+)
+"test_treeset.mlt" 226 9983 9986 "test_treeset.mlt" 226 9983 10012
+type(
+  bool
+)
+"test_treeset.mlt" 226 9983 10018 "test_treeset.mlt" 226 9983 10023
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 226 9983 10039 "test_treeset.mlt" 226 9983 10060
+type(
+  string
+)
+"test_treeset.mlt" 226 9983 10066 "test_treeset.mlt" 226 9983 10069
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 225 9898 9904 "test_treeset.mlt" 225 9898 9907
+)
+"test_treeset.mlt" 226 9983 10076 "test_treeset.mlt" 226 9983 10292
+type(
+  string
+)
+"test_treeset.mlt" 226 9983 10034 "test_treeset.mlt" 226 9983 10293
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 226 9983 10024 "test_treeset.mlt" 226 9983 10294
+type(
+  exn
+)
+"test_treeset.mlt" 226 9983 10018 "test_treeset.mlt" 226 9983 10294
+type(
+  unit
+)
+"test_treeset.mlt" 226 9983 10300 "test_treeset.mlt" 226 9983 10302
+type(
+  unit
+)
+"test_treeset.mlt" 226 9983 9983 "test_treeset.mlt" 226 9983 10302
+type(
+  unit
+)
+"test_treeset.mlt" 230 10339 10345 "test_treeset.mlt" 230 10339 10351
+type(
+  string
+)
+ident(
+  def actual "test_treeset.mlt" 231 10379 10381 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 230 10339 10354 "test_treeset.mlt" 230 10339 10369
+type(
+  ISSet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref ISSet.to_string "treeset.ml" 65 1972 1978 "treeset.ml" 65 1972 1987
+)
+"test_treeset.mlt" 230 10339 10370 "test_treeset.mlt" 230 10339 10375
+type(
+  ISSet.ElTreemap.treemap
+)
+ident(
+  int_ref isset "test_treeset.mlt" 217 9652 9658 "test_treeset.mlt" 217 9652 9663
+)
+"test_treeset.mlt" 230 10339 10354 "test_treeset.mlt" 230 10339 10375
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 231 10379 10385 "test_treeset.mlt" 231 10379 10391
+type(
+  string
+)
+ident(
+  def expect "test_treeset.mlt" 232 10485 10487 "test_treeset.mlt" 233 10570 10967
+)
+"test_treeset.mlt" 231 10379 10394 "test_treeset.mlt" 231 10379 10481
+type(
+  string
+)
+"test_treeset.mlt" 232 10485 10491 "test_treeset.mlt" 232 10485 10494
+type(
+  string
+)
+ident(
+  def msg "test_treeset.mlt" 233 10570 10570 "test_treeset.mlt" 233 10570 10966
+)
+"test_treeset.mlt" 232 10485 10497 "test_treeset.mlt" 232 10485 10504
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 232 10485 10505 "test_treeset.mlt" 232 10485 10552
+type(
+  (string -> string -> string, unit, string) format
+)
+"test_treeset.mlt" 232 10485 10553 "test_treeset.mlt" 232 10485 10559
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 231 10379 10385 "test_treeset.mlt" 231 10379 10391
+)
+"test_treeset.mlt" 232 10485 10560 "test_treeset.mlt" 232 10485 10566
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 230 10339 10345 "test_treeset.mlt" 230 10339 10351
+)
+"test_treeset.mlt" 232 10485 10497 "test_treeset.mlt" 232 10485 10566
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 233 10570 10573 "test_treeset.mlt" 233 10570 10576
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 233 10570 10581 "test_treeset.mlt" 233 10570 10587
+type(
+  string
+)
+ident(
+  int_ref expect "test_treeset.mlt" 231 10379 10385 "test_treeset.mlt" 231 10379 10391
+)
+"test_treeset.mlt" 233 10570 10588 "test_treeset.mlt" 233 10570 10589
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_treeset.mlt" 233 10570 10590 "test_treeset.mlt" 233 10570 10596
+type(
+  string
+)
+ident(
+  int_ref actual "test_treeset.mlt" 230 10339 10345 "test_treeset.mlt" 230 10339 10351
+)
+"test_treeset.mlt" 233 10570 10577 "test_treeset.mlt" 233 10570 10599
+type(
+  bool
+)
+"test_treeset.mlt" 233 10570 10573 "test_treeset.mlt" 233 10570 10599
+type(
+  bool
+)
+"test_treeset.mlt" 233 10570 10605 "test_treeset.mlt" 233 10570 10610
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 233 10570 10626 "test_treeset.mlt" 233 10570 10647
+type(
+  string
+)
+"test_treeset.mlt" 233 10570 10653 "test_treeset.mlt" 233 10570 10656
+type(
+  string
+)
+ident(
+  int_ref msg "test_treeset.mlt" 232 10485 10491 "test_treeset.mlt" 232 10485 10494
+)
+"test_treeset.mlt" 233 10570 10663 "test_treeset.mlt" 233 10570 10956
+type(
+  string
+)
+"test_treeset.mlt" 233 10570 10621 "test_treeset.mlt" 233 10570 10957
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 233 10570 10611 "test_treeset.mlt" 233 10570 10958
+type(
+  exn
+)
+"test_treeset.mlt" 233 10570 10605 "test_treeset.mlt" 233 10570 10958
+type(
+  unit
+)
+"test_treeset.mlt" 233 10570 10964 "test_treeset.mlt" 233 10570 10966
+type(
+  unit
+)
+"test_treeset.mlt" 233 10570 10570 "test_treeset.mlt" 233 10570 10966
+type(
+  unit
+)
+"test_treeset.mlt" 232 10485 10487 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 231 10379 10381 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 230 10339 10341 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 226 9983 9983 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 225 9898 9900 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 224 9875 9877 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 223 9829 9831 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 217 9652 9654 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 216 9607 9609 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 210 9433 9435 "test_treeset.mlt" 233 10570 10967
+type(
+  unit
+)
+"test_treeset.mlt" 208 9404 9404 "test_treeset.mlt" 236 10986 10987
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 238 10990 10995 "test_treeset.mlt" 238 10990 10997
+type(
+  unit
+)
+"test_treeset.mlt" 242 11081 11091 "test_treeset.mlt" 242 11081 11098
+type(
+  'h -> 'h -> int
+)
+ident(
+  def compare "test_treeset.mlt" 243 11122 11128 "test_treeset.mlt" 244 11177 11184
+)
+"test_treeset.mlt" 242 11081 11101 "test_treeset.mlt" 242 11081 11119
+type(
+  'h -> 'h -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 243 11122 11132 "test_treeset.mlt" 243 11122 11143
+type(
+  string * int -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 243 11122 11174 "test_treeset.mlt" 244 11177 11184
+)
+"test_treeset.mlt" 243 11122 11145 "test_treeset.mlt" 243 11122 11146
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 243 11122 11152 "test_treeset.mlt" 243 11122 11174
+)
+"test_treeset.mlt" 243 11122 11147 "test_treeset.mlt" 243 11122 11148
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 243 11122 11152 "test_treeset.mlt" 243 11122 11174
+)
+"test_treeset.mlt" 243 11122 11144 "test_treeset.mlt" 243 11122 11149
+type(
+  string * int
+)
+"test_treeset.mlt" 243 11122 11152 "test_treeset.mlt" 243 11122 11159
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 243 11122 11160 "test_treeset.mlt" 243 11122 11170
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 243 11122 11171 "test_treeset.mlt" 243 11122 11172
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 243 11122 11145 "test_treeset.mlt" 243 11122 11146
+)
+"test_treeset.mlt" 243 11122 11173 "test_treeset.mlt" 243 11122 11174
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 243 11122 11147 "test_treeset.mlt" 243 11122 11148
+)
+"test_treeset.mlt" 243 11122 11152 "test_treeset.mlt" 243 11122 11174
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 246 11190 11211 "test_treeset.mlt" 246 11190 11231
+call(
+  stack
+)
+"test_treeset.mlt" 247 11235 11241 "test_treeset.mlt" 247 11235 11246
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  def siset "test_treeset.mlt" 251 11390 11392 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 248 11249 11257 "test_treeset.mlt" 248 11249 11260
+type(
+  (string * int) list
+)
+ident(
+  def els "test_treeset.mlt" 249 11340 11344 "test_treeset.mlt" 249 11340 11384
+)
+"test_treeset.mlt" 248 11249 11264 "test_treeset.mlt" 248 11249 11271
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11272 "test_treeset.mlt" 248 11249 11273
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11264 "test_treeset.mlt" 248 11249 11273
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11275 "test_treeset.mlt" 248 11249 11280
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11281 "test_treeset.mlt" 248 11249 11282
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11275 "test_treeset.mlt" 248 11249 11282
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11284 "test_treeset.mlt" 248 11249 11290
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11291 "test_treeset.mlt" 248 11249 11292
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11284 "test_treeset.mlt" 248 11249 11292
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11294 "test_treeset.mlt" 248 11249 11299
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11300 "test_treeset.mlt" 248 11249 11301
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11294 "test_treeset.mlt" 248 11249 11301
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11303 "test_treeset.mlt" 248 11249 11309
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11310 "test_treeset.mlt" 248 11249 11311
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11303 "test_treeset.mlt" 248 11249 11311
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11313 "test_treeset.mlt" 248 11249 11321
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11322 "test_treeset.mlt" 248 11249 11324
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11313 "test_treeset.mlt" 248 11249 11324
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11326 "test_treeset.mlt" 248 11249 11333
+type(
+  string
+)
+"test_treeset.mlt" 248 11249 11334 "test_treeset.mlt" 248 11249 11335
+type(
+  int
+)
+"test_treeset.mlt" 248 11249 11326 "test_treeset.mlt" 248 11249 11335
+type(
+  string * int
+)
+"test_treeset.mlt" 248 11249 11263 "test_treeset.mlt" 248 11249 11336
+type(
+  (string * int) list
+)
+"test_treeset.mlt" 249 11340 11344 "test_treeset.mlt" 249 11340 11358
+type(
+  (SISet.ElTreemap.treemap ->
+   SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap) ->
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t list -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 249 11340 11359 "test_treeset.mlt" 249 11340 11368
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 249 11340 11369 "test_treeset.mlt" 249 11340 11380
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 249 11340 11381 "test_treeset.mlt" 249 11340 11384
+type(
+  SISet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 248 11249 11257 "test_treeset.mlt" 248 11249 11260
+)
+"test_treeset.mlt" 249 11340 11344 "test_treeset.mlt" 249 11340 11384
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 248 11249 11253 "test_treeset.mlt" 249 11340 11384
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 251 11390 11396 "test_treeset.mlt" 251 11390 11405
+type(
+  string
+)
+ident(
+  def siset_str "test_treeset.mlt" 254 11453 11455 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 251 11390 11408 "test_treeset.mlt" 251 11390 11425
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 251 11390 11426 "test_treeset.mlt" 251 11390 11431
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 247 11235 11241 "test_treeset.mlt" 247 11235 11246
+)
+"test_treeset.mlt" 251 11390 11408 "test_treeset.mlt" 251 11390 11431
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 254 11453 11460 "test_treeset.mlt" 254 11453 11461
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 255 11487 11489 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 254 11453 11462 "test_treeset.mlt" 254 11453 11463
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 255 11487 11489 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 254 11453 11459 "test_treeset.mlt" 254 11453 11464
+type(
+  string * int
+)
+"test_treeset.mlt" 254 11453 11468 "test_treeset.mlt" 254 11453 11470
+ident(
+  def el "test_treeset.mlt" 255 11487 11489 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 254 11453 11459 "test_treeset.mlt" 254 11453 11470
+type(
+  string * int
+)
+"test_treeset.mlt" 254 11453 11474 "test_treeset.mlt" 254 11453 11479
+type(
+  string
+)
+"test_treeset.mlt" 254 11453 11480 "test_treeset.mlt" 254 11453 11482
+type(
+  int
+)
+"test_treeset.mlt" 254 11453 11473 "test_treeset.mlt" 254 11453 11483
+type(
+  string * int
+)
+"test_treeset.mlt" 255 11487 11493 "test_treeset.mlt" 255 11487 11500
+type(
+  string
+)
+ident(
+  def initmsg "test_treeset.mlt" 256 11556 11558 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 255 11487 11503 "test_treeset.mlt" 255 11487 11518
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+)
+"test_treeset.mlt" 255 11487 11520 "test_treeset.mlt" 255 11487 11527
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 255 11487 11528 "test_treeset.mlt" 255 11487 11537
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 255 11487 11538 "test_treeset.mlt" 255 11487 11539
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 254 11453 11460 "test_treeset.mlt" 254 11453 11461
+)
+"test_treeset.mlt" 255 11487 11540 "test_treeset.mlt" 255 11487 11541
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 254 11453 11462 "test_treeset.mlt" 254 11453 11463
+)
+"test_treeset.mlt" 255 11487 11519 "test_treeset.mlt" 255 11487 11542
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 255 11487 11543 "test_treeset.mlt" 255 11487 11552
+type(
+  string
+)
+ident(
+  int_ref siset_str "test_treeset.mlt" 251 11390 11396 "test_treeset.mlt" 251 11390 11405
+)
+"test_treeset.mlt" 255 11487 11503 "test_treeset.mlt" 255 11487 11552
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 256 11556 11562 "test_treeset.mlt" 256 11556 11572
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 257 11622 11624 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 256 11556 11576 "test_treeset.mlt" 256 11556 11593
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 256 11556 11595 "test_treeset.mlt" 256 11556 11607
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.remove "treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+)
+"test_treeset.mlt" 256 11556 11608 "test_treeset.mlt" 256 11556 11613
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 247 11235 11241 "test_treeset.mlt" 247 11235 11246
+)
+"test_treeset.mlt" 256 11556 11614 "test_treeset.mlt" 256 11556 11616
+type(
+  SISet.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 254 11453 11459 "test_treeset.mlt" 254 11453 11470
+)
+"test_treeset.mlt" 256 11556 11594 "test_treeset.mlt" 256 11556 11617
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 256 11556 11575 "test_treeset.mlt" 256 11556 11618
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 257 11622 11628 "test_treeset.mlt" 257 11622 11638
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 267 11773 11773 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 257 11622 11641 "test_treeset.mlt" 265 11766 11767
+type(
+  string
+)
+"test_treeset.mlt" 267 11773 11776 "test_treeset.mlt" 267 11773 11779
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 267 11773 11784 "test_treeset.mlt" 267 11773 11794
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 267 11773 11796 "test_treeset.mlt" 267 11773 11806
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 257 11622 11628 "test_treeset.mlt" 257 11622 11638
+)
+"test_treeset.mlt" 267 11773 11807 "test_treeset.mlt" 267 11773 11818
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 267 11773 11820 "test_treeset.mlt" 267 11773 11830
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 256 11556 11562 "test_treeset.mlt" 256 11556 11572
+)
+"test_treeset.mlt" 267 11773 11831 "test_treeset.mlt" 267 11773 11842
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 267 11773 11843 "test_treeset.mlt" 267 11773 11852
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 267 11773 11854 "test_treeset.mlt" 267 11773 11861
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treeset.mlt" 255 11487 11493 "test_treeset.mlt" 255 11487 11500
+)
+"test_treeset.mlt" 267 11773 11862 "test_treeset.mlt" 267 11773 11868
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 267 11773 11780 "test_treeset.mlt" 267 11773 11871
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 267 11773 11776 "test_treeset.mlt" 267 11773 11871
+type(
+  bool
+)
+"test_treeset.mlt" 267 11773 11877 "test_treeset.mlt" 267 11773 11882
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 267 11773 11898 "test_treeset.mlt" 267 11773 11919
+type(
+  string
+)
+"test_treeset.mlt" 267 11773 11926 "test_treeset.mlt" 267 11773 11927
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 267 11773 11927 "test_treeset.mlt" 267 11773 11933
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 267 11773 11925 "test_treeset.mlt" 267 11773 11934
+type(
+  string
+)
+"test_treeset.mlt" 267 11773 11941 "test_treeset.mlt" 267 11773 12449
+type(
+  string
+)
+"test_treeset.mlt" 267 11773 11893 "test_treeset.mlt" 267 11773 12450
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 267 11773 11883 "test_treeset.mlt" 267 11773 12451
+type(
+  exn
+)
+"test_treeset.mlt" 267 11773 11877 "test_treeset.mlt" 267 11773 12451
+type(
+  unit
+)
+"test_treeset.mlt" 267 11773 12457 "test_treeset.mlt" 267 11773 12459
+type(
+  unit
+)
+"test_treeset.mlt" 267 11773 11773 "test_treeset.mlt" 267 11773 12459
+type(
+  unit
+)
+"test_treeset.mlt" 271 12496 12503 "test_treeset.mlt" 271 12496 12504
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 272 12529 12531 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 271 12496 12505 "test_treeset.mlt" 271 12496 12506
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 272 12529 12531 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 271 12496 12502 "test_treeset.mlt" 271 12496 12507
+type(
+  string * int
+)
+"test_treeset.mlt" 271 12496 12511 "test_treeset.mlt" 271 12496 12513
+ident(
+  def el "test_treeset.mlt" 272 12529 12531 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 271 12496 12502 "test_treeset.mlt" 271 12496 12513
+type(
+  string * int
+)
+"test_treeset.mlt" 271 12496 12517 "test_treeset.mlt" 271 12496 12522
+type(
+  string
+)
+"test_treeset.mlt" 271 12496 12523 "test_treeset.mlt" 271 12496 12524
+type(
+  int
+)
+"test_treeset.mlt" 271 12496 12516 "test_treeset.mlt" 271 12496 12525
+type(
+  string * int
+)
+"test_treeset.mlt" 272 12529 12535 "test_treeset.mlt" 272 12529 12542
+type(
+  string
+)
+ident(
+  def initmsg "test_treeset.mlt" 273 12598 12600 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 272 12529 12545 "test_treeset.mlt" 272 12529 12560
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+)
+"test_treeset.mlt" 272 12529 12562 "test_treeset.mlt" 272 12529 12569
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 272 12529 12570 "test_treeset.mlt" 272 12529 12579
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 272 12529 12580 "test_treeset.mlt" 272 12529 12581
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 271 12496 12503 "test_treeset.mlt" 271 12496 12504
+)
+"test_treeset.mlt" 272 12529 12582 "test_treeset.mlt" 272 12529 12583
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 271 12496 12505 "test_treeset.mlt" 271 12496 12506
+)
+"test_treeset.mlt" 272 12529 12561 "test_treeset.mlt" 272 12529 12584
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 272 12529 12585 "test_treeset.mlt" 272 12529 12594
+type(
+  string
+)
+ident(
+  int_ref siset_str "test_treeset.mlt" 251 11390 11396 "test_treeset.mlt" 251 11390 11405
+)
+"test_treeset.mlt" 272 12529 12545 "test_treeset.mlt" 272 12529 12594
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 273 12598 12604 "test_treeset.mlt" 273 12598 12614
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 274 12664 12666 "test_treeset.mlt" 283 12796 13458
+)
+"test_treeset.mlt" 273 12598 12618 "test_treeset.mlt" 273 12598 12635
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 273 12598 12637 "test_treeset.mlt" 273 12598 12649
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.remove "treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+)
+"test_treeset.mlt" 273 12598 12650 "test_treeset.mlt" 273 12598 12655
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 247 11235 11241 "test_treeset.mlt" 247 11235 11246
+)
+"test_treeset.mlt" 273 12598 12656 "test_treeset.mlt" 273 12598 12658
+type(
+  SISet.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 271 12496 12502 "test_treeset.mlt" 271 12496 12513
+)
+"test_treeset.mlt" 273 12598 12636 "test_treeset.mlt" 273 12598 12659
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 273 12598 12617 "test_treeset.mlt" 273 12598 12660
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 274 12664 12670 "test_treeset.mlt" 274 12664 12680
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 283 12796 12796 "test_treeset.mlt" 283 12796 13457
+)
+"test_treeset.mlt" 274 12664 12683 "test_treeset.mlt" 281 12789 12790
+type(
+  string
+)
+"test_treeset.mlt" 283 12796 12799 "test_treeset.mlt" 283 12796 12802
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 283 12796 12807 "test_treeset.mlt" 283 12796 12817
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 283 12796 12819 "test_treeset.mlt" 283 12796 12829
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 274 12664 12670 "test_treeset.mlt" 274 12664 12680
+)
+"test_treeset.mlt" 283 12796 12830 "test_treeset.mlt" 283 12796 12841
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 283 12796 12843 "test_treeset.mlt" 283 12796 12853
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 273 12598 12604 "test_treeset.mlt" 273 12598 12614
+)
+"test_treeset.mlt" 283 12796 12854 "test_treeset.mlt" 283 12796 12865
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 283 12796 12866 "test_treeset.mlt" 283 12796 12875
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 283 12796 12877 "test_treeset.mlt" 283 12796 12884
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treeset.mlt" 272 12529 12535 "test_treeset.mlt" 272 12529 12542
+)
+"test_treeset.mlt" 283 12796 12885 "test_treeset.mlt" 283 12796 12891
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 283 12796 12803 "test_treeset.mlt" 283 12796 12894
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 283 12796 12799 "test_treeset.mlt" 283 12796 12894
+type(
+  bool
+)
+"test_treeset.mlt" 283 12796 12900 "test_treeset.mlt" 283 12796 12905
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 283 12796 12921 "test_treeset.mlt" 283 12796 12942
+type(
+  string
+)
+"test_treeset.mlt" 283 12796 12949 "test_treeset.mlt" 283 12796 12950
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 283 12796 12950 "test_treeset.mlt" 283 12796 12956
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 283 12796 12948 "test_treeset.mlt" 283 12796 12957
+type(
+  string
+)
+"test_treeset.mlt" 283 12796 12964 "test_treeset.mlt" 283 12796 13447
+type(
+  string
+)
+"test_treeset.mlt" 283 12796 12916 "test_treeset.mlt" 283 12796 13448
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 283 12796 12906 "test_treeset.mlt" 283 12796 13449
+type(
+  exn
+)
+"test_treeset.mlt" 283 12796 12900 "test_treeset.mlt" 283 12796 13449
+type(
+  unit
+)
+"test_treeset.mlt" 283 12796 13455 "test_treeset.mlt" 283 12796 13457
+type(
+  unit
+)
+"test_treeset.mlt" 283 12796 12796 "test_treeset.mlt" 283 12796 13457
+type(
+  unit
+)
+"test_treeset.mlt" 274 12664 12666 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 273 12598 12600 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 272 12529 12531 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 271 12496 12498 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 267 11773 11773 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 257 11622 11624 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 256 11556 11558 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 255 11487 11489 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 254 11453 11455 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 251 11390 11392 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 247 11235 11237 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 246 11190 11192 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 240 11016 11018 "test_treeset.mlt" 283 12796 13458
+type(
+  unit
+)
+"test_treeset.mlt" 238 10990 10990 "test_treeset.mlt" 285 13476 13477
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 287 13480 13485 "test_treeset.mlt" 287 13480 13487
+type(
+  unit
+)
+"test_treeset.mlt" 291 13571 13581 "test_treeset.mlt" 291 13571 13588
+type(
+  'i -> 'i -> int
+)
+ident(
+  def compare "test_treeset.mlt" 292 13612 13618 "test_treeset.mlt" 293 13667 13674
+)
+"test_treeset.mlt" 291 13571 13591 "test_treeset.mlt" 291 13571 13609
+type(
+  'i -> 'i -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 292 13612 13622 "test_treeset.mlt" 292 13612 13633
+type(
+  string * int -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 292 13612 13664 "test_treeset.mlt" 293 13667 13674
+)
+"test_treeset.mlt" 292 13612 13635 "test_treeset.mlt" 292 13612 13636
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 292 13612 13642 "test_treeset.mlt" 292 13612 13664
+)
+"test_treeset.mlt" 292 13612 13637 "test_treeset.mlt" 292 13612 13638
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 292 13612 13642 "test_treeset.mlt" 292 13612 13664
+)
+"test_treeset.mlt" 292 13612 13634 "test_treeset.mlt" 292 13612 13639
+type(
+  string * int
+)
+"test_treeset.mlt" 292 13612 13642 "test_treeset.mlt" 292 13612 13649
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 292 13612 13650 "test_treeset.mlt" 292 13612 13660
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 292 13612 13661 "test_treeset.mlt" 292 13612 13662
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 292 13612 13635 "test_treeset.mlt" 292 13612 13636
+)
+"test_treeset.mlt" 292 13612 13663 "test_treeset.mlt" 292 13612 13664
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 292 13612 13637 "test_treeset.mlt" 292 13612 13638
+)
+"test_treeset.mlt" 292 13612 13642 "test_treeset.mlt" 292 13612 13664
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 295 13680 13701 "test_treeset.mlt" 295 13680 13721
+call(
+  stack
+)
+"test_treeset.mlt" 296 13725 13731 "test_treeset.mlt" 296 13725 13736
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  def siset "test_treeset.mlt" 300 13880 13882 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 297 13739 13747 "test_treeset.mlt" 297 13739 13750
+type(
+  (string * int) list
+)
+ident(
+  def els "test_treeset.mlt" 298 13830 13834 "test_treeset.mlt" 298 13830 13874
+)
+"test_treeset.mlt" 297 13739 13754 "test_treeset.mlt" 297 13739 13761
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13762 "test_treeset.mlt" 297 13739 13763
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13754 "test_treeset.mlt" 297 13739 13763
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13765 "test_treeset.mlt" 297 13739 13770
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13771 "test_treeset.mlt" 297 13739 13772
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13765 "test_treeset.mlt" 297 13739 13772
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13774 "test_treeset.mlt" 297 13739 13780
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13781 "test_treeset.mlt" 297 13739 13782
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13774 "test_treeset.mlt" 297 13739 13782
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13784 "test_treeset.mlt" 297 13739 13789
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13790 "test_treeset.mlt" 297 13739 13791
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13784 "test_treeset.mlt" 297 13739 13791
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13793 "test_treeset.mlt" 297 13739 13799
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13800 "test_treeset.mlt" 297 13739 13801
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13793 "test_treeset.mlt" 297 13739 13801
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13803 "test_treeset.mlt" 297 13739 13811
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13812 "test_treeset.mlt" 297 13739 13814
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13803 "test_treeset.mlt" 297 13739 13814
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13816 "test_treeset.mlt" 297 13739 13823
+type(
+  string
+)
+"test_treeset.mlt" 297 13739 13824 "test_treeset.mlt" 297 13739 13825
+type(
+  int
+)
+"test_treeset.mlt" 297 13739 13816 "test_treeset.mlt" 297 13739 13825
+type(
+  string * int
+)
+"test_treeset.mlt" 297 13739 13753 "test_treeset.mlt" 297 13739 13826
+type(
+  (string * int) list
+)
+"test_treeset.mlt" 298 13830 13834 "test_treeset.mlt" 298 13830 13848
+type(
+  (SISet.ElTreemap.treemap ->
+   SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap) ->
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t list -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 298 13830 13849 "test_treeset.mlt" 298 13830 13858
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 298 13830 13859 "test_treeset.mlt" 298 13830 13870
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 298 13830 13871 "test_treeset.mlt" 298 13830 13874
+type(
+  SISet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 297 13739 13747 "test_treeset.mlt" 297 13739 13750
+)
+"test_treeset.mlt" 298 13830 13834 "test_treeset.mlt" 298 13830 13874
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 297 13739 13743 "test_treeset.mlt" 298 13830 13874
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 300 13880 13886 "test_treeset.mlt" 300 13880 13895
+type(
+  string
+)
+ident(
+  def siset_str "test_treeset.mlt" 303 13943 13945 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 300 13880 13898 "test_treeset.mlt" 300 13880 13915
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 300 13880 13916 "test_treeset.mlt" 300 13880 13921
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 296 13725 13731 "test_treeset.mlt" 296 13725 13736
+)
+"test_treeset.mlt" 300 13880 13898 "test_treeset.mlt" 300 13880 13921
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 303 13943 13950 "test_treeset.mlt" 303 13943 13951
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 304 13978 13980 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 303 13943 13952 "test_treeset.mlt" 303 13943 13953
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 304 13978 13980 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 303 13943 13949 "test_treeset.mlt" 303 13943 13954
+type(
+  string * int
+)
+"test_treeset.mlt" 303 13943 13958 "test_treeset.mlt" 303 13943 13960
+ident(
+  def el "test_treeset.mlt" 304 13978 13980 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 303 13943 13949 "test_treeset.mlt" 303 13943 13960
+type(
+  string * int
+)
+"test_treeset.mlt" 303 13943 13964 "test_treeset.mlt" 303 13943 13971
+type(
+  string
+)
+"test_treeset.mlt" 303 13943 13972 "test_treeset.mlt" 303 13943 13973
+type(
+  int
+)
+"test_treeset.mlt" 303 13943 13963 "test_treeset.mlt" 303 13943 13974
+type(
+  string * int
+)
+"test_treeset.mlt" 304 13978 13984 "test_treeset.mlt" 304 13978 13991
+type(
+  string
+)
+ident(
+  def initmsg "test_treeset.mlt" 305 14047 14049 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 304 13978 13994 "test_treeset.mlt" 304 13978 14009
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+)
+"test_treeset.mlt" 304 13978 14011 "test_treeset.mlt" 304 13978 14018
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 304 13978 14019 "test_treeset.mlt" 304 13978 14028
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 304 13978 14029 "test_treeset.mlt" 304 13978 14030
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 303 13943 13950 "test_treeset.mlt" 303 13943 13951
+)
+"test_treeset.mlt" 304 13978 14031 "test_treeset.mlt" 304 13978 14032
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 303 13943 13952 "test_treeset.mlt" 303 13943 13953
+)
+"test_treeset.mlt" 304 13978 14010 "test_treeset.mlt" 304 13978 14033
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 304 13978 14034 "test_treeset.mlt" 304 13978 14043
+type(
+  string
+)
+ident(
+  int_ref siset_str "test_treeset.mlt" 300 13880 13886 "test_treeset.mlt" 300 13880 13895
+)
+"test_treeset.mlt" 304 13978 13994 "test_treeset.mlt" 304 13978 14043
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 305 14047 14053 "test_treeset.mlt" 305 14047 14063
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 306 14113 14115 "test_treeset.mlt" 315 14245 14909
+)
+"test_treeset.mlt" 305 14047 14067 "test_treeset.mlt" 305 14047 14084
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 305 14047 14086 "test_treeset.mlt" 305 14047 14098
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.remove "treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+)
+"test_treeset.mlt" 305 14047 14099 "test_treeset.mlt" 305 14047 14104
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 296 13725 13731 "test_treeset.mlt" 296 13725 13736
+)
+"test_treeset.mlt" 305 14047 14105 "test_treeset.mlt" 305 14047 14107
+type(
+  SISet.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 303 13943 13949 "test_treeset.mlt" 303 13943 13960
+)
+"test_treeset.mlt" 305 14047 14085 "test_treeset.mlt" 305 14047 14108
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 305 14047 14066 "test_treeset.mlt" 305 14047 14109
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 306 14113 14119 "test_treeset.mlt" 306 14113 14129
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 315 14245 14245 "test_treeset.mlt" 315 14245 14908
+)
+"test_treeset.mlt" 306 14113 14132 "test_treeset.mlt" 313 14238 14239
+type(
+  string
+)
+"test_treeset.mlt" 315 14245 14248 "test_treeset.mlt" 315 14245 14251
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 315 14245 14256 "test_treeset.mlt" 315 14245 14266
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 315 14245 14268 "test_treeset.mlt" 315 14245 14278
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 306 14113 14119 "test_treeset.mlt" 306 14113 14129
+)
+"test_treeset.mlt" 315 14245 14279 "test_treeset.mlt" 315 14245 14290
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 315 14245 14292 "test_treeset.mlt" 315 14245 14302
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 305 14047 14053 "test_treeset.mlt" 305 14047 14063
+)
+"test_treeset.mlt" 315 14245 14303 "test_treeset.mlt" 315 14245 14314
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 315 14245 14315 "test_treeset.mlt" 315 14245 14324
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 315 14245 14326 "test_treeset.mlt" 315 14245 14333
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treeset.mlt" 304 13978 13984 "test_treeset.mlt" 304 13978 13991
+)
+"test_treeset.mlt" 315 14245 14334 "test_treeset.mlt" 315 14245 14340
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 315 14245 14252 "test_treeset.mlt" 315 14245 14343
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 315 14245 14248 "test_treeset.mlt" 315 14245 14343
+type(
+  bool
+)
+"test_treeset.mlt" 315 14245 14349 "test_treeset.mlt" 315 14245 14354
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 315 14245 14370 "test_treeset.mlt" 315 14245 14391
+type(
+  string
+)
+"test_treeset.mlt" 315 14245 14398 "test_treeset.mlt" 315 14245 14399
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 315 14245 14399 "test_treeset.mlt" 315 14245 14405
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 315 14245 14397 "test_treeset.mlt" 315 14245 14406
+type(
+  string
+)
+"test_treeset.mlt" 315 14245 14413 "test_treeset.mlt" 315 14245 14898
+type(
+  string
+)
+"test_treeset.mlt" 315 14245 14365 "test_treeset.mlt" 315 14245 14899
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 315 14245 14355 "test_treeset.mlt" 315 14245 14900
+type(
+  exn
+)
+"test_treeset.mlt" 315 14245 14349 "test_treeset.mlt" 315 14245 14900
+type(
+  unit
+)
+"test_treeset.mlt" 315 14245 14906 "test_treeset.mlt" 315 14245 14908
+type(
+  unit
+)
+"test_treeset.mlt" 315 14245 14245 "test_treeset.mlt" 315 14245 14908
+type(
+  unit
+)
+"test_treeset.mlt" 306 14113 14115 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 305 14047 14049 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 304 13978 13980 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 303 13943 13945 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 300 13880 13882 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 296 13725 13727 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 295 13680 13682 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 289 13506 13508 "test_treeset.mlt" 315 14245 14909
+type(
+  unit
+)
+"test_treeset.mlt" 287 13480 13480 "test_treeset.mlt" 317 14927 14928
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 319 14931 14936 "test_treeset.mlt" 319 14931 14938
+type(
+  unit
+)
+"test_treeset.mlt" 323 15022 15032 "test_treeset.mlt" 323 15022 15039
+type(
+  'j -> 'j -> int
+)
+ident(
+  def compare "test_treeset.mlt" 324 15063 15069 "test_treeset.mlt" 325 15118 15125
+)
+"test_treeset.mlt" 323 15022 15042 "test_treeset.mlt" 323 15022 15060
+type(
+  'j -> 'j -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 324 15063 15073 "test_treeset.mlt" 324 15063 15084
+type(
+  string * int -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 324 15063 15115 "test_treeset.mlt" 325 15118 15125
+)
+"test_treeset.mlt" 324 15063 15086 "test_treeset.mlt" 324 15063 15087
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 324 15063 15093 "test_treeset.mlt" 324 15063 15115
+)
+"test_treeset.mlt" 324 15063 15088 "test_treeset.mlt" 324 15063 15089
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 324 15063 15093 "test_treeset.mlt" 324 15063 15115
+)
+"test_treeset.mlt" 324 15063 15085 "test_treeset.mlt" 324 15063 15090
+type(
+  string * int
+)
+"test_treeset.mlt" 324 15063 15093 "test_treeset.mlt" 324 15063 15100
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 324 15063 15101 "test_treeset.mlt" 324 15063 15111
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 324 15063 15112 "test_treeset.mlt" 324 15063 15113
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 324 15063 15086 "test_treeset.mlt" 324 15063 15087
+)
+"test_treeset.mlt" 324 15063 15114 "test_treeset.mlt" 324 15063 15115
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 324 15063 15088 "test_treeset.mlt" 324 15063 15089
+)
+"test_treeset.mlt" 324 15063 15093 "test_treeset.mlt" 324 15063 15115
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 327 15131 15152 "test_treeset.mlt" 327 15131 15172
+call(
+  stack
+)
+"test_treeset.mlt" 328 15176 15182 "test_treeset.mlt" 328 15176 15187
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  def siset "test_treeset.mlt" 332 15331 15333 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 329 15190 15198 "test_treeset.mlt" 329 15190 15201
+type(
+  (string * int) list
+)
+ident(
+  def els "test_treeset.mlt" 330 15281 15285 "test_treeset.mlt" 330 15281 15325
+)
+"test_treeset.mlt" 329 15190 15205 "test_treeset.mlt" 329 15190 15212
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15213 "test_treeset.mlt" 329 15190 15214
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15205 "test_treeset.mlt" 329 15190 15214
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15216 "test_treeset.mlt" 329 15190 15221
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15222 "test_treeset.mlt" 329 15190 15223
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15216 "test_treeset.mlt" 329 15190 15223
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15225 "test_treeset.mlt" 329 15190 15231
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15232 "test_treeset.mlt" 329 15190 15233
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15225 "test_treeset.mlt" 329 15190 15233
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15235 "test_treeset.mlt" 329 15190 15240
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15241 "test_treeset.mlt" 329 15190 15242
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15235 "test_treeset.mlt" 329 15190 15242
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15244 "test_treeset.mlt" 329 15190 15250
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15251 "test_treeset.mlt" 329 15190 15252
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15244 "test_treeset.mlt" 329 15190 15252
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15254 "test_treeset.mlt" 329 15190 15262
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15263 "test_treeset.mlt" 329 15190 15265
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15254 "test_treeset.mlt" 329 15190 15265
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15267 "test_treeset.mlt" 329 15190 15274
+type(
+  string
+)
+"test_treeset.mlt" 329 15190 15275 "test_treeset.mlt" 329 15190 15276
+type(
+  int
+)
+"test_treeset.mlt" 329 15190 15267 "test_treeset.mlt" 329 15190 15276
+type(
+  string * int
+)
+"test_treeset.mlt" 329 15190 15204 "test_treeset.mlt" 329 15190 15277
+type(
+  (string * int) list
+)
+"test_treeset.mlt" 330 15281 15285 "test_treeset.mlt" 330 15281 15299
+type(
+  (SISet.ElTreemap.treemap ->
+   SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap) ->
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t list -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 330 15281 15300 "test_treeset.mlt" 330 15281 15309
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 330 15281 15310 "test_treeset.mlt" 330 15281 15321
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 330 15281 15322 "test_treeset.mlt" 330 15281 15325
+type(
+  SISet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 329 15190 15198 "test_treeset.mlt" 329 15190 15201
+)
+"test_treeset.mlt" 330 15281 15285 "test_treeset.mlt" 330 15281 15325
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 329 15190 15194 "test_treeset.mlt" 330 15281 15325
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 332 15331 15337 "test_treeset.mlt" 332 15331 15346
+type(
+  string
+)
+ident(
+  def siset_str "test_treeset.mlt" 335 15394 15396 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 332 15331 15349 "test_treeset.mlt" 332 15331 15366
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 332 15331 15367 "test_treeset.mlt" 332 15331 15372
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 328 15176 15182 "test_treeset.mlt" 328 15176 15187
+)
+"test_treeset.mlt" 332 15331 15349 "test_treeset.mlt" 332 15331 15372
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 335 15394 15401 "test_treeset.mlt" 335 15394 15402
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 336 15431 15433 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 335 15394 15403 "test_treeset.mlt" 335 15394 15404
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 336 15431 15433 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 335 15394 15400 "test_treeset.mlt" 335 15394 15405
+type(
+  string * int
+)
+"test_treeset.mlt" 335 15394 15409 "test_treeset.mlt" 335 15394 15411
+ident(
+  def el "test_treeset.mlt" 336 15431 15433 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 335 15394 15400 "test_treeset.mlt" 335 15394 15411
+type(
+  string * int
+)
+"test_treeset.mlt" 335 15394 15415 "test_treeset.mlt" 335 15394 15423
+type(
+  string
+)
+"test_treeset.mlt" 335 15394 15424 "test_treeset.mlt" 335 15394 15426
+type(
+  int
+)
+"test_treeset.mlt" 335 15394 15414 "test_treeset.mlt" 335 15394 15427
+type(
+  string * int
+)
+"test_treeset.mlt" 336 15431 15437 "test_treeset.mlt" 336 15431 15444
+type(
+  string
+)
+ident(
+  def initmsg "test_treeset.mlt" 337 15500 15502 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 336 15431 15447 "test_treeset.mlt" 336 15431 15462
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+)
+"test_treeset.mlt" 336 15431 15464 "test_treeset.mlt" 336 15431 15471
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 336 15431 15472 "test_treeset.mlt" 336 15431 15481
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 336 15431 15482 "test_treeset.mlt" 336 15431 15483
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 335 15394 15401 "test_treeset.mlt" 335 15394 15402
+)
+"test_treeset.mlt" 336 15431 15484 "test_treeset.mlt" 336 15431 15485
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 335 15394 15403 "test_treeset.mlt" 335 15394 15404
+)
+"test_treeset.mlt" 336 15431 15463 "test_treeset.mlt" 336 15431 15486
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 336 15431 15487 "test_treeset.mlt" 336 15431 15496
+type(
+  string
+)
+ident(
+  int_ref siset_str "test_treeset.mlt" 332 15331 15337 "test_treeset.mlt" 332 15331 15346
+)
+"test_treeset.mlt" 336 15431 15447 "test_treeset.mlt" 336 15431 15496
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 337 15500 15506 "test_treeset.mlt" 337 15500 15516
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 338 15566 15568 "test_treeset.mlt" 347 15696 16360
+)
+"test_treeset.mlt" 337 15500 15520 "test_treeset.mlt" 337 15500 15537
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 337 15500 15539 "test_treeset.mlt" 337 15500 15551
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.remove "treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+)
+"test_treeset.mlt" 337 15500 15552 "test_treeset.mlt" 337 15500 15557
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 328 15176 15182 "test_treeset.mlt" 328 15176 15187
+)
+"test_treeset.mlt" 337 15500 15558 "test_treeset.mlt" 337 15500 15560
+type(
+  SISet.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 335 15394 15400 "test_treeset.mlt" 335 15394 15411
+)
+"test_treeset.mlt" 337 15500 15538 "test_treeset.mlt" 337 15500 15561
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 337 15500 15519 "test_treeset.mlt" 337 15500 15562
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 338 15566 15572 "test_treeset.mlt" 338 15566 15582
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 347 15696 15696 "test_treeset.mlt" 347 15696 16359
+)
+"test_treeset.mlt" 338 15566 15585 "test_treeset.mlt" 345 15689 15690
+type(
+  string
+)
+"test_treeset.mlt" 347 15696 15699 "test_treeset.mlt" 347 15696 15702
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 347 15696 15707 "test_treeset.mlt" 347 15696 15717
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 347 15696 15719 "test_treeset.mlt" 347 15696 15729
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 338 15566 15572 "test_treeset.mlt" 338 15566 15582
+)
+"test_treeset.mlt" 347 15696 15730 "test_treeset.mlt" 347 15696 15741
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 347 15696 15743 "test_treeset.mlt" 347 15696 15753
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 337 15500 15506 "test_treeset.mlt" 337 15500 15516
+)
+"test_treeset.mlt" 347 15696 15754 "test_treeset.mlt" 347 15696 15765
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 347 15696 15766 "test_treeset.mlt" 347 15696 15775
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 347 15696 15777 "test_treeset.mlt" 347 15696 15784
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treeset.mlt" 336 15431 15437 "test_treeset.mlt" 336 15431 15444
+)
+"test_treeset.mlt" 347 15696 15785 "test_treeset.mlt" 347 15696 15791
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 347 15696 15703 "test_treeset.mlt" 347 15696 15794
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 347 15696 15699 "test_treeset.mlt" 347 15696 15794
+type(
+  bool
+)
+"test_treeset.mlt" 347 15696 15800 "test_treeset.mlt" 347 15696 15805
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 347 15696 15821 "test_treeset.mlt" 347 15696 15842
+type(
+  string
+)
+"test_treeset.mlt" 347 15696 15849 "test_treeset.mlt" 347 15696 15850
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 347 15696 15850 "test_treeset.mlt" 347 15696 15856
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 347 15696 15848 "test_treeset.mlt" 347 15696 15857
+type(
+  string
+)
+"test_treeset.mlt" 347 15696 15864 "test_treeset.mlt" 347 15696 16349
+type(
+  string
+)
+"test_treeset.mlt" 347 15696 15816 "test_treeset.mlt" 347 15696 16350
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 347 15696 15806 "test_treeset.mlt" 347 15696 16351
+type(
+  exn
+)
+"test_treeset.mlt" 347 15696 15800 "test_treeset.mlt" 347 15696 16351
+type(
+  unit
+)
+"test_treeset.mlt" 347 15696 16357 "test_treeset.mlt" 347 15696 16359
+type(
+  unit
+)
+"test_treeset.mlt" 347 15696 15696 "test_treeset.mlt" 347 15696 16359
+type(
+  unit
+)
+"test_treeset.mlt" 338 15566 15568 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 337 15500 15502 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 336 15431 15433 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 335 15394 15396 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 332 15331 15333 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 328 15176 15178 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 327 15131 15133 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 321 14957 14959 "test_treeset.mlt" 347 15696 16360
+type(
+  unit
+)
+"test_treeset.mlt" 319 14931 14931 "test_treeset.mlt" 350 16379 16380
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 352 16383 16388 "test_treeset.mlt" 352 16383 16390
+type(
+  unit
+)
+"test_treeset.mlt" 356 16474 16484 "test_treeset.mlt" 356 16474 16491
+type(
+  'k -> 'k -> int
+)
+ident(
+  def compare "test_treeset.mlt" 357 16515 16521 "test_treeset.mlt" 358 16570 16577
+)
+"test_treeset.mlt" 356 16474 16494 "test_treeset.mlt" 356 16474 16512
+type(
+  'k -> 'k -> int
+)
+ident(
+  int_ref Pervasives.compare "pervasives.mli" 87 3721 3721 "pervasives.mli" 87 3721 3768
+)
+"test_treeset.mlt" 357 16515 16525 "test_treeset.mlt" 357 16515 16536
+type(
+  string * int -> string
+)
+ident(
+  def elem_string "test_treeset.mlt" 357 16515 16567 "test_treeset.mlt" 358 16570 16577
+)
+"test_treeset.mlt" 357 16515 16538 "test_treeset.mlt" 357 16515 16539
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 357 16515 16545 "test_treeset.mlt" 357 16515 16567
+)
+"test_treeset.mlt" 357 16515 16540 "test_treeset.mlt" 357 16515 16541
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 357 16515 16545 "test_treeset.mlt" 357 16515 16567
+)
+"test_treeset.mlt" 357 16515 16537 "test_treeset.mlt" 357 16515 16542
+type(
+  string * int
+)
+"test_treeset.mlt" 357 16515 16545 "test_treeset.mlt" 357 16515 16552
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 357 16515 16553 "test_treeset.mlt" 357 16515 16563
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 357 16515 16564 "test_treeset.mlt" 357 16515 16565
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 357 16515 16538 "test_treeset.mlt" 357 16515 16539
+)
+"test_treeset.mlt" 357 16515 16566 "test_treeset.mlt" 357 16515 16567
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 357 16515 16540 "test_treeset.mlt" 357 16515 16541
+)
+"test_treeset.mlt" 357 16515 16545 "test_treeset.mlt" 357 16515 16567
+call(
+  tail
+)
+type(
+  string
+)
+"test_treeset.mlt" 360 16583 16604 "test_treeset.mlt" 360 16583 16624
+call(
+  stack
+)
+"test_treeset.mlt" 361 16628 16634 "test_treeset.mlt" 361 16628 16639
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  def siset "test_treeset.mlt" 365 16783 16785 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 362 16642 16650 "test_treeset.mlt" 362 16642 16653
+type(
+  (string * int) list
+)
+ident(
+  def els "test_treeset.mlt" 363 16733 16737 "test_treeset.mlt" 363 16733 16777
+)
+"test_treeset.mlt" 362 16642 16657 "test_treeset.mlt" 362 16642 16664
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16665 "test_treeset.mlt" 362 16642 16666
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16657 "test_treeset.mlt" 362 16642 16666
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16668 "test_treeset.mlt" 362 16642 16673
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16674 "test_treeset.mlt" 362 16642 16675
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16668 "test_treeset.mlt" 362 16642 16675
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16677 "test_treeset.mlt" 362 16642 16683
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16684 "test_treeset.mlt" 362 16642 16685
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16677 "test_treeset.mlt" 362 16642 16685
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16687 "test_treeset.mlt" 362 16642 16692
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16693 "test_treeset.mlt" 362 16642 16694
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16687 "test_treeset.mlt" 362 16642 16694
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16696 "test_treeset.mlt" 362 16642 16702
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16703 "test_treeset.mlt" 362 16642 16704
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16696 "test_treeset.mlt" 362 16642 16704
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16706 "test_treeset.mlt" 362 16642 16714
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16715 "test_treeset.mlt" 362 16642 16717
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16706 "test_treeset.mlt" 362 16642 16717
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16719 "test_treeset.mlt" 362 16642 16726
+type(
+  string
+)
+"test_treeset.mlt" 362 16642 16727 "test_treeset.mlt" 362 16642 16728
+type(
+  int
+)
+"test_treeset.mlt" 362 16642 16719 "test_treeset.mlt" 362 16642 16728
+type(
+  string * int
+)
+"test_treeset.mlt" 362 16642 16656 "test_treeset.mlt" 362 16642 16729
+type(
+  (string * int) list
+)
+"test_treeset.mlt" 363 16733 16737 "test_treeset.mlt" 363 16733 16751
+type(
+  (SISet.ElTreemap.treemap ->
+   SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap) ->
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t list -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref List.fold_left "list.mli" 134 5190 5190 "list.mli" 134 5190 5245
+)
+"test_treeset.mlt" 363 16733 16752 "test_treeset.mlt" 363 16733 16761
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.add "treeset.ml" 31 987 993 "treeset.ml" 31 987 996
+)
+"test_treeset.mlt" 363 16733 16762 "test_treeset.mlt" 363 16733 16773
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.empty "treeset.ml" 28 903 909 "treeset.ml" 28 903 914
+)
+"test_treeset.mlt" 363 16733 16774 "test_treeset.mlt" 363 16733 16777
+type(
+  SISet.ElemKeyVal.key_t list
+)
+ident(
+  int_ref els "test_treeset.mlt" 362 16642 16650 "test_treeset.mlt" 362 16642 16653
+)
+"test_treeset.mlt" 363 16733 16737 "test_treeset.mlt" 363 16733 16777
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 362 16642 16646 "test_treeset.mlt" 363 16733 16777
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 365 16783 16789 "test_treeset.mlt" 365 16783 16798
+type(
+  string
+)
+ident(
+  def siset_str "test_treeset.mlt" 368 16846 16848 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 365 16783 16801 "test_treeset.mlt" 365 16783 16818
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 365 16783 16819 "test_treeset.mlt" 365 16783 16824
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 361 16628 16634 "test_treeset.mlt" 361 16628 16639
+)
+"test_treeset.mlt" 365 16783 16801 "test_treeset.mlt" 365 16783 16824
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 368 16846 16853 "test_treeset.mlt" 368 16846 16854
+type(
+  string
+)
+ident(
+  def s "test_treeset.mlt" 369 16885 16887 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 368 16846 16855 "test_treeset.mlt" 368 16846 16856
+type(
+  int
+)
+ident(
+  def i "test_treeset.mlt" 369 16885 16887 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 368 16846 16852 "test_treeset.mlt" 368 16846 16857
+type(
+  string * int
+)
+"test_treeset.mlt" 368 16846 16861 "test_treeset.mlt" 368 16846 16863
+ident(
+  def el "test_treeset.mlt" 369 16885 16887 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 368 16846 16852 "test_treeset.mlt" 368 16846 16863
+type(
+  string * int
+)
+"test_treeset.mlt" 368 16846 16867 "test_treeset.mlt" 368 16846 16877
+type(
+  string
+)
+"test_treeset.mlt" 368 16846 16878 "test_treeset.mlt" 368 16846 16880
+type(
+  int
+)
+"test_treeset.mlt" 368 16846 16866 "test_treeset.mlt" 368 16846 16881
+type(
+  string * int
+)
+"test_treeset.mlt" 369 16885 16891 "test_treeset.mlt" 369 16885 16898
+type(
+  string
+)
+ident(
+  def initmsg "test_treeset.mlt" 370 16954 16956 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 369 16885 16901 "test_treeset.mlt" 369 16885 16916
+type(
+  string -> string -> string
+)
+ident(
+  int_ref make_remove_msg "test_treeset.mlt" 41 881 885 "test_treeset.mlt" 41 881 900
+)
+"test_treeset.mlt" 369 16885 16918 "test_treeset.mlt" 369 16885 16925
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_treeset.mlt" 369 16885 16926 "test_treeset.mlt" 369 16885 16935
+type(
+  (string -> int -> string, unit, string) format
+)
+"test_treeset.mlt" 369 16885 16936 "test_treeset.mlt" 369 16885 16937
+type(
+  string
+)
+ident(
+  int_ref s "test_treeset.mlt" 368 16846 16853 "test_treeset.mlt" 368 16846 16854
+)
+"test_treeset.mlt" 369 16885 16938 "test_treeset.mlt" 369 16885 16939
+type(
+  int
+)
+ident(
+  int_ref i "test_treeset.mlt" 368 16846 16855 "test_treeset.mlt" 368 16846 16856
+)
+"test_treeset.mlt" 369 16885 16917 "test_treeset.mlt" 369 16885 16940
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 369 16885 16941 "test_treeset.mlt" 369 16885 16950
+type(
+  string
+)
+ident(
+  int_ref siset_str "test_treeset.mlt" 365 16783 16789 "test_treeset.mlt" 365 16783 16798
+)
+"test_treeset.mlt" 369 16885 16901 "test_treeset.mlt" 369 16885 16950
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 370 16954 16960 "test_treeset.mlt" 370 16954 16970
+type(
+  string
+)
+ident(
+  def actual_str "test_treeset.mlt" 371 17020 17022 "test_treeset.mlt" 381 17171 17863
+)
+"test_treeset.mlt" 370 16954 16974 "test_treeset.mlt" 370 16954 16991
+type(
+  SISet.ElTreemap.treemap -> string
+)
+ident(
+  int_ref SISet.tree_string "treeset.ml" 36 1116 1122 "treeset.ml" 36 1116 1133
+)
+"test_treeset.mlt" 370 16954 16993 "test_treeset.mlt" 370 16954 17005
+type(
+  SISet.ElTreemap.treemap ->
+  SISet.ElemKeyVal.key_t -> SISet.ElTreemap.treemap
+)
+ident(
+  int_ref SISet.remove "treeset.ml" 70 2082 2088 "treeset.ml" 70 2082 2094
+)
+"test_treeset.mlt" 370 16954 17006 "test_treeset.mlt" 370 16954 17011
+type(
+  SISet.ElTreemap.treemap
+)
+ident(
+  int_ref siset "test_treeset.mlt" 361 16628 16634 "test_treeset.mlt" 361 16628 16639
+)
+"test_treeset.mlt" 370 16954 17012 "test_treeset.mlt" 370 16954 17014
+type(
+  SISet.ElemKeyVal.key_t
+)
+ident(
+  int_ref el "test_treeset.mlt" 368 16846 16852 "test_treeset.mlt" 368 16846 16863
+)
+"test_treeset.mlt" 370 16954 16992 "test_treeset.mlt" 370 16954 17015
+call(
+  stack
+)
+type(
+  SISet.ElTreemap.treemap
+)
+"test_treeset.mlt" 370 16954 16973 "test_treeset.mlt" 370 16954 17016
+call(
+  stack
+)
+type(
+  string
+)
+"test_treeset.mlt" 371 17020 17026 "test_treeset.mlt" 371 17020 17036
+type(
+  string
+)
+ident(
+  def expect_str "test_treeset.mlt" 381 17171 17171 "test_treeset.mlt" 381 17171 17862
+)
+"test_treeset.mlt" 371 17020 17039 "test_treeset.mlt" 379 17164 17165
+type(
+  string
+)
+"test_treeset.mlt" 381 17171 17174 "test_treeset.mlt" 381 17171 17177
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_treeset.mlt" 381 17171 17182 "test_treeset.mlt" 381 17171 17192
+type(
+  ?expect_str:string ->
+  string ->
+  ?actual_str:string ->
+  string -> string -> ?initmsg:string -> string ref -> bool
+)
+ident(
+  int_ref Mltest.check_diff "mltest.ml" 126 3914 3918 "mltest.ml" 126 3914 3928
+)
+"test_treeset.mlt" 381 17171 17194 "test_treeset.mlt" 381 17171 17204
+type(
+  string
+)
+ident(
+  int_ref expect_str "test_treeset.mlt" 371 17020 17026 "test_treeset.mlt" 371 17020 17036
+)
+"test_treeset.mlt" 381 17171 17205 "test_treeset.mlt" 381 17171 17216
+type(
+  string
+)
+ident(
+  int_ref expect_file "test_treeset.mlt" 7 97 101 "test_treeset.mlt" 7 97 112
+)
+"test_treeset.mlt" 381 17171 17218 "test_treeset.mlt" 381 17171 17228
+type(
+  string
+)
+ident(
+  int_ref actual_str "test_treeset.mlt" 370 16954 16960 "test_treeset.mlt" 370 16954 16970
+)
+"test_treeset.mlt" 381 17171 17229 "test_treeset.mlt" 381 17171 17240
+type(
+  string
+)
+ident(
+  int_ref actual_file "test_treeset.mlt" 6 54 58 "test_treeset.mlt" 6 54 69
+)
+"test_treeset.mlt" 381 17171 17241 "test_treeset.mlt" 381 17171 17250
+type(
+  string
+)
+ident(
+  int_ref diff_file "test_treeset.mlt" 8 140 144 "test_treeset.mlt" 8 140 153
+)
+"test_treeset.mlt" 381 17171 17252 "test_treeset.mlt" 381 17171 17259
+type(
+  string
+)
+ident(
+  int_ref initmsg "test_treeset.mlt" 369 16885 16891 "test_treeset.mlt" 369 16885 16898
+)
+"test_treeset.mlt" 381 17171 17260 "test_treeset.mlt" 381 17171 17266
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 381 17171 17178 "test_treeset.mlt" 381 17171 17269
+call(
+  stack
+)
+type(
+  bool
+)
+"test_treeset.mlt" 381 17171 17174 "test_treeset.mlt" 381 17171 17269
+type(
+  bool
+)
+"test_treeset.mlt" 381 17171 17275 "test_treeset.mlt" 381 17171 17280
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_treeset.mlt" 381 17171 17296 "test_treeset.mlt" 381 17171 17317
+type(
+  string
+)
+"test_treeset.mlt" 381 17171 17324 "test_treeset.mlt" 381 17171 17325
+type(
+  string ref -> string
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"test_treeset.mlt" 381 17171 17325 "test_treeset.mlt" 381 17171 17331
+type(
+  string ref
+)
+ident(
+  int_ref msgref "test_treeset.mlt" 9 183 187 "test_treeset.mlt" 9 183 193
+)
+"test_treeset.mlt" 381 17171 17323 "test_treeset.mlt" 381 17171 17332
+type(
+  string
+)
+"test_treeset.mlt" 381 17171 17339 "test_treeset.mlt" 381 17171 17852
+type(
+  string
+)
+"test_treeset.mlt" 381 17171 17291 "test_treeset.mlt" 381 17171 17853
+type(
+  Mltest.TestFail
+)
+"test_treeset.mlt" 381 17171 17281 "test_treeset.mlt" 381 17171 17854
+type(
+  exn
+)
+"test_treeset.mlt" 381 17171 17275 "test_treeset.mlt" 381 17171 17854
+type(
+  unit
+)
+"test_treeset.mlt" 381 17171 17860 "test_treeset.mlt" 381 17171 17862
+type(
+  unit
+)
+"test_treeset.mlt" 381 17171 17171 "test_treeset.mlt" 381 17171 17862
+type(
+  unit
+)
+"test_treeset.mlt" 371 17020 17022 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 370 16954 16956 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 369 16885 16887 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 368 16846 16848 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 365 16783 16785 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 361 16628 16630 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 360 16583 16585 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 354 16409 16411 "test_treeset.mlt" 381 17171 17863
+type(
+  unit
+)
+"test_treeset.mlt" 352 16383 16383 "test_treeset.mlt" 383 17881 17882
+type(
+  unit -> unit
+)
+"test_treeset.mlt" 51 1128 1140 "test_treeset.mlt" 384 17884 17886
+type(
+  (unit -> unit) array
+)
+"test_treeset.mlt" 51 1128 1128 "test_treeset.mlt" 384 17884 17886
+call(
+  stack
+)
+type(
+  unit
+)

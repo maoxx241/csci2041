@@ -1,0 +1,216 @@
+open Sortedlist;;               (* insert / remove / print / merge *)
+open Printf;;
+open Mltest;;
+
+(* generate error message for an int list *)
+let make_intlist_msg listA listB expect actual =
+  String.concat "\n" [
+      "listA:  "^(intlist2str listA);
+      "listB:  "^(intlist2str listB);
+      "Expect: "^(intlist2str expect);
+      "Actual: "^(intlist2str actual);
+    ]
+;;
+
+(* generate error message for an string list *)
+let make_strlist_msg listA listB expect actual =
+  String.concat "\n" [
+      "listA:  "^(strlist2str listA);
+      "listB:  "^(strlist2str listB);
+      "Expect: "^(strlist2str expect);
+      "Actual: "^(strlist2str actual);
+    ]
+;;
+
+Mltest.main [|
+(******************************************)
+(* sortedlist merge tests *)
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [] in
+  let listB = [] in
+  let actual = merge listA listB in
+  let expect = [] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:37"; msg=msg; code="31:  (* Sortedlist.merge base cases *)\n32:  let listA = [] in\n33:  let listB = [] in\n34:  let actual = merge listA listB in\n35:  let expect = [] in\n36:  let msg = make_intlist_msg listA listB expect actual in\n37:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [1] in
+  let listB = [] in
+  let actual = merge listA listB in
+  let expect = [1] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:46"; msg=msg; code="40:  (* Sortedlist.merge base cases *)\n41:  let listA = [1] in\n42:  let listB = [] in\n43:  let actual = merge listA listB in\n44:  let expect = [1] in\n45:  let msg = make_intlist_msg listA listB expect actual in\n46:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [] in
+  let listB = [2] in
+  let actual = merge listA listB in
+  let expect = [2] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:55"; msg=msg; code="49:  (* Sortedlist.merge base cases *)\n50:  let listA = [] in\n51:  let listB = [2] in\n52:  let actual = merge listA listB in\n53:  let expect = [2] in\n54:  let msg = make_intlist_msg listA listB expect actual in\n55:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [1;3;5;7;9;11] in
+  let listB = [] in
+  let actual = merge listA listB in
+  let expect = [1;3;5;7;9;11] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:64"; msg=msg; code="58:  (* Sortedlist.merge base cases *)\n59:  let listA = [1;3;5;7;9;11] in\n60:  let listB = [] in\n61:  let actual = merge listA listB in\n62:  let expect = [1;3;5;7;9;11] in\n63:  let msg = make_intlist_msg listA listB expect actual in\n64:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [] in
+  let listB = [1;3;5;7;9;11] in
+  let actual = merge listA listB in
+  let expect = [1;3;5;7;9;11] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:73"; msg=msg; code="67:  (* Sortedlist.merge base cases *)\n68:  let listA = [] in\n69:  let listB = [1;3;5;7;9;11] in\n70:  let actual = merge listA listB in\n71:  let expect = [1;3;5;7;9;11] in\n72:  let msg = make_intlist_msg listA listB expect actual in\n73:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.merge short cases *)
+  let listA = [1] in
+  let listB = [2] in
+  let actual = merge listA listB in
+  let expect = [1;2] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:85"; msg=msg; code="79:  (* Sortedlist.merge short cases *)\n80:  let listA = [1] in\n81:  let listB = [2] in\n82:  let actual = merge listA listB in\n83:  let expect = [1;2] in\n84:  let msg = make_intlist_msg listA listB expect actual in\n85:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [2] in
+  let listB = [1] in
+  let actual = merge listA listB in
+  let expect = [1;2] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:94"; msg=msg; code="88:  (* Sortedlist.merge base cases *)\n89:  let listA = [2] in\n90:  let listB = [1] in\n91:  let actual = merge listA listB in\n92:  let expect = [1;2] in\n93:  let msg = make_intlist_msg listA listB expect actual in\n94:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge base cases *)
+  let listA = [1] in
+  let listB = [1] in
+  let actual = merge listA listB in
+  let expect = [1] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:103"; msg=msg; code="97:  (* Sortedlist.merge base cases *)\n98:  let listA = [1] in\n99:  let listB = [1] in\n100:  let actual = merge listA listB in\n101:  let expect = [1] in\n102:  let msg = make_intlist_msg listA listB expect actual in\n103:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.merge 2nd list many positions cases *)
+  let listA = [1;3;5] in
+  let listB = [2] in
+  let actual = merge listA listB in
+  let expect = [1;2;3;5] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:115"; msg=msg; code="109:  (* Sortedlist.merge 2nd list many positions cases *)\n110:  let listA = [1;3;5] in\n111:  let listB = [2] in\n112:  let actual = merge listA listB in\n113:  let expect = [1;2;3;5] in\n114:  let msg = make_intlist_msg listA listB expect actual in\n115:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge 2nd list many positions cases *)
+  let listA = [1;3;5] in
+  let listB = [6] in
+  let actual = merge listA listB in
+  let expect = [1;3;5;6] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:124"; msg=msg; code="118:  (* Sortedlist.merge 2nd list many positions cases *)\n119:  let listA = [1;3;5] in\n120:  let listB = [6] in\n121:  let actual = merge listA listB in\n122:  let expect = [1;3;5;6] in\n123:  let msg = make_intlist_msg listA listB expect actual in\n124:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge 2nd list many positions cases *)
+  let listA = [1;3;5] in
+  let listB = [4] in
+  let actual = merge listA listB in
+  let expect = [1;3;4;5] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:133"; msg=msg; code="127:  (* Sortedlist.merge 2nd list many positions cases *)\n128:  let listA = [1;3;5] in\n129:  let listB = [4] in\n130:  let actual = merge listA listB in\n131:  let expect = [1;3;4;5] in\n132:  let msg = make_intlist_msg listA listB expect actual in\n133:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge 2nd list many positions cases *)
+  let listA = [1;3;5] in
+  let listB = [0] in
+  let actual = merge listA listB in
+  let expect = [0;1;3;5] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:142"; msg=msg; code="136:  (* Sortedlist.merge 2nd list many positions cases *)\n137:  let listA = [1;3;5] in\n138:  let listB = [0] in\n139:  let actual = merge listA listB in\n140:  let expect = [0;1;3;5] in\n141:  let msg = make_intlist_msg listA listB expect actual in\n142:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.merge medium cases *)
+  let listA = [1;3;5] in
+  let listB = [2;4;6] in
+  let actual = merge listA listB in
+  let expect = [1;2;3;4;5;6] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:154"; msg=msg; code="148:  (* Sortedlist.merge medium cases *)\n149:  let listA = [1;3;5] in\n150:  let listB = [2;4;6] in\n151:  let actual = merge listA listB in\n152:  let expect = [1;2;3;4;5;6] in\n153:  let msg = make_intlist_msg listA listB expect actual in\n154:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge medium cases *)
+  let listA = [1;3;5] in
+  let listB = [0;2;4;6;8;10] in
+  let actual = merge listA listB in
+  let expect = [0;1;2;3;4;5;6;8;10] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:163"; msg=msg; code="157:  (* Sortedlist.merge medium cases *)\n158:  let listA = [1;3;5] in\n159:  let listB = [0;2;4;6;8;10] in\n160:  let actual = merge listA listB in\n161:  let expect = [0;1;2;3;4;5;6;8;10] in\n162:  let msg = make_intlist_msg listA listB expect actual in\n163:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge medium cases *)
+  let listA = [1;3;5;9;11] in
+  let listB = [4;6;8] in
+  let actual = merge listA listB in
+  let expect = [1;3;4;5;6;8;9;11] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:172"; msg=msg; code="166:  (* Sortedlist.merge medium cases *)\n167:  let listA = [1;3;5;9;11] in\n168:  let listB = [4;6;8] in\n169:  let actual = merge listA listB in\n170:  let expect = [1;3;4;5;6;8;9;11] in\n171:  let msg = make_intlist_msg listA listB expect actual in\n172:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge medium cases *)
+  let listA = [1;3;5;9;11] in
+  let listB = [0;4;6;8;10] in
+  let actual = merge listA listB in
+  let expect = [0;1;3;4;5;6;8;9;10;11] in
+  let msg = make_intlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:181"; msg=msg; code="175:  (* Sortedlist.merge medium cases *)\n176:  let listA = [1;3;5;9;11] in\n177:  let listB = [0;4;6;8;10] in\n178:  let actual = merge listA listB in\n179:  let expect = [0;1;3;4;5;6;8;9;10;11] in\n180:  let msg = make_intlist_msg listA listB expect actual in\n181:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.merge large string *)
+  let listA = ["develop";"population";] in
+  let listB = ["according";"close";"director";"four";"guess";"knowledge";"letter";"lose";"nor";"want";] in
+  let actual = merge listA listB in
+  let expect = ["according"; "close"; "develop"; "director"; "four"; "guess"; "knowledge"; "letter"; "lose"; "nor"; "population"; "want"] in
+  let msg = make_strlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:193"; msg=msg; code="187:  (* Sortedlist.merge large string *)\n188:  let listA = [\"develop\";\"population\";] in\n189:  let listB = [\"according\";\"close\";\"director\";\"four\";\"guess\";\"knowledge\";\"letter\";\"lose\";\"nor\";\"want\";] in\n190:  let actual = merge listA listB in\n191:  let expect = [\"according\"; \"close\"; \"develop\"; \"director\"; \"four\"; \"guess\"; \"knowledge\"; \"letter\"; \"lose\"; \"nor\"; \"population\"; \"want\"] in\n192:  let msg = make_strlist_msg listA listB expect actual in\n193:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge large string *)
+  let listA = ["about";"assume";"call";"catch";"develop";"girl";"glass";"patient";"population";"summer";] in
+  let listB = ["according";"close";"director";"four";"guess";"knowledge";"letter";"lose";"nor";"want";] in
+  let actual = merge listA listB in
+  let expect = ["about"; "according"; "assume"; "call"; "catch"; "close"; "develop"; "director"; "four"; "girl"; "glass"; "guess"; "knowledge"; "letter"; "lose"; "nor"; "patient"; "population"; "summer"; "want"] in
+  let msg = make_strlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:202"; msg=msg; code="196:  (* Sortedlist.merge large string *)\n197:  let listA = [\"about\";\"assume\";\"call\";\"catch\";\"develop\";\"girl\";\"glass\";\"patient\";\"population\";\"summer\";] in\n198:  let listB = [\"according\";\"close\";\"director\";\"four\";\"guess\";\"knowledge\";\"letter\";\"lose\";\"nor\";\"want\";] in\n199:  let actual = merge listA listB in\n200:  let expect = [\"about\"; \"according\"; \"assume\"; \"call\"; \"catch\"; \"close\"; \"develop\"; \"director\"; \"four\"; \"girl\"; \"glass\"; \"guess\"; \"knowledge\"; \"letter\"; \"lose\"; \"nor\"; \"patient\"; \"population\"; \"summer\"; \"want\"] in\n201:  let msg = make_strlist_msg listA listB expect actual in\n202:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.merge large string *)
+  let listA = ["ability";"after";"agreement";"better";"born";"call";"central";"create";"detail";"everyone";"factor";"hair";"his";"keep";"record";"safe";"series";"service";"shot";"society";"statement";"them";"upon";"whatever";"window";] in
+  let listB = ["ahead";"beautiful";"day";"instead";"method";"my";"particular";"relationship";"win";"wind";] in
+  let actual = merge listA listB in
+  let expect = ["ability"; "after"; "agreement"; "ahead"; "beautiful"; "better"; "born"; "call"; "central"; "create"; "day"; "detail"; "everyone"; "factor"; "hair"; "his"; "instead"; "keep"; "method"; "my"; "particular"; "record"; "relationship"; "safe"; "series"; "service"; "shot"; "society"; "statement"; "them"; "upon"; "whatever"; "win"; "wind"; "window"] in
+  let msg = make_strlist_msg listA listB expect actual in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist2.ml:211"; msg=msg; code="205:  (* Sortedlist.merge large string *)\n206:  let listA = [\"ability\";\"after\";\"agreement\";\"better\";\"born\";\"call\";\"central\";\"create\";\"detail\";\"everyone\";\"factor\";\"hair\";\"his\";\"keep\";\"record\";\"safe\";\"series\";\"service\";\"shot\";\"society\";\"statement\";\"them\";\"upon\";\"whatever\";\"window\";] in\n207:  let listB = [\"ahead\";\"beautiful\";\"day\";\"instead\";\"method\";\"my\";\"particular\";\"relationship\";\"win\";\"wind\";] in\n208:  let actual = merge listA listB in\n209:  let expect = [\"ability\"; \"after\"; \"agreement\"; \"ahead\"; \"beautiful\"; \"better\"; \"born\"; \"call\"; \"central\"; \"create\"; \"day\"; \"detail\"; \"everyone\"; \"factor\"; \"hair\"; \"his\"; \"instead\"; \"keep\"; \"method\"; \"my\"; \"particular\"; \"record\"; \"relationship\"; \"safe\"; \"series\"; \"service\"; \"shot\"; \"society\"; \"statement\"; \"them\"; \"upon\"; \"whatever\"; \"win\"; \"wind\"; \"window\"] in\n210:  let msg = make_strlist_msg listA listB expect actual in\n211:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+|];;    
+    

@@ -1,0 +1,252 @@
+open Abovefuncs;;               (* array_above and list_above *)
+open Printf;;
+open Mltest;;
+
+Mltest.main [|
+(******************************************)
+(* array_above tests *)
+(fun () ->
+  (* BEG_TEST *)
+  (* array_above on short int array *)
+  let thresh = 0 in
+  let input = [|0; 1; 2; 0|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|1; 2|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intarr2str expect) (intarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:17",msg,"10:  (* array_above on short int array *)\n11:  let thresh = 0 in\n12:  let input = [|0; 1; 2; 0|] in\n13:  let original = Array.copy input in\n14:  let actual = array_above thresh input in\n15:  let expect = [|1; 2|] in\n16:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n17:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (intarr2str original) (intarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:19",msg,"10:  (* array_above on short int array *)\n11:  let thresh = 0 in\n12:  let input = [|0; 1; 2; 0|] in\n13:  let original = Array.copy input in\n14:  let actual = array_above thresh input in\n15:  let expect = [|1; 2|] in\n16:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n17:  __check__ (actual = expect);\n18:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (intarr2str original) (intarr2str input) in\n19:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_above on short int array *)
+  let thresh = 0 in
+  let input = [|4; -2; -1; 7; 0; 3|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|4; 7; 3|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intarr2str expect) (intarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:31",msg,"24:  (* array_above on short int array *)\n25:  let thresh = 0 in\n26:  let input = [|4; -2; -1; 7; 0; 3|] in\n27:  let original = Array.copy input in\n28:  let actual = array_above thresh input in\n29:  let expect = [|4; 7; 3|] in\n30:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n31:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (intarr2str original) (intarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:33",msg,"24:  (* array_above on short int array *)\n25:  let thresh = 0 in\n26:  let input = [|4; -2; -1; 7; 0; 3|] in\n27:  let original = Array.copy input in\n28:  let actual = array_above thresh input in\n29:  let expect = [|4; 7; 3|] in\n30:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n31:  __check__ (actual = expect);\n32:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (intarr2str original) (intarr2str input) in\n33:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* array_above on short array *)
+  let thresh = 3 in
+  let input = [|4; -2; -1; 7; 0; 3|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|4; 7|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intarr2str expect) (intarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:43",msg,"36:  (* array_above on short array *)\n37:  let thresh = 3 in\n38:  let input = [|4; -2; -1; 7; 0; 3|] in\n39:  let original = Array.copy input in\n40:  let actual = array_above thresh input in\n41:  let expect = [|4; 7|] in\n42:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n43:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (intarr2str original) (intarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:45",msg,"36:  (* array_above on short array *)\n37:  let thresh = 3 in\n38:  let input = [|4; -2; -1; 7; 0; 3|] in\n39:  let original = Array.copy input in\n40:  let actual = array_above thresh input in\n41:  let expect = [|4; 7|] in\n42:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n43:  __check__ (actual = expect);\n44:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (intarr2str original) (intarr2str input) in\n45:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_above on short float array *)
+  let thresh = 1.5 in
+  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|4.2; 7.6; 8.9; 8.5|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatarr2str expect) (floatarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:57",msg,"50:  (* array_above on short float array *)\n51:  let thresh = 1.5 in\n52:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n53:  let original = Array.copy input in\n54:  let actual = array_above thresh input in\n55:  let expect = [|4.2; 7.6; 8.9; 8.5|] in\n56:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n57:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (floatarr2str original) (floatarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:59",msg,"50:  (* array_above on short float array *)\n51:  let thresh = 1.5 in\n52:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n53:  let original = Array.copy input in\n54:  let actual = array_above thresh input in\n55:  let expect = [|4.2; 7.6; 8.9; 8.5|] in\n56:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n57:  __check__ (actual = expect);\n58:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (floatarr2str original) (floatarr2str input) in\n59:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* array_above on short array *)
+  let thresh = 0.0 in
+  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatarr2str expect) (floatarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:69",msg,"62:  (* array_above on short array *)\n63:  let thresh = 0.0 in\n64:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n65:  let original = Array.copy input in\n66:  let actual = array_above thresh input in\n67:  let expect = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n68:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n69:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (floatarr2str original) (floatarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:71",msg,"62:  (* array_above on short array *)\n63:  let thresh = 0.0 in\n64:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n65:  let original = Array.copy input in\n66:  let actual = array_above thresh input in\n67:  let expect = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n68:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n69:  __check__ (actual = expect);\n70:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (floatarr2str original) (floatarr2str input) in\n71:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* array_above on short float array *)
+  let thresh = 9.0 in
+  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [||] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatarr2str expect) (floatarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:81",msg,"74:  (* array_above on short float array *)\n75:  let thresh = 9.0 in\n76:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n77:  let original = Array.copy input in\n78:  let actual = array_above thresh input in\n79:  let expect = [||] in\n80:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n81:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (floatarr2str original) (floatarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:83",msg,"74:  (* array_above on short float array *)\n75:  let thresh = 9.0 in\n76:  let input = [|4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5|] in\n77:  let original = Array.copy input in\n78:  let actual = array_above thresh input in\n79:  let expect = [||] in\n80:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n81:  __check__ (actual = expect);\n82:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (floatarr2str original) (floatarr2str input) in\n83:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_above on short bool array *)
+  let thresh = false in
+  let input = [|false; true; false; true; true;|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|true; true; true|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (boolarr2str expect) (boolarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:95",msg,"88:  (* array_above on short bool array *)\n89:  let thresh = false in\n90:  let input = [|false; true; false; true; true;|] in\n91:  let original = Array.copy input in\n92:  let actual = array_above thresh input in\n93:  let expect = [|true; true; true|] in\n94:  let msg = sprintf \"Expect: %s\\nActual: %s\" (boolarr2str expect) (boolarr2str actual) in\n95:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (boolarr2str original) (boolarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:97",msg,"88:  (* array_above on short bool array *)\n89:  let thresh = false in\n90:  let input = [|false; true; false; true; true;|] in\n91:  let original = Array.copy input in\n92:  let actual = array_above thresh input in\n93:  let expect = [|true; true; true|] in\n94:  let msg = sprintf \"Expect: %s\\nActual: %s\" (boolarr2str expect) (boolarr2str actual) in\n95:  __check__ (actual = expect);\n96:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (boolarr2str original) (boolarr2str input) in\n97:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_above on empty array *)
+  let thresh = 0 in
+  let input = [||] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [||] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intarr2str expect) (intarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:109",msg,"102:  (* array_above on empty array *)\n103:  let thresh = 0 in\n104:  let input = [||] in\n105:  let original = Array.copy input in\n106:  let actual = array_above thresh input in\n107:  let expect = [||] in\n108:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n109:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (intarr2str original) (intarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:111",msg,"102:  (* array_above on empty array *)\n103:  let thresh = 0 in\n104:  let input = [||] in\n105:  let original = Array.copy input in\n106:  let actual = array_above thresh input in\n107:  let expect = [||] in\n108:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n109:  __check__ (actual = expect);\n110:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (intarr2str original) (intarr2str input) in\n111:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* array_above on empty array *)
+  let thresh = 100.0 in
+  let input = [||] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [||] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatarr2str expect) (floatarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:121",msg,"114:  (* array_above on empty array *)\n115:  let thresh = 100.0 in\n116:  let input = [||] in\n117:  let original = Array.copy input in\n118:  let actual = array_above thresh input in\n119:  let expect = [||] in\n120:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n121:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (floatarr2str original) (floatarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:123",msg,"114:  (* array_above on empty array *)\n115:  let thresh = 100.0 in\n116:  let input = [||] in\n117:  let original = Array.copy input in\n118:  let actual = array_above thresh input in\n119:  let expect = [||] in\n120:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatarr2str expect) (floatarr2str actual) in\n121:  __check__ (actual = expect);\n122:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (floatarr2str original) (floatarr2str input) in\n123:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* array_above on long int array *)
+  let thresh = 49 in
+  let input = [|30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;|] in
+  let original = Array.copy input in
+  let actual = array_above thresh input in
+  let expect = [|62; 50; 63; 96; 68; 70; 100; 85; 72; 59; 71; 60; 76; 99; 97; 58; 74; 65; 75; 88; 90; 54; 84; 86; 95; 98; 79; 78; 69; 83; 64; 73; 81; 77; 92; 67; 56; 51; 89; 93; 66; 53; 52; 82; 80; 94; 87; 91; 55; 61; 57|] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intarr2str expect) (intarr2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:133",msg,"126:  (* array_above on long int array *)\n127:  let thresh = 49 in\n128:  let input = [|30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;|] in\n129:  let original = Array.copy input in\n130:  let actual = array_above thresh input in\n131:  let expect = [|62; 50; 63; 96; 68; 70; 100; 85; 72; 59; 71; 60; 76; 99; 97; 58; 74; 65; 75; 88; 90; 54; 84; 86; 95; 98; 79; 78; 69; 83; 64; 73; 81; 77; 92; 67; 56; 51; 89; 93; 66; 53; 52; 82; 80; 94; 87; 91; 55; 61; 57|] in\n132:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n133:  __check__ (actual = expect);\n")) else ();
+  let msg = sprintf "Input Array Modified\nOriginal: %s\nActual:   %s" (intarr2str original) (intarr2str input) in
+if not ( (input = original)) then raise (TestFail("test_abovefuncs.ml:135",msg,"126:  (* array_above on long int array *)\n127:  let thresh = 49 in\n128:  let input = [|30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;|] in\n129:  let original = Array.copy input in\n130:  let actual = array_above thresh input in\n131:  let expect = [|62; 50; 63; 96; 68; 70; 100; 85; 72; 59; 71; 60; 76; 99; 97; 58; 74; 65; 75; 88; 90; 54; 84; 86; 95; 98; 79; 78; 69; 83; 64; 73; 81; 77; 92; 67; 56; 51; 89; 93; 66; 53; 52; 82; 80; 94; 87; 91; 55; 61; 57|] in\n132:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intarr2str expect) (intarr2str actual) in\n133:  __check__ (actual = expect);\n134:  let msg = sprintf \"Input Array Modified\\nOriginal: %s\\nActual:   %s\" (intarr2str original) (intarr2str input) in\n135:  __check__ (input = original);\n")) else ();
+  (* END_TEST *)
+);
+
+
+(******************************************)
+(* list_above tests *)
+(fun () ->
+  (* BEG_TEST *)
+  (* list_above on short int array *)
+  let thresh = 0 in
+  let input = [0; 1; 2; 0] in
+  let actual = list_above thresh input in
+  let expect = [1; 2] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:150",msg,"144:  (* list_above on short int array *)\n145:  let thresh = 0 in\n146:  let input = [0; 1; 2; 0] in\n147:  let actual = list_above thresh input in\n148:  let expect = [1; 2] in\n149:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n150:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on short int array *)
+  let thresh = 0 in
+  let input = [4; -2; -1; 7; 0; 3] in
+  let actual = list_above thresh input in
+  let expect = [4; 7; 3] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:159",msg,"153:  (* list_above on short int array *)\n154:  let thresh = 0 in\n155:  let input = [4; -2; -1; 7; 0; 3] in\n156:  let actual = list_above thresh input in\n157:  let expect = [4; 7; 3] in\n158:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n159:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on short array *)
+  let thresh = 3 in
+  let input = [4; -2; -1; 7; 0; 3] in
+  let actual = list_above thresh input in
+  let expect = [4; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:168",msg,"162:  (* list_above on short array *)\n163:  let thresh = 3 in\n164:  let input = [4; -2; -1; 7; 0; 3] in\n165:  let actual = list_above thresh input in\n166:  let expect = [4; 7] in\n167:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n168:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_above on short float array *)
+  let thresh = 1.5 in
+  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in
+  let actual = list_above thresh input in
+  let expect = [4.2; 7.6; 8.9; 8.5] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatlist2str expect) (floatlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:179",msg,"173:  (* list_above on short float array *)\n174:  let thresh = 1.5 in\n175:  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in\n176:  let actual = list_above thresh input in\n177:  let expect = [4.2; 7.6; 8.9; 8.5] in\n178:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatlist2str expect) (floatlist2str actual) in\n179:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on short array *)
+  let thresh = 0.0 in
+  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in
+  let actual = list_above thresh input in
+  let expect = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatlist2str expect) (floatlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:188",msg,"182:  (* list_above on short array *)\n183:  let thresh = 0.0 in\n184:  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in\n185:  let actual = list_above thresh input in\n186:  let expect = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in\n187:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatlist2str expect) (floatlist2str actual) in\n188:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on short float array *)
+  let thresh = 9.0 in
+  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in
+  let actual = list_above thresh input in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatlist2str expect) (floatlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:197",msg,"191:  (* list_above on short float array *)\n192:  let thresh = 9.0 in\n193:  let input = [4.2; 0.5; 1.2; 7.6; 8.9; 0.8; 8.5] in\n194:  let actual = list_above thresh input in\n195:  let expect = [] in\n196:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatlist2str expect) (floatlist2str actual) in\n197:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_above on short bool array *)
+  let thresh = false in
+  let input = [false; true; false; true; true;] in
+  let actual = list_above thresh input in
+  let expect = [true; true; true] in
+  let msg = sprintf "Expect: %s\nActual: %s" (boollist2str expect) (boollist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:208",msg,"202:  (* list_above on short bool array *)\n203:  let thresh = false in\n204:  let input = [false; true; false; true; true;] in\n205:  let actual = list_above thresh input in\n206:  let expect = [true; true; true] in\n207:  let msg = sprintf \"Expect: %s\\nActual: %s\" (boollist2str expect) (boollist2str actual) in\n208:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_above on empty array *)
+  let thresh = 0 in
+  let input = [] in
+  let actual = list_above thresh input in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:219",msg,"213:  (* list_above on empty array *)\n214:  let thresh = 0 in\n215:  let input = [] in\n216:  let actual = list_above thresh input in\n217:  let expect = [] in\n218:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n219:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on empty array *)
+  let thresh = 100.0 in
+  let input = [] in
+  let actual = list_above thresh input in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (floatlist2str expect) (floatlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:228",msg,"222:  (* list_above on empty array *)\n223:  let thresh = 100.0 in\n224:  let input = [] in\n225:  let actual = list_above thresh input in\n226:  let expect = [] in\n227:  let msg = sprintf \"Expect: %s\\nActual: %s\" (floatlist2str expect) (floatlist2str actual) in\n228:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_above on long int array *)
+  let thresh = 49 in
+  let input = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;] in
+  let actual = list_above thresh input in
+  let expect = [62; 50; 63; 96; 68; 70; 100; 85; 72; 59; 71; 60; 76; 99; 97; 58; 74; 65; 75; 88; 90; 54; 84; 86; 95; 98; 79; 78; 69; 83; 64; 73; 81; 77; 92; 67; 56; 51; 89; 93; 66; 53; 52; 82; 80; 94; 87; 91; 55; 61; 57] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:239",msg,"233:  (* list_above on long int array *)\n234:  let thresh = 49 in\n235:  let input = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;] in\n236:  let actual = list_above thresh input in\n237:  let expect = [62; 50; 63; 96; 68; 70; 100; 85; 72; 59; 71; 60; 76; 99; 97; 58; 74; 65; 75; 88; 90; 54; 84; 86; 95; 98; 79; 78; 69; 83; 64; 73; 81; 77; 92; 67; 56; 51; 89; 93; 66; 53; 52; 82; 80; 94; 87; 91; 55; 61; 57] in\n238:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n239:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* list_above on long int array *)
+  let thresh = 22 in
+  let input = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;] in
+  let actual = list_above thresh input in
+  let expect = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 43; 23; 70; 45; 100; 85; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 77; 92; 29; 67; 56; 51; 89; 34; 93; 66; 53; 27; 39; 52; 82; 80; 94; 87; 91; 55; 33; 61; 57; 26] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail("test_abovefuncs.ml:248",msg,"242:  (* list_above on long int array *)\n243:  let thresh = 22 in\n244:  let input = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 5; 10; 43; 23; 70; 45; 9; 17; 7; 100; 85; 6; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 18; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 20; 22; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 11; 77; 92; 29; 67; 56; 12; 51; 89; 14; 34; 93; 8; 66; 13; 53; 27; 39; 52; 82; 4; 16; 80; 94; 2; 87; 91; 55; 19; 33; 21; 15; 1; 61; 57; 3; 26;] in\n245:  let actual = list_above thresh input in\n246:  let expect = [30; 62; 24; 40; 50; 63; 35; 96; 68; 41; 43; 23; 70; 45; 100; 85; 72; 59; 71; 36; 60; 42; 76; 99; 97; 58; 74; 65; 75; 88; 49; 90; 48; 54; 38; 84; 46; 86; 95; 98; 79; 32; 78; 69; 44; 83; 28; 25; 37; 64; 47; 31; 73; 81; 77; 92; 29; 67; 56; 51; 89; 34; 93; 66; 53; 27; 39; 52; 82; 80; 94; 87; 91; 55; 33; 61; 57; 26] in\n247:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n248:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+|];;    
+    

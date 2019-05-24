@@ -1,0 +1,5709 @@
+"test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  def make_intlist_msg "test_sortedlist2.mlt" 16 428 428 "test_sortedlist2.mlt" 1 0 -1
+)
+"test_sortedlist2.mlt" 6 144 165 "test_sortedlist2.mlt" 6 144 170
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 6 144 171 "test_sortedlist2.mlt" 12 370 375
+)
+"test_sortedlist2.mlt" 6 144 171 "test_sortedlist2.mlt" 6 144 176
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 6 144 177 "test_sortedlist2.mlt" 12 370 375
+)
+"test_sortedlist2.mlt" 6 144 177 "test_sortedlist2.mlt" 6 144 183
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 6 144 184 "test_sortedlist2.mlt" 12 370 375
+)
+"test_sortedlist2.mlt" 6 144 184 "test_sortedlist2.mlt" 6 144 190
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 7 193 195 "test_sortedlist2.mlt" 12 370 375
+)
+"test_sortedlist2.mlt" 7 193 195 "test_sortedlist2.mlt" 7 193 208
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_sortedlist2.mlt" 7 193 209 "test_sortedlist2.mlt" 7 193 213
+type(
+  string
+)
+"test_sortedlist2.mlt" 8 216 222 "test_sortedlist2.mlt" 8 216 232
+type(
+  string
+)
+"test_sortedlist2.mlt" 8 216 232 "test_sortedlist2.mlt" 8 216 233
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 8 216 234 "test_sortedlist2.mlt" 8 216 245
+type(
+  int list -> string
+)
+ident(
+  ext_ref Mltest.intlist2str
+)
+"test_sortedlist2.mlt" 8 216 246 "test_sortedlist2.mlt" 8 216 251
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 6 144 165 "test_sortedlist2.mlt" 6 144 170
+)
+"test_sortedlist2.mlt" 8 216 233 "test_sortedlist2.mlt" 8 216 252
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 8 216 222 "test_sortedlist2.mlt" 8 216 252
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 9 254 260 "test_sortedlist2.mlt" 9 254 270
+type(
+  string
+)
+"test_sortedlist2.mlt" 9 254 270 "test_sortedlist2.mlt" 9 254 271
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 9 254 272 "test_sortedlist2.mlt" 9 254 283
+type(
+  int list -> string
+)
+ident(
+  ext_ref Mltest.intlist2str
+)
+"test_sortedlist2.mlt" 9 254 284 "test_sortedlist2.mlt" 9 254 289
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 6 144 171 "test_sortedlist2.mlt" 6 144 176
+)
+"test_sortedlist2.mlt" 9 254 271 "test_sortedlist2.mlt" 9 254 290
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 9 254 260 "test_sortedlist2.mlt" 9 254 290
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 10 292 298 "test_sortedlist2.mlt" 10 292 308
+type(
+  string
+)
+"test_sortedlist2.mlt" 10 292 308 "test_sortedlist2.mlt" 10 292 309
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 10 292 310 "test_sortedlist2.mlt" 10 292 321
+type(
+  int list -> string
+)
+ident(
+  ext_ref Mltest.intlist2str
+)
+"test_sortedlist2.mlt" 10 292 322 "test_sortedlist2.mlt" 10 292 328
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 6 144 177 "test_sortedlist2.mlt" 6 144 183
+)
+"test_sortedlist2.mlt" 10 292 309 "test_sortedlist2.mlt" 10 292 329
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 10 292 298 "test_sortedlist2.mlt" 10 292 329
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 11 331 337 "test_sortedlist2.mlt" 11 331 347
+type(
+  string
+)
+"test_sortedlist2.mlt" 11 331 347 "test_sortedlist2.mlt" 11 331 348
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 11 331 349 "test_sortedlist2.mlt" 11 331 360
+type(
+  int list -> string
+)
+ident(
+  ext_ref Mltest.intlist2str
+)
+"test_sortedlist2.mlt" 11 331 361 "test_sortedlist2.mlt" 11 331 367
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 6 144 184 "test_sortedlist2.mlt" 6 144 190
+)
+"test_sortedlist2.mlt" 11 331 348 "test_sortedlist2.mlt" 11 331 368
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 11 331 337 "test_sortedlist2.mlt" 11 331 368
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 7 193 214 "test_sortedlist2.mlt" 12 370 375
+type(
+  string list
+)
+"test_sortedlist2.mlt" 7 193 195 "test_sortedlist2.mlt" 12 370 375
+call(
+  tail
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 16 428 432 "test_sortedlist2.mlt" 16 428 448
+type(
+  string list -> string list -> string list -> string list -> string
+)
+ident(
+  def make_strlist_msg "test_sortedlist2.mlt" 25 664 664 "test_sortedlist2.mlt" 1 0 -1
+)
+"test_sortedlist2.mlt" 16 428 449 "test_sortedlist2.mlt" 16 428 454
+type(
+  string list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 16 428 455 "test_sortedlist2.mlt" 22 654 659
+)
+"test_sortedlist2.mlt" 16 428 455 "test_sortedlist2.mlt" 16 428 460
+type(
+  string list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 16 428 461 "test_sortedlist2.mlt" 22 654 659
+)
+"test_sortedlist2.mlt" 16 428 461 "test_sortedlist2.mlt" 16 428 467
+type(
+  string list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 16 428 468 "test_sortedlist2.mlt" 22 654 659
+)
+"test_sortedlist2.mlt" 16 428 468 "test_sortedlist2.mlt" 16 428 474
+type(
+  string list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 17 477 479 "test_sortedlist2.mlt" 22 654 659
+)
+"test_sortedlist2.mlt" 17 477 479 "test_sortedlist2.mlt" 17 477 492
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_sortedlist2.mlt" 17 477 493 "test_sortedlist2.mlt" 17 477 497
+type(
+  string
+)
+"test_sortedlist2.mlt" 18 500 506 "test_sortedlist2.mlt" 18 500 516
+type(
+  string
+)
+"test_sortedlist2.mlt" 18 500 516 "test_sortedlist2.mlt" 18 500 517
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 18 500 518 "test_sortedlist2.mlt" 18 500 529
+type(
+  string list -> string
+)
+ident(
+  ext_ref Mltest.strlist2str
+)
+"test_sortedlist2.mlt" 18 500 530 "test_sortedlist2.mlt" 18 500 535
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 16 428 449 "test_sortedlist2.mlt" 16 428 454
+)
+"test_sortedlist2.mlt" 18 500 517 "test_sortedlist2.mlt" 18 500 536
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 18 500 506 "test_sortedlist2.mlt" 18 500 536
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 19 538 544 "test_sortedlist2.mlt" 19 538 554
+type(
+  string
+)
+"test_sortedlist2.mlt" 19 538 554 "test_sortedlist2.mlt" 19 538 555
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 19 538 556 "test_sortedlist2.mlt" 19 538 567
+type(
+  string list -> string
+)
+ident(
+  ext_ref Mltest.strlist2str
+)
+"test_sortedlist2.mlt" 19 538 568 "test_sortedlist2.mlt" 19 538 573
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 16 428 455 "test_sortedlist2.mlt" 16 428 460
+)
+"test_sortedlist2.mlt" 19 538 555 "test_sortedlist2.mlt" 19 538 574
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 19 538 544 "test_sortedlist2.mlt" 19 538 574
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 20 576 582 "test_sortedlist2.mlt" 20 576 592
+type(
+  string
+)
+"test_sortedlist2.mlt" 20 576 592 "test_sortedlist2.mlt" 20 576 593
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 20 576 594 "test_sortedlist2.mlt" 20 576 605
+type(
+  string list -> string
+)
+ident(
+  ext_ref Mltest.strlist2str
+)
+"test_sortedlist2.mlt" 20 576 606 "test_sortedlist2.mlt" 20 576 612
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 16 428 461 "test_sortedlist2.mlt" 16 428 467
+)
+"test_sortedlist2.mlt" 20 576 593 "test_sortedlist2.mlt" 20 576 613
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 20 576 582 "test_sortedlist2.mlt" 20 576 613
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 21 615 621 "test_sortedlist2.mlt" 21 615 631
+type(
+  string
+)
+"test_sortedlist2.mlt" 21 615 631 "test_sortedlist2.mlt" 21 615 632
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_sortedlist2.mlt" 21 615 633 "test_sortedlist2.mlt" 21 615 644
+type(
+  string list -> string
+)
+ident(
+  ext_ref Mltest.strlist2str
+)
+"test_sortedlist2.mlt" 21 615 645 "test_sortedlist2.mlt" 21 615 651
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 16 428 468 "test_sortedlist2.mlt" 16 428 474
+)
+"test_sortedlist2.mlt" 21 615 632 "test_sortedlist2.mlt" 21 615 652
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 21 615 621 "test_sortedlist2.mlt" 21 615 652
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 17 477 498 "test_sortedlist2.mlt" 22 654 659
+type(
+  string list
+)
+"test_sortedlist2.mlt" 17 477 479 "test_sortedlist2.mlt" 22 654 659
+call(
+  tail
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 25 664 664 "test_sortedlist2.mlt" 25 664 675
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  ext_ref Mltest.main
+)
+"test_sortedlist2.mlt" 29 754 759 "test_sortedlist2.mlt" 29 754 761
+type(
+  unit
+)
+"test_sortedlist2.mlt" 32 818 824 "test_sortedlist2.mlt" 32 818 829
+type(
+  'a list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 33 838 840 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 32 818 832 "test_sortedlist2.mlt" 32 818 834
+type(
+  'a list
+)
+"test_sortedlist2.mlt" 33 838 844 "test_sortedlist2.mlt" 33 838 849
+type(
+  'b list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 34 858 860 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 33 838 852 "test_sortedlist2.mlt" 33 838 854
+type(
+  'b list
+)
+"test_sortedlist2.mlt" 34 858 864 "test_sortedlist2.mlt" 34 858 870
+type(
+  'c list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 35 894 896 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 34 858 873 "test_sortedlist2.mlt" 34 858 878
+type(
+  'c list -> 'c list -> 'c list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 34 858 879 "test_sortedlist2.mlt" 34 858 884
+type(
+  'c list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 32 818 824 "test_sortedlist2.mlt" 32 818 829
+)
+"test_sortedlist2.mlt" 34 858 885 "test_sortedlist2.mlt" 34 858 890
+type(
+  'c list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 33 838 844 "test_sortedlist2.mlt" 33 838 849
+)
+"test_sortedlist2.mlt" 34 858 873 "test_sortedlist2.mlt" 34 858 890
+call(
+  stack
+)
+type(
+  'c list
+)
+"test_sortedlist2.mlt" 35 894 900 "test_sortedlist2.mlt" 35 894 906
+type(
+  'd list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 36 915 917 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 35 894 909 "test_sortedlist2.mlt" 35 894 911
+type(
+  'd list
+)
+"test_sortedlist2.mlt" 36 915 921 "test_sortedlist2.mlt" 36 915 924
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 37 973 973 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 36 915 927 "test_sortedlist2.mlt" 36 915 943
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 36 915 944 "test_sortedlist2.mlt" 36 915 949
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 32 818 824 "test_sortedlist2.mlt" 32 818 829
+)
+"test_sortedlist2.mlt" 36 915 950 "test_sortedlist2.mlt" 36 915 955
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 33 838 844 "test_sortedlist2.mlt" 33 838 849
+)
+"test_sortedlist2.mlt" 36 915 956 "test_sortedlist2.mlt" 36 915 962
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 35 894 900 "test_sortedlist2.mlt" 35 894 906
+)
+"test_sortedlist2.mlt" 36 915 963 "test_sortedlist2.mlt" 36 915 969
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 34 858 864 "test_sortedlist2.mlt" 34 858 870
+)
+"test_sortedlist2.mlt" 36 915 927 "test_sortedlist2.mlt" 36 915 969
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 37 973 976 "test_sortedlist2.mlt" 37 973 979
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 37 973 983 "test_sortedlist2.mlt" 37 973 989
+type(
+  '_e list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 34 858 864 "test_sortedlist2.mlt" 34 858 870
+)
+"test_sortedlist2.mlt" 37 973 990 "test_sortedlist2.mlt" 37 973 991
+type(
+  '_e list -> '_e list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 37 973 992 "test_sortedlist2.mlt" 37 973 998
+type(
+  '_e list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 35 894 900 "test_sortedlist2.mlt" 35 894 906
+)
+"test_sortedlist2.mlt" 37 973 980 "test_sortedlist2.mlt" 37 973 1000
+type(
+  bool
+)
+"test_sortedlist2.mlt" 37 973 976 "test_sortedlist2.mlt" 37 973 1000
+type(
+  bool
+)
+"test_sortedlist2.mlt" 37 973 1006 "test_sortedlist2.mlt" 37 973 1011
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 37 973 1027 "test_sortedlist2.mlt" 37 973 1051
+type(
+  string
+)
+"test_sortedlist2.mlt" 37 973 1057 "test_sortedlist2.mlt" 37 973 1060
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 36 915 921 "test_sortedlist2.mlt" 36 915 924
+)
+"test_sortedlist2.mlt" 37 973 1067 "test_sortedlist2.mlt" 37 973 1319
+type(
+  string
+)
+"test_sortedlist2.mlt" 37 973 1022 "test_sortedlist2.mlt" 37 973 1320
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 37 973 1012 "test_sortedlist2.mlt" 37 973 1321
+type(
+  exn
+)
+"test_sortedlist2.mlt" 37 973 1006 "test_sortedlist2.mlt" 37 973 1321
+type(
+  unit
+)
+"test_sortedlist2.mlt" 37 973 1327 "test_sortedlist2.mlt" 37 973 1329
+type(
+  unit
+)
+"test_sortedlist2.mlt" 37 973 973 "test_sortedlist2.mlt" 37 973 1329
+type(
+  unit
+)
+"test_sortedlist2.mlt" 41 1401 1407 "test_sortedlist2.mlt" 41 1401 1412
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 42 1422 1424 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 41 1401 1416 "test_sortedlist2.mlt" 41 1401 1417
+type(
+  int
+)
+"test_sortedlist2.mlt" 41 1401 1415 "test_sortedlist2.mlt" 41 1401 1418
+type(
+  int list
+)
+"test_sortedlist2.mlt" 42 1422 1428 "test_sortedlist2.mlt" 42 1422 1433
+type(
+  'f list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 43 1442 1444 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 42 1422 1436 "test_sortedlist2.mlt" 42 1422 1438
+type(
+  'f list
+)
+"test_sortedlist2.mlt" 43 1442 1448 "test_sortedlist2.mlt" 43 1442 1454
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 44 1478 1480 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 43 1442 1457 "test_sortedlist2.mlt" 43 1442 1462
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 43 1442 1463 "test_sortedlist2.mlt" 43 1442 1468
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 41 1401 1407 "test_sortedlist2.mlt" 41 1401 1412
+)
+"test_sortedlist2.mlt" 43 1442 1469 "test_sortedlist2.mlt" 43 1442 1474
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 42 1422 1428 "test_sortedlist2.mlt" 42 1422 1433
+)
+"test_sortedlist2.mlt" 43 1442 1457 "test_sortedlist2.mlt" 43 1442 1474
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 44 1478 1484 "test_sortedlist2.mlt" 44 1478 1490
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 45 1500 1502 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 44 1478 1494 "test_sortedlist2.mlt" 44 1478 1495
+type(
+  int
+)
+"test_sortedlist2.mlt" 44 1478 1493 "test_sortedlist2.mlt" 44 1478 1496
+type(
+  int list
+)
+"test_sortedlist2.mlt" 45 1500 1506 "test_sortedlist2.mlt" 45 1500 1509
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 46 1558 1558 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 45 1500 1512 "test_sortedlist2.mlt" 45 1500 1528
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 45 1500 1529 "test_sortedlist2.mlt" 45 1500 1534
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 41 1401 1407 "test_sortedlist2.mlt" 41 1401 1412
+)
+"test_sortedlist2.mlt" 45 1500 1535 "test_sortedlist2.mlt" 45 1500 1540
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 42 1422 1428 "test_sortedlist2.mlt" 42 1422 1433
+)
+"test_sortedlist2.mlt" 45 1500 1541 "test_sortedlist2.mlt" 45 1500 1547
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 44 1478 1484 "test_sortedlist2.mlt" 44 1478 1490
+)
+"test_sortedlist2.mlt" 45 1500 1548 "test_sortedlist2.mlt" 45 1500 1554
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 43 1442 1448 "test_sortedlist2.mlt" 43 1442 1454
+)
+"test_sortedlist2.mlt" 45 1500 1512 "test_sortedlist2.mlt" 45 1500 1554
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 46 1558 1561 "test_sortedlist2.mlt" 46 1558 1564
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 46 1558 1568 "test_sortedlist2.mlt" 46 1558 1574
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 43 1442 1448 "test_sortedlist2.mlt" 43 1442 1454
+)
+"test_sortedlist2.mlt" 46 1558 1575 "test_sortedlist2.mlt" 46 1558 1576
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 46 1558 1577 "test_sortedlist2.mlt" 46 1558 1583
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 44 1478 1484 "test_sortedlist2.mlt" 44 1478 1490
+)
+"test_sortedlist2.mlt" 46 1558 1565 "test_sortedlist2.mlt" 46 1558 1585
+type(
+  bool
+)
+"test_sortedlist2.mlt" 46 1558 1561 "test_sortedlist2.mlt" 46 1558 1585
+type(
+  bool
+)
+"test_sortedlist2.mlt" 46 1558 1591 "test_sortedlist2.mlt" 46 1558 1596
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 46 1558 1612 "test_sortedlist2.mlt" 46 1558 1636
+type(
+  string
+)
+"test_sortedlist2.mlt" 46 1558 1642 "test_sortedlist2.mlt" 46 1558 1645
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 45 1500 1506 "test_sortedlist2.mlt" 45 1500 1509
+)
+"test_sortedlist2.mlt" 46 1558 1652 "test_sortedlist2.mlt" 46 1558 1906
+type(
+  string
+)
+"test_sortedlist2.mlt" 46 1558 1607 "test_sortedlist2.mlt" 46 1558 1907
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 46 1558 1597 "test_sortedlist2.mlt" 46 1558 1908
+type(
+  exn
+)
+"test_sortedlist2.mlt" 46 1558 1591 "test_sortedlist2.mlt" 46 1558 1908
+type(
+  unit
+)
+"test_sortedlist2.mlt" 46 1558 1914 "test_sortedlist2.mlt" 46 1558 1916
+type(
+  unit
+)
+"test_sortedlist2.mlt" 46 1558 1558 "test_sortedlist2.mlt" 46 1558 1916
+type(
+  unit
+)
+"test_sortedlist2.mlt" 50 1988 1994 "test_sortedlist2.mlt" 50 1988 1999
+type(
+  'g list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 51 2008 2010 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 50 1988 2002 "test_sortedlist2.mlt" 50 1988 2004
+type(
+  'g list
+)
+"test_sortedlist2.mlt" 51 2008 2014 "test_sortedlist2.mlt" 51 2008 2019
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 52 2029 2031 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 51 2008 2023 "test_sortedlist2.mlt" 51 2008 2024
+type(
+  int
+)
+"test_sortedlist2.mlt" 51 2008 2022 "test_sortedlist2.mlt" 51 2008 2025
+type(
+  int list
+)
+"test_sortedlist2.mlt" 52 2029 2035 "test_sortedlist2.mlt" 52 2029 2041
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 53 2065 2067 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 52 2029 2044 "test_sortedlist2.mlt" 52 2029 2049
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 52 2029 2050 "test_sortedlist2.mlt" 52 2029 2055
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 50 1988 1994 "test_sortedlist2.mlt" 50 1988 1999
+)
+"test_sortedlist2.mlt" 52 2029 2056 "test_sortedlist2.mlt" 52 2029 2061
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 51 2008 2014 "test_sortedlist2.mlt" 51 2008 2019
+)
+"test_sortedlist2.mlt" 52 2029 2044 "test_sortedlist2.mlt" 52 2029 2061
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 53 2065 2071 "test_sortedlist2.mlt" 53 2065 2077
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 54 2087 2089 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 53 2065 2081 "test_sortedlist2.mlt" 53 2065 2082
+type(
+  int
+)
+"test_sortedlist2.mlt" 53 2065 2080 "test_sortedlist2.mlt" 53 2065 2083
+type(
+  int list
+)
+"test_sortedlist2.mlt" 54 2087 2093 "test_sortedlist2.mlt" 54 2087 2096
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 55 2145 2145 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 54 2087 2099 "test_sortedlist2.mlt" 54 2087 2115
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 54 2087 2116 "test_sortedlist2.mlt" 54 2087 2121
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 50 1988 1994 "test_sortedlist2.mlt" 50 1988 1999
+)
+"test_sortedlist2.mlt" 54 2087 2122 "test_sortedlist2.mlt" 54 2087 2127
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 51 2008 2014 "test_sortedlist2.mlt" 51 2008 2019
+)
+"test_sortedlist2.mlt" 54 2087 2128 "test_sortedlist2.mlt" 54 2087 2134
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 53 2065 2071 "test_sortedlist2.mlt" 53 2065 2077
+)
+"test_sortedlist2.mlt" 54 2087 2135 "test_sortedlist2.mlt" 54 2087 2141
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 52 2029 2035 "test_sortedlist2.mlt" 52 2029 2041
+)
+"test_sortedlist2.mlt" 54 2087 2099 "test_sortedlist2.mlt" 54 2087 2141
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 55 2145 2148 "test_sortedlist2.mlt" 55 2145 2151
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 55 2145 2155 "test_sortedlist2.mlt" 55 2145 2161
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 52 2029 2035 "test_sortedlist2.mlt" 52 2029 2041
+)
+"test_sortedlist2.mlt" 55 2145 2162 "test_sortedlist2.mlt" 55 2145 2163
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 55 2145 2164 "test_sortedlist2.mlt" 55 2145 2170
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 53 2065 2071 "test_sortedlist2.mlt" 53 2065 2077
+)
+"test_sortedlist2.mlt" 55 2145 2152 "test_sortedlist2.mlt" 55 2145 2172
+type(
+  bool
+)
+"test_sortedlist2.mlt" 55 2145 2148 "test_sortedlist2.mlt" 55 2145 2172
+type(
+  bool
+)
+"test_sortedlist2.mlt" 55 2145 2178 "test_sortedlist2.mlt" 55 2145 2183
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 55 2145 2199 "test_sortedlist2.mlt" 55 2145 2223
+type(
+  string
+)
+"test_sortedlist2.mlt" 55 2145 2229 "test_sortedlist2.mlt" 55 2145 2232
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 54 2087 2093 "test_sortedlist2.mlt" 54 2087 2096
+)
+"test_sortedlist2.mlt" 55 2145 2239 "test_sortedlist2.mlt" 55 2145 2493
+type(
+  string
+)
+"test_sortedlist2.mlt" 55 2145 2194 "test_sortedlist2.mlt" 55 2145 2494
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 55 2145 2184 "test_sortedlist2.mlt" 55 2145 2495
+type(
+  exn
+)
+"test_sortedlist2.mlt" 55 2145 2178 "test_sortedlist2.mlt" 55 2145 2495
+type(
+  unit
+)
+"test_sortedlist2.mlt" 55 2145 2501 "test_sortedlist2.mlt" 55 2145 2503
+type(
+  unit
+)
+"test_sortedlist2.mlt" 55 2145 2145 "test_sortedlist2.mlt" 55 2145 2503
+type(
+  unit
+)
+"test_sortedlist2.mlt" 59 2575 2581 "test_sortedlist2.mlt" 59 2575 2586
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 60 2607 2609 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 59 2575 2590 "test_sortedlist2.mlt" 59 2575 2591
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2592 "test_sortedlist2.mlt" 59 2575 2593
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2594 "test_sortedlist2.mlt" 59 2575 2595
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2596 "test_sortedlist2.mlt" 59 2575 2597
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2598 "test_sortedlist2.mlt" 59 2575 2599
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2600 "test_sortedlist2.mlt" 59 2575 2602
+type(
+  int
+)
+"test_sortedlist2.mlt" 59 2575 2589 "test_sortedlist2.mlt" 59 2575 2603
+type(
+  int list
+)
+"test_sortedlist2.mlt" 60 2607 2613 "test_sortedlist2.mlt" 60 2607 2618
+type(
+  'h list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 61 2627 2629 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 60 2607 2621 "test_sortedlist2.mlt" 60 2607 2623
+type(
+  'h list
+)
+"test_sortedlist2.mlt" 61 2627 2633 "test_sortedlist2.mlt" 61 2627 2639
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 62 2663 2665 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 61 2627 2642 "test_sortedlist2.mlt" 61 2627 2647
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 61 2627 2648 "test_sortedlist2.mlt" 61 2627 2653
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 59 2575 2581 "test_sortedlist2.mlt" 59 2575 2586
+)
+"test_sortedlist2.mlt" 61 2627 2654 "test_sortedlist2.mlt" 61 2627 2659
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 60 2607 2613 "test_sortedlist2.mlt" 60 2607 2618
+)
+"test_sortedlist2.mlt" 61 2627 2642 "test_sortedlist2.mlt" 61 2627 2659
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 62 2663 2669 "test_sortedlist2.mlt" 62 2663 2675
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 63 2696 2698 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 62 2663 2679 "test_sortedlist2.mlt" 62 2663 2680
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2681 "test_sortedlist2.mlt" 62 2663 2682
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2683 "test_sortedlist2.mlt" 62 2663 2684
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2685 "test_sortedlist2.mlt" 62 2663 2686
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2687 "test_sortedlist2.mlt" 62 2663 2688
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2689 "test_sortedlist2.mlt" 62 2663 2691
+type(
+  int
+)
+"test_sortedlist2.mlt" 62 2663 2678 "test_sortedlist2.mlt" 62 2663 2692
+type(
+  int list
+)
+"test_sortedlist2.mlt" 63 2696 2702 "test_sortedlist2.mlt" 63 2696 2705
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 64 2754 2754 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 63 2696 2708 "test_sortedlist2.mlt" 63 2696 2724
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 63 2696 2725 "test_sortedlist2.mlt" 63 2696 2730
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 59 2575 2581 "test_sortedlist2.mlt" 59 2575 2586
+)
+"test_sortedlist2.mlt" 63 2696 2731 "test_sortedlist2.mlt" 63 2696 2736
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 60 2607 2613 "test_sortedlist2.mlt" 60 2607 2618
+)
+"test_sortedlist2.mlt" 63 2696 2737 "test_sortedlist2.mlt" 63 2696 2743
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 62 2663 2669 "test_sortedlist2.mlt" 62 2663 2675
+)
+"test_sortedlist2.mlt" 63 2696 2744 "test_sortedlist2.mlt" 63 2696 2750
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 61 2627 2633 "test_sortedlist2.mlt" 61 2627 2639
+)
+"test_sortedlist2.mlt" 63 2696 2708 "test_sortedlist2.mlt" 63 2696 2750
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 64 2754 2757 "test_sortedlist2.mlt" 64 2754 2760
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 64 2754 2764 "test_sortedlist2.mlt" 64 2754 2770
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 61 2627 2633 "test_sortedlist2.mlt" 61 2627 2639
+)
+"test_sortedlist2.mlt" 64 2754 2771 "test_sortedlist2.mlt" 64 2754 2772
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 64 2754 2773 "test_sortedlist2.mlt" 64 2754 2779
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 62 2663 2669 "test_sortedlist2.mlt" 62 2663 2675
+)
+"test_sortedlist2.mlt" 64 2754 2761 "test_sortedlist2.mlt" 64 2754 2781
+type(
+  bool
+)
+"test_sortedlist2.mlt" 64 2754 2757 "test_sortedlist2.mlt" 64 2754 2781
+type(
+  bool
+)
+"test_sortedlist2.mlt" 64 2754 2787 "test_sortedlist2.mlt" 64 2754 2792
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 64 2754 2808 "test_sortedlist2.mlt" 64 2754 2832
+type(
+  string
+)
+"test_sortedlist2.mlt" 64 2754 2838 "test_sortedlist2.mlt" 64 2754 2841
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 63 2696 2702 "test_sortedlist2.mlt" 63 2696 2705
+)
+"test_sortedlist2.mlt" 64 2754 2848 "test_sortedlist2.mlt" 64 2754 3124
+type(
+  string
+)
+"test_sortedlist2.mlt" 64 2754 2803 "test_sortedlist2.mlt" 64 2754 3125
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 64 2754 2793 "test_sortedlist2.mlt" 64 2754 3126
+type(
+  exn
+)
+"test_sortedlist2.mlt" 64 2754 2787 "test_sortedlist2.mlt" 64 2754 3126
+type(
+  unit
+)
+"test_sortedlist2.mlt" 64 2754 3132 "test_sortedlist2.mlt" 64 2754 3134
+type(
+  unit
+)
+"test_sortedlist2.mlt" 64 2754 2754 "test_sortedlist2.mlt" 64 2754 3134
+type(
+  unit
+)
+"test_sortedlist2.mlt" 68 3206 3212 "test_sortedlist2.mlt" 68 3206 3217
+type(
+  'i list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 69 3226 3228 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 68 3206 3220 "test_sortedlist2.mlt" 68 3206 3222
+type(
+  'i list
+)
+"test_sortedlist2.mlt" 69 3226 3232 "test_sortedlist2.mlt" 69 3226 3237
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 70 3258 3260 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 69 3226 3241 "test_sortedlist2.mlt" 69 3226 3242
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3243 "test_sortedlist2.mlt" 69 3226 3244
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3245 "test_sortedlist2.mlt" 69 3226 3246
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3247 "test_sortedlist2.mlt" 69 3226 3248
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3249 "test_sortedlist2.mlt" 69 3226 3250
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3251 "test_sortedlist2.mlt" 69 3226 3253
+type(
+  int
+)
+"test_sortedlist2.mlt" 69 3226 3240 "test_sortedlist2.mlt" 69 3226 3254
+type(
+  int list
+)
+"test_sortedlist2.mlt" 70 3258 3264 "test_sortedlist2.mlt" 70 3258 3270
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 71 3294 3296 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 70 3258 3273 "test_sortedlist2.mlt" 70 3258 3278
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 70 3258 3279 "test_sortedlist2.mlt" 70 3258 3284
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 68 3206 3212 "test_sortedlist2.mlt" 68 3206 3217
+)
+"test_sortedlist2.mlt" 70 3258 3285 "test_sortedlist2.mlt" 70 3258 3290
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 69 3226 3232 "test_sortedlist2.mlt" 69 3226 3237
+)
+"test_sortedlist2.mlt" 70 3258 3273 "test_sortedlist2.mlt" 70 3258 3290
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 71 3294 3300 "test_sortedlist2.mlt" 71 3294 3306
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 72 3327 3329 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 71 3294 3310 "test_sortedlist2.mlt" 71 3294 3311
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3312 "test_sortedlist2.mlt" 71 3294 3313
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3314 "test_sortedlist2.mlt" 71 3294 3315
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3316 "test_sortedlist2.mlt" 71 3294 3317
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3318 "test_sortedlist2.mlt" 71 3294 3319
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3320 "test_sortedlist2.mlt" 71 3294 3322
+type(
+  int
+)
+"test_sortedlist2.mlt" 71 3294 3309 "test_sortedlist2.mlt" 71 3294 3323
+type(
+  int list
+)
+"test_sortedlist2.mlt" 72 3327 3333 "test_sortedlist2.mlt" 72 3327 3336
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 73 3385 3385 "test_sortedlist2.mlt" 73 3385 3766
+)
+"test_sortedlist2.mlt" 72 3327 3339 "test_sortedlist2.mlt" 72 3327 3355
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 72 3327 3356 "test_sortedlist2.mlt" 72 3327 3361
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 68 3206 3212 "test_sortedlist2.mlt" 68 3206 3217
+)
+"test_sortedlist2.mlt" 72 3327 3362 "test_sortedlist2.mlt" 72 3327 3367
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 69 3226 3232 "test_sortedlist2.mlt" 69 3226 3237
+)
+"test_sortedlist2.mlt" 72 3327 3368 "test_sortedlist2.mlt" 72 3327 3374
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 71 3294 3300 "test_sortedlist2.mlt" 71 3294 3306
+)
+"test_sortedlist2.mlt" 72 3327 3375 "test_sortedlist2.mlt" 72 3327 3381
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 70 3258 3264 "test_sortedlist2.mlt" 70 3258 3270
+)
+"test_sortedlist2.mlt" 72 3327 3339 "test_sortedlist2.mlt" 72 3327 3381
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 73 3385 3388 "test_sortedlist2.mlt" 73 3385 3391
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 73 3385 3395 "test_sortedlist2.mlt" 73 3385 3401
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 70 3258 3264 "test_sortedlist2.mlt" 70 3258 3270
+)
+"test_sortedlist2.mlt" 73 3385 3402 "test_sortedlist2.mlt" 73 3385 3403
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 73 3385 3404 "test_sortedlist2.mlt" 73 3385 3410
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 71 3294 3300 "test_sortedlist2.mlt" 71 3294 3306
+)
+"test_sortedlist2.mlt" 73 3385 3392 "test_sortedlist2.mlt" 73 3385 3412
+type(
+  bool
+)
+"test_sortedlist2.mlt" 73 3385 3388 "test_sortedlist2.mlt" 73 3385 3412
+type(
+  bool
+)
+"test_sortedlist2.mlt" 73 3385 3418 "test_sortedlist2.mlt" 73 3385 3423
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 73 3385 3439 "test_sortedlist2.mlt" 73 3385 3463
+type(
+  string
+)
+"test_sortedlist2.mlt" 73 3385 3469 "test_sortedlist2.mlt" 73 3385 3472
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 72 3327 3333 "test_sortedlist2.mlt" 72 3327 3336
+)
+"test_sortedlist2.mlt" 73 3385 3479 "test_sortedlist2.mlt" 73 3385 3755
+type(
+  string
+)
+"test_sortedlist2.mlt" 73 3385 3434 "test_sortedlist2.mlt" 73 3385 3756
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 73 3385 3424 "test_sortedlist2.mlt" 73 3385 3757
+type(
+  exn
+)
+"test_sortedlist2.mlt" 73 3385 3418 "test_sortedlist2.mlt" 73 3385 3757
+type(
+  unit
+)
+"test_sortedlist2.mlt" 73 3385 3763 "test_sortedlist2.mlt" 73 3385 3765
+type(
+  unit
+)
+"test_sortedlist2.mlt" 73 3385 3385 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 72 3327 3329 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 71 3294 3296 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 70 3258 3260 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 69 3226 3228 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 68 3206 3208 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 64 2754 2754 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 63 2696 2698 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 62 2663 2665 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 61 2627 2629 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 60 2607 2609 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 59 2575 2577 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 55 2145 2145 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 54 2087 2089 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 53 2065 2067 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 52 2029 2031 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 51 2008 2010 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 50 1988 1990 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 46 1558 1558 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 45 1500 1502 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 44 1478 1480 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 43 1442 1444 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 42 1422 1424 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 41 1401 1403 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 37 973 973 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 36 915 917 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 35 894 896 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 34 858 860 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 33 838 840 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 32 818 820 "test_sortedlist2.mlt" 73 3385 3766
+type(
+  unit
+)
+"test_sortedlist2.mlt" 29 754 754 "test_sortedlist2.mlt" 75 3784 3785
+type(
+  unit -> unit
+)
+"test_sortedlist2.mlt" 77 3788 3793 "test_sortedlist2.mlt" 77 3788 3795
+type(
+  unit
+)
+"test_sortedlist2.mlt" 80 3853 3859 "test_sortedlist2.mlt" 80 3853 3864
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 81 3874 3876 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 80 3853 3868 "test_sortedlist2.mlt" 80 3853 3869
+type(
+  int
+)
+"test_sortedlist2.mlt" 80 3853 3867 "test_sortedlist2.mlt" 80 3853 3870
+type(
+  int list
+)
+"test_sortedlist2.mlt" 81 3874 3880 "test_sortedlist2.mlt" 81 3874 3885
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 82 3895 3897 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 81 3874 3889 "test_sortedlist2.mlt" 81 3874 3890
+type(
+  int
+)
+"test_sortedlist2.mlt" 81 3874 3888 "test_sortedlist2.mlt" 81 3874 3891
+type(
+  int list
+)
+"test_sortedlist2.mlt" 82 3895 3901 "test_sortedlist2.mlt" 82 3895 3907
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 83 3931 3933 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 82 3895 3910 "test_sortedlist2.mlt" 82 3895 3915
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 82 3895 3916 "test_sortedlist2.mlt" 82 3895 3921
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 80 3853 3859 "test_sortedlist2.mlt" 80 3853 3864
+)
+"test_sortedlist2.mlt" 82 3895 3922 "test_sortedlist2.mlt" 82 3895 3927
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 81 3874 3880 "test_sortedlist2.mlt" 81 3874 3885
+)
+"test_sortedlist2.mlt" 82 3895 3910 "test_sortedlist2.mlt" 82 3895 3927
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 83 3931 3937 "test_sortedlist2.mlt" 83 3931 3943
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 84 3955 3957 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 83 3931 3947 "test_sortedlist2.mlt" 83 3931 3948
+type(
+  int
+)
+"test_sortedlist2.mlt" 83 3931 3949 "test_sortedlist2.mlt" 83 3931 3950
+type(
+  int
+)
+"test_sortedlist2.mlt" 83 3931 3946 "test_sortedlist2.mlt" 83 3931 3951
+type(
+  int list
+)
+"test_sortedlist2.mlt" 84 3955 3961 "test_sortedlist2.mlt" 84 3955 3964
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 85 4013 4013 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 84 3955 3967 "test_sortedlist2.mlt" 84 3955 3983
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 84 3955 3984 "test_sortedlist2.mlt" 84 3955 3989
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 80 3853 3859 "test_sortedlist2.mlt" 80 3853 3864
+)
+"test_sortedlist2.mlt" 84 3955 3990 "test_sortedlist2.mlt" 84 3955 3995
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 81 3874 3880 "test_sortedlist2.mlt" 81 3874 3885
+)
+"test_sortedlist2.mlt" 84 3955 3996 "test_sortedlist2.mlt" 84 3955 4002
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 83 3931 3937 "test_sortedlist2.mlt" 83 3931 3943
+)
+"test_sortedlist2.mlt" 84 3955 4003 "test_sortedlist2.mlt" 84 3955 4009
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 82 3895 3901 "test_sortedlist2.mlt" 82 3895 3907
+)
+"test_sortedlist2.mlt" 84 3955 3967 "test_sortedlist2.mlt" 84 3955 4009
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 85 4013 4016 "test_sortedlist2.mlt" 85 4013 4019
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 85 4013 4023 "test_sortedlist2.mlt" 85 4013 4029
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 82 3895 3901 "test_sortedlist2.mlt" 82 3895 3907
+)
+"test_sortedlist2.mlt" 85 4013 4030 "test_sortedlist2.mlt" 85 4013 4031
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 85 4013 4032 "test_sortedlist2.mlt" 85 4013 4038
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 83 3931 3937 "test_sortedlist2.mlt" 83 3931 3943
+)
+"test_sortedlist2.mlt" 85 4013 4020 "test_sortedlist2.mlt" 85 4013 4040
+type(
+  bool
+)
+"test_sortedlist2.mlt" 85 4013 4016 "test_sortedlist2.mlt" 85 4013 4040
+type(
+  bool
+)
+"test_sortedlist2.mlt" 85 4013 4046 "test_sortedlist2.mlt" 85 4013 4051
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 85 4013 4067 "test_sortedlist2.mlt" 85 4013 4091
+type(
+  string
+)
+"test_sortedlist2.mlt" 85 4013 4097 "test_sortedlist2.mlt" 85 4013 4100
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 84 3955 3961 "test_sortedlist2.mlt" 84 3955 3964
+)
+"test_sortedlist2.mlt" 85 4013 4107 "test_sortedlist2.mlt" 85 4013 4365
+type(
+  string
+)
+"test_sortedlist2.mlt" 85 4013 4062 "test_sortedlist2.mlt" 85 4013 4366
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 85 4013 4052 "test_sortedlist2.mlt" 85 4013 4367
+type(
+  exn
+)
+"test_sortedlist2.mlt" 85 4013 4046 "test_sortedlist2.mlt" 85 4013 4367
+type(
+  unit
+)
+"test_sortedlist2.mlt" 85 4013 4373 "test_sortedlist2.mlt" 85 4013 4375
+type(
+  unit
+)
+"test_sortedlist2.mlt" 85 4013 4013 "test_sortedlist2.mlt" 85 4013 4375
+type(
+  unit
+)
+"test_sortedlist2.mlt" 89 4447 4453 "test_sortedlist2.mlt" 89 4447 4458
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 90 4468 4470 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 89 4447 4462 "test_sortedlist2.mlt" 89 4447 4463
+type(
+  int
+)
+"test_sortedlist2.mlt" 89 4447 4461 "test_sortedlist2.mlt" 89 4447 4464
+type(
+  int list
+)
+"test_sortedlist2.mlt" 90 4468 4474 "test_sortedlist2.mlt" 90 4468 4479
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 91 4489 4491 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 90 4468 4483 "test_sortedlist2.mlt" 90 4468 4484
+type(
+  int
+)
+"test_sortedlist2.mlt" 90 4468 4482 "test_sortedlist2.mlt" 90 4468 4485
+type(
+  int list
+)
+"test_sortedlist2.mlt" 91 4489 4495 "test_sortedlist2.mlt" 91 4489 4501
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 92 4525 4527 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 91 4489 4504 "test_sortedlist2.mlt" 91 4489 4509
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 91 4489 4510 "test_sortedlist2.mlt" 91 4489 4515
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 89 4447 4453 "test_sortedlist2.mlt" 89 4447 4458
+)
+"test_sortedlist2.mlt" 91 4489 4516 "test_sortedlist2.mlt" 91 4489 4521
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 90 4468 4474 "test_sortedlist2.mlt" 90 4468 4479
+)
+"test_sortedlist2.mlt" 91 4489 4504 "test_sortedlist2.mlt" 91 4489 4521
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 92 4525 4531 "test_sortedlist2.mlt" 92 4525 4537
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 93 4549 4551 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 92 4525 4541 "test_sortedlist2.mlt" 92 4525 4542
+type(
+  int
+)
+"test_sortedlist2.mlt" 92 4525 4543 "test_sortedlist2.mlt" 92 4525 4544
+type(
+  int
+)
+"test_sortedlist2.mlt" 92 4525 4540 "test_sortedlist2.mlt" 92 4525 4545
+type(
+  int list
+)
+"test_sortedlist2.mlt" 93 4549 4555 "test_sortedlist2.mlt" 93 4549 4558
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 94 4607 4607 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 93 4549 4561 "test_sortedlist2.mlt" 93 4549 4577
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 93 4549 4578 "test_sortedlist2.mlt" 93 4549 4583
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 89 4447 4453 "test_sortedlist2.mlt" 89 4447 4458
+)
+"test_sortedlist2.mlt" 93 4549 4584 "test_sortedlist2.mlt" 93 4549 4589
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 90 4468 4474 "test_sortedlist2.mlt" 90 4468 4479
+)
+"test_sortedlist2.mlt" 93 4549 4590 "test_sortedlist2.mlt" 93 4549 4596
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 92 4525 4531 "test_sortedlist2.mlt" 92 4525 4537
+)
+"test_sortedlist2.mlt" 93 4549 4597 "test_sortedlist2.mlt" 93 4549 4603
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 91 4489 4495 "test_sortedlist2.mlt" 91 4489 4501
+)
+"test_sortedlist2.mlt" 93 4549 4561 "test_sortedlist2.mlt" 93 4549 4603
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 94 4607 4610 "test_sortedlist2.mlt" 94 4607 4613
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 94 4607 4617 "test_sortedlist2.mlt" 94 4607 4623
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 91 4489 4495 "test_sortedlist2.mlt" 91 4489 4501
+)
+"test_sortedlist2.mlt" 94 4607 4624 "test_sortedlist2.mlt" 94 4607 4625
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 94 4607 4626 "test_sortedlist2.mlt" 94 4607 4632
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 92 4525 4531 "test_sortedlist2.mlt" 92 4525 4537
+)
+"test_sortedlist2.mlt" 94 4607 4614 "test_sortedlist2.mlt" 94 4607 4634
+type(
+  bool
+)
+"test_sortedlist2.mlt" 94 4607 4610 "test_sortedlist2.mlt" 94 4607 4634
+type(
+  bool
+)
+"test_sortedlist2.mlt" 94 4607 4640 "test_sortedlist2.mlt" 94 4607 4645
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 94 4607 4661 "test_sortedlist2.mlt" 94 4607 4685
+type(
+  string
+)
+"test_sortedlist2.mlt" 94 4607 4691 "test_sortedlist2.mlt" 94 4607 4694
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 93 4549 4555 "test_sortedlist2.mlt" 93 4549 4558
+)
+"test_sortedlist2.mlt" 94 4607 4701 "test_sortedlist2.mlt" 94 4607 4958
+type(
+  string
+)
+"test_sortedlist2.mlt" 94 4607 4656 "test_sortedlist2.mlt" 94 4607 4959
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 94 4607 4646 "test_sortedlist2.mlt" 94 4607 4960
+type(
+  exn
+)
+"test_sortedlist2.mlt" 94 4607 4640 "test_sortedlist2.mlt" 94 4607 4960
+type(
+  unit
+)
+"test_sortedlist2.mlt" 94 4607 4966 "test_sortedlist2.mlt" 94 4607 4968
+type(
+  unit
+)
+"test_sortedlist2.mlt" 94 4607 4607 "test_sortedlist2.mlt" 94 4607 4968
+type(
+  unit
+)
+"test_sortedlist2.mlt" 98 5040 5046 "test_sortedlist2.mlt" 98 5040 5051
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 99 5061 5063 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 98 5040 5055 "test_sortedlist2.mlt" 98 5040 5056
+type(
+  int
+)
+"test_sortedlist2.mlt" 98 5040 5054 "test_sortedlist2.mlt" 98 5040 5057
+type(
+  int list
+)
+"test_sortedlist2.mlt" 99 5061 5067 "test_sortedlist2.mlt" 99 5061 5072
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 100 5082 5084 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 99 5061 5076 "test_sortedlist2.mlt" 99 5061 5077
+type(
+  int
+)
+"test_sortedlist2.mlt" 99 5061 5075 "test_sortedlist2.mlt" 99 5061 5078
+type(
+  int list
+)
+"test_sortedlist2.mlt" 100 5082 5088 "test_sortedlist2.mlt" 100 5082 5094
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 101 5118 5120 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 100 5082 5097 "test_sortedlist2.mlt" 100 5082 5102
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 100 5082 5103 "test_sortedlist2.mlt" 100 5082 5108
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 98 5040 5046 "test_sortedlist2.mlt" 98 5040 5051
+)
+"test_sortedlist2.mlt" 100 5082 5109 "test_sortedlist2.mlt" 100 5082 5114
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 99 5061 5067 "test_sortedlist2.mlt" 99 5061 5072
+)
+"test_sortedlist2.mlt" 100 5082 5097 "test_sortedlist2.mlt" 100 5082 5114
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 101 5118 5124 "test_sortedlist2.mlt" 101 5118 5130
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 102 5140 5142 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 101 5118 5134 "test_sortedlist2.mlt" 101 5118 5135
+type(
+  int
+)
+"test_sortedlist2.mlt" 101 5118 5133 "test_sortedlist2.mlt" 101 5118 5136
+type(
+  int list
+)
+"test_sortedlist2.mlt" 102 5140 5146 "test_sortedlist2.mlt" 102 5140 5149
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 103 5198 5198 "test_sortedlist2.mlt" 103 5198 5563
+)
+"test_sortedlist2.mlt" 102 5140 5152 "test_sortedlist2.mlt" 102 5140 5168
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 102 5140 5169 "test_sortedlist2.mlt" 102 5140 5174
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 98 5040 5046 "test_sortedlist2.mlt" 98 5040 5051
+)
+"test_sortedlist2.mlt" 102 5140 5175 "test_sortedlist2.mlt" 102 5140 5180
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 99 5061 5067 "test_sortedlist2.mlt" 99 5061 5072
+)
+"test_sortedlist2.mlt" 102 5140 5181 "test_sortedlist2.mlt" 102 5140 5187
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 101 5118 5124 "test_sortedlist2.mlt" 101 5118 5130
+)
+"test_sortedlist2.mlt" 102 5140 5188 "test_sortedlist2.mlt" 102 5140 5194
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 100 5082 5088 "test_sortedlist2.mlt" 100 5082 5094
+)
+"test_sortedlist2.mlt" 102 5140 5152 "test_sortedlist2.mlt" 102 5140 5194
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 103 5198 5201 "test_sortedlist2.mlt" 103 5198 5204
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 103 5198 5208 "test_sortedlist2.mlt" 103 5198 5214
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 100 5082 5088 "test_sortedlist2.mlt" 100 5082 5094
+)
+"test_sortedlist2.mlt" 103 5198 5215 "test_sortedlist2.mlt" 103 5198 5216
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 103 5198 5217 "test_sortedlist2.mlt" 103 5198 5223
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 101 5118 5124 "test_sortedlist2.mlt" 101 5118 5130
+)
+"test_sortedlist2.mlt" 103 5198 5205 "test_sortedlist2.mlt" 103 5198 5225
+type(
+  bool
+)
+"test_sortedlist2.mlt" 103 5198 5201 "test_sortedlist2.mlt" 103 5198 5225
+type(
+  bool
+)
+"test_sortedlist2.mlt" 103 5198 5231 "test_sortedlist2.mlt" 103 5198 5236
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 103 5198 5252 "test_sortedlist2.mlt" 103 5198 5277
+type(
+  string
+)
+"test_sortedlist2.mlt" 103 5198 5283 "test_sortedlist2.mlt" 103 5198 5286
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 102 5140 5146 "test_sortedlist2.mlt" 102 5140 5149
+)
+"test_sortedlist2.mlt" 103 5198 5293 "test_sortedlist2.mlt" 103 5198 5552
+type(
+  string
+)
+"test_sortedlist2.mlt" 103 5198 5247 "test_sortedlist2.mlt" 103 5198 5553
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 103 5198 5237 "test_sortedlist2.mlt" 103 5198 5554
+type(
+  exn
+)
+"test_sortedlist2.mlt" 103 5198 5231 "test_sortedlist2.mlt" 103 5198 5554
+type(
+  unit
+)
+"test_sortedlist2.mlt" 103 5198 5560 "test_sortedlist2.mlt" 103 5198 5562
+type(
+  unit
+)
+"test_sortedlist2.mlt" 103 5198 5198 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 102 5140 5142 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 101 5118 5120 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 100 5082 5084 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 99 5061 5063 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 98 5040 5042 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 94 4607 4607 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 93 4549 4551 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 92 4525 4527 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 91 4489 4491 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 90 4468 4470 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 89 4447 4449 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 85 4013 4013 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 84 3955 3957 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 83 3931 3933 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 82 3895 3897 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 81 3874 3876 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 80 3853 3855 "test_sortedlist2.mlt" 103 5198 5563
+type(
+  unit
+)
+"test_sortedlist2.mlt" 77 3788 3788 "test_sortedlist2.mlt" 105 5581 5582
+type(
+  unit -> unit
+)
+"test_sortedlist2.mlt" 107 5585 5590 "test_sortedlist2.mlt" 107 5585 5592
+type(
+  unit
+)
+"test_sortedlist2.mlt" 110 5668 5674 "test_sortedlist2.mlt" 110 5668 5679
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 111 5693 5695 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 110 5668 5683 "test_sortedlist2.mlt" 110 5668 5684
+type(
+  int
+)
+"test_sortedlist2.mlt" 110 5668 5685 "test_sortedlist2.mlt" 110 5668 5686
+type(
+  int
+)
+"test_sortedlist2.mlt" 110 5668 5687 "test_sortedlist2.mlt" 110 5668 5688
+type(
+  int
+)
+"test_sortedlist2.mlt" 110 5668 5682 "test_sortedlist2.mlt" 110 5668 5689
+type(
+  int list
+)
+"test_sortedlist2.mlt" 111 5693 5699 "test_sortedlist2.mlt" 111 5693 5704
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 112 5714 5716 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 111 5693 5708 "test_sortedlist2.mlt" 111 5693 5709
+type(
+  int
+)
+"test_sortedlist2.mlt" 111 5693 5707 "test_sortedlist2.mlt" 111 5693 5710
+type(
+  int list
+)
+"test_sortedlist2.mlt" 112 5714 5720 "test_sortedlist2.mlt" 112 5714 5726
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 113 5750 5752 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 112 5714 5729 "test_sortedlist2.mlt" 112 5714 5734
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 112 5714 5735 "test_sortedlist2.mlt" 112 5714 5740
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 110 5668 5674 "test_sortedlist2.mlt" 110 5668 5679
+)
+"test_sortedlist2.mlt" 112 5714 5741 "test_sortedlist2.mlt" 112 5714 5746
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 111 5693 5699 "test_sortedlist2.mlt" 111 5693 5704
+)
+"test_sortedlist2.mlt" 112 5714 5729 "test_sortedlist2.mlt" 112 5714 5746
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 113 5750 5756 "test_sortedlist2.mlt" 113 5750 5762
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 114 5778 5780 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 113 5750 5766 "test_sortedlist2.mlt" 113 5750 5767
+type(
+  int
+)
+"test_sortedlist2.mlt" 113 5750 5768 "test_sortedlist2.mlt" 113 5750 5769
+type(
+  int
+)
+"test_sortedlist2.mlt" 113 5750 5770 "test_sortedlist2.mlt" 113 5750 5771
+type(
+  int
+)
+"test_sortedlist2.mlt" 113 5750 5772 "test_sortedlist2.mlt" 113 5750 5773
+type(
+  int
+)
+"test_sortedlist2.mlt" 113 5750 5765 "test_sortedlist2.mlt" 113 5750 5774
+type(
+  int list
+)
+"test_sortedlist2.mlt" 114 5778 5784 "test_sortedlist2.mlt" 114 5778 5787
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 115 5836 5836 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 114 5778 5790 "test_sortedlist2.mlt" 114 5778 5806
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 114 5778 5807 "test_sortedlist2.mlt" 114 5778 5812
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 110 5668 5674 "test_sortedlist2.mlt" 110 5668 5679
+)
+"test_sortedlist2.mlt" 114 5778 5813 "test_sortedlist2.mlt" 114 5778 5818
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 111 5693 5699 "test_sortedlist2.mlt" 111 5693 5704
+)
+"test_sortedlist2.mlt" 114 5778 5819 "test_sortedlist2.mlt" 114 5778 5825
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 113 5750 5756 "test_sortedlist2.mlt" 113 5750 5762
+)
+"test_sortedlist2.mlt" 114 5778 5826 "test_sortedlist2.mlt" 114 5778 5832
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 112 5714 5720 "test_sortedlist2.mlt" 112 5714 5726
+)
+"test_sortedlist2.mlt" 114 5778 5790 "test_sortedlist2.mlt" 114 5778 5832
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 115 5836 5839 "test_sortedlist2.mlt" 115 5836 5842
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 115 5836 5846 "test_sortedlist2.mlt" 115 5836 5852
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 112 5714 5720 "test_sortedlist2.mlt" 112 5714 5726
+)
+"test_sortedlist2.mlt" 115 5836 5853 "test_sortedlist2.mlt" 115 5836 5854
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 115 5836 5855 "test_sortedlist2.mlt" 115 5836 5861
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 113 5750 5756 "test_sortedlist2.mlt" 113 5750 5762
+)
+"test_sortedlist2.mlt" 115 5836 5843 "test_sortedlist2.mlt" 115 5836 5863
+type(
+  bool
+)
+"test_sortedlist2.mlt" 115 5836 5839 "test_sortedlist2.mlt" 115 5836 5863
+type(
+  bool
+)
+"test_sortedlist2.mlt" 115 5836 5869 "test_sortedlist2.mlt" 115 5836 5874
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 115 5836 5890 "test_sortedlist2.mlt" 115 5836 5915
+type(
+  string
+)
+"test_sortedlist2.mlt" 115 5836 5921 "test_sortedlist2.mlt" 115 5836 5924
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 114 5778 5784 "test_sortedlist2.mlt" 114 5778 5787
+)
+"test_sortedlist2.mlt" 115 5836 5931 "test_sortedlist2.mlt" 115 5836 6222
+type(
+  string
+)
+"test_sortedlist2.mlt" 115 5836 5885 "test_sortedlist2.mlt" 115 5836 6223
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 115 5836 5875 "test_sortedlist2.mlt" 115 5836 6224
+type(
+  exn
+)
+"test_sortedlist2.mlt" 115 5836 5869 "test_sortedlist2.mlt" 115 5836 6224
+type(
+  unit
+)
+"test_sortedlist2.mlt" 115 5836 6230 "test_sortedlist2.mlt" 115 5836 6232
+type(
+  unit
+)
+"test_sortedlist2.mlt" 115 5836 5836 "test_sortedlist2.mlt" 115 5836 6232
+type(
+  unit
+)
+"test_sortedlist2.mlt" 119 6323 6329 "test_sortedlist2.mlt" 119 6323 6334
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 120 6348 6350 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 119 6323 6338 "test_sortedlist2.mlt" 119 6323 6339
+type(
+  int
+)
+"test_sortedlist2.mlt" 119 6323 6340 "test_sortedlist2.mlt" 119 6323 6341
+type(
+  int
+)
+"test_sortedlist2.mlt" 119 6323 6342 "test_sortedlist2.mlt" 119 6323 6343
+type(
+  int
+)
+"test_sortedlist2.mlt" 119 6323 6337 "test_sortedlist2.mlt" 119 6323 6344
+type(
+  int list
+)
+"test_sortedlist2.mlt" 120 6348 6354 "test_sortedlist2.mlt" 120 6348 6359
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 121 6369 6371 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 120 6348 6363 "test_sortedlist2.mlt" 120 6348 6364
+type(
+  int
+)
+"test_sortedlist2.mlt" 120 6348 6362 "test_sortedlist2.mlt" 120 6348 6365
+type(
+  int list
+)
+"test_sortedlist2.mlt" 121 6369 6375 "test_sortedlist2.mlt" 121 6369 6381
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 122 6405 6407 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 121 6369 6384 "test_sortedlist2.mlt" 121 6369 6389
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 121 6369 6390 "test_sortedlist2.mlt" 121 6369 6395
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 119 6323 6329 "test_sortedlist2.mlt" 119 6323 6334
+)
+"test_sortedlist2.mlt" 121 6369 6396 "test_sortedlist2.mlt" 121 6369 6401
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 120 6348 6354 "test_sortedlist2.mlt" 120 6348 6359
+)
+"test_sortedlist2.mlt" 121 6369 6384 "test_sortedlist2.mlt" 121 6369 6401
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 122 6405 6411 "test_sortedlist2.mlt" 122 6405 6417
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 123 6433 6435 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 122 6405 6421 "test_sortedlist2.mlt" 122 6405 6422
+type(
+  int
+)
+"test_sortedlist2.mlt" 122 6405 6423 "test_sortedlist2.mlt" 122 6405 6424
+type(
+  int
+)
+"test_sortedlist2.mlt" 122 6405 6425 "test_sortedlist2.mlt" 122 6405 6426
+type(
+  int
+)
+"test_sortedlist2.mlt" 122 6405 6427 "test_sortedlist2.mlt" 122 6405 6428
+type(
+  int
+)
+"test_sortedlist2.mlt" 122 6405 6420 "test_sortedlist2.mlt" 122 6405 6429
+type(
+  int list
+)
+"test_sortedlist2.mlt" 123 6433 6439 "test_sortedlist2.mlt" 123 6433 6442
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 124 6491 6491 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 123 6433 6445 "test_sortedlist2.mlt" 123 6433 6461
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 123 6433 6462 "test_sortedlist2.mlt" 123 6433 6467
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 119 6323 6329 "test_sortedlist2.mlt" 119 6323 6334
+)
+"test_sortedlist2.mlt" 123 6433 6468 "test_sortedlist2.mlt" 123 6433 6473
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 120 6348 6354 "test_sortedlist2.mlt" 120 6348 6359
+)
+"test_sortedlist2.mlt" 123 6433 6474 "test_sortedlist2.mlt" 123 6433 6480
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 122 6405 6411 "test_sortedlist2.mlt" 122 6405 6417
+)
+"test_sortedlist2.mlt" 123 6433 6481 "test_sortedlist2.mlt" 123 6433 6487
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 121 6369 6375 "test_sortedlist2.mlt" 121 6369 6381
+)
+"test_sortedlist2.mlt" 123 6433 6445 "test_sortedlist2.mlt" 123 6433 6487
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 124 6491 6494 "test_sortedlist2.mlt" 124 6491 6497
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 124 6491 6501 "test_sortedlist2.mlt" 124 6491 6507
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 121 6369 6375 "test_sortedlist2.mlt" 121 6369 6381
+)
+"test_sortedlist2.mlt" 124 6491 6508 "test_sortedlist2.mlt" 124 6491 6509
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 124 6491 6510 "test_sortedlist2.mlt" 124 6491 6516
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 122 6405 6411 "test_sortedlist2.mlt" 122 6405 6417
+)
+"test_sortedlist2.mlt" 124 6491 6498 "test_sortedlist2.mlt" 124 6491 6518
+type(
+  bool
+)
+"test_sortedlist2.mlt" 124 6491 6494 "test_sortedlist2.mlt" 124 6491 6518
+type(
+  bool
+)
+"test_sortedlist2.mlt" 124 6491 6524 "test_sortedlist2.mlt" 124 6491 6529
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 124 6491 6545 "test_sortedlist2.mlt" 124 6491 6570
+type(
+  string
+)
+"test_sortedlist2.mlt" 124 6491 6576 "test_sortedlist2.mlt" 124 6491 6579
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 123 6433 6439 "test_sortedlist2.mlt" 123 6433 6442
+)
+"test_sortedlist2.mlt" 124 6491 6586 "test_sortedlist2.mlt" 124 6491 6877
+type(
+  string
+)
+"test_sortedlist2.mlt" 124 6491 6540 "test_sortedlist2.mlt" 124 6491 6878
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 124 6491 6530 "test_sortedlist2.mlt" 124 6491 6879
+type(
+  exn
+)
+"test_sortedlist2.mlt" 124 6491 6524 "test_sortedlist2.mlt" 124 6491 6879
+type(
+  unit
+)
+"test_sortedlist2.mlt" 124 6491 6885 "test_sortedlist2.mlt" 124 6491 6887
+type(
+  unit
+)
+"test_sortedlist2.mlt" 124 6491 6491 "test_sortedlist2.mlt" 124 6491 6887
+type(
+  unit
+)
+"test_sortedlist2.mlt" 128 6978 6984 "test_sortedlist2.mlt" 128 6978 6989
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 129 7003 7005 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 128 6978 6993 "test_sortedlist2.mlt" 128 6978 6994
+type(
+  int
+)
+"test_sortedlist2.mlt" 128 6978 6995 "test_sortedlist2.mlt" 128 6978 6996
+type(
+  int
+)
+"test_sortedlist2.mlt" 128 6978 6997 "test_sortedlist2.mlt" 128 6978 6998
+type(
+  int
+)
+"test_sortedlist2.mlt" 128 6978 6992 "test_sortedlist2.mlt" 128 6978 6999
+type(
+  int list
+)
+"test_sortedlist2.mlt" 129 7003 7009 "test_sortedlist2.mlt" 129 7003 7014
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 130 7024 7026 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 129 7003 7018 "test_sortedlist2.mlt" 129 7003 7019
+type(
+  int
+)
+"test_sortedlist2.mlt" 129 7003 7017 "test_sortedlist2.mlt" 129 7003 7020
+type(
+  int list
+)
+"test_sortedlist2.mlt" 130 7024 7030 "test_sortedlist2.mlt" 130 7024 7036
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 131 7060 7062 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 130 7024 7039 "test_sortedlist2.mlt" 130 7024 7044
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 130 7024 7045 "test_sortedlist2.mlt" 130 7024 7050
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 128 6978 6984 "test_sortedlist2.mlt" 128 6978 6989
+)
+"test_sortedlist2.mlt" 130 7024 7051 "test_sortedlist2.mlt" 130 7024 7056
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 129 7003 7009 "test_sortedlist2.mlt" 129 7003 7014
+)
+"test_sortedlist2.mlt" 130 7024 7039 "test_sortedlist2.mlt" 130 7024 7056
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 131 7060 7066 "test_sortedlist2.mlt" 131 7060 7072
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 132 7088 7090 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 131 7060 7076 "test_sortedlist2.mlt" 131 7060 7077
+type(
+  int
+)
+"test_sortedlist2.mlt" 131 7060 7078 "test_sortedlist2.mlt" 131 7060 7079
+type(
+  int
+)
+"test_sortedlist2.mlt" 131 7060 7080 "test_sortedlist2.mlt" 131 7060 7081
+type(
+  int
+)
+"test_sortedlist2.mlt" 131 7060 7082 "test_sortedlist2.mlt" 131 7060 7083
+type(
+  int
+)
+"test_sortedlist2.mlt" 131 7060 7075 "test_sortedlist2.mlt" 131 7060 7084
+type(
+  int list
+)
+"test_sortedlist2.mlt" 132 7088 7094 "test_sortedlist2.mlt" 132 7088 7097
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 133 7146 7146 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 132 7088 7100 "test_sortedlist2.mlt" 132 7088 7116
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 132 7088 7117 "test_sortedlist2.mlt" 132 7088 7122
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 128 6978 6984 "test_sortedlist2.mlt" 128 6978 6989
+)
+"test_sortedlist2.mlt" 132 7088 7123 "test_sortedlist2.mlt" 132 7088 7128
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 129 7003 7009 "test_sortedlist2.mlt" 129 7003 7014
+)
+"test_sortedlist2.mlt" 132 7088 7129 "test_sortedlist2.mlt" 132 7088 7135
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 131 7060 7066 "test_sortedlist2.mlt" 131 7060 7072
+)
+"test_sortedlist2.mlt" 132 7088 7136 "test_sortedlist2.mlt" 132 7088 7142
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 130 7024 7030 "test_sortedlist2.mlt" 130 7024 7036
+)
+"test_sortedlist2.mlt" 132 7088 7100 "test_sortedlist2.mlt" 132 7088 7142
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 133 7146 7149 "test_sortedlist2.mlt" 133 7146 7152
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 133 7146 7156 "test_sortedlist2.mlt" 133 7146 7162
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 130 7024 7030 "test_sortedlist2.mlt" 130 7024 7036
+)
+"test_sortedlist2.mlt" 133 7146 7163 "test_sortedlist2.mlt" 133 7146 7164
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 133 7146 7165 "test_sortedlist2.mlt" 133 7146 7171
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 131 7060 7066 "test_sortedlist2.mlt" 131 7060 7072
+)
+"test_sortedlist2.mlt" 133 7146 7153 "test_sortedlist2.mlt" 133 7146 7173
+type(
+  bool
+)
+"test_sortedlist2.mlt" 133 7146 7149 "test_sortedlist2.mlt" 133 7146 7173
+type(
+  bool
+)
+"test_sortedlist2.mlt" 133 7146 7179 "test_sortedlist2.mlt" 133 7146 7184
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 133 7146 7200 "test_sortedlist2.mlt" 133 7146 7225
+type(
+  string
+)
+"test_sortedlist2.mlt" 133 7146 7231 "test_sortedlist2.mlt" 133 7146 7234
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 132 7088 7094 "test_sortedlist2.mlt" 132 7088 7097
+)
+"test_sortedlist2.mlt" 133 7146 7241 "test_sortedlist2.mlt" 133 7146 7532
+type(
+  string
+)
+"test_sortedlist2.mlt" 133 7146 7195 "test_sortedlist2.mlt" 133 7146 7533
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 133 7146 7185 "test_sortedlist2.mlt" 133 7146 7534
+type(
+  exn
+)
+"test_sortedlist2.mlt" 133 7146 7179 "test_sortedlist2.mlt" 133 7146 7534
+type(
+  unit
+)
+"test_sortedlist2.mlt" 133 7146 7540 "test_sortedlist2.mlt" 133 7146 7542
+type(
+  unit
+)
+"test_sortedlist2.mlt" 133 7146 7146 "test_sortedlist2.mlt" 133 7146 7542
+type(
+  unit
+)
+"test_sortedlist2.mlt" 137 7633 7639 "test_sortedlist2.mlt" 137 7633 7644
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 138 7658 7660 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 137 7633 7648 "test_sortedlist2.mlt" 137 7633 7649
+type(
+  int
+)
+"test_sortedlist2.mlt" 137 7633 7650 "test_sortedlist2.mlt" 137 7633 7651
+type(
+  int
+)
+"test_sortedlist2.mlt" 137 7633 7652 "test_sortedlist2.mlt" 137 7633 7653
+type(
+  int
+)
+"test_sortedlist2.mlt" 137 7633 7647 "test_sortedlist2.mlt" 137 7633 7654
+type(
+  int list
+)
+"test_sortedlist2.mlt" 138 7658 7664 "test_sortedlist2.mlt" 138 7658 7669
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 139 7679 7681 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 138 7658 7673 "test_sortedlist2.mlt" 138 7658 7674
+type(
+  int
+)
+"test_sortedlist2.mlt" 138 7658 7672 "test_sortedlist2.mlt" 138 7658 7675
+type(
+  int list
+)
+"test_sortedlist2.mlt" 139 7679 7685 "test_sortedlist2.mlt" 139 7679 7691
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 140 7715 7717 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 139 7679 7694 "test_sortedlist2.mlt" 139 7679 7699
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 139 7679 7700 "test_sortedlist2.mlt" 139 7679 7705
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 137 7633 7639 "test_sortedlist2.mlt" 137 7633 7644
+)
+"test_sortedlist2.mlt" 139 7679 7706 "test_sortedlist2.mlt" 139 7679 7711
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 138 7658 7664 "test_sortedlist2.mlt" 138 7658 7669
+)
+"test_sortedlist2.mlt" 139 7679 7694 "test_sortedlist2.mlt" 139 7679 7711
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 140 7715 7721 "test_sortedlist2.mlt" 140 7715 7727
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 141 7743 7745 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 140 7715 7731 "test_sortedlist2.mlt" 140 7715 7732
+type(
+  int
+)
+"test_sortedlist2.mlt" 140 7715 7733 "test_sortedlist2.mlt" 140 7715 7734
+type(
+  int
+)
+"test_sortedlist2.mlt" 140 7715 7735 "test_sortedlist2.mlt" 140 7715 7736
+type(
+  int
+)
+"test_sortedlist2.mlt" 140 7715 7737 "test_sortedlist2.mlt" 140 7715 7738
+type(
+  int
+)
+"test_sortedlist2.mlt" 140 7715 7730 "test_sortedlist2.mlt" 140 7715 7739
+type(
+  int list
+)
+"test_sortedlist2.mlt" 141 7743 7749 "test_sortedlist2.mlt" 141 7743 7752
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 142 7801 7801 "test_sortedlist2.mlt" 142 7801 8198
+)
+"test_sortedlist2.mlt" 141 7743 7755 "test_sortedlist2.mlt" 141 7743 7771
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 141 7743 7772 "test_sortedlist2.mlt" 141 7743 7777
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 137 7633 7639 "test_sortedlist2.mlt" 137 7633 7644
+)
+"test_sortedlist2.mlt" 141 7743 7778 "test_sortedlist2.mlt" 141 7743 7783
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 138 7658 7664 "test_sortedlist2.mlt" 138 7658 7669
+)
+"test_sortedlist2.mlt" 141 7743 7784 "test_sortedlist2.mlt" 141 7743 7790
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 140 7715 7721 "test_sortedlist2.mlt" 140 7715 7727
+)
+"test_sortedlist2.mlt" 141 7743 7791 "test_sortedlist2.mlt" 141 7743 7797
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 139 7679 7685 "test_sortedlist2.mlt" 139 7679 7691
+)
+"test_sortedlist2.mlt" 141 7743 7755 "test_sortedlist2.mlt" 141 7743 7797
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 142 7801 7804 "test_sortedlist2.mlt" 142 7801 7807
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 142 7801 7811 "test_sortedlist2.mlt" 142 7801 7817
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 139 7679 7685 "test_sortedlist2.mlt" 139 7679 7691
+)
+"test_sortedlist2.mlt" 142 7801 7818 "test_sortedlist2.mlt" 142 7801 7819
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 142 7801 7820 "test_sortedlist2.mlt" 142 7801 7826
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 140 7715 7721 "test_sortedlist2.mlt" 140 7715 7727
+)
+"test_sortedlist2.mlt" 142 7801 7808 "test_sortedlist2.mlt" 142 7801 7828
+type(
+  bool
+)
+"test_sortedlist2.mlt" 142 7801 7804 "test_sortedlist2.mlt" 142 7801 7828
+type(
+  bool
+)
+"test_sortedlist2.mlt" 142 7801 7834 "test_sortedlist2.mlt" 142 7801 7839
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 142 7801 7855 "test_sortedlist2.mlt" 142 7801 7880
+type(
+  string
+)
+"test_sortedlist2.mlt" 142 7801 7886 "test_sortedlist2.mlt" 142 7801 7889
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 141 7743 7749 "test_sortedlist2.mlt" 141 7743 7752
+)
+"test_sortedlist2.mlt" 142 7801 7896 "test_sortedlist2.mlt" 142 7801 8187
+type(
+  string
+)
+"test_sortedlist2.mlt" 142 7801 7850 "test_sortedlist2.mlt" 142 7801 8188
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 142 7801 7840 "test_sortedlist2.mlt" 142 7801 8189
+type(
+  exn
+)
+"test_sortedlist2.mlt" 142 7801 7834 "test_sortedlist2.mlt" 142 7801 8189
+type(
+  unit
+)
+"test_sortedlist2.mlt" 142 7801 8195 "test_sortedlist2.mlt" 142 7801 8197
+type(
+  unit
+)
+"test_sortedlist2.mlt" 142 7801 7801 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 141 7743 7745 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 140 7715 7717 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 139 7679 7681 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 138 7658 7660 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 137 7633 7635 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 133 7146 7146 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 132 7088 7090 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 131 7060 7062 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 130 7024 7026 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 129 7003 7005 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 128 6978 6980 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 124 6491 6491 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 123 6433 6435 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 122 6405 6407 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 121 6369 6371 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 120 6348 6350 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 119 6323 6325 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 115 5836 5836 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 114 5778 5780 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 113 5750 5752 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 112 5714 5716 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 111 5693 5695 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 110 5668 5670 "test_sortedlist2.mlt" 142 7801 8198
+type(
+  unit
+)
+"test_sortedlist2.mlt" 107 5585 5585 "test_sortedlist2.mlt" 144 8216 8217
+type(
+  unit -> unit
+)
+"test_sortedlist2.mlt" 146 8220 8225 "test_sortedlist2.mlt" 146 8220 8227
+type(
+  unit
+)
+"test_sortedlist2.mlt" 149 8286 8292 "test_sortedlist2.mlt" 149 8286 8297
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 150 8311 8313 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 149 8286 8301 "test_sortedlist2.mlt" 149 8286 8302
+type(
+  int
+)
+"test_sortedlist2.mlt" 149 8286 8303 "test_sortedlist2.mlt" 149 8286 8304
+type(
+  int
+)
+"test_sortedlist2.mlt" 149 8286 8305 "test_sortedlist2.mlt" 149 8286 8306
+type(
+  int
+)
+"test_sortedlist2.mlt" 149 8286 8300 "test_sortedlist2.mlt" 149 8286 8307
+type(
+  int list
+)
+"test_sortedlist2.mlt" 150 8311 8317 "test_sortedlist2.mlt" 150 8311 8322
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 151 8336 8338 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 150 8311 8326 "test_sortedlist2.mlt" 150 8311 8327
+type(
+  int
+)
+"test_sortedlist2.mlt" 150 8311 8328 "test_sortedlist2.mlt" 150 8311 8329
+type(
+  int
+)
+"test_sortedlist2.mlt" 150 8311 8330 "test_sortedlist2.mlt" 150 8311 8331
+type(
+  int
+)
+"test_sortedlist2.mlt" 150 8311 8325 "test_sortedlist2.mlt" 150 8311 8332
+type(
+  int list
+)
+"test_sortedlist2.mlt" 151 8336 8342 "test_sortedlist2.mlt" 151 8336 8348
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 152 8372 8374 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 151 8336 8351 "test_sortedlist2.mlt" 151 8336 8356
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 151 8336 8357 "test_sortedlist2.mlt" 151 8336 8362
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 149 8286 8292 "test_sortedlist2.mlt" 149 8286 8297
+)
+"test_sortedlist2.mlt" 151 8336 8363 "test_sortedlist2.mlt" 151 8336 8368
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 150 8311 8317 "test_sortedlist2.mlt" 150 8311 8322
+)
+"test_sortedlist2.mlt" 151 8336 8351 "test_sortedlist2.mlt" 151 8336 8368
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 152 8372 8378 "test_sortedlist2.mlt" 152 8372 8384
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 153 8404 8406 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 152 8372 8388 "test_sortedlist2.mlt" 152 8372 8389
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8390 "test_sortedlist2.mlt" 152 8372 8391
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8392 "test_sortedlist2.mlt" 152 8372 8393
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8394 "test_sortedlist2.mlt" 152 8372 8395
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8396 "test_sortedlist2.mlt" 152 8372 8397
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8398 "test_sortedlist2.mlt" 152 8372 8399
+type(
+  int
+)
+"test_sortedlist2.mlt" 152 8372 8387 "test_sortedlist2.mlt" 152 8372 8400
+type(
+  int list
+)
+"test_sortedlist2.mlt" 153 8404 8410 "test_sortedlist2.mlt" 153 8404 8413
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 154 8462 8462 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 153 8404 8416 "test_sortedlist2.mlt" 153 8404 8432
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 153 8404 8433 "test_sortedlist2.mlt" 153 8404 8438
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 149 8286 8292 "test_sortedlist2.mlt" 149 8286 8297
+)
+"test_sortedlist2.mlt" 153 8404 8439 "test_sortedlist2.mlt" 153 8404 8444
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 150 8311 8317 "test_sortedlist2.mlt" 150 8311 8322
+)
+"test_sortedlist2.mlt" 153 8404 8445 "test_sortedlist2.mlt" 153 8404 8451
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 152 8372 8378 "test_sortedlist2.mlt" 152 8372 8384
+)
+"test_sortedlist2.mlt" 153 8404 8452 "test_sortedlist2.mlt" 153 8404 8458
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 151 8336 8342 "test_sortedlist2.mlt" 151 8336 8348
+)
+"test_sortedlist2.mlt" 153 8404 8416 "test_sortedlist2.mlt" 153 8404 8458
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 154 8462 8465 "test_sortedlist2.mlt" 154 8462 8468
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 154 8462 8472 "test_sortedlist2.mlt" 154 8462 8478
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 151 8336 8342 "test_sortedlist2.mlt" 151 8336 8348
+)
+"test_sortedlist2.mlt" 154 8462 8479 "test_sortedlist2.mlt" 154 8462 8480
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 154 8462 8481 "test_sortedlist2.mlt" 154 8462 8487
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 152 8372 8378 "test_sortedlist2.mlt" 152 8372 8384
+)
+"test_sortedlist2.mlt" 154 8462 8469 "test_sortedlist2.mlt" 154 8462 8489
+type(
+  bool
+)
+"test_sortedlist2.mlt" 154 8462 8465 "test_sortedlist2.mlt" 154 8462 8489
+type(
+  bool
+)
+"test_sortedlist2.mlt" 154 8462 8495 "test_sortedlist2.mlt" 154 8462 8500
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 154 8462 8516 "test_sortedlist2.mlt" 154 8462 8541
+type(
+  string
+)
+"test_sortedlist2.mlt" 154 8462 8547 "test_sortedlist2.mlt" 154 8462 8550
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 153 8404 8410 "test_sortedlist2.mlt" 153 8404 8413
+)
+"test_sortedlist2.mlt" 154 8462 8557 "test_sortedlist2.mlt" 154 8462 8839
+type(
+  string
+)
+"test_sortedlist2.mlt" 154 8462 8511 "test_sortedlist2.mlt" 154 8462 8840
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 154 8462 8501 "test_sortedlist2.mlt" 154 8462 8841
+type(
+  exn
+)
+"test_sortedlist2.mlt" 154 8462 8495 "test_sortedlist2.mlt" 154 8462 8841
+type(
+  unit
+)
+"test_sortedlist2.mlt" 154 8462 8847 "test_sortedlist2.mlt" 154 8462 8849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 154 8462 8462 "test_sortedlist2.mlt" 154 8462 8849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 158 8923 8929 "test_sortedlist2.mlt" 158 8923 8934
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 159 8948 8950 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 158 8923 8938 "test_sortedlist2.mlt" 158 8923 8939
+type(
+  int
+)
+"test_sortedlist2.mlt" 158 8923 8940 "test_sortedlist2.mlt" 158 8923 8941
+type(
+  int
+)
+"test_sortedlist2.mlt" 158 8923 8942 "test_sortedlist2.mlt" 158 8923 8943
+type(
+  int
+)
+"test_sortedlist2.mlt" 158 8923 8937 "test_sortedlist2.mlt" 158 8923 8944
+type(
+  int list
+)
+"test_sortedlist2.mlt" 159 8948 8954 "test_sortedlist2.mlt" 159 8948 8959
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 160 8980 8982 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 159 8948 8963 "test_sortedlist2.mlt" 159 8948 8964
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8965 "test_sortedlist2.mlt" 159 8948 8966
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8967 "test_sortedlist2.mlt" 159 8948 8968
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8969 "test_sortedlist2.mlt" 159 8948 8970
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8971 "test_sortedlist2.mlt" 159 8948 8972
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8973 "test_sortedlist2.mlt" 159 8948 8975
+type(
+  int
+)
+"test_sortedlist2.mlt" 159 8948 8962 "test_sortedlist2.mlt" 159 8948 8976
+type(
+  int list
+)
+"test_sortedlist2.mlt" 160 8980 8986 "test_sortedlist2.mlt" 160 8980 8992
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 161 9016 9018 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 160 8980 8995 "test_sortedlist2.mlt" 160 8980 9000
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 160 8980 9001 "test_sortedlist2.mlt" 160 8980 9006
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 158 8923 8929 "test_sortedlist2.mlt" 158 8923 8934
+)
+"test_sortedlist2.mlt" 160 8980 9007 "test_sortedlist2.mlt" 160 8980 9012
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 159 8948 8954 "test_sortedlist2.mlt" 159 8948 8959
+)
+"test_sortedlist2.mlt" 160 8980 8995 "test_sortedlist2.mlt" 160 8980 9012
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 161 9016 9022 "test_sortedlist2.mlt" 161 9016 9028
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 162 9055 9057 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 161 9016 9032 "test_sortedlist2.mlt" 161 9016 9033
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9034 "test_sortedlist2.mlt" 161 9016 9035
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9036 "test_sortedlist2.mlt" 161 9016 9037
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9038 "test_sortedlist2.mlt" 161 9016 9039
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9040 "test_sortedlist2.mlt" 161 9016 9041
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9042 "test_sortedlist2.mlt" 161 9016 9043
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9044 "test_sortedlist2.mlt" 161 9016 9045
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9046 "test_sortedlist2.mlt" 161 9016 9047
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9048 "test_sortedlist2.mlt" 161 9016 9050
+type(
+  int
+)
+"test_sortedlist2.mlt" 161 9016 9031 "test_sortedlist2.mlt" 161 9016 9051
+type(
+  int list
+)
+"test_sortedlist2.mlt" 162 9055 9061 "test_sortedlist2.mlt" 162 9055 9064
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 163 9113 9113 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 162 9055 9067 "test_sortedlist2.mlt" 162 9055 9083
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 162 9055 9084 "test_sortedlist2.mlt" 162 9055 9089
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 158 8923 8929 "test_sortedlist2.mlt" 158 8923 8934
+)
+"test_sortedlist2.mlt" 162 9055 9090 "test_sortedlist2.mlt" 162 9055 9095
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 159 8948 8954 "test_sortedlist2.mlt" 159 8948 8959
+)
+"test_sortedlist2.mlt" 162 9055 9096 "test_sortedlist2.mlt" 162 9055 9102
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 161 9016 9022 "test_sortedlist2.mlt" 161 9016 9028
+)
+"test_sortedlist2.mlt" 162 9055 9103 "test_sortedlist2.mlt" 162 9055 9109
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 160 8980 8986 "test_sortedlist2.mlt" 160 8980 8992
+)
+"test_sortedlist2.mlt" 162 9055 9067 "test_sortedlist2.mlt" 162 9055 9109
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 163 9113 9116 "test_sortedlist2.mlt" 163 9113 9119
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 163 9113 9123 "test_sortedlist2.mlt" 163 9113 9129
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 160 8980 8986 "test_sortedlist2.mlt" 160 8980 8992
+)
+"test_sortedlist2.mlt" 163 9113 9130 "test_sortedlist2.mlt" 163 9113 9131
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 163 9113 9132 "test_sortedlist2.mlt" 163 9113 9138
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 161 9016 9022 "test_sortedlist2.mlt" 161 9016 9028
+)
+"test_sortedlist2.mlt" 163 9113 9120 "test_sortedlist2.mlt" 163 9113 9140
+type(
+  bool
+)
+"test_sortedlist2.mlt" 163 9113 9116 "test_sortedlist2.mlt" 163 9113 9140
+type(
+  bool
+)
+"test_sortedlist2.mlt" 163 9113 9146 "test_sortedlist2.mlt" 163 9113 9151
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 163 9113 9167 "test_sortedlist2.mlt" 163 9113 9192
+type(
+  string
+)
+"test_sortedlist2.mlt" 163 9113 9198 "test_sortedlist2.mlt" 163 9113 9201
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 162 9055 9061 "test_sortedlist2.mlt" 162 9055 9064
+)
+"test_sortedlist2.mlt" 163 9113 9208 "test_sortedlist2.mlt" 163 9113 9504
+type(
+  string
+)
+"test_sortedlist2.mlt" 163 9113 9162 "test_sortedlist2.mlt" 163 9113 9505
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 163 9113 9152 "test_sortedlist2.mlt" 163 9113 9506
+type(
+  exn
+)
+"test_sortedlist2.mlt" 163 9113 9146 "test_sortedlist2.mlt" 163 9113 9506
+type(
+  unit
+)
+"test_sortedlist2.mlt" 163 9113 9512 "test_sortedlist2.mlt" 163 9113 9514
+type(
+  unit
+)
+"test_sortedlist2.mlt" 163 9113 9113 "test_sortedlist2.mlt" 163 9113 9514
+type(
+  unit
+)
+"test_sortedlist2.mlt" 167 9588 9594 "test_sortedlist2.mlt" 167 9588 9599
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 168 9618 9620 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 167 9588 9603 "test_sortedlist2.mlt" 167 9588 9604
+type(
+  int
+)
+"test_sortedlist2.mlt" 167 9588 9605 "test_sortedlist2.mlt" 167 9588 9606
+type(
+  int
+)
+"test_sortedlist2.mlt" 167 9588 9607 "test_sortedlist2.mlt" 167 9588 9608
+type(
+  int
+)
+"test_sortedlist2.mlt" 167 9588 9609 "test_sortedlist2.mlt" 167 9588 9610
+type(
+  int
+)
+"test_sortedlist2.mlt" 167 9588 9611 "test_sortedlist2.mlt" 167 9588 9613
+type(
+  int
+)
+"test_sortedlist2.mlt" 167 9588 9602 "test_sortedlist2.mlt" 167 9588 9614
+type(
+  int list
+)
+"test_sortedlist2.mlt" 168 9618 9624 "test_sortedlist2.mlt" 168 9618 9629
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 169 9643 9645 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 168 9618 9633 "test_sortedlist2.mlt" 168 9618 9634
+type(
+  int
+)
+"test_sortedlist2.mlt" 168 9618 9635 "test_sortedlist2.mlt" 168 9618 9636
+type(
+  int
+)
+"test_sortedlist2.mlt" 168 9618 9637 "test_sortedlist2.mlt" 168 9618 9638
+type(
+  int
+)
+"test_sortedlist2.mlt" 168 9618 9632 "test_sortedlist2.mlt" 168 9618 9639
+type(
+  int list
+)
+"test_sortedlist2.mlt" 169 9643 9649 "test_sortedlist2.mlt" 169 9643 9655
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 170 9679 9681 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 169 9643 9658 "test_sortedlist2.mlt" 169 9643 9663
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 169 9643 9664 "test_sortedlist2.mlt" 169 9643 9669
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 167 9588 9594 "test_sortedlist2.mlt" 167 9588 9599
+)
+"test_sortedlist2.mlt" 169 9643 9670 "test_sortedlist2.mlt" 169 9643 9675
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 168 9618 9624 "test_sortedlist2.mlt" 168 9618 9629
+)
+"test_sortedlist2.mlt" 169 9643 9658 "test_sortedlist2.mlt" 169 9643 9675
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 170 9679 9685 "test_sortedlist2.mlt" 170 9679 9691
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 171 9716 9718 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 170 9679 9695 "test_sortedlist2.mlt" 170 9679 9696
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9697 "test_sortedlist2.mlt" 170 9679 9698
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9699 "test_sortedlist2.mlt" 170 9679 9700
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9701 "test_sortedlist2.mlt" 170 9679 9702
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9703 "test_sortedlist2.mlt" 170 9679 9704
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9705 "test_sortedlist2.mlt" 170 9679 9706
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9707 "test_sortedlist2.mlt" 170 9679 9708
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9709 "test_sortedlist2.mlt" 170 9679 9711
+type(
+  int
+)
+"test_sortedlist2.mlt" 170 9679 9694 "test_sortedlist2.mlt" 170 9679 9712
+type(
+  int list
+)
+"test_sortedlist2.mlt" 171 9716 9722 "test_sortedlist2.mlt" 171 9716 9725
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 172 9774 9774 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 171 9716 9728 "test_sortedlist2.mlt" 171 9716 9744
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 171 9716 9745 "test_sortedlist2.mlt" 171 9716 9750
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 167 9588 9594 "test_sortedlist2.mlt" 167 9588 9599
+)
+"test_sortedlist2.mlt" 171 9716 9751 "test_sortedlist2.mlt" 171 9716 9756
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 168 9618 9624 "test_sortedlist2.mlt" 168 9618 9629
+)
+"test_sortedlist2.mlt" 171 9716 9757 "test_sortedlist2.mlt" 171 9716 9763
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 170 9679 9685 "test_sortedlist2.mlt" 170 9679 9691
+)
+"test_sortedlist2.mlt" 171 9716 9764 "test_sortedlist2.mlt" 171 9716 9770
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 169 9643 9649 "test_sortedlist2.mlt" 169 9643 9655
+)
+"test_sortedlist2.mlt" 171 9716 9728 "test_sortedlist2.mlt" 171 9716 9770
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 172 9774 9777 "test_sortedlist2.mlt" 172 9774 9780
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 172 9774 9784 "test_sortedlist2.mlt" 172 9774 9790
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 169 9643 9649 "test_sortedlist2.mlt" 169 9643 9655
+)
+"test_sortedlist2.mlt" 172 9774 9791 "test_sortedlist2.mlt" 172 9774 9792
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 172 9774 9793 "test_sortedlist2.mlt" 172 9774 9799
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 170 9679 9685 "test_sortedlist2.mlt" 170 9679 9691
+)
+"test_sortedlist2.mlt" 172 9774 9781 "test_sortedlist2.mlt" 172 9774 9801
+type(
+  bool
+)
+"test_sortedlist2.mlt" 172 9774 9777 "test_sortedlist2.mlt" 172 9774 9801
+type(
+  bool
+)
+"test_sortedlist2.mlt" 172 9774 9807 "test_sortedlist2.mlt" 172 9774 9812
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 172 9774 9828 "test_sortedlist2.mlt" 172 9774 9853
+type(
+  string
+)
+"test_sortedlist2.mlt" 172 9774 9859 "test_sortedlist2.mlt" 172 9774 9862
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 171 9716 9722 "test_sortedlist2.mlt" 171 9716 9725
+)
+"test_sortedlist2.mlt" 172 9774 9869 "test_sortedlist2.mlt" 172 9774 10161
+type(
+  string
+)
+"test_sortedlist2.mlt" 172 9774 9823 "test_sortedlist2.mlt" 172 9774 10162
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 172 9774 9813 "test_sortedlist2.mlt" 172 9774 10163
+type(
+  exn
+)
+"test_sortedlist2.mlt" 172 9774 9807 "test_sortedlist2.mlt" 172 9774 10163
+type(
+  unit
+)
+"test_sortedlist2.mlt" 172 9774 10169 "test_sortedlist2.mlt" 172 9774 10171
+type(
+  unit
+)
+"test_sortedlist2.mlt" 172 9774 9774 "test_sortedlist2.mlt" 172 9774 10171
+type(
+  unit
+)
+"test_sortedlist2.mlt" 176 10245 10251 "test_sortedlist2.mlt" 176 10245 10256
+type(
+  int list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 177 10275 10277 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 176 10245 10260 "test_sortedlist2.mlt" 176 10245 10261
+type(
+  int
+)
+"test_sortedlist2.mlt" 176 10245 10262 "test_sortedlist2.mlt" 176 10245 10263
+type(
+  int
+)
+"test_sortedlist2.mlt" 176 10245 10264 "test_sortedlist2.mlt" 176 10245 10265
+type(
+  int
+)
+"test_sortedlist2.mlt" 176 10245 10266 "test_sortedlist2.mlt" 176 10245 10267
+type(
+  int
+)
+"test_sortedlist2.mlt" 176 10245 10268 "test_sortedlist2.mlt" 176 10245 10270
+type(
+  int
+)
+"test_sortedlist2.mlt" 176 10245 10259 "test_sortedlist2.mlt" 176 10245 10271
+type(
+  int list
+)
+"test_sortedlist2.mlt" 177 10275 10281 "test_sortedlist2.mlt" 177 10275 10286
+type(
+  int list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 178 10305 10307 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 177 10275 10290 "test_sortedlist2.mlt" 177 10275 10291
+type(
+  int
+)
+"test_sortedlist2.mlt" 177 10275 10292 "test_sortedlist2.mlt" 177 10275 10293
+type(
+  int
+)
+"test_sortedlist2.mlt" 177 10275 10294 "test_sortedlist2.mlt" 177 10275 10295
+type(
+  int
+)
+"test_sortedlist2.mlt" 177 10275 10296 "test_sortedlist2.mlt" 177 10275 10297
+type(
+  int
+)
+"test_sortedlist2.mlt" 177 10275 10298 "test_sortedlist2.mlt" 177 10275 10300
+type(
+  int
+)
+"test_sortedlist2.mlt" 177 10275 10289 "test_sortedlist2.mlt" 177 10275 10301
+type(
+  int list
+)
+"test_sortedlist2.mlt" 178 10305 10311 "test_sortedlist2.mlt" 178 10305 10317
+type(
+  int list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 179 10341 10343 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 178 10305 10320 "test_sortedlist2.mlt" 178 10305 10325
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 178 10305 10326 "test_sortedlist2.mlt" 178 10305 10331
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 176 10245 10251 "test_sortedlist2.mlt" 176 10245 10256
+)
+"test_sortedlist2.mlt" 178 10305 10332 "test_sortedlist2.mlt" 178 10305 10337
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 177 10275 10281 "test_sortedlist2.mlt" 177 10275 10286
+)
+"test_sortedlist2.mlt" 178 10305 10320 "test_sortedlist2.mlt" 178 10305 10337
+call(
+  stack
+)
+type(
+  int list
+)
+"test_sortedlist2.mlt" 179 10341 10347 "test_sortedlist2.mlt" 179 10341 10353
+type(
+  int list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 180 10383 10385 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 179 10341 10357 "test_sortedlist2.mlt" 179 10341 10358
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10359 "test_sortedlist2.mlt" 179 10341 10360
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10361 "test_sortedlist2.mlt" 179 10341 10362
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10363 "test_sortedlist2.mlt" 179 10341 10364
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10365 "test_sortedlist2.mlt" 179 10341 10366
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10367 "test_sortedlist2.mlt" 179 10341 10368
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10369 "test_sortedlist2.mlt" 179 10341 10370
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10371 "test_sortedlist2.mlt" 179 10341 10372
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10373 "test_sortedlist2.mlt" 179 10341 10375
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10376 "test_sortedlist2.mlt" 179 10341 10378
+type(
+  int
+)
+"test_sortedlist2.mlt" 179 10341 10356 "test_sortedlist2.mlt" 179 10341 10379
+type(
+  int list
+)
+"test_sortedlist2.mlt" 180 10383 10389 "test_sortedlist2.mlt" 180 10383 10392
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 181 10441 10441 "test_sortedlist2.mlt" 181 10441 10849
+)
+"test_sortedlist2.mlt" 180 10383 10395 "test_sortedlist2.mlt" 180 10383 10411
+type(
+  int list -> int list -> int list -> int list -> string
+)
+ident(
+  int_ref make_intlist_msg "test_sortedlist2.mlt" 6 144 148 "test_sortedlist2.mlt" 6 144 164
+)
+"test_sortedlist2.mlt" 180 10383 10412 "test_sortedlist2.mlt" 180 10383 10417
+type(
+  int list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 176 10245 10251 "test_sortedlist2.mlt" 176 10245 10256
+)
+"test_sortedlist2.mlt" 180 10383 10418 "test_sortedlist2.mlt" 180 10383 10423
+type(
+  int list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 177 10275 10281 "test_sortedlist2.mlt" 177 10275 10286
+)
+"test_sortedlist2.mlt" 180 10383 10424 "test_sortedlist2.mlt" 180 10383 10430
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 179 10341 10347 "test_sortedlist2.mlt" 179 10341 10353
+)
+"test_sortedlist2.mlt" 180 10383 10431 "test_sortedlist2.mlt" 180 10383 10437
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 178 10305 10311 "test_sortedlist2.mlt" 178 10305 10317
+)
+"test_sortedlist2.mlt" 180 10383 10395 "test_sortedlist2.mlt" 180 10383 10437
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 181 10441 10444 "test_sortedlist2.mlt" 181 10441 10447
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 181 10441 10451 "test_sortedlist2.mlt" 181 10441 10457
+type(
+  int list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 178 10305 10311 "test_sortedlist2.mlt" 178 10305 10317
+)
+"test_sortedlist2.mlt" 181 10441 10458 "test_sortedlist2.mlt" 181 10441 10459
+type(
+  int list -> int list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 181 10441 10460 "test_sortedlist2.mlt" 181 10441 10466
+type(
+  int list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 179 10341 10347 "test_sortedlist2.mlt" 179 10341 10353
+)
+"test_sortedlist2.mlt" 181 10441 10448 "test_sortedlist2.mlt" 181 10441 10468
+type(
+  bool
+)
+"test_sortedlist2.mlt" 181 10441 10444 "test_sortedlist2.mlt" 181 10441 10468
+type(
+  bool
+)
+"test_sortedlist2.mlt" 181 10441 10474 "test_sortedlist2.mlt" 181 10441 10479
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 181 10441 10495 "test_sortedlist2.mlt" 181 10441 10520
+type(
+  string
+)
+"test_sortedlist2.mlt" 181 10441 10526 "test_sortedlist2.mlt" 181 10441 10529
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 180 10383 10389 "test_sortedlist2.mlt" 180 10383 10392
+)
+"test_sortedlist2.mlt" 181 10441 10536 "test_sortedlist2.mlt" 181 10441 10838
+type(
+  string
+)
+"test_sortedlist2.mlt" 181 10441 10490 "test_sortedlist2.mlt" 181 10441 10839
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 181 10441 10480 "test_sortedlist2.mlt" 181 10441 10840
+type(
+  exn
+)
+"test_sortedlist2.mlt" 181 10441 10474 "test_sortedlist2.mlt" 181 10441 10840
+type(
+  unit
+)
+"test_sortedlist2.mlt" 181 10441 10846 "test_sortedlist2.mlt" 181 10441 10848
+type(
+  unit
+)
+"test_sortedlist2.mlt" 181 10441 10441 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 180 10383 10385 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 179 10341 10343 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 178 10305 10307 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 177 10275 10277 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 176 10245 10247 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 172 9774 9774 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 171 9716 9718 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 170 9679 9681 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 169 9643 9645 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 168 9618 9620 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 167 9588 9590 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 163 9113 9113 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 162 9055 9057 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 161 9016 9018 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 160 8980 8982 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 159 8948 8950 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 158 8923 8925 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 154 8462 8462 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 153 8404 8406 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 152 8372 8374 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 151 8336 8338 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 150 8311 8313 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 149 8286 8288 "test_sortedlist2.mlt" 181 10441 10849
+type(
+  unit
+)
+"test_sortedlist2.mlt" 146 8220 8220 "test_sortedlist2.mlt" 183 10867 10868
+type(
+  unit -> unit
+)
+"test_sortedlist2.mlt" 185 10871 10876 "test_sortedlist2.mlt" 185 10871 10878
+type(
+  unit
+)
+"test_sortedlist2.mlt" 188 10937 10943 "test_sortedlist2.mlt" 188 10937 10948
+type(
+  string list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 189 10980 10982 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 188 10937 10952 "test_sortedlist2.mlt" 188 10937 10961
+type(
+  string
+)
+"test_sortedlist2.mlt" 188 10937 10962 "test_sortedlist2.mlt" 188 10937 10974
+type(
+  string
+)
+"test_sortedlist2.mlt" 188 10937 10951 "test_sortedlist2.mlt" 188 10937 10976
+type(
+  string list
+)
+"test_sortedlist2.mlt" 189 10980 10986 "test_sortedlist2.mlt" 189 10980 10991
+type(
+  string list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 190 11087 11089 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 189 10980 10995 "test_sortedlist2.mlt" 189 10980 11006
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11007 "test_sortedlist2.mlt" 189 10980 11014
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11015 "test_sortedlist2.mlt" 189 10980 11025
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11026 "test_sortedlist2.mlt" 189 10980 11032
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11033 "test_sortedlist2.mlt" 189 10980 11040
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11041 "test_sortedlist2.mlt" 189 10980 11052
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11053 "test_sortedlist2.mlt" 189 10980 11061
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11062 "test_sortedlist2.mlt" 189 10980 11068
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11069 "test_sortedlist2.mlt" 189 10980 11074
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 11075 "test_sortedlist2.mlt" 189 10980 11081
+type(
+  string
+)
+"test_sortedlist2.mlt" 189 10980 10994 "test_sortedlist2.mlt" 189 10980 11083
+type(
+  string list
+)
+"test_sortedlist2.mlt" 190 11087 11093 "test_sortedlist2.mlt" 190 11087 11099
+type(
+  string list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 191 11123 11125 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 190 11087 11102 "test_sortedlist2.mlt" 190 11087 11107
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 190 11087 11108 "test_sortedlist2.mlt" 190 11087 11113
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 188 10937 10943 "test_sortedlist2.mlt" 188 10937 10948
+)
+"test_sortedlist2.mlt" 190 11087 11114 "test_sortedlist2.mlt" 190 11087 11119
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 189 10980 10986 "test_sortedlist2.mlt" 189 10980 10991
+)
+"test_sortedlist2.mlt" 190 11087 11102 "test_sortedlist2.mlt" 190 11087 11119
+call(
+  stack
+)
+type(
+  string list
+)
+"test_sortedlist2.mlt" 191 11123 11129 "test_sortedlist2.mlt" 191 11123 11135
+type(
+  string list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 192 11264 11266 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 191 11123 11139 "test_sortedlist2.mlt" 191 11123 11150
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11152 "test_sortedlist2.mlt" 191 11123 11159
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11161 "test_sortedlist2.mlt" 191 11123 11170
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11172 "test_sortedlist2.mlt" 191 11123 11182
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11184 "test_sortedlist2.mlt" 191 11123 11190
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11192 "test_sortedlist2.mlt" 191 11123 11199
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11201 "test_sortedlist2.mlt" 191 11123 11212
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11214 "test_sortedlist2.mlt" 191 11123 11222
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11224 "test_sortedlist2.mlt" 191 11123 11230
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11232 "test_sortedlist2.mlt" 191 11123 11237
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11239 "test_sortedlist2.mlt" 191 11123 11251
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11253 "test_sortedlist2.mlt" 191 11123 11259
+type(
+  string
+)
+"test_sortedlist2.mlt" 191 11123 11138 "test_sortedlist2.mlt" 191 11123 11260
+type(
+  string list
+)
+"test_sortedlist2.mlt" 192 11264 11270 "test_sortedlist2.mlt" 192 11264 11273
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 193 11322 11322 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 192 11264 11276 "test_sortedlist2.mlt" 192 11264 11292
+type(
+  string list -> string list -> string list -> string list -> string
+)
+ident(
+  int_ref make_strlist_msg "test_sortedlist2.mlt" 16 428 432 "test_sortedlist2.mlt" 16 428 448
+)
+"test_sortedlist2.mlt" 192 11264 11293 "test_sortedlist2.mlt" 192 11264 11298
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 188 10937 10943 "test_sortedlist2.mlt" 188 10937 10948
+)
+"test_sortedlist2.mlt" 192 11264 11299 "test_sortedlist2.mlt" 192 11264 11304
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 189 10980 10986 "test_sortedlist2.mlt" 189 10980 10991
+)
+"test_sortedlist2.mlt" 192 11264 11305 "test_sortedlist2.mlt" 192 11264 11311
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 191 11123 11129 "test_sortedlist2.mlt" 191 11123 11135
+)
+"test_sortedlist2.mlt" 192 11264 11312 "test_sortedlist2.mlt" 192 11264 11318
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 190 11087 11093 "test_sortedlist2.mlt" 190 11087 11099
+)
+"test_sortedlist2.mlt" 192 11264 11276 "test_sortedlist2.mlt" 192 11264 11318
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 193 11322 11325 "test_sortedlist2.mlt" 193 11322 11328
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 193 11322 11332 "test_sortedlist2.mlt" 193 11322 11338
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 190 11087 11093 "test_sortedlist2.mlt" 190 11087 11099
+)
+"test_sortedlist2.mlt" 193 11322 11339 "test_sortedlist2.mlt" 193 11322 11340
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 193 11322 11341 "test_sortedlist2.mlt" 193 11322 11347
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 191 11123 11129 "test_sortedlist2.mlt" 191 11123 11135
+)
+"test_sortedlist2.mlt" 193 11322 11329 "test_sortedlist2.mlt" 193 11322 11349
+type(
+  bool
+)
+"test_sortedlist2.mlt" 193 11322 11325 "test_sortedlist2.mlt" 193 11322 11349
+type(
+  bool
+)
+"test_sortedlist2.mlt" 193 11322 11355 "test_sortedlist2.mlt" 193 11322 11360
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 193 11322 11376 "test_sortedlist2.mlt" 193 11322 11401
+type(
+  string
+)
+"test_sortedlist2.mlt" 193 11322 11407 "test_sortedlist2.mlt" 193 11322 11410
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 192 11264 11270 "test_sortedlist2.mlt" 192 11264 11273
+)
+"test_sortedlist2.mlt" 193 11322 11417 "test_sortedlist2.mlt" 193 11322 11956
+type(
+  string
+)
+"test_sortedlist2.mlt" 193 11322 11371 "test_sortedlist2.mlt" 193 11322 11957
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 193 11322 11361 "test_sortedlist2.mlt" 193 11322 11958
+type(
+  exn
+)
+"test_sortedlist2.mlt" 193 11322 11355 "test_sortedlist2.mlt" 193 11322 11958
+type(
+  unit
+)
+"test_sortedlist2.mlt" 193 11322 11964 "test_sortedlist2.mlt" 193 11322 11966
+type(
+  unit
+)
+"test_sortedlist2.mlt" 193 11322 11322 "test_sortedlist2.mlt" 193 11322 11966
+type(
+  unit
+)
+"test_sortedlist2.mlt" 197 12040 12046 "test_sortedlist2.mlt" 197 12040 12051
+type(
+  string list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 198 12149 12151 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 197 12040 12055 "test_sortedlist2.mlt" 197 12040 12062
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12063 "test_sortedlist2.mlt" 197 12040 12071
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12072 "test_sortedlist2.mlt" 197 12040 12078
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12079 "test_sortedlist2.mlt" 197 12040 12086
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12087 "test_sortedlist2.mlt" 197 12040 12096
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12097 "test_sortedlist2.mlt" 197 12040 12103
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12104 "test_sortedlist2.mlt" 197 12040 12111
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12112 "test_sortedlist2.mlt" 197 12040 12121
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12122 "test_sortedlist2.mlt" 197 12040 12134
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12135 "test_sortedlist2.mlt" 197 12040 12143
+type(
+  string
+)
+"test_sortedlist2.mlt" 197 12040 12054 "test_sortedlist2.mlt" 197 12040 12145
+type(
+  string list
+)
+"test_sortedlist2.mlt" 198 12149 12155 "test_sortedlist2.mlt" 198 12149 12160
+type(
+  string list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 199 12256 12258 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 198 12149 12164 "test_sortedlist2.mlt" 198 12149 12175
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12176 "test_sortedlist2.mlt" 198 12149 12183
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12184 "test_sortedlist2.mlt" 198 12149 12194
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12195 "test_sortedlist2.mlt" 198 12149 12201
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12202 "test_sortedlist2.mlt" 198 12149 12209
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12210 "test_sortedlist2.mlt" 198 12149 12221
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12222 "test_sortedlist2.mlt" 198 12149 12230
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12231 "test_sortedlist2.mlt" 198 12149 12237
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12238 "test_sortedlist2.mlt" 198 12149 12243
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12244 "test_sortedlist2.mlt" 198 12149 12250
+type(
+  string
+)
+"test_sortedlist2.mlt" 198 12149 12163 "test_sortedlist2.mlt" 198 12149 12252
+type(
+  string list
+)
+"test_sortedlist2.mlt" 199 12256 12262 "test_sortedlist2.mlt" 199 12256 12268
+type(
+  string list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 200 12292 12294 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 199 12256 12271 "test_sortedlist2.mlt" 199 12256 12276
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 199 12256 12277 "test_sortedlist2.mlt" 199 12256 12282
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 197 12040 12046 "test_sortedlist2.mlt" 197 12040 12051
+)
+"test_sortedlist2.mlt" 199 12256 12283 "test_sortedlist2.mlt" 199 12256 12288
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 198 12149 12155 "test_sortedlist2.mlt" 198 12149 12160
+)
+"test_sortedlist2.mlt" 199 12256 12271 "test_sortedlist2.mlt" 199 12256 12288
+call(
+  stack
+)
+type(
+  string list
+)
+"test_sortedlist2.mlt" 200 12292 12298 "test_sortedlist2.mlt" 200 12292 12304
+type(
+  string list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 201 12507 12509 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 200 12292 12308 "test_sortedlist2.mlt" 200 12292 12315
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12317 "test_sortedlist2.mlt" 200 12292 12328
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12330 "test_sortedlist2.mlt" 200 12292 12338
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12340 "test_sortedlist2.mlt" 200 12292 12346
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12348 "test_sortedlist2.mlt" 200 12292 12355
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12357 "test_sortedlist2.mlt" 200 12292 12364
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12366 "test_sortedlist2.mlt" 200 12292 12375
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12377 "test_sortedlist2.mlt" 200 12292 12387
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12389 "test_sortedlist2.mlt" 200 12292 12395
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12397 "test_sortedlist2.mlt" 200 12292 12403
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12405 "test_sortedlist2.mlt" 200 12292 12412
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12414 "test_sortedlist2.mlt" 200 12292 12421
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12423 "test_sortedlist2.mlt" 200 12292 12434
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12436 "test_sortedlist2.mlt" 200 12292 12444
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12446 "test_sortedlist2.mlt" 200 12292 12452
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12454 "test_sortedlist2.mlt" 200 12292 12459
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12461 "test_sortedlist2.mlt" 200 12292 12470
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12472 "test_sortedlist2.mlt" 200 12292 12484
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12486 "test_sortedlist2.mlt" 200 12292 12494
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12496 "test_sortedlist2.mlt" 200 12292 12502
+type(
+  string
+)
+"test_sortedlist2.mlt" 200 12292 12307 "test_sortedlist2.mlt" 200 12292 12503
+type(
+  string list
+)
+"test_sortedlist2.mlt" 201 12507 12513 "test_sortedlist2.mlt" 201 12507 12516
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 202 12565 12565 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 201 12507 12519 "test_sortedlist2.mlt" 201 12507 12535
+type(
+  string list -> string list -> string list -> string list -> string
+)
+ident(
+  int_ref make_strlist_msg "test_sortedlist2.mlt" 16 428 432 "test_sortedlist2.mlt" 16 428 448
+)
+"test_sortedlist2.mlt" 201 12507 12536 "test_sortedlist2.mlt" 201 12507 12541
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 197 12040 12046 "test_sortedlist2.mlt" 197 12040 12051
+)
+"test_sortedlist2.mlt" 201 12507 12542 "test_sortedlist2.mlt" 201 12507 12547
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 198 12149 12155 "test_sortedlist2.mlt" 198 12149 12160
+)
+"test_sortedlist2.mlt" 201 12507 12548 "test_sortedlist2.mlt" 201 12507 12554
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 200 12292 12298 "test_sortedlist2.mlt" 200 12292 12304
+)
+"test_sortedlist2.mlt" 201 12507 12555 "test_sortedlist2.mlt" 201 12507 12561
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 199 12256 12262 "test_sortedlist2.mlt" 199 12256 12268
+)
+"test_sortedlist2.mlt" 201 12507 12519 "test_sortedlist2.mlt" 201 12507 12561
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 202 12565 12568 "test_sortedlist2.mlt" 202 12565 12571
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 202 12565 12575 "test_sortedlist2.mlt" 202 12565 12581
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 199 12256 12262 "test_sortedlist2.mlt" 199 12256 12268
+)
+"test_sortedlist2.mlt" 202 12565 12582 "test_sortedlist2.mlt" 202 12565 12583
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 202 12565 12584 "test_sortedlist2.mlt" 202 12565 12590
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 200 12292 12298 "test_sortedlist2.mlt" 200 12292 12304
+)
+"test_sortedlist2.mlt" 202 12565 12572 "test_sortedlist2.mlt" 202 12565 12592
+type(
+  bool
+)
+"test_sortedlist2.mlt" 202 12565 12568 "test_sortedlist2.mlt" 202 12565 12592
+type(
+  bool
+)
+"test_sortedlist2.mlt" 202 12565 12598 "test_sortedlist2.mlt" 202 12565 12603
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 202 12565 12619 "test_sortedlist2.mlt" 202 12565 12644
+type(
+  string
+)
+"test_sortedlist2.mlt" 202 12565 12650 "test_sortedlist2.mlt" 202 12565 12653
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 201 12507 12513 "test_sortedlist2.mlt" 201 12507 12516
+)
+"test_sortedlist2.mlt" 202 12565 12660 "test_sortedlist2.mlt" 202 12565 13371
+type(
+  string
+)
+"test_sortedlist2.mlt" 202 12565 12614 "test_sortedlist2.mlt" 202 12565 13372
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 202 12565 12604 "test_sortedlist2.mlt" 202 12565 13373
+type(
+  exn
+)
+"test_sortedlist2.mlt" 202 12565 12598 "test_sortedlist2.mlt" 202 12565 13373
+type(
+  unit
+)
+"test_sortedlist2.mlt" 202 12565 13379 "test_sortedlist2.mlt" 202 12565 13381
+type(
+  unit
+)
+"test_sortedlist2.mlt" 202 12565 12565 "test_sortedlist2.mlt" 202 12565 13381
+type(
+  unit
+)
+"test_sortedlist2.mlt" 206 13455 13461 "test_sortedlist2.mlt" 206 13455 13466
+type(
+  string list
+)
+ident(
+  def listA "test_sortedlist2.mlt" 207 13694 13696 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 206 13455 13470 "test_sortedlist2.mlt" 206 13455 13479
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13480 "test_sortedlist2.mlt" 206 13455 13487
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13488 "test_sortedlist2.mlt" 206 13455 13499
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13500 "test_sortedlist2.mlt" 206 13455 13508
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13509 "test_sortedlist2.mlt" 206 13455 13515
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13516 "test_sortedlist2.mlt" 206 13455 13522
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13523 "test_sortedlist2.mlt" 206 13455 13532
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13533 "test_sortedlist2.mlt" 206 13455 13541
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13542 "test_sortedlist2.mlt" 206 13455 13550
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13551 "test_sortedlist2.mlt" 206 13455 13561
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13562 "test_sortedlist2.mlt" 206 13455 13570
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13571 "test_sortedlist2.mlt" 206 13455 13577
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13578 "test_sortedlist2.mlt" 206 13455 13583
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13584 "test_sortedlist2.mlt" 206 13455 13590
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13591 "test_sortedlist2.mlt" 206 13455 13599
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13600 "test_sortedlist2.mlt" 206 13455 13606
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13607 "test_sortedlist2.mlt" 206 13455 13615
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13616 "test_sortedlist2.mlt" 206 13455 13625
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13626 "test_sortedlist2.mlt" 206 13455 13632
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13633 "test_sortedlist2.mlt" 206 13455 13642
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13643 "test_sortedlist2.mlt" 206 13455 13654
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13655 "test_sortedlist2.mlt" 206 13455 13661
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13662 "test_sortedlist2.mlt" 206 13455 13668
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13669 "test_sortedlist2.mlt" 206 13455 13679
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13680 "test_sortedlist2.mlt" 206 13455 13688
+type(
+  string
+)
+"test_sortedlist2.mlt" 206 13455 13469 "test_sortedlist2.mlt" 206 13455 13690
+type(
+  string list
+)
+"test_sortedlist2.mlt" 207 13694 13700 "test_sortedlist2.mlt" 207 13694 13705
+type(
+  string list
+)
+ident(
+  def listB "test_sortedlist2.mlt" 208 13805 13807 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 207 13694 13709 "test_sortedlist2.mlt" 207 13694 13716
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13717 "test_sortedlist2.mlt" 207 13694 13728
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13729 "test_sortedlist2.mlt" 207 13694 13734
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13735 "test_sortedlist2.mlt" 207 13694 13744
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13745 "test_sortedlist2.mlt" 207 13694 13753
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13754 "test_sortedlist2.mlt" 207 13694 13758
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13759 "test_sortedlist2.mlt" 207 13694 13771
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13772 "test_sortedlist2.mlt" 207 13694 13786
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13787 "test_sortedlist2.mlt" 207 13694 13792
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13793 "test_sortedlist2.mlt" 207 13694 13799
+type(
+  string
+)
+"test_sortedlist2.mlt" 207 13694 13708 "test_sortedlist2.mlt" 207 13694 13801
+type(
+  string list
+)
+"test_sortedlist2.mlt" 208 13805 13811 "test_sortedlist2.mlt" 208 13805 13817
+type(
+  string list
+)
+ident(
+  def actual "test_sortedlist2.mlt" 209 13841 13843 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 208 13805 13820 "test_sortedlist2.mlt" 208 13805 13825
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"test_sortedlist2.mlt" 208 13805 13826 "test_sortedlist2.mlt" 208 13805 13831
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 206 13455 13461 "test_sortedlist2.mlt" 206 13455 13466
+)
+"test_sortedlist2.mlt" 208 13805 13832 "test_sortedlist2.mlt" 208 13805 13837
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 207 13694 13700 "test_sortedlist2.mlt" 207 13694 13705
+)
+"test_sortedlist2.mlt" 208 13805 13820 "test_sortedlist2.mlt" 208 13805 13837
+call(
+  stack
+)
+type(
+  string list
+)
+"test_sortedlist2.mlt" 209 13841 13847 "test_sortedlist2.mlt" 209 13841 13853
+type(
+  string list
+)
+ident(
+  def expect "test_sortedlist2.mlt" 210 14205 14207 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 209 13841 13857 "test_sortedlist2.mlt" 209 13841 13866
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13868 "test_sortedlist2.mlt" 209 13841 13875
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13877 "test_sortedlist2.mlt" 209 13841 13888
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13890 "test_sortedlist2.mlt" 209 13841 13897
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13899 "test_sortedlist2.mlt" 209 13841 13910
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13912 "test_sortedlist2.mlt" 209 13841 13920
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13922 "test_sortedlist2.mlt" 209 13841 13928
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13930 "test_sortedlist2.mlt" 209 13841 13936
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13938 "test_sortedlist2.mlt" 209 13841 13947
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13949 "test_sortedlist2.mlt" 209 13841 13957
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13959 "test_sortedlist2.mlt" 209 13841 13964
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13966 "test_sortedlist2.mlt" 209 13841 13974
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13976 "test_sortedlist2.mlt" 209 13841 13986
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13988 "test_sortedlist2.mlt" 209 13841 13996
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13998 "test_sortedlist2.mlt" 209 13841 14004
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14006 "test_sortedlist2.mlt" 209 13841 14011
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14013 "test_sortedlist2.mlt" 209 13841 14022
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14024 "test_sortedlist2.mlt" 209 13841 14030
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14032 "test_sortedlist2.mlt" 209 13841 14040
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14042 "test_sortedlist2.mlt" 209 13841 14046
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14048 "test_sortedlist2.mlt" 209 13841 14060
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14062 "test_sortedlist2.mlt" 209 13841 14070
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14072 "test_sortedlist2.mlt" 209 13841 14086
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14088 "test_sortedlist2.mlt" 209 13841 14094
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14096 "test_sortedlist2.mlt" 209 13841 14104
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14106 "test_sortedlist2.mlt" 209 13841 14115
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14117 "test_sortedlist2.mlt" 209 13841 14123
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14125 "test_sortedlist2.mlt" 209 13841 14134
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14136 "test_sortedlist2.mlt" 209 13841 14147
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14149 "test_sortedlist2.mlt" 209 13841 14155
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14157 "test_sortedlist2.mlt" 209 13841 14163
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14165 "test_sortedlist2.mlt" 209 13841 14175
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14177 "test_sortedlist2.mlt" 209 13841 14182
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14184 "test_sortedlist2.mlt" 209 13841 14190
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 14192 "test_sortedlist2.mlt" 209 13841 14200
+type(
+  string
+)
+"test_sortedlist2.mlt" 209 13841 13856 "test_sortedlist2.mlt" 209 13841 14201
+type(
+  string list
+)
+"test_sortedlist2.mlt" 210 14205 14211 "test_sortedlist2.mlt" 210 14205 14214
+type(
+  string
+)
+ident(
+  def msg "test_sortedlist2.mlt" 211 14263 14263 "test_sortedlist2.mlt" 211 14263 15423
+)
+"test_sortedlist2.mlt" 210 14205 14217 "test_sortedlist2.mlt" 210 14205 14233
+type(
+  string list -> string list -> string list -> string list -> string
+)
+ident(
+  int_ref make_strlist_msg "test_sortedlist2.mlt" 16 428 432 "test_sortedlist2.mlt" 16 428 448
+)
+"test_sortedlist2.mlt" 210 14205 14234 "test_sortedlist2.mlt" 210 14205 14239
+type(
+  string list
+)
+ident(
+  int_ref listA "test_sortedlist2.mlt" 206 13455 13461 "test_sortedlist2.mlt" 206 13455 13466
+)
+"test_sortedlist2.mlt" 210 14205 14240 "test_sortedlist2.mlt" 210 14205 14245
+type(
+  string list
+)
+ident(
+  int_ref listB "test_sortedlist2.mlt" 207 13694 13700 "test_sortedlist2.mlt" 207 13694 13705
+)
+"test_sortedlist2.mlt" 210 14205 14246 "test_sortedlist2.mlt" 210 14205 14252
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 209 13841 13847 "test_sortedlist2.mlt" 209 13841 13853
+)
+"test_sortedlist2.mlt" 210 14205 14253 "test_sortedlist2.mlt" 210 14205 14259
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 208 13805 13811 "test_sortedlist2.mlt" 208 13805 13817
+)
+"test_sortedlist2.mlt" 210 14205 14217 "test_sortedlist2.mlt" 210 14205 14259
+call(
+  stack
+)
+type(
+  string
+)
+"test_sortedlist2.mlt" 211 14263 14266 "test_sortedlist2.mlt" 211 14263 14269
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_sortedlist2.mlt" 211 14263 14273 "test_sortedlist2.mlt" 211 14263 14279
+type(
+  string list
+)
+ident(
+  int_ref actual "test_sortedlist2.mlt" 208 13805 13811 "test_sortedlist2.mlt" 208 13805 13817
+)
+"test_sortedlist2.mlt" 211 14263 14280 "test_sortedlist2.mlt" 211 14263 14281
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_sortedlist2.mlt" 211 14263 14282 "test_sortedlist2.mlt" 211 14263 14288
+type(
+  string list
+)
+ident(
+  int_ref expect "test_sortedlist2.mlt" 209 13841 13847 "test_sortedlist2.mlt" 209 13841 13853
+)
+"test_sortedlist2.mlt" 211 14263 14270 "test_sortedlist2.mlt" 211 14263 14290
+type(
+  bool
+)
+"test_sortedlist2.mlt" 211 14263 14266 "test_sortedlist2.mlt" 211 14263 14290
+type(
+  bool
+)
+"test_sortedlist2.mlt" 211 14263 14296 "test_sortedlist2.mlt" 211 14263 14301
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_sortedlist2.mlt" 211 14263 14317 "test_sortedlist2.mlt" 211 14263 14342
+type(
+  string
+)
+"test_sortedlist2.mlt" 211 14263 14348 "test_sortedlist2.mlt" 211 14263 14351
+type(
+  string
+)
+ident(
+  int_ref msg "test_sortedlist2.mlt" 210 14205 14211 "test_sortedlist2.mlt" 210 14205 14214
+)
+"test_sortedlist2.mlt" 211 14263 14358 "test_sortedlist2.mlt" 211 14263 15412
+type(
+  string
+)
+"test_sortedlist2.mlt" 211 14263 14312 "test_sortedlist2.mlt" 211 14263 15413
+type(
+  Mltest.TestFail
+)
+"test_sortedlist2.mlt" 211 14263 14302 "test_sortedlist2.mlt" 211 14263 15414
+type(
+  exn
+)
+"test_sortedlist2.mlt" 211 14263 14296 "test_sortedlist2.mlt" 211 14263 15414
+type(
+  unit
+)
+"test_sortedlist2.mlt" 211 14263 15420 "test_sortedlist2.mlt" 211 14263 15422
+type(
+  unit
+)
+"test_sortedlist2.mlt" 211 14263 14263 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 210 14205 14207 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 209 13841 13843 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 208 13805 13807 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 207 13694 13696 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 206 13455 13457 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 202 12565 12565 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 201 12507 12509 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 200 12292 12294 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 199 12256 12258 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 198 12149 12151 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 197 12040 12042 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 193 11322 11322 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 192 11264 11266 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 191 11123 11125 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 190 11087 11089 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 189 10980 10982 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 188 10937 10939 "test_sortedlist2.mlt" 211 14263 15423
+type(
+  unit
+)
+"test_sortedlist2.mlt" 185 10871 10871 "test_sortedlist2.mlt" 213 15441 15442
+type(
+  unit -> unit
+)
+"test_sortedlist2.mlt" 25 664 676 "test_sortedlist2.mlt" 215 15445 15447
+type(
+  (unit -> unit) array
+)
+"test_sortedlist2.mlt" 25 664 664 "test_sortedlist2.mlt" 215 15445 15447
+call(
+  stack
+)
+type(
+  unit
+)

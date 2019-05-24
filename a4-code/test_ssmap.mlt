@@ -1,0 +1,1592 @@
+open Printf;;
+open Mltest;;
+
+
+(* files for diffing *)
+let actual_file = "test-data/actual.tmp";;
+let expect_file = "test-data/expect.tmp";;
+let diff_file   = "test-data/diff.tmp"  ;;
+let msgref = ref "";;
+
+let string_of_stropt o =
+  match o with
+  | None -> "None"
+  | Some s -> sprintf "Some \"%s\"" s
+;;
+
+let make_getopt_msg key map expect actual =
+  let lines = [
+      sprintf "Key:    %s" key;
+      sprintf "EXPECT: %s" (string_of_stropt expect);
+      sprintf "ACTUAL: %s" (string_of_stropt actual);
+      sprintf "Tree String for Map:\n%s" (Ssmap.tree_string map);
+    ]
+  in
+  String.concat "\n" lines
+;;
+
+let make_contains_key_msg key map expect actual =
+  let lines = [
+      sprintf "Key:    %s" key;
+      sprintf "EXPECT: %s" (string_of_bool expect);
+      sprintf "ACTUAL: %s" (string_of_bool actual);
+      sprintf "Tree String for Map:\n%s" (Ssmap.tree_string map);
+    ]
+  in
+  String.concat "\n" lines
+;;
+
+let make_iterfold_msg map funcstr expect actual =
+  let lines = [
+      sprintf "%s" funcstr;
+      sprintf "EXPECT: %s" expect;
+      sprintf "ACTUAL: %s" actual;
+      sprintf "Tree String for Map:\n%s" (Ssmap.tree_string map);
+    ]
+  in
+  String.concat "\n" lines
+;;
+
+
+let make_remove_msg key original =
+  let lines = [
+      sprintf "REMOVAL PRODUCES WRONG TREE";
+      sprintf "- Remove Key: %s" key;
+      sprintf "- Original Tree:";
+      sprintf "%s\n" (Ssmap.tree_string original);
+    ] in
+  String.concat "\n" lines
+;;
+
+let singleton = Ssmap.add Ssmap.empty "Mario" "plumber";;
+
+let smallmap =
+  let map = Ssmap.empty in
+  let map = Ssmap.add map "Mario"    "plumber"  in
+  let map = Ssmap.add map "Toad"     "retainer" in
+  let map = Ssmap.add map "Luigi"    "plumber"  in
+  let map = Ssmap.add map "Princess" "royalty"  in
+  map
+;;
+
+(* map for a larger tests *)
+let bigmap =
+  let entries = [
+      "Mouser"    , "1";
+      "Cobrat"    , "2";
+      "Tweeter"   , "3";
+      "Pokey"     , "4";
+      "Phanto"    , "5";
+      "Beezo"     , "6";
+      "Toad"      , "7";
+      "Pidgit"    , "8";
+      "Ostro"     , "9";
+      "Autobomb"  ,"10";
+      "Wart"      ,"11";
+      "Hoopster"  ,"12";
+      "Spark"     ,"13";
+      "Mario"     ,"14";
+      "Albatoss"  ,"15";
+      "Tryclyde"  ,"16";
+      "Flurry"    ,"17";
+      "Bob-omb"   ,"18";
+      "Hawkmouth" ,"19";
+      "Trouter"   ,"20";
+      "Snifit"    ,"21";
+      "Ninji"     ,"22";
+      "ShyGuy"    ,"23";
+      "Porcupo"   ,"24";
+      "Luigi"     ,"25";
+      "Princess"  ,"26";
+      "Panser"    ,"27";
+      "Clawgrip"  ,"28";
+      "Whale"     ,"29";
+    ] in
+  let addkv map (k,v) = Ssmap.add map k v in
+  List.fold_left addkv Ssmap.empty entries
+;;
+
+(* map for a larger tests *)
+let bigmap2 =
+  let entries = [
+      "Beezo"     , "1" ;
+      "Bob-omb"   , "2" ;
+      "Spark"     , "3" ;
+      "Mouser"    , "4" ;
+      "Cobrat"    , "5" ;
+      "Tweeter"   , "6" ;
+      "Pokey"     , "7" ;
+      "Phanto"    , "8" ;
+      "Albatoss"  , "9" ;
+      "Toad"      ,"10" ;
+      "Pidgit"    ,"11" ;
+      "Ostro"     ,"12" ;
+      "Autobomb"  ,"13" ;
+      "Wart"      ,"14" ;
+      "Hoopster"  ,"15" ;
+      "Mario"     ,"16" ;
+      "Tryclyde"  ,"17" ;
+      "Flurry"    ,"18" ;
+      "Hawkmouth" ,"19" ;
+      "Trouter"   ,"20" ;
+      "Snifit"    ,"21" ;
+      "Ninji"     ,"22" ;
+      "ShyGuy"    ,"23" ;
+      "Porcupo"   ,"24" ;
+      "Luigi"     ,"25" ;
+      "Princess"  ,"26" ;
+      "Panser"    ,"27" ;
+      "Clawgrip"  ,"28" ;
+      "Whale"     ,"29" ;
+    ] in
+  let addkv map (k,v) = Ssmap.add map k v in
+  List.fold_left addkv Ssmap.empty entries
+;;
+
+
+Mltest.main [|
+(******************************************)
+(* ssmap.ml tests *)
+
+(fun () ->
+  (* getopt calls in an empty tree *)
+  let map = Ssmap.empty in
+  
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:160"; msg=msg; code="156:  let key = \"Mario\" in\n157:  let actual = Ssmap.getopt map key in\n158:  let expect = None in\n159:  let msg = make_getopt_msg key map expect actual in\n160:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:168"; msg=msg; code="164:  let key = \"Luigi\" in\n165:  let actual = Ssmap.getopt map key in\n166:  let expect = None in\n167:  let msg = make_getopt_msg key map expect actual in\n168:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* getopt calls in a singleton tree *)
+  let map = Ssmap.empty in
+  let map = Ssmap.add map "Mario"    "plumber"  in
+  
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "plumber" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:182"; msg=msg; code="178:  let key = \"Mario\" in\n179:  let actual = Ssmap.getopt map key in\n180:  let expect = Some \"plumber\" in\n181:  let msg = make_getopt_msg key map expect actual in\n182:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:190"; msg=msg; code="186:  let key = \"Luigi\" in\n187:  let actual = Ssmap.getopt map key in\n188:  let expect = None in\n189:  let msg = make_getopt_msg key map expect actual in\n190:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:198"; msg=msg; code="194:  let key = \"Princess\" in\n195:  let actual = Ssmap.getopt map key in\n196:  let expect = None in\n197:  let msg = make_getopt_msg key map expect actual in\n198:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* successful getopt calls in a small tree *)
+  
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = Some "plumber" in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:210"; msg=msg; code="206:  let key = \"Mario\" in\n207:  let actual = Ssmap.getopt smallmap key in\n208:  let expect = Some \"plumber\" in\n209:  let msg = make_getopt_msg key smallmap expect actual in\n210:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = Some "plumber" in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:218"; msg=msg; code="214:  let key = \"Luigi\" in\n215:  let actual = Ssmap.getopt smallmap key in\n216:  let expect = Some \"plumber\" in\n217:  let msg = make_getopt_msg key smallmap expect actual in\n218:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = Some "royalty" in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:226"; msg=msg; code="222:  let key = \"Princess\" in\n223:  let actual = Ssmap.getopt smallmap key in\n224:  let expect = Some \"royalty\" in\n225:  let msg = make_getopt_msg key smallmap expect actual in\n226:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Toad" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = Some "retainer" in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:234"; msg=msg; code="230:  let key = \"Toad\" in\n231:  let actual = Ssmap.getopt smallmap key in\n232:  let expect = Some \"retainer\" in\n233:  let msg = make_getopt_msg key smallmap expect actual in\n234:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* failure getopt calls in a small tree *)
+  
+  (* BEG_TEST *)
+  let key = "Bowser" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:246"; msg=msg; code="242:  let key = \"Bowser\" in\n243:  let actual = Ssmap.getopt smallmap key in\n244:  let expect = None in\n245:  let msg = make_getopt_msg key smallmap expect actual in\n246:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Morton" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:254"; msg=msg; code="250:  let key = \"Morton\" in\n251:  let actual = Ssmap.getopt smallmap key in\n252:  let expect = None in\n253:  let msg = make_getopt_msg key smallmap expect actual in\n254:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Wario" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:262"; msg=msg; code="258:  let key = \"Wario\" in\n259:  let actual = Ssmap.getopt smallmap key in\n260:  let expect = None in\n261:  let msg = make_getopt_msg key smallmap expect actual in\n262:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luma" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:270"; msg=msg; code="266:  let key = \"Luma\" in\n267:  let actual = Ssmap.getopt smallmap key in\n268:  let expect = None in\n269:  let msg = make_getopt_msg key smallmap expect actual in\n270:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Peach" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:278"; msg=msg; code="274:  let key = \"Peach\" in\n275:  let actual = Ssmap.getopt smallmap key in\n276:  let expect = None in\n277:  let msg = make_getopt_msg key smallmap expect actual in\n278:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "ShyGuy" in
+  let actual = Ssmap.getopt smallmap key in
+  let expect = None in
+  let msg = make_getopt_msg key smallmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:286"; msg=msg; code="282:  let key = \"ShyGuy\" in\n283:  let actual = Ssmap.getopt smallmap key in\n284:  let expect = None in\n285:  let msg = make_getopt_msg key smallmap expect actual in\n286:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (*  getopt calls in a large tree 1 *)
+  (* BEG_TEST *)
+  let key = "ShyGuy" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "23" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:297"; msg=msg; code="293:  let key = \"ShyGuy\" in\n294:  let actual = Ssmap.getopt bigmap key in\n295:  let expect = Some \"23\" in\n296:  let msg = make_getopt_msg key bigmap expect actual in\n297:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "14" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:305"; msg=msg; code="301:  let key = \"Mario\" in\n302:  let actual = Ssmap.getopt bigmap key in\n303:  let expect = Some \"14\" in\n304:  let msg = make_getopt_msg key bigmap expect actual in\n305:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "26" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:313"; msg=msg; code="309:  let key = \"Princess\" in\n310:  let actual = Ssmap.getopt bigmap key in\n311:  let expect = Some \"26\" in\n312:  let msg = make_getopt_msg key bigmap expect actual in\n313:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Clawgrip" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "28" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:321"; msg=msg; code="317:  let key = \"Clawgrip\" in\n318:  let actual = Ssmap.getopt bigmap key in\n319:  let expect = Some \"28\" in\n320:  let msg = make_getopt_msg key bigmap expect actual in\n321:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Wart" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "11" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:329"; msg=msg; code="325:  let key = \"Wart\" in\n326:  let actual = Ssmap.getopt bigmap key in\n327:  let expect = Some \"11\" in\n328:  let msg = make_getopt_msg key bigmap expect actual in\n329:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (*  getopt calls in a large tree 2 *)
+
+  (* BEG_TEST *)
+  let key = "Porcupo" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "24" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:341"; msg=msg; code="337:  let key = \"Porcupo\" in\n338:  let actual = Ssmap.getopt bigmap key in\n339:  let expect = Some \"24\" in\n340:  let msg = make_getopt_msg key bigmap expect actual in\n341:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Ninji" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = Some "22" in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:349"; msg=msg; code="345:  let key = \"Ninji\" in\n346:  let actual = Ssmap.getopt bigmap key in\n347:  let expect = Some \"22\" in\n348:  let msg = make_getopt_msg key bigmap expect actual in\n349:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Wario" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = None in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:357"; msg=msg; code="353:  let key = \"Wario\" in\n354:  let actual = Ssmap.getopt bigmap key in\n355:  let expect = None in\n356:  let msg = make_getopt_msg key bigmap expect actual in\n357:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Bowser" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = None in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:365"; msg=msg; code="361:  let key = \"Bowser\" in\n362:  let actual = Ssmap.getopt bigmap key in\n363:  let expect = None in\n364:  let msg = make_getopt_msg key bigmap expect actual in\n365:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Koopa" in
+  let actual = Ssmap.getopt bigmap key in
+  let expect = None in
+  let msg = make_getopt_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:373"; msg=msg; code="369:  let key = \"Koopa\" in\n370:  let actual = Ssmap.getopt bigmap key in\n371:  let expect = None in\n372:  let msg = make_getopt_msg key bigmap expect actual in\n373:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  (* contains_key calls 1 *)
+  let map = Ssmap.empty in
+  
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let actual = Ssmap.contains_key map key in
+  let expect = false in
+  let msg = make_contains_key_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:387"; msg=msg; code="383:  let key = \"Mario\" in\n384:  let actual = Ssmap.contains_key map key in\n385:  let expect = false in\n386:  let msg = make_contains_key_msg key map expect actual in\n387:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let actual = Ssmap.contains_key map key in
+  let expect = false in
+  let msg = make_contains_key_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:395"; msg=msg; code="391:  let key = \"Luigi\" in\n392:  let actual = Ssmap.contains_key map key in\n393:  let expect = false in\n394:  let msg = make_contains_key_msg key map expect actual in\n395:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = true in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:403"; msg=msg; code="399:  let key = \"Princess\" in\n400:  let actual = Ssmap.contains_key bigmap key in\n401:  let expect = true in\n402:  let msg = make_contains_key_msg key bigmap expect actual in\n403:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Clawgrip" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = true in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:411"; msg=msg; code="407:  let key = \"Clawgrip\" in\n408:  let actual = Ssmap.contains_key bigmap key in\n409:  let expect = true in\n410:  let msg = make_contains_key_msg key bigmap expect actual in\n411:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* contains_key calls 2 *)
+
+  (* BEG_TEST *)
+  let key = "Wart" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = true in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:423"; msg=msg; code="419:  let key = \"Wart\" in\n420:  let actual = Ssmap.contains_key bigmap key in\n421:  let expect = true in\n422:  let msg = make_contains_key_msg key bigmap expect actual in\n423:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Wario" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = false in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:431"; msg=msg; code="427:  let key = \"Wario\" in\n428:  let actual = Ssmap.contains_key bigmap key in\n429:  let expect = false in\n430:  let msg = make_contains_key_msg key bigmap expect actual in\n431:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Bowser" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = false in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:439"; msg=msg; code="435:  let key = \"Bowser\" in\n436:  let actual = Ssmap.contains_key bigmap key in\n437:  let expect = false in\n438:  let msg = make_contains_key_msg key bigmap expect actual in\n439:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Koopa" in
+  let actual = Ssmap.contains_key bigmap key in
+  let expect = false in
+  let msg = make_contains_key_msg key bigmap expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:447"; msg=msg; code="443:  let key = \"Koopa\" in\n444:  let actual = Ssmap.contains_key bigmap key in\n445:  let expect = false in\n446:  let msg = make_contains_key_msg key bigmap expect actual in\n447:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* iter calls on empty *)
+  let empty = Ssmap.empty in
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_keys k v = str := !str ^ k ^ " " in
+  let funcstr = "concatenate all keys in a ref" in
+  Ssmap.iter concat_keys empty;
+  let expect = "" in
+  let actual = !str in
+  let msg = make_iterfold_msg empty funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:463"; msg=msg; code="456:  let str = ref \"\" in\n457:  let concat_keys k v = str := !str ^ k ^ \" \" in\n458:  let funcstr = \"concatenate all keys in a ref\" in\n459:  Ssmap.iter concat_keys empty;\n460:  let expect = \"\" in\n461:  let actual = !str in\n462:  let msg = make_iterfold_msg empty funcstr expect actual in\n463:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_values k v = str := !str ^ v ^ " " in
+  let funcstr = "concatenate all value strings in a ref" in
+  Ssmap.iter concat_values empty;
+  let expect = "" in
+  let actual = !str in
+  let msg = make_iterfold_msg empty funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:474"; msg=msg; code="467:  let str = ref \"\" in\n468:  let concat_values k v = str := !str ^ v ^ \" \" in\n469:  let funcstr = \"concatenate all value strings in a ref\" in\n470:  Ssmap.iter concat_values empty;\n471:  let expect = \"\" in\n472:  let actual = !str in\n473:  let msg = make_iterfold_msg empty funcstr expect actual in\n474:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let sum = ref 0 in
+  let add_values k v = sum := !sum + (int_of_string v) in
+  let funcstr = "add all values in a ref" in
+  Ssmap.iter add_values empty;
+  let expect = 0 in
+  let actual = !sum in
+  let msg = make_iterfold_msg empty funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:485"; msg=msg; code="478:  let sum = ref 0 in\n479:  let add_values k v = sum := !sum + (int_of_string v) in\n480:  let funcstr = \"add all values in a ref\" in\n481:  Ssmap.iter add_values empty;\n482:  let expect = 0 in\n483:  let actual = !sum in\n484:  let msg = make_iterfold_msg empty funcstr (string_of_int expect) (string_of_int actual) in\n485:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);  
+
+(fun () ->
+  (* iter calls on small/big map 1 *)
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_keys k v = str := !str ^ k ^ " " in
+  let funcstr = "concatenate all keys in a ref" in
+  Ssmap.iter concat_keys smallmap;
+  let expect = "Luigi Mario Princess Toad " in
+  let actual = !str in
+  let msg = make_iterfold_msg smallmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:500"; msg=msg; code="493:  let str = ref \"\" in\n494:  let concat_keys k v = str := !str ^ k ^ \" \" in\n495:  let funcstr = \"concatenate all keys in a ref\" in\n496:  Ssmap.iter concat_keys smallmap;\n497:  let expect = \"Luigi Mario Princess Toad \" in\n498:  let actual = !str in\n499:  let msg = make_iterfold_msg smallmap funcstr expect actual in\n500:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_values k v = str := !str ^ v ^ " " in
+  let funcstr = "concatenate all vlaues in a ref" in
+  Ssmap.iter concat_values smallmap;
+  let expect = "plumber plumber royalty retainer " in
+  let actual = !str in
+  let msg = make_iterfold_msg smallmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:511"; msg=msg; code="504:  let str = ref \"\" in\n505:  let concat_values k v = str := !str ^ v ^ \" \" in\n506:  let funcstr = \"concatenate all vlaues in a ref\" in\n507:  Ssmap.iter concat_values smallmap;\n508:  let expect = \"plumber plumber royalty retainer \" in\n509:  let actual = !str in\n510:  let msg = make_iterfold_msg smallmap funcstr expect actual in\n511:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_keys k v = str := !str ^ k ^ " " in
+  let funcstr = "concatenate all keys in a ref" in
+  Ssmap.iter concat_keys bigmap;
+  let expect = "Albatoss Autobomb Beezo Bob-omb Clawgrip Cobrat Flurry Hawkmouth Hoopster Luigi Mario Mouser Ninji Ostro Panser Phanto Pidgit Pokey Porcupo Princess ShyGuy Snifit Spark Toad Trouter Tryclyde Tweeter Wart Whale " in
+  let actual = !str in
+  let msg = make_iterfold_msg bigmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:522"; msg=msg; code="515:  let str = ref \"\" in\n516:  let concat_keys k v = str := !str ^ k ^ \" \" in\n517:  let funcstr = \"concatenate all keys in a ref\" in\n518:  Ssmap.iter concat_keys bigmap;\n519:  let expect = \"Albatoss Autobomb Beezo Bob-omb Clawgrip Cobrat Flurry Hawkmouth Hoopster Luigi Mario Mouser Ninji Ostro Panser Phanto Pidgit Pokey Porcupo Princess ShyGuy Snifit Spark Toad Trouter Tryclyde Tweeter Wart Whale \" in\n520:  let actual = !str in\n521:  let msg = make_iterfold_msg bigmap funcstr expect actual in\n522:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let str = ref "" in
+  let concat_values k v = str := !str ^ v ^ " " in
+  let funcstr = "concatenate all vlaues in a ref" in
+  Ssmap.iter concat_values bigmap;
+  let expect = "15 10 6 18 28 2 17 19 12 25 14 1 22 9 27 5 8 4 24 26 23 21 13 7 20 16 3 11 29 " in
+  let actual = !str in
+  let msg = make_iterfold_msg bigmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:533"; msg=msg; code="526:  let str = ref \"\" in\n527:  let concat_values k v = str := !str ^ v ^ \" \" in\n528:  let funcstr = \"concatenate all vlaues in a ref\" in\n529:  Ssmap.iter concat_values bigmap;\n530:  let expect = \"15 10 6 18 28 2 17 19 12 25 14 1 22 9 27 5 8 4 24 26 23 21 13 7 20 16 3 11 29 \" in\n531:  let actual = !str in\n532:  let msg = make_iterfold_msg bigmap funcstr expect actual in\n533:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* iter calls on small/big map 2 *)
+
+  (* BEG_TEST *)
+  let sum = ref 0 in
+  let add_vallengths k v = sum := !sum + (String.length v) in
+  let funcstr = "add lengths of values in a ref" in
+  Ssmap.iter add_vallengths smallmap;
+  let expect = 29 in
+  let actual = !sum in
+  let msg = make_iterfold_msg smallmap funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:548"; msg=msg; code="541:  let sum = ref 0 in\n542:  let add_vallengths k v = sum := !sum + (String.length v) in\n543:  let funcstr = \"add lengths of values in a ref\" in\n544:  Ssmap.iter add_vallengths smallmap;\n545:  let expect = 29 in\n546:  let actual = !sum in\n547:  let msg = make_iterfold_msg smallmap funcstr (string_of_int expect) (string_of_int actual) in\n548:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let sum = ref 0 in
+  let add_valints k v = sum := !sum + (int_of_string v) in
+  let funcstr = "add values as ints in a ref" in
+  Ssmap.iter add_valints bigmap;
+  let expect = 435 in
+  let actual = !sum in
+  let msg = make_iterfold_msg bigmap funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:559"; msg=msg; code="552:  let sum = ref 0 in\n553:  let add_valints k v = sum := !sum + (int_of_string v) in\n554:  let funcstr = \"add values as ints in a ref\" in\n555:  Ssmap.iter add_valints bigmap;\n556:  let expect = 435 in\n557:  let actual = !sum in\n558:  let msg = make_iterfold_msg bigmap funcstr (string_of_int expect) (string_of_int actual) in\n559:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* fold calls on empty map *)
+  let empty = Ssmap.empty in
+
+  (* BEG_TEST *)
+  let concat_keys cur k v = cur ^ k ^ " " in
+  let funcstr = "concatenate all keys in a fold" in
+  let actual = Ssmap.fold concat_keys "" empty in
+  let expect = "" in
+  let msg = make_iterfold_msg empty funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:574"; msg=msg; code="569:  let concat_keys cur k v = cur ^ k ^ \" \" in\n570:  let funcstr = \"concatenate all keys in a fold\" in\n571:  let actual = Ssmap.fold concat_keys \"\" empty in\n572:  let expect = \"\" in\n573:  let msg = make_iterfold_msg empty funcstr expect actual in\n574:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let concat_values cur k v = cur ^ v ^ " " in
+  let funcstr = "concatenate all vlaues in a fold" in
+  let actual = Ssmap.fold concat_values "" empty in
+  let expect = "" in
+  let msg = make_iterfold_msg empty funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:583"; msg=msg; code="578:  let concat_values cur k v = cur ^ v ^ \" \" in\n579:  let funcstr = \"concatenate all vlaues in a fold\" in\n580:  let actual = Ssmap.fold concat_values \"\" empty in\n581:  let expect = \"\" in\n582:  let msg = make_iterfold_msg empty funcstr expect actual in\n583:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let add_vallengths sum k v = sum + (String.length v) in
+  let funcstr = "add lengths of values in a fold" in
+  let actual = Ssmap.fold add_vallengths 0 empty in
+  let expect = 0 in
+  let msg = make_iterfold_msg empty funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:592"; msg=msg; code="587:  let add_vallengths sum k v = sum + (String.length v) in\n588:  let funcstr = \"add lengths of values in a fold\" in\n589:  let actual = Ssmap.fold add_vallengths 0 empty in\n590:  let expect = 0 in\n591:  let msg = make_iterfold_msg empty funcstr (string_of_int expect) (string_of_int actual) in\n592:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* fold calls on small/big map 1 *)
+
+  (* BEG_TEST *)
+  let concat_keys cur k v = cur ^ k ^ " " in
+  let funcstr = "concatenate all keys in a fold" in
+  let actual = Ssmap.fold concat_keys "" smallmap in
+  let expect = "Luigi Mario Princess Toad " in
+  let msg = make_iterfold_msg smallmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:605"; msg=msg; code="600:  let concat_keys cur k v = cur ^ k ^ \" \" in\n601:  let funcstr = \"concatenate all keys in a fold\" in\n602:  let actual = Ssmap.fold concat_keys \"\" smallmap in\n603:  let expect = \"Luigi Mario Princess Toad \" in\n604:  let msg = make_iterfold_msg smallmap funcstr expect actual in\n605:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let concat_values cur k v = cur ^ v ^ " " in
+  let funcstr = "concatenate all vlaues in a fold" in
+  let actual = Ssmap.fold concat_values "" smallmap in
+  let expect = "plumber plumber royalty retainer " in
+  let msg = make_iterfold_msg smallmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:614"; msg=msg; code="609:  let concat_values cur k v = cur ^ v ^ \" \" in\n610:  let funcstr = \"concatenate all vlaues in a fold\" in\n611:  let actual = Ssmap.fold concat_values \"\" smallmap in\n612:  let expect = \"plumber plumber royalty retainer \" in\n613:  let msg = make_iterfold_msg smallmap funcstr expect actual in\n614:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let concat_keys str k v = str ^ k ^ " " in
+  let funcstr = "concatenate all keys in a fold" in
+  let actual = Ssmap.fold concat_keys "" bigmap in
+  let expect = "Albatoss Autobomb Beezo Bob-omb Clawgrip Cobrat Flurry Hawkmouth Hoopster Luigi Mario Mouser Ninji Ostro Panser Phanto Pidgit Pokey Porcupo Princess ShyGuy Snifit Spark Toad Trouter Tryclyde Tweeter Wart Whale " in
+  let msg = make_iterfold_msg bigmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:623"; msg=msg; code="618:  let concat_keys str k v = str ^ k ^ \" \" in\n619:  let funcstr = \"concatenate all keys in a fold\" in\n620:  let actual = Ssmap.fold concat_keys \"\" bigmap in\n621:  let expect = \"Albatoss Autobomb Beezo Bob-omb Clawgrip Cobrat Flurry Hawkmouth Hoopster Luigi Mario Mouser Ninji Ostro Panser Phanto Pidgit Pokey Porcupo Princess ShyGuy Snifit Spark Toad Trouter Tryclyde Tweeter Wart Whale \" in\n622:  let msg = make_iterfold_msg bigmap funcstr expect actual in\n623:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let concat_values str k v = str ^ v ^ " " in
+  let funcstr = "concatenate all vlaues in a fold" in
+  let actual = Ssmap.fold concat_values "" bigmap in
+  let expect = "15 10 6 18 28 2 17 19 12 25 14 1 22 9 27 5 8 4 24 26 23 21 13 7 20 16 3 11 29 " in
+  let msg = make_iterfold_msg bigmap funcstr expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:632"; msg=msg; code="627:  let concat_values str k v = str ^ v ^ \" \" in\n628:  let funcstr = \"concatenate all vlaues in a fold\" in\n629:  let actual = Ssmap.fold concat_values \"\" bigmap in\n630:  let expect = \"15 10 6 18 28 2 17 19 12 25 14 1 22 9 27 5 8 4 24 26 23 21 13 7 20 16 3 11 29 \" in\n631:  let msg = make_iterfold_msg bigmap funcstr expect actual in\n632:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* fold calls on small/big map *)
+
+  (* BEG_TEST *)
+  let add_vallengths sum k v = sum + (String.length v) in
+  let funcstr = "add lengths of values in a fold" in
+  let actual = Ssmap.fold add_vallengths 0 smallmap in
+  let expect = 29 in
+  let msg = make_iterfold_msg smallmap funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:645"; msg=msg; code="640:  let add_vallengths sum k v = sum + (String.length v) in\n641:  let funcstr = \"add lengths of values in a fold\" in\n642:  let actual = Ssmap.fold add_vallengths 0 smallmap in\n643:  let expect = 29 in\n644:  let msg = make_iterfold_msg smallmap funcstr (string_of_int expect) (string_of_int actual) in\n645:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let add_valints sum k v = sum + (int_of_string v) in
+  let funcstr = "add values as ints in a fold" in
+  let actual = Ssmap.fold add_valints 0 bigmap in
+  let expect = 435 in
+  let msg = make_iterfold_msg bigmap funcstr (string_of_int expect) (string_of_int actual) in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:654"; msg=msg; code="649:  let add_valints sum k v = sum + (int_of_string v) in\n650:  let funcstr = \"add values as ints in a fold\" in\n651:  let actual = Ssmap.fold add_valints 0 bigmap in\n652:  let expect = 435 in\n653:  let msg = make_iterfold_msg bigmap funcstr (string_of_int expect) (string_of_int actual) in\n654:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* to_string on empty map *)
+  (* BEG_TEST *)
+  let actual = Ssmap.to_string Ssmap.empty in
+  let expect = "[]" in
+  let msg = sprintf "EXPECT to_string: %s\nACTUAL to_string: %s\n" expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:665"; msg=msg; code="662:  let actual = Ssmap.to_string Ssmap.empty in\n663:  let expect = \"[]\" in\n664:  let msg = sprintf \"EXPECT to_string: %s\\nACTUAL to_string: %s\\n\" expect actual in\n665:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* to_string on smallmap *)
+  (* BEG_TEST *)
+  let actual = Ssmap.to_string smallmap in
+  let expect = "[{Luigi -> plumber}, {Mario -> plumber}, {Princess -> royalty}, {Toad -> retainer}]" in
+  let msg = sprintf "EXPECT to_string: %s\nACTUAL to_string: %s\n" expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:675"; msg=msg; code="672:  let actual = Ssmap.to_string smallmap in\n673:  let expect = \"[{Luigi -> plumber}, {Mario -> plumber}, {Princess -> royalty}, {Toad -> retainer}]\" in\n674:  let msg = sprintf \"EXPECT to_string: %s\\nACTUAL to_string: %s\\n\" expect actual in\n675:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* to_string on bigmap *)
+  (* BEG_TEST *)
+  let actual = Ssmap.to_string bigmap in
+  let expect = "[{Albatoss -> 15}, {Autobomb -> 10}, {Beezo -> 6}, {Bob-omb -> 18}, {Clawgrip -> 28}, {Cobrat -> 2}, {Flurry -> 17}, {Hawkmouth -> 19}, {Hoopster -> 12}, {Luigi -> 25}, {Mario -> 14}, {Mouser -> 1}, {Ninji -> 22}, {Ostro -> 9}, {Panser -> 27}, {Phanto -> 5}, {Pidgit -> 8}, {Pokey -> 4}, {Porcupo -> 24}, {Princess -> 26}, {ShyGuy -> 23}, {Snifit -> 21}, {Spark -> 13}, {Toad -> 7}, {Trouter -> 20}, {Tryclyde -> 16}, {Tweeter -> 3}, {Wart -> 11}, {Whale -> 29}]" in
+  let msg = sprintf "EXPECT to_string: %s\nACTUAL to_string: %s\n" expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:685"; msg=msg; code="682:  let actual = Ssmap.to_string bigmap in\n683:  let expect = \"[{Albatoss -> 15}, {Autobomb -> 10}, {Beezo -> 6}, {Bob-omb -> 18}, {Clawgrip -> 28}, {Cobrat -> 2}, {Flurry -> 17}, {Hawkmouth -> 19}, {Hoopster -> 12}, {Luigi -> 25}, {Mario -> 14}, {Mouser -> 1}, {Ninji -> 22}, {Ostro -> 9}, {Panser -> 27}, {Phanto -> 5}, {Pidgit -> 8}, {Pokey -> 4}, {Porcupo -> 24}, {Princess -> 26}, {ShyGuy -> 23}, {Snifit -> 21}, {Spark -> 13}, {Toad -> 7}, {Trouter -> 20}, {Tryclyde -> 16}, {Tweeter -> 3}, {Wart -> 11}, {Whale -> 29}]\" in\n684:  let msg = sprintf \"EXPECT to_string: %s\\nACTUAL to_string: %s\\n\" expect actual in\n685:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  (* findmin_keyval on empty map, raises exception *)
+  (* BEG_TEST *)
+  try
+    let _ = Ssmap.findmin_keyval Ssmap.empty in
+    let msg = "Should have raised an exception" in
+if not ( ( false )) then raise (TestFail {loc="test_ssmap.ml:696"; msg=msg; code="693:  try\n694:    let _ = Ssmap.findmin_keyval Ssmap.empty in\n695:    let msg = \"Should have raised an exception\" in\n696:    __check__ ( false );\n"}) else ();
+  with Failure(actual) ->
+    begin
+      let expect = "No minimum in an empty tree" in
+      let msg = sprintf "EXPECT message: %s\nACTUAL message: %s\n" expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:701"; msg=msg; code="693:  try\n694:    let _ = Ssmap.findmin_keyval Ssmap.empty in\n695:    let msg = \"Should have raised an exception\" in\n696:    __check__ ( false );\n697:  with Failure(actual) ->\n698:    begin\n699:      let expect = \"No minimum in an empty tree\" in\n700:      let msg = sprintf \"EXPECT message: %s\\nACTUAL message: %s\\n\" expect actual in\n701:      __check__ ( expect = actual );\n"}) else ();
+    end
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* findmin_keyval on singleton map *)
+  (* BEG_TEST *)
+  let map = Ssmap.add Ssmap.empty "Mario" "plumber" in
+  let (actkey,actval) as actual = Ssmap.findmin_keyval map in
+  let (expkey,expval) as expect = ("Mario","plumber") in
+  let msg = sprintf "EXPECT: (%s,%s)\nACTUAL: (%s,%s)\n" expkey expval actkey actval in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:713"; msg=msg; code="709:  let map = Ssmap.add Ssmap.empty \"Mario\" \"plumber\" in\n710:  let (actkey,actval) as actual = Ssmap.findmin_keyval map in\n711:  let (expkey,expval) as expect = (\"Mario\",\"plumber\") in\n712:  let msg = sprintf \"EXPECT: (%s,%s)\\nACTUAL: (%s,%s)\\n\" expkey expval actkey actval in\n713:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* findmin_keyval on small/big map *)
+  (* BEG_TEST *)
+  let (actkey,actval) as actual = Ssmap.findmin_keyval smallmap in
+  let (expkey,expval) as expect = ("Luigi","plumber") in
+  let msg = sprintf "EXPECT: (%s,%s)\nACTUAL: (%s,%s)\n" expkey expval actkey actval in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:723"; msg=msg; code="720:  let (actkey,actval) as actual = Ssmap.findmin_keyval smallmap in\n721:  let (expkey,expval) as expect = (\"Luigi\",\"plumber\") in\n722:  let msg = sprintf \"EXPECT: (%s,%s)\\nACTUAL: (%s,%s)\\n\" expkey expval actkey actval in\n723:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let (actkey,actval) as actual = Ssmap.findmin_keyval bigmap in
+  let (expkey,expval) as expect = ("Albatoss","15") in
+  let msg = sprintf "EXPECT: (%s,%s)\nACTUAL: (%s,%s)\n" expkey expval actkey actval in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:730"; msg=msg; code="727:  let (actkey,actval) as actual = Ssmap.findmin_keyval bigmap in\n728:  let (expkey,expval) as expect = (\"Albatoss\",\"15\") in\n729:  let msg = sprintf \"EXPECT: (%s,%s)\\nACTUAL: (%s,%s)\\n\" expkey expval actkey actval in\n730:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* remove_key on empty *)
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let original = Ssmap.empty in
+  let initmsg = sprintf "REMOVAL PRODUCES WRONG TREE\nRemove Key: %s\nOriginal Tree:\n%s\n" key (Ssmap.tree_string original) in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "" in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:742"; msg=(!msgref); code="737:  let key = \"Mario\" in\n738:  let original = Ssmap.empty in\n739:  let initmsg = sprintf \"REMOVAL PRODUCES WRONG TREE\\nRemove Key: %s\\nOriginal Tree:\\n%s\\n\" key (Ssmap.tree_string original) in\n740:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n741:  let expect_str = \"\" in\n742:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let original = Ssmap.empty in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "" in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:751"; msg=(!msgref); code="746:  let key = \"Princess\" in\n747:  let original = Ssmap.empty in\n748:  let initmsg = make_remove_msg key original in\n749:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n750:  let expect_str = \"\" in\n751:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* remove_key on singleton map *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let original = singleton in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = " 0: {Mario -> plumber}" in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:764"; msg=(!msgref); code="759:  let key = \"Princess\" in\n760:  let original = singleton in\n761:  let initmsg = make_remove_msg key original in\n762:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n763:  let expect_str = \" 0: {Mario -> plumber}\" in\n764:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let original = singleton in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = " 0: {Mario -> plumber}" in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:773"; msg=(!msgref); code="768:  let key = \"Luigi\" in\n769:  let original = singleton in\n770:  let initmsg = make_remove_msg key original in\n771:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n772:  let expect_str = \" 0: {Mario -> plumber}\" in\n773:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* actually removes only root leaving empty *)
+  let key = "Mario" in
+  let original = singleton in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "" in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:783"; msg=(!msgref); code="777:  (* actually removes only root leaving empty *)\n778:  let key = \"Mario\" in\n779:  let original = singleton in\n780:  let initmsg = make_remove_msg key original in\n781:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n782:  let expect_str = \"\" in\n783:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* remove_key on small map, not present  *)
+
+  (* BEG_TEST *)
+  let key = "Wario" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+     2: {Princess -> royalty}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:802"; msg=(!msgref); code="791:  let key = \"Wario\" in\n792:  let original = smallmap in\n793:  let initmsg = make_remove_msg key original in\n794:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n795:  let expect_str = \"\n796:   1: {Toad -> retainer}\n797:     2: {Princess -> royalty}\n798: 0: {Mario -> plumber}\n799:   1: {Luigi -> plumber}\n800:\"\n801:  in\n802:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Bob-omb" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+     2: {Princess -> royalty}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:817"; msg=(!msgref); code="806:  let key = \"Bob-omb\" in\n807:  let original = smallmap in\n808:  let initmsg = make_remove_msg key original in\n809:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n810:  let expect_str = \"\n811:   1: {Toad -> retainer}\n812:     2: {Princess -> royalty}\n813: 0: {Mario -> plumber}\n814:   1: {Luigi -> plumber}\n815:\"\n816:  in\n817:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Koopa" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+     2: {Princess -> royalty}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:832"; msg=(!msgref); code="821:  let key = \"Koopa\" in\n822:  let original = smallmap in\n823:  let initmsg = make_remove_msg key original in\n824:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n825:  let expect_str = \"\n826:   1: {Toad -> retainer}\n827:     2: {Princess -> royalty}\n828: 0: {Mario -> plumber}\n829:   1: {Luigi -> plumber}\n830:\"\n831:  in\n832:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "ShyGuy" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+     2: {Princess -> royalty}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:847"; msg=(!msgref); code="836:  let key = \"ShyGuy\" in\n837:  let original = smallmap in\n838:  let initmsg = make_remove_msg key original in\n839:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n840:  let expect_str = \"\n841:   1: {Toad -> retainer}\n842:     2: {Princess -> royalty}\n843: 0: {Mario -> plumber}\n844:   1: {Luigi -> plumber}\n845:\"\n846:  in\n847:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* remove_key on small map, 0 or 1 single child *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:865"; msg=(!msgref); code="855:  let key = \"Princess\" in\n856:  let original = smallmap in\n857:  let initmsg = make_remove_msg key original in\n858:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n859:  let expect_str = \"\n860:   1: {Toad -> retainer}\n861: 0: {Mario -> plumber}\n862:   1: {Luigi -> plumber}\n863:\"\n864:  in\n865:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Luigi" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+     2: {Princess -> royalty}
+ 0: {Mario -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:879"; msg=(!msgref); code="869:  let key = \"Luigi\" in\n870:  let original = smallmap in\n871:  let initmsg = make_remove_msg key original in\n872:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n873:  let expect_str = \"\n874:   1: {Toad -> retainer}\n875:     2: {Princess -> royalty}\n876: 0: {Mario -> plumber}\n877:\"\n878:  in\n879:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Toad" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Princess -> royalty}
+ 0: {Mario -> plumber}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:893"; msg=(!msgref); code="883:  let key = \"Toad\" in\n884:  let original = smallmap in\n885:  let initmsg = make_remove_msg key original in\n886:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n887:  let expect_str = \"\n888:   1: {Princess -> royalty}\n889: 0: {Mario -> plumber}\n890:   1: {Luigi -> plumber}\n891:\"\n892:  in\n893:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* remove on smallmap, two-child root  *)
+  (* BEG_TEST *)
+  let key = "Mario" in
+  let original = smallmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+   1: {Toad -> retainer}
+ 0: {Princess -> royalty}
+   1: {Luigi -> plumber}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:910"; msg=(!msgref); code="900:  let key = \"Mario\" in\n901:  let original = smallmap in\n902:  let initmsg = make_remove_msg key original in\n903:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n904:  let expect_str = \"\n905:   1: {Toad -> retainer}\n906: 0: {Princess -> royalty}\n907:   1: {Luigi -> plumber}\n908:\"\n909:  in\n910:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* remove on bigmap, not present *)
+
+  (* BEG_TEST *)
+  let key = "Wario" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:955"; msg=(!msgref); code="919:  let key = \"Wario\" in\n920:  let original = bigmap in\n921:  let initmsg = make_remove_msg key original in\n922:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n923:  let expect_str = \"\n924:       3: {Whale -> 29}\n925:     2: {Wart -> 11}\n926:   1: {Tweeter -> 3}\n927:         4: {Tryclyde -> 16}\n928:           5: {Trouter -> 20}\n929:       3: {Toad -> 7}\n930:         4: {Spark -> 13}\n931:           5: {Snifit -> 21}\n932:             6: {ShyGuy -> 23}\n933:                 8: {Princess -> 26}\n934:               7: {Porcupo -> 24}\n935:     2: {Pokey -> 4}\n936:         4: {Pidgit -> 8}\n937:       3: {Phanto -> 5}\n938:           5: {Panser -> 27}\n939:         4: {Ostro -> 9}\n940:           5: {Ninji -> 22}\n941: 0: {Mouser -> 1}\n942:       3: {Mario -> 14}\n943:         4: {Luigi -> 25}\n944:     2: {Hoopster -> 12}\n945:         4: {Hawkmouth -> 19}\n946:       3: {Flurry -> 17}\n947:   1: {Cobrat -> 2}\n948:         4: {Clawgrip -> 28}\n949:       3: {Bob-omb -> 18}\n950:     2: {Beezo -> 6}\n951:       3: {Autobomb -> 10}\n952:         4: {Albatoss -> 15}\n953:\"\n954:  in\n955:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Bowser" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:995"; msg=(!msgref); code="959:  let key = \"Bowser\" in\n960:  let original = bigmap in\n961:  let initmsg = make_remove_msg key original in\n962:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n963:  let expect_str = \"\n964:       3: {Whale -> 29}\n965:     2: {Wart -> 11}\n966:   1: {Tweeter -> 3}\n967:         4: {Tryclyde -> 16}\n968:           5: {Trouter -> 20}\n969:       3: {Toad -> 7}\n970:         4: {Spark -> 13}\n971:           5: {Snifit -> 21}\n972:             6: {ShyGuy -> 23}\n973:                 8: {Princess -> 26}\n974:               7: {Porcupo -> 24}\n975:     2: {Pokey -> 4}\n976:         4: {Pidgit -> 8}\n977:       3: {Phanto -> 5}\n978:           5: {Panser -> 27}\n979:         4: {Ostro -> 9}\n980:           5: {Ninji -> 22}\n981: 0: {Mouser -> 1}\n982:       3: {Mario -> 14}\n983:         4: {Luigi -> 25}\n984:     2: {Hoopster -> 12}\n985:         4: {Hawkmouth -> 19}\n986:       3: {Flurry -> 17}\n987:   1: {Cobrat -> 2}\n988:         4: {Clawgrip -> 28}\n989:       3: {Bob-omb -> 18}\n990:     2: {Beezo -> 6}\n991:       3: {Autobomb -> 10}\n992:         4: {Albatoss -> 15}\n993:\"\n994:  in\n995:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Koopa" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1035"; msg=(!msgref); code="999:  let key = \"Koopa\" in\n1000:  let original = bigmap in\n1001:  let initmsg = make_remove_msg key original in\n1002:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1003:  let expect_str = \"\n1004:       3: {Whale -> 29}\n1005:     2: {Wart -> 11}\n1006:   1: {Tweeter -> 3}\n1007:         4: {Tryclyde -> 16}\n1008:           5: {Trouter -> 20}\n1009:       3: {Toad -> 7}\n1010:         4: {Spark -> 13}\n1011:           5: {Snifit -> 21}\n1012:             6: {ShyGuy -> 23}\n1013:                 8: {Princess -> 26}\n1014:               7: {Porcupo -> 24}\n1015:     2: {Pokey -> 4}\n1016:         4: {Pidgit -> 8}\n1017:       3: {Phanto -> 5}\n1018:           5: {Panser -> 27}\n1019:         4: {Ostro -> 9}\n1020:           5: {Ninji -> 22}\n1021: 0: {Mouser -> 1}\n1022:       3: {Mario -> 14}\n1023:         4: {Luigi -> 25}\n1024:     2: {Hoopster -> 12}\n1025:         4: {Hawkmouth -> 19}\n1026:       3: {Flurry -> 17}\n1027:   1: {Cobrat -> 2}\n1028:         4: {Clawgrip -> 28}\n1029:       3: {Bob-omb -> 18}\n1030:     2: {Beezo -> 6}\n1031:       3: {Autobomb -> 10}\n1032:         4: {Albatoss -> 15}\n1033:\"\n1034:  in\n1035:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Daisy" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1075"; msg=(!msgref); code="1039:  let key = \"Daisy\" in\n1040:  let original = bigmap in\n1041:  let initmsg = make_remove_msg key original in\n1042:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1043:  let expect_str = \"\n1044:       3: {Whale -> 29}\n1045:     2: {Wart -> 11}\n1046:   1: {Tweeter -> 3}\n1047:         4: {Tryclyde -> 16}\n1048:           5: {Trouter -> 20}\n1049:       3: {Toad -> 7}\n1050:         4: {Spark -> 13}\n1051:           5: {Snifit -> 21}\n1052:             6: {ShyGuy -> 23}\n1053:                 8: {Princess -> 26}\n1054:               7: {Porcupo -> 24}\n1055:     2: {Pokey -> 4}\n1056:         4: {Pidgit -> 8}\n1057:       3: {Phanto -> 5}\n1058:           5: {Panser -> 27}\n1059:         4: {Ostro -> 9}\n1060:           5: {Ninji -> 22}\n1061: 0: {Mouser -> 1}\n1062:       3: {Mario -> 14}\n1063:         4: {Luigi -> 25}\n1064:     2: {Hoopster -> 12}\n1065:         4: {Hawkmouth -> 19}\n1066:       3: {Flurry -> 17}\n1067:   1: {Cobrat -> 2}\n1068:         4: {Clawgrip -> 28}\n1069:       3: {Bob-omb -> 18}\n1070:     2: {Beezo -> 6}\n1071:       3: {Autobomb -> 10}\n1072:         4: {Albatoss -> 15}\n1073:\"\n1074:  in\n1075:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* remove on bigmap, 0/1 child *)
+  (* BEG_TEST *)
+  let key = "Wart" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+     2: {Whale -> 29}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1118"; msg=(!msgref); code="1083:  let key = \"Wart\" in\n1084:  let original = bigmap in\n1085:  let initmsg = make_remove_msg key original in\n1086:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1087:  let expect_str = \"\n1088:     2: {Whale -> 29}\n1089:   1: {Tweeter -> 3}\n1090:         4: {Tryclyde -> 16}\n1091:           5: {Trouter -> 20}\n1092:       3: {Toad -> 7}\n1093:         4: {Spark -> 13}\n1094:           5: {Snifit -> 21}\n1095:             6: {ShyGuy -> 23}\n1096:                 8: {Princess -> 26}\n1097:               7: {Porcupo -> 24}\n1098:     2: {Pokey -> 4}\n1099:         4: {Pidgit -> 8}\n1100:       3: {Phanto -> 5}\n1101:           5: {Panser -> 27}\n1102:         4: {Ostro -> 9}\n1103:           5: {Ninji -> 22}\n1104: 0: {Mouser -> 1}\n1105:       3: {Mario -> 14}\n1106:         4: {Luigi -> 25}\n1107:     2: {Hoopster -> 12}\n1108:         4: {Hawkmouth -> 19}\n1109:       3: {Flurry -> 17}\n1110:   1: {Cobrat -> 2}\n1111:         4: {Clawgrip -> 28}\n1112:       3: {Bob-omb -> 18}\n1113:     2: {Beezo -> 6}\n1114:       3: {Autobomb -> 10}\n1115:         4: {Albatoss -> 15}\n1116:\"\n1117:  in\n1118:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Tryclyde" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1157"; msg=(!msgref); code="1122:  let key = \"Tryclyde\" in\n1123:  let original = bigmap in\n1124:  let initmsg = make_remove_msg key original in\n1125:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1126:  let expect_str = \"\n1127:       3: {Whale -> 29}\n1128:     2: {Wart -> 11}\n1129:   1: {Tweeter -> 3}\n1130:         4: {Trouter -> 20}\n1131:       3: {Toad -> 7}\n1132:         4: {Spark -> 13}\n1133:           5: {Snifit -> 21}\n1134:             6: {ShyGuy -> 23}\n1135:                 8: {Princess -> 26}\n1136:               7: {Porcupo -> 24}\n1137:     2: {Pokey -> 4}\n1138:         4: {Pidgit -> 8}\n1139:       3: {Phanto -> 5}\n1140:           5: {Panser -> 27}\n1141:         4: {Ostro -> 9}\n1142:           5: {Ninji -> 22}\n1143: 0: {Mouser -> 1}\n1144:       3: {Mario -> 14}\n1145:         4: {Luigi -> 25}\n1146:     2: {Hoopster -> 12}\n1147:         4: {Hawkmouth -> 19}\n1148:       3: {Flurry -> 17}\n1149:   1: {Cobrat -> 2}\n1150:         4: {Clawgrip -> 28}\n1151:       3: {Bob-omb -> 18}\n1152:     2: {Beezo -> 6}\n1153:       3: {Autobomb -> 10}\n1154:         4: {Albatoss -> 15}\n1155:\"\n1156:  in\n1157:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Bob-omb" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+       3: {Clawgrip -> 28}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1196"; msg=(!msgref); code="1161:  let key = \"Bob-omb\" in\n1162:  let original = bigmap in\n1163:  let initmsg = make_remove_msg key original in\n1164:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1165:  let expect_str = \"\n1166:       3: {Whale -> 29}\n1167:     2: {Wart -> 11}\n1168:   1: {Tweeter -> 3}\n1169:         4: {Tryclyde -> 16}\n1170:           5: {Trouter -> 20}\n1171:       3: {Toad -> 7}\n1172:         4: {Spark -> 13}\n1173:           5: {Snifit -> 21}\n1174:             6: {ShyGuy -> 23}\n1175:                 8: {Princess -> 26}\n1176:               7: {Porcupo -> 24}\n1177:     2: {Pokey -> 4}\n1178:         4: {Pidgit -> 8}\n1179:       3: {Phanto -> 5}\n1180:           5: {Panser -> 27}\n1181:         4: {Ostro -> 9}\n1182:           5: {Ninji -> 22}\n1183: 0: {Mouser -> 1}\n1184:       3: {Mario -> 14}\n1185:         4: {Luigi -> 25}\n1186:     2: {Hoopster -> 12}\n1187:         4: {Hawkmouth -> 19}\n1188:       3: {Flurry -> 17}\n1189:   1: {Cobrat -> 2}\n1190:       3: {Clawgrip -> 28}\n1191:     2: {Beezo -> 6}\n1192:       3: {Autobomb -> 10}\n1193:         4: {Albatoss -> 15}\n1194:\"\n1195:  in\n1196:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Porcupo" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+               7: {Princess -> 26}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1235"; msg=(!msgref); code="1200:  let key = \"Porcupo\" in\n1201:  let original = bigmap in\n1202:  let initmsg = make_remove_msg key original in\n1203:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1204:  let expect_str = \"\n1205:       3: {Whale -> 29}\n1206:     2: {Wart -> 11}\n1207:   1: {Tweeter -> 3}\n1208:         4: {Tryclyde -> 16}\n1209:           5: {Trouter -> 20}\n1210:       3: {Toad -> 7}\n1211:         4: {Spark -> 13}\n1212:           5: {Snifit -> 21}\n1213:             6: {ShyGuy -> 23}\n1214:               7: {Princess -> 26}\n1215:     2: {Pokey -> 4}\n1216:         4: {Pidgit -> 8}\n1217:       3: {Phanto -> 5}\n1218:           5: {Panser -> 27}\n1219:         4: {Ostro -> 9}\n1220:           5: {Ninji -> 22}\n1221: 0: {Mouser -> 1}\n1222:       3: {Mario -> 14}\n1223:         4: {Luigi -> 25}\n1224:     2: {Hoopster -> 12}\n1225:         4: {Hawkmouth -> 19}\n1226:       3: {Flurry -> 17}\n1227:   1: {Cobrat -> 2}\n1228:         4: {Clawgrip -> 28}\n1229:       3: {Bob-omb -> 18}\n1230:     2: {Beezo -> 6}\n1231:       3: {Autobomb -> 10}\n1232:         4: {Albatoss -> 15}\n1233:\"\n1234:  in\n1235:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* remove on bigmap, two children *)
+
+  (* BEG_TEST *)
+  let key = "Mouser" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+ 0: {Ninji -> 22}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1279"; msg=(!msgref); code="1244:  let key = \"Mouser\" in\n1245:  let original = bigmap in\n1246:  let initmsg = make_remove_msg key original in\n1247:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1248:  let expect_str = \"\n1249:       3: {Whale -> 29}\n1250:     2: {Wart -> 11}\n1251:   1: {Tweeter -> 3}\n1252:         4: {Tryclyde -> 16}\n1253:           5: {Trouter -> 20}\n1254:       3: {Toad -> 7}\n1255:         4: {Spark -> 13}\n1256:           5: {Snifit -> 21}\n1257:             6: {ShyGuy -> 23}\n1258:                 8: {Princess -> 26}\n1259:               7: {Porcupo -> 24}\n1260:     2: {Pokey -> 4}\n1261:         4: {Pidgit -> 8}\n1262:       3: {Phanto -> 5}\n1263:           5: {Panser -> 27}\n1264:         4: {Ostro -> 9}\n1265: 0: {Ninji -> 22}\n1266:       3: {Mario -> 14}\n1267:         4: {Luigi -> 25}\n1268:     2: {Hoopster -> 12}\n1269:         4: {Hawkmouth -> 19}\n1270:       3: {Flurry -> 17}\n1271:   1: {Cobrat -> 2}\n1272:         4: {Clawgrip -> 28}\n1273:       3: {Bob-omb -> 18}\n1274:     2: {Beezo -> 6}\n1275:       3: {Autobomb -> 10}\n1276:         4: {Albatoss -> 15}\n1277:\"\n1278:  in\n1279:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Pokey" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+               7: {Princess -> 26}
+     2: {Porcupo -> 24}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1318"; msg=(!msgref); code="1283:  let key = \"Pokey\" in\n1284:  let original = bigmap in\n1285:  let initmsg = make_remove_msg key original in\n1286:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1287:  let expect_str = \"\n1288:       3: {Whale -> 29}\n1289:     2: {Wart -> 11}\n1290:   1: {Tweeter -> 3}\n1291:         4: {Tryclyde -> 16}\n1292:           5: {Trouter -> 20}\n1293:       3: {Toad -> 7}\n1294:         4: {Spark -> 13}\n1295:           5: {Snifit -> 21}\n1296:             6: {ShyGuy -> 23}\n1297:               7: {Princess -> 26}\n1298:     2: {Porcupo -> 24}\n1299:         4: {Pidgit -> 8}\n1300:       3: {Phanto -> 5}\n1301:           5: {Panser -> 27}\n1302:         4: {Ostro -> 9}\n1303:           5: {Ninji -> 22}\n1304: 0: {Mouser -> 1}\n1305:       3: {Mario -> 14}\n1306:         4: {Luigi -> 25}\n1307:     2: {Hoopster -> 12}\n1308:         4: {Hawkmouth -> 19}\n1309:       3: {Flurry -> 17}\n1310:   1: {Cobrat -> 2}\n1311:         4: {Clawgrip -> 28}\n1312:       3: {Bob-omb -> 18}\n1313:     2: {Beezo -> 6}\n1314:       3: {Autobomb -> 10}\n1315:         4: {Albatoss -> 15}\n1316:\"\n1317:  in\n1318:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Toad" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+       3: {Trouter -> 20}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1357"; msg=(!msgref); code="1322:  let key = \"Toad\" in\n1323:  let original = bigmap in\n1324:  let initmsg = make_remove_msg key original in\n1325:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1326:  let expect_str = \"\n1327:       3: {Whale -> 29}\n1328:     2: {Wart -> 11}\n1329:   1: {Tweeter -> 3}\n1330:         4: {Tryclyde -> 16}\n1331:       3: {Trouter -> 20}\n1332:         4: {Spark -> 13}\n1333:           5: {Snifit -> 21}\n1334:             6: {ShyGuy -> 23}\n1335:                 8: {Princess -> 26}\n1336:               7: {Porcupo -> 24}\n1337:     2: {Pokey -> 4}\n1338:         4: {Pidgit -> 8}\n1339:       3: {Phanto -> 5}\n1340:           5: {Panser -> 27}\n1341:         4: {Ostro -> 9}\n1342:           5: {Ninji -> 22}\n1343: 0: {Mouser -> 1}\n1344:       3: {Mario -> 14}\n1345:         4: {Luigi -> 25}\n1346:     2: {Hoopster -> 12}\n1347:         4: {Hawkmouth -> 19}\n1348:       3: {Flurry -> 17}\n1349:   1: {Cobrat -> 2}\n1350:         4: {Clawgrip -> 28}\n1351:       3: {Bob-omb -> 18}\n1352:     2: {Beezo -> 6}\n1353:       3: {Autobomb -> 10}\n1354:         4: {Albatoss -> 15}\n1355:\"\n1356:  in\n1357:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Pokey" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+               7: {Princess -> 26}
+     2: {Porcupo -> 24}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+         4: {Clawgrip -> 28}
+       3: {Bob-omb -> 18}
+     2: {Beezo -> 6}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1396"; msg=(!msgref); code="1361:  let key = \"Pokey\" in\n1362:  let original = bigmap in\n1363:  let initmsg = make_remove_msg key original in\n1364:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1365:  let expect_str = \"\n1366:       3: {Whale -> 29}\n1367:     2: {Wart -> 11}\n1368:   1: {Tweeter -> 3}\n1369:         4: {Tryclyde -> 16}\n1370:           5: {Trouter -> 20}\n1371:       3: {Toad -> 7}\n1372:         4: {Spark -> 13}\n1373:           5: {Snifit -> 21}\n1374:             6: {ShyGuy -> 23}\n1375:               7: {Princess -> 26}\n1376:     2: {Porcupo -> 24}\n1377:         4: {Pidgit -> 8}\n1378:       3: {Phanto -> 5}\n1379:           5: {Panser -> 27}\n1380:         4: {Ostro -> 9}\n1381:           5: {Ninji -> 22}\n1382: 0: {Mouser -> 1}\n1383:       3: {Mario -> 14}\n1384:         4: {Luigi -> 25}\n1385:     2: {Hoopster -> 12}\n1386:         4: {Hawkmouth -> 19}\n1387:       3: {Flurry -> 17}\n1388:   1: {Cobrat -> 2}\n1389:         4: {Clawgrip -> 28}\n1390:       3: {Bob-omb -> 18}\n1391:     2: {Beezo -> 6}\n1392:       3: {Autobomb -> 10}\n1393:         4: {Albatoss -> 15}\n1394:\"\n1395:  in\n1396:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Beezo" in
+  let original = bigmap in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+       3: {Whale -> 29}
+     2: {Wart -> 11}
+   1: {Tweeter -> 3}
+         4: {Tryclyde -> 16}
+           5: {Trouter -> 20}
+       3: {Toad -> 7}
+         4: {Spark -> 13}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+     2: {Pokey -> 4}
+         4: {Pidgit -> 8}
+       3: {Phanto -> 5}
+           5: {Panser -> 27}
+         4: {Ostro -> 9}
+           5: {Ninji -> 22}
+ 0: {Mouser -> 1}
+       3: {Mario -> 14}
+         4: {Luigi -> 25}
+     2: {Hoopster -> 12}
+         4: {Hawkmouth -> 19}
+       3: {Flurry -> 17}
+   1: {Cobrat -> 2}
+       3: {Clawgrip -> 28}
+     2: {Bob-omb -> 18}
+       3: {Autobomb -> 10}
+         4: {Albatoss -> 15}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1435"; msg=(!msgref); code="1400:  let key = \"Beezo\" in\n1401:  let original = bigmap in\n1402:  let initmsg = make_remove_msg key original in\n1403:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1404:  let expect_str = \"\n1405:       3: {Whale -> 29}\n1406:     2: {Wart -> 11}\n1407:   1: {Tweeter -> 3}\n1408:         4: {Tryclyde -> 16}\n1409:           5: {Trouter -> 20}\n1410:       3: {Toad -> 7}\n1411:         4: {Spark -> 13}\n1412:           5: {Snifit -> 21}\n1413:             6: {ShyGuy -> 23}\n1414:                 8: {Princess -> 26}\n1415:               7: {Porcupo -> 24}\n1416:     2: {Pokey -> 4}\n1417:         4: {Pidgit -> 8}\n1418:       3: {Phanto -> 5}\n1419:           5: {Panser -> 27}\n1420:         4: {Ostro -> 9}\n1421:           5: {Ninji -> 22}\n1422: 0: {Mouser -> 1}\n1423:       3: {Mario -> 14}\n1424:         4: {Luigi -> 25}\n1425:     2: {Hoopster -> 12}\n1426:         4: {Hawkmouth -> 19}\n1427:       3: {Flurry -> 17}\n1428:   1: {Cobrat -> 2}\n1429:       3: {Clawgrip -> 28}\n1430:     2: {Bob-omb -> 18}\n1431:       3: {Autobomb -> 10}\n1432:         4: {Albatoss -> 15}\n1433:\"\n1434:  in\n1435:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* remove on bigmap 2 *)
+  (* BEG_TEST *)
+  let key = "Bob-omb" in
+  let original = bigmap2 in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+         4: {Whale -> 29}
+       3: {Wart -> 14}
+     2: {Tweeter -> 6}
+         4: {Tryclyde -> 17}
+           5: {Trouter -> 20}
+       3: {Toad -> 10}
+   1: {Spark -> 3}
+         4: {Snifit -> 21}
+           5: {ShyGuy -> 23}
+               7: {Princess -> 26}
+             6: {Porcupo -> 24}
+       3: {Pokey -> 7}
+           5: {Pidgit -> 11}
+         4: {Phanto -> 8}
+             6: {Panser -> 27}
+           5: {Ostro -> 12}
+             6: {Ninji -> 22}
+     2: {Mouser -> 4}
+           5: {Mario -> 16}
+             6: {Luigi -> 25}
+         4: {Hoopster -> 15}
+             6: {Hawkmouth -> 19}
+           5: {Flurry -> 18}
+       3: {Cobrat -> 5}
+         4: {Clawgrip -> 28}
+ 0: {Beezo -> 1}
+     2: {Autobomb -> 13}
+   1: {Albatoss -> 9}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1478"; msg=(!msgref); code="1443:  let key = \"Bob-omb\" in\n1444:  let original = bigmap2 in\n1445:  let initmsg = make_remove_msg key original in\n1446:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1447:  let expect_str = \"\n1448:         4: {Whale -> 29}\n1449:       3: {Wart -> 14}\n1450:     2: {Tweeter -> 6}\n1451:         4: {Tryclyde -> 17}\n1452:           5: {Trouter -> 20}\n1453:       3: {Toad -> 10}\n1454:   1: {Spark -> 3}\n1455:         4: {Snifit -> 21}\n1456:           5: {ShyGuy -> 23}\n1457:               7: {Princess -> 26}\n1458:             6: {Porcupo -> 24}\n1459:       3: {Pokey -> 7}\n1460:           5: {Pidgit -> 11}\n1461:         4: {Phanto -> 8}\n1462:             6: {Panser -> 27}\n1463:           5: {Ostro -> 12}\n1464:             6: {Ninji -> 22}\n1465:     2: {Mouser -> 4}\n1466:           5: {Mario -> 16}\n1467:             6: {Luigi -> 25}\n1468:         4: {Hoopster -> 15}\n1469:             6: {Hawkmouth -> 19}\n1470:           5: {Flurry -> 18}\n1471:       3: {Cobrat -> 5}\n1472:         4: {Clawgrip -> 28}\n1473: 0: {Beezo -> 1}\n1474:     2: {Autobomb -> 13}\n1475:   1: {Albatoss -> 9}\n1476:\"\n1477:  in\n1478:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Flurry" in
+  let original = bigmap2 in
+  let initmsg = make_remove_msg key original in
+  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in
+  let expect_str = "
+           5: {Whale -> 29}
+         4: {Wart -> 14}
+       3: {Tweeter -> 6}
+           5: {Tryclyde -> 17}
+             6: {Trouter -> 20}
+         4: {Toad -> 10}
+     2: {Spark -> 3}
+           5: {Snifit -> 21}
+             6: {ShyGuy -> 23}
+                 8: {Princess -> 26}
+               7: {Porcupo -> 24}
+         4: {Pokey -> 7}
+             6: {Pidgit -> 11}
+           5: {Phanto -> 8}
+               7: {Panser -> 27}
+             6: {Ostro -> 12}
+               7: {Ninji -> 22}
+       3: {Mouser -> 4}
+             6: {Mario -> 16}
+               7: {Luigi -> 25}
+           5: {Hoopster -> 15}
+             6: {Hawkmouth -> 19}
+         4: {Cobrat -> 5}
+           5: {Clawgrip -> 28}
+   1: {Bob-omb -> 2}
+ 0: {Beezo -> 1}
+     2: {Autobomb -> 13}
+   1: {Albatoss -> 9}
+"
+  in
+if not ( ( check_diff ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref )) then raise (TestFail {loc="test_ssmap.ml:1517"; msg=(!msgref); code="1482:  let key = \"Flurry\" in\n1483:  let original = bigmap2 in\n1484:  let initmsg = make_remove_msg key original in\n1485:  let actual_str = (Ssmap.tree_string (Ssmap.remove_key original key)) in\n1486:  let expect_str = \"\n1487:           5: {Whale -> 29}\n1488:         4: {Wart -> 14}\n1489:       3: {Tweeter -> 6}\n1490:           5: {Tryclyde -> 17}\n1491:             6: {Trouter -> 20}\n1492:         4: {Toad -> 10}\n1493:     2: {Spark -> 3}\n1494:           5: {Snifit -> 21}\n1495:             6: {ShyGuy -> 23}\n1496:                 8: {Princess -> 26}\n1497:               7: {Porcupo -> 24}\n1498:         4: {Pokey -> 7}\n1499:             6: {Pidgit -> 11}\n1500:           5: {Phanto -> 8}\n1501:               7: {Panser -> 27}\n1502:             6: {Ostro -> 12}\n1503:               7: {Ninji -> 22}\n1504:       3: {Mouser -> 4}\n1505:             6: {Mario -> 16}\n1506:               7: {Luigi -> 25}\n1507:           5: {Hoopster -> 15}\n1508:             6: {Hawkmouth -> 19}\n1509:         4: {Cobrat -> 5}\n1510:           5: {Clawgrip -> 28}\n1511:   1: {Bob-omb -> 2}\n1512: 0: {Beezo -> 1}\n1513:     2: {Autobomb -> 13}\n1514:   1: {Albatoss -> 9}\n1515:\"\n1516:  in\n1517:  __check_output__ ( check_diff  ~expect_str expect_file ~actual_str actual_file diff_file ~initmsg msgref );\n"}) else ();
+  (* END_TEST *)
+
+);
+
+(fun () ->
+  (* remove with getopt *)
+
+  (* BEG_TEST *)
+  let key = "Princess" in
+  let original = smallmap in
+  let map = Ssmap.remove_key original key in
+
+  let key = "Princess" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1534"; msg=msg; code="1526:  let key = \"Princess\" in\n1527:  let original = smallmap in\n1528:  let map = Ssmap.remove_key original key in\n1529:\n1530:  let key = \"Princess\" in\n1531:  let actual = Ssmap.getopt map key in\n1532:  let expect = None in\n1533:  let msg = make_getopt_msg key map expect actual in\n1534:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Mario" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "plumber" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1540"; msg=msg; code="1526:  let key = \"Princess\" in\n1527:  let original = smallmap in\n1528:  let map = Ssmap.remove_key original key in\n1529:\n1530:  let key = \"Princess\" in\n1531:  let actual = Ssmap.getopt map key in\n1532:  let expect = None in\n1533:  let msg = make_getopt_msg key map expect actual in\n1534:  __check__ ( expect = actual );\n1535:\n1536:  let key = \"Mario\" in\n1537:  let actual = Ssmap.getopt map key in\n1538:  let expect = Some \"plumber\" in\n1539:  let msg = make_getopt_msg key map expect actual in\n1540:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Luigi" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "plumber" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1546"; msg=msg; code="1526:  let key = \"Princess\" in\n1527:  let original = smallmap in\n1528:  let map = Ssmap.remove_key original key in\n1529:\n1530:  let key = \"Princess\" in\n1531:  let actual = Ssmap.getopt map key in\n1532:  let expect = None in\n1533:  let msg = make_getopt_msg key map expect actual in\n1534:  __check__ ( expect = actual );\n1535:\n1536:  let key = \"Mario\" in\n1537:  let actual = Ssmap.getopt map key in\n1538:  let expect = Some \"plumber\" in\n1539:  let msg = make_getopt_msg key map expect actual in\n1540:  __check__ ( expect = actual );\n1541:\n1542:  let key = \"Luigi\" in\n1543:  let actual = Ssmap.getopt map key in\n1544:  let expect = Some \"plumber\" in\n1545:  let msg = make_getopt_msg key map expect actual in\n1546:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Toad" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "retainer" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1552"; msg=msg; code="1526:  let key = \"Princess\" in\n1527:  let original = smallmap in\n1528:  let map = Ssmap.remove_key original key in\n1529:\n1530:  let key = \"Princess\" in\n1531:  let actual = Ssmap.getopt map key in\n1532:  let expect = None in\n1533:  let msg = make_getopt_msg key map expect actual in\n1534:  __check__ ( expect = actual );\n1535:\n1536:  let key = \"Mario\" in\n1537:  let actual = Ssmap.getopt map key in\n1538:  let expect = Some \"plumber\" in\n1539:  let msg = make_getopt_msg key map expect actual in\n1540:  __check__ ( expect = actual );\n1541:\n1542:  let key = \"Luigi\" in\n1543:  let actual = Ssmap.getopt map key in\n1544:  let expect = Some \"plumber\" in\n1545:  let msg = make_getopt_msg key map expect actual in\n1546:  __check__ ( expect = actual );\n1547:\n1548:  let key = \"Toad\" in\n1549:  let actual = Ssmap.getopt map key in\n1550:  let expect = Some \"retainer\" in\n1551:  let msg = make_getopt_msg key map expect actual in\n1552:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Wart" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1558"; msg=msg; code="1526:  let key = \"Princess\" in\n1527:  let original = smallmap in\n1528:  let map = Ssmap.remove_key original key in\n1529:\n1530:  let key = \"Princess\" in\n1531:  let actual = Ssmap.getopt map key in\n1532:  let expect = None in\n1533:  let msg = make_getopt_msg key map expect actual in\n1534:  __check__ ( expect = actual );\n1535:\n1536:  let key = \"Mario\" in\n1537:  let actual = Ssmap.getopt map key in\n1538:  let expect = Some \"plumber\" in\n1539:  let msg = make_getopt_msg key map expect actual in\n1540:  __check__ ( expect = actual );\n1541:\n1542:  let key = \"Luigi\" in\n1543:  let actual = Ssmap.getopt map key in\n1544:  let expect = Some \"plumber\" in\n1545:  let msg = make_getopt_msg key map expect actual in\n1546:  __check__ ( expect = actual );\n1547:\n1548:  let key = \"Toad\" in\n1549:  let actual = Ssmap.getopt map key in\n1550:  let expect = Some \"retainer\" in\n1551:  let msg = make_getopt_msg key map expect actual in\n1552:  __check__ ( expect = actual );\n1553:\n1554:  let key = \"Wart\" in\n1555:  let actual = Ssmap.getopt map key in\n1556:  let expect = None in\n1557:  let msg = make_getopt_msg key map expect actual in\n1558:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  let key = "Mouser" in
+  let original = bigmap in
+  let map = Ssmap.remove_key original key in
+
+  let key = "Mouser" in
+  let actual = Ssmap.getopt map key in
+  let expect = None in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1570"; msg=msg; code="1562:  let key = \"Mouser\" in\n1563:  let original = bigmap in\n1564:  let map = Ssmap.remove_key original key in\n1565:\n1566:  let key = \"Mouser\" in\n1567:  let actual = Ssmap.getopt map key in\n1568:  let expect = None in\n1569:  let msg = make_getopt_msg key map expect actual in\n1570:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Tweeter" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "3" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1576"; msg=msg; code="1562:  let key = \"Mouser\" in\n1563:  let original = bigmap in\n1564:  let map = Ssmap.remove_key original key in\n1565:\n1566:  let key = \"Mouser\" in\n1567:  let actual = Ssmap.getopt map key in\n1568:  let expect = None in\n1569:  let msg = make_getopt_msg key map expect actual in\n1570:  __check__ ( expect = actual );\n1571:\n1572:  let key = \"Tweeter\" in\n1573:  let actual = Ssmap.getopt map key in\n1574:  let expect = Some \"3\" in\n1575:  let msg = make_getopt_msg key map expect actual in\n1576:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Cobrat" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "2" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1582"; msg=msg; code="1562:  let key = \"Mouser\" in\n1563:  let original = bigmap in\n1564:  let map = Ssmap.remove_key original key in\n1565:\n1566:  let key = \"Mouser\" in\n1567:  let actual = Ssmap.getopt map key in\n1568:  let expect = None in\n1569:  let msg = make_getopt_msg key map expect actual in\n1570:  __check__ ( expect = actual );\n1571:\n1572:  let key = \"Tweeter\" in\n1573:  let actual = Ssmap.getopt map key in\n1574:  let expect = Some \"3\" in\n1575:  let msg = make_getopt_msg key map expect actual in\n1576:  __check__ ( expect = actual );\n1577:\n1578:  let key = \"Cobrat\" in\n1579:  let actual = Ssmap.getopt map key in\n1580:  let expect = Some \"2\" in\n1581:  let msg = make_getopt_msg key map expect actual in\n1582:  __check__ ( expect = actual );\n"}) else ();
+
+  let key = "Hawkmouth" in
+  let actual = Ssmap.getopt map key in
+  let expect = Some "19" in
+  let msg = make_getopt_msg key map expect actual in
+if not ( ( expect = actual )) then raise (TestFail {loc="test_ssmap.ml:1588"; msg=msg; code="1562:  let key = \"Mouser\" in\n1563:  let original = bigmap in\n1564:  let map = Ssmap.remove_key original key in\n1565:\n1566:  let key = \"Mouser\" in\n1567:  let actual = Ssmap.getopt map key in\n1568:  let expect = None in\n1569:  let msg = make_getopt_msg key map expect actual in\n1570:  __check__ ( expect = actual );\n1571:\n1572:  let key = \"Tweeter\" in\n1573:  let actual = Ssmap.getopt map key in\n1574:  let expect = Some \"3\" in\n1575:  let msg = make_getopt_msg key map expect actual in\n1576:  __check__ ( expect = actual );\n1577:\n1578:  let key = \"Cobrat\" in\n1579:  let actual = Ssmap.getopt map key in\n1580:  let expect = Some \"2\" in\n1581:  let msg = make_getopt_msg key map expect actual in\n1582:  __check__ ( expect = actual );\n1583:\n1584:  let key = \"Hawkmouth\" in\n1585:  let actual = Ssmap.getopt map key in\n1586:  let expect = Some \"19\" in\n1587:  let msg = make_getopt_msg key map expect actual in\n1588:  __check__ ( expect = actual );\n"}) else ();
+  (* END_TEST *)
+);
+
+|];;    

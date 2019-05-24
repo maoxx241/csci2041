@@ -1,0 +1,333 @@
+"sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+type(
+  int array -> int
+)
+ident(
+  def array_sum "sumfuncs.ml" 15 266 270 "sumfuncs.ml" 1 0 -1
+)
+"sumfuncs.ml" 1 0 14 "sumfuncs.ml" 1 0 17
+type(
+  int array
+)
+ident(
+  def arr "sumfuncs.ml" 2 20 24 "sumfuncs.ml" 7 158 173
+)
+"sumfuncs.ml" 2 20 28 "sumfuncs.ml" 2 20 34
+type(
+  int ref
+)
+ident(
+  def result "sumfuncs.ml" 3 45 49 "sumfuncs.ml" 7 158 173
+)
+"sumfuncs.ml" 2 20 36 "sumfuncs.ml" 2 20 39
+type(
+  int -> int ref
+)
+ident(
+  int_ref Pervasives.ref "pervasives.mli" 1063 41160 41160 "pervasives.mli" 1063 41160 41204
+)
+"sumfuncs.ml" 2 20 40 "sumfuncs.ml" 2 20 41
+type(
+  int
+)
+"sumfuncs.ml" 2 20 36 "sumfuncs.ml" 2 20 41
+type(
+  int ref
+)
+"sumfuncs.ml" 3 45 55 "sumfuncs.ml" 3 45 56
+type(
+  int
+)
+"sumfuncs.ml" 3 45 61 "sumfuncs.ml" 3 45 73
+type(
+  int array -> int
+)
+ident(
+  int_ref Array.length "array.mli" 18 1105 1105 "array.mli" 18 1105 1156
+)
+"sumfuncs.ml" 3 45 74 "sumfuncs.ml" 3 45 77
+type(
+  int array
+)
+ident(
+  int_ref arr "sumfuncs.ml" 1 0 14 "sumfuncs.ml" 1 0 17
+)
+"sumfuncs.ml" 3 45 60 "sumfuncs.ml" 3 45 78
+type(
+  int
+)
+"sumfuncs.ml" 3 45 78 "sumfuncs.ml" 3 45 79
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( - ) "pervasives.mli" 265 10396 10396 "pervasives.mli" 265 10396 10442
+)
+"sumfuncs.ml" 3 45 79 "sumfuncs.ml" 3 45 80
+type(
+  int
+)
+"sumfuncs.ml" 3 45 60 "sumfuncs.ml" 3 45 80
+type(
+  int
+)
+"sumfuncs.ml" 4 84 96 "sumfuncs.ml" 4 84 100
+type(
+  int
+)
+ident(
+  def next "sumfuncs.ml" 5 122 130 "sumfuncs.ml" 5 122 142
+)
+"sumfuncs.ml" 4 84 102 "sumfuncs.ml" 4 84 103
+type(
+  int ref -> int
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"sumfuncs.ml" 4 84 103 "sumfuncs.ml" 4 84 109
+type(
+  int ref
+)
+ident(
+  int_ref result "sumfuncs.ml" 2 20 28 "sumfuncs.ml" 2 20 34
+)
+"sumfuncs.ml" 4 84 102 "sumfuncs.ml" 4 84 109
+type(
+  int
+)
+"sumfuncs.ml" 4 84 109 "sumfuncs.ml" 4 84 110
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( + ) "pervasives.mli" 261 10267 10267 "pervasives.mli" 261 10267 10313
+)
+"sumfuncs.ml" 4 84 111 "sumfuncs.ml" 4 84 114
+type(
+  int array
+)
+ident(
+  int_ref arr "sumfuncs.ml" 1 0 14 "sumfuncs.ml" 1 0 17
+)
+"sumfuncs.ml" 4 84 116 "sumfuncs.ml" 4 84 117
+type(
+  int
+)
+ident(
+  int_ref i "sumfuncs.ml" 3 45 49 "sumfuncs.ml" 6 144 156
+)
+"sumfuncs.ml" 4 84 111 "sumfuncs.ml" 4 84 118
+type(
+  int
+)
+"sumfuncs.ml" 4 84 102 "sumfuncs.ml" 4 84 118
+type(
+  int
+)
+"sumfuncs.ml" 5 122 130 "sumfuncs.ml" 5 122 136
+type(
+  int ref
+)
+ident(
+  int_ref result "sumfuncs.ml" 2 20 28 "sumfuncs.ml" 2 20 34
+)
+"sumfuncs.ml" 5 122 136 "sumfuncs.ml" 5 122 138
+type(
+  int ref -> int -> unit
+)
+ident(
+  int_ref Pervasives.( := ) "pervasives.mli" 1071 41452 41452 "pervasives.mli" 1071 41452 41505
+)
+"sumfuncs.ml" 5 122 138 "sumfuncs.ml" 5 122 142
+type(
+  int
+)
+ident(
+  int_ref next "sumfuncs.ml" 4 84 96 "sumfuncs.ml" 4 84 100
+)
+"sumfuncs.ml" 5 122 130 "sumfuncs.ml" 5 122 142
+type(
+  unit
+)
+"sumfuncs.ml" 4 84 92 "sumfuncs.ml" 5 122 143
+type(
+  unit
+)
+"sumfuncs.ml" 3 45 49 "sumfuncs.ml" 6 144 156
+type(
+  unit
+)
+"sumfuncs.ml" 7 158 166 "sumfuncs.ml" 7 158 167
+type(
+  int ref -> int
+)
+ident(
+  int_ref Pervasives.( ! ) "pervasives.mli" 1066 41266 41266 "pervasives.mli" 1066 41266 41307
+)
+"sumfuncs.ml" 7 158 167 "sumfuncs.ml" 7 158 173
+type(
+  int ref
+)
+ident(
+  int_ref result "sumfuncs.ml" 2 20 28 "sumfuncs.ml" 2 20 34
+)
+"sumfuncs.ml" 7 158 166 "sumfuncs.ml" 7 158 173
+type(
+  int
+)
+"sumfuncs.ml" 3 45 49 "sumfuncs.ml" 7 158 173
+type(
+  int
+)
+"sumfuncs.ml" 2 20 24 "sumfuncs.ml" 7 158 173
+type(
+  int
+)
+"sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+type(
+  int list -> int
+)
+ident(
+  def list_sum "sumfuncs.ml" 15 266 270 "sumfuncs.ml" 1 0 -1
+)
+"sumfuncs.ml" 15 266 287 "sumfuncs.ml" 15 266 290
+type(
+  int list
+)
+ident(
+  def lst "sumfuncs.ml" 17 294 298 "sumfuncs.ml" 21 404 441
+)
+"sumfuncs.ml" 17 294 301 "sumfuncs.ml" 17 294 304
+type(
+  int list
+)
+ident(
+  int_ref lst "sumfuncs.ml" 15 266 287 "sumfuncs.ml" 15 266 290
+)
+"sumfuncs.ml" 17 294 304 "sumfuncs.ml" 17 294 305
+type(
+  int list -> int list -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"sumfuncs.ml" 17 294 305 "sumfuncs.ml" 17 294 307
+type(
+  int list
+)
+"sumfuncs.ml" 17 294 301 "sumfuncs.ml" 17 294 307
+type(
+  bool
+)
+"sumfuncs.ml" 17 294 313 "sumfuncs.ml" 17 294 314
+type(
+  int
+)
+"sumfuncs.ml" 19 328 340 "sumfuncs.ml" 19 328 353
+type(
+  int
+)
+ident(
+  def first_element "sumfuncs.ml" 20 370 378 "sumfuncs.ml" 21 404 441
+)
+"sumfuncs.ml" 19 328 355 "sumfuncs.ml" 19 328 362
+type(
+  int list -> int
+)
+ident(
+  int_ref List.hd "list.mli" 51 2344 2344 "list.mli" 51 2344 2366
+)
+"sumfuncs.ml" 19 328 363 "sumfuncs.ml" 19 328 366
+type(
+  int list
+)
+ident(
+  int_ref lst "sumfuncs.ml" 15 266 287 "sumfuncs.ml" 15 266 290
+)
+"sumfuncs.ml" 19 328 355 "sumfuncs.ml" 19 328 366
+call(
+  stack
+)
+type(
+  int
+)
+"sumfuncs.ml" 20 370 382 "sumfuncs.ml" 20 370 388
+type(
+  int list
+)
+ident(
+  def remain "sumfuncs.ml" 21 404 412 "sumfuncs.ml" 21 404 441
+)
+"sumfuncs.ml" 20 370 389 "sumfuncs.ml" 20 370 396
+type(
+  int list -> int list
+)
+ident(
+  int_ref List.tl "list.mli" 55 2465 2465 "list.mli" 55 2465 2492
+)
+"sumfuncs.ml" 20 370 397 "sumfuncs.ml" 20 370 400
+type(
+  int list
+)
+ident(
+  int_ref lst "sumfuncs.ml" 15 266 287 "sumfuncs.ml" 15 266 290
+)
+"sumfuncs.ml" 20 370 389 "sumfuncs.ml" 20 370 400
+call(
+  stack
+)
+type(
+  int list
+)
+"sumfuncs.ml" 21 404 412 "sumfuncs.ml" 21 404 425
+type(
+  int
+)
+ident(
+  int_ref first_element "sumfuncs.ml" 19 328 340 "sumfuncs.ml" 19 328 353
+)
+"sumfuncs.ml" 21 404 425 "sumfuncs.ml" 21 404 426
+type(
+  int -> int -> int
+)
+ident(
+  int_ref Pervasives.( + ) "pervasives.mli" 261 10267 10267 "pervasives.mli" 261 10267 10313
+)
+"sumfuncs.ml" 21 404 426 "sumfuncs.ml" 21 404 434
+type(
+  int list -> int
+)
+ident(
+  int_ref list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"sumfuncs.ml" 21 404 435 "sumfuncs.ml" 21 404 441
+type(
+  int list
+)
+ident(
+  int_ref remain "sumfuncs.ml" 20 370 382 "sumfuncs.ml" 20 370 388
+)
+"sumfuncs.ml" 21 404 426 "sumfuncs.ml" 21 404 441
+call(
+  stack
+)
+type(
+  int
+)
+"sumfuncs.ml" 21 404 412 "sumfuncs.ml" 21 404 441
+type(
+  int
+)
+"sumfuncs.ml" 20 370 378 "sumfuncs.ml" 21 404 441
+type(
+  int
+)
+"sumfuncs.ml" 19 328 336 "sumfuncs.ml" 21 404 441
+type(
+  int
+)
+"sumfuncs.ml" 17 294 298 "sumfuncs.ml" 21 404 441
+type(
+  int
+)

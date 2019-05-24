@@ -1,0 +1,54 @@
+calculon> def double = 4;
+double : IntDat(4)
+calculon> def six = 6;
+six : IntDat(6)
+calculon> def alwaystwo_std = 2;
+alwaystwo_std : IntDat(2)
+calculon> source test_input_b.tmp;
+Reading source file 'test_input_b.tmp'
+calculon> def one = 1;
+one : IntDat(1)
+calculon> def double = @n n*2;
+double : Closure(n, <fun>)
+calculon> 
+End of file 'test_input_b.tmp'
+calculon> source test_input_c.tmp;
+Reading source file 'test_input_c.tmp'
+calculon> def octuple_std =
+@n
+  2*2*2*n;
+octuple_std : Closure(n, <fun>)
+calculon> def addten_std = 
+@x
+  let a = 2*3 in
+  let b = 1*1+1*1+1*2 in
+  a+b+x;
+addten_std : Closure(x, <fun>)
+calculon> def alwaystwo_std = 
+@a
+  if true then
+    2
+  else
+    a+5;
+alwaystwo_std : Closure(a, <fun>)
+calculon> 
+End of file 'test_input_c.tmp'
+calculon> def one = 0;
+one : IntDat(0)
+calculon> source test_input_b.tmp;
+Reading source file 'test_input_b.tmp'
+calculon> def one = 1;
+one : IntDat(1)
+calculon> def double = @n n*2;
+double : Closure(n, <fun>)
+calculon> 
+End of file 'test_input_b.tmp'
+calculon> whos;
+addten_std : Closure(x, <fun>)
+alwaystwo_std : Closure(a, <fun>)
+    double : Closure(n, <fun>)
+octuple_std : Closure(n, <fun>)
+       one : IntDat(1)
+       six : IntDat(6)
+calculon> 
+That was so terrible I think you gave me cancer!

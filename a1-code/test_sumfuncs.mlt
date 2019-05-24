@@ -1,0 +1,113 @@
+open Sumfuncs;;                           (* array_sum and list_sum *)
+open Printf;;
+open Mltest;;
+
+Mltest.main [|
+(******************************************)
+(* array_sum tests *)
+(fun () ->
+  (* BEG_TEST *)
+  (* array_sum on short array *)
+  let input = [|1; 2; 3;|] in
+  let actual = array_sum input in
+  let expect = 6 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:15",msg,"10:  (* array_sum on short array *)\n11:  let input = [|1; 2; 3;|] in\n12:  let actual = array_sum input in\n13:  let expect = 6 in\n14:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n15:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_sum on short array *)
+  let input = [|8; 6; 7; 5; 7; 0; 9;|] in
+  let actual = array_sum input in
+  let expect = 42 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:25",msg,"20:  (* array_sum on short array *)\n21:  let input = [|8; 6; 7; 5; 7; 0; 9;|] in\n22:  let actual = array_sum input in\n23:  let expect = 42 in\n24:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n25:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_sum on short array *)
+  let input = [|-2; 1; 9; -17; 6;|] in
+  let actual = array_sum input in
+  let expect = -3 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:35",msg,"30:  (* array_sum on short array *)\n31:  let input = [|-2; 1; 9; -17; 6;|] in\n32:  let actual = array_sum input in\n33:  let expect = -3 in\n34:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n35:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_sum on single element array *)
+  let input = [|13|] in
+  let actual = array_sum input in
+  let expect = 13 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:45",msg,"40:  (* array_sum on single element array *)\n41:  let input = [|13|] in\n42:  let actual = array_sum input in\n43:  let expect = 13 in\n44:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n45:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* array_sum on empty array *)
+  let input = [||] in
+  let actual = array_sum input in
+  let expect = 0 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:55",msg,"50:  (* array_sum on empty array *)\n51:  let input = [||] in\n52:  let actual = array_sum input in\n53:  let expect = 0 in\n54:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n55:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+
+(******************************************)
+(* list_sum tests *)
+(fun () ->
+  (* BEG_TEST *)
+  (* list_sum on short list *)
+  let input = [1; 2; 3;] in
+  let actual = list_sum input in
+  let expect = 6 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:68",msg,"63:  (* list_sum on short list *)\n64:  let input = [1; 2; 3;] in\n65:  let actual = list_sum input in\n66:  let expect = 6 in\n67:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n68:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_sum on short list *)
+  let input = [8; 6; 7; 5; 7; 0; 9;] in
+  let actual = list_sum input in
+  let expect = 42 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:78",msg,"73:  (* list_sum on short list *)\n74:  let input = [8; 6; 7; 5; 7; 0; 9;] in\n75:  let actual = list_sum input in\n76:  let expect = 42 in\n77:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n78:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_sum on short list *)
+  let input = [-2; 1; 9; -17; 6;] in
+  let actual = list_sum input in
+  let expect = -3 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:88",msg,"83:  (* list_sum on short list *)\n84:  let input = [-2; 1; 9; -17; 6;] in\n85:  let actual = list_sum input in\n86:  let expect = -3 in\n87:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n88:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_sum on single element list *)
+  let input = [13] in
+  let actual = list_sum input in
+  let expect = 13 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:98",msg,"93:  (* list_sum on single element list *)\n94:  let input = [13] in\n95:  let actual = list_sum input in\n96:  let expect = 13 in\n97:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n98:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* list_sum on empty list *)
+  let input = [] in
+  let actual = list_sum input in
+  let expect = 0 in
+  let msg = sprintf "Expect: %d\nActual: %d" expect actual in
+if not ( (actual = expect)) then raise (TestFail("test_sumfuncs.ml:108",msg,"103:  (* list_sum on empty list *)\n104:  let input = [] in\n105:  let actual = list_sum input in\n106:  let expect = 0 in\n107:  let msg = sprintf \"Expect: %d\\nActual: %d\" expect actual in\n108:  __check__ (actual = expect);\n")) else ();
+  (* END_TEST *)
+);
+
+|];;    
+    

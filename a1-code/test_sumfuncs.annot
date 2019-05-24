@@ -1,0 +1,2016 @@
+"test_sumfuncs.mlt" 5 100 100 "test_sumfuncs.mlt" 5 100 111
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  int_ref Mltest.main "mltest.ml" 93 2654 2658 "mltest.ml" 93 2654 2662
+)
+"test_sumfuncs.mlt" 8 182 187 "test_sumfuncs.mlt" 8 182 189
+type(
+  unit
+)
+"test_sumfuncs.mlt" 11 243 249 "test_sumfuncs.mlt" 11 243 254
+type(
+  int array
+)
+ident(
+  def input "test_sumfuncs.mlt" 12 273 275 "test_sumfuncs.mlt" 15 389 714
+)
+"test_sumfuncs.mlt" 11 243 259 "test_sumfuncs.mlt" 11 243 260
+type(
+  int
+)
+"test_sumfuncs.mlt" 11 243 262 "test_sumfuncs.mlt" 11 243 263
+type(
+  int
+)
+"test_sumfuncs.mlt" 11 243 265 "test_sumfuncs.mlt" 11 243 266
+type(
+  int
+)
+"test_sumfuncs.mlt" 11 243 257 "test_sumfuncs.mlt" 11 243 269
+type(
+  int array
+)
+"test_sumfuncs.mlt" 12 273 279 "test_sumfuncs.mlt" 12 273 285
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 13 307 309 "test_sumfuncs.mlt" 15 389 714
+)
+"test_sumfuncs.mlt" 12 273 288 "test_sumfuncs.mlt" 12 273 297
+type(
+  int array -> int
+)
+ident(
+  int_ref Sumfuncs.array_sum "sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+)
+"test_sumfuncs.mlt" 12 273 298 "test_sumfuncs.mlt" 12 273 303
+type(
+  int array
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 11 243 249 "test_sumfuncs.mlt" 11 243 254
+)
+"test_sumfuncs.mlt" 12 273 288 "test_sumfuncs.mlt" 12 273 303
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 13 307 313 "test_sumfuncs.mlt" 13 307 319
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 14 327 329 "test_sumfuncs.mlt" 15 389 714
+)
+"test_sumfuncs.mlt" 13 307 322 "test_sumfuncs.mlt" 13 307 323
+type(
+  int
+)
+"test_sumfuncs.mlt" 14 327 333 "test_sumfuncs.mlt" 14 327 336
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 15 389 389 "test_sumfuncs.mlt" 15 389 713
+)
+"test_sumfuncs.mlt" 14 327 339 "test_sumfuncs.mlt" 14 327 346
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 14 327 347 "test_sumfuncs.mlt" 14 327 371
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 14 327 372 "test_sumfuncs.mlt" 14 327 378
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 13 307 313 "test_sumfuncs.mlt" 13 307 319
+)
+"test_sumfuncs.mlt" 14 327 379 "test_sumfuncs.mlt" 14 327 385
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 12 273 279 "test_sumfuncs.mlt" 12 273 285
+)
+"test_sumfuncs.mlt" 14 327 339 "test_sumfuncs.mlt" 14 327 385
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 15 389 392 "test_sumfuncs.mlt" 15 389 395
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 15 389 399 "test_sumfuncs.mlt" 15 389 405
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 12 273 279 "test_sumfuncs.mlt" 12 273 285
+)
+"test_sumfuncs.mlt" 15 389 406 "test_sumfuncs.mlt" 15 389 407
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 15 389 408 "test_sumfuncs.mlt" 15 389 414
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 13 307 313 "test_sumfuncs.mlt" 13 307 319
+)
+"test_sumfuncs.mlt" 15 389 396 "test_sumfuncs.mlt" 15 389 416
+type(
+  bool
+)
+"test_sumfuncs.mlt" 15 389 392 "test_sumfuncs.mlt" 15 389 416
+type(
+  bool
+)
+"test_sumfuncs.mlt" 15 389 422 "test_sumfuncs.mlt" 15 389 427
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 15 389 438 "test_sumfuncs.mlt" 15 389 459
+type(
+  string
+)
+"test_sumfuncs.mlt" 15 389 460 "test_sumfuncs.mlt" 15 389 463
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 14 327 333 "test_sumfuncs.mlt" 14 327 336
+)
+"test_sumfuncs.mlt" 15 389 464 "test_sumfuncs.mlt" 15 389 703
+type(
+  string
+)
+"test_sumfuncs.mlt" 15 389 428 "test_sumfuncs.mlt" 15 389 705
+type(
+  exn
+)
+"test_sumfuncs.mlt" 15 389 422 "test_sumfuncs.mlt" 15 389 705
+type(
+  unit
+)
+"test_sumfuncs.mlt" 15 389 711 "test_sumfuncs.mlt" 15 389 713
+type(
+  unit
+)
+"test_sumfuncs.mlt" 15 389 389 "test_sumfuncs.mlt" 15 389 713
+type(
+  unit
+)
+"test_sumfuncs.mlt" 14 327 329 "test_sumfuncs.mlt" 15 389 714
+type(
+  unit
+)
+"test_sumfuncs.mlt" 13 307 309 "test_sumfuncs.mlt" 15 389 714
+type(
+  unit
+)
+"test_sumfuncs.mlt" 12 273 275 "test_sumfuncs.mlt" 15 389 714
+type(
+  unit
+)
+"test_sumfuncs.mlt" 11 243 245 "test_sumfuncs.mlt" 15 389 714
+type(
+  unit
+)
+"test_sumfuncs.mlt" 8 182 182 "test_sumfuncs.mlt" 17 732 733
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 18 735 740 "test_sumfuncs.mlt" 18 735 742
+type(
+  unit
+)
+"test_sumfuncs.mlt" 21 796 802 "test_sumfuncs.mlt" 21 796 807
+type(
+  int array
+)
+ident(
+  def input "test_sumfuncs.mlt" 22 838 840 "test_sumfuncs.mlt" 25 955 1293
+)
+"test_sumfuncs.mlt" 21 796 812 "test_sumfuncs.mlt" 21 796 813
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 815 "test_sumfuncs.mlt" 21 796 816
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 818 "test_sumfuncs.mlt" 21 796 819
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 821 "test_sumfuncs.mlt" 21 796 822
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 824 "test_sumfuncs.mlt" 21 796 825
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 827 "test_sumfuncs.mlt" 21 796 828
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 830 "test_sumfuncs.mlt" 21 796 831
+type(
+  int
+)
+"test_sumfuncs.mlt" 21 796 810 "test_sumfuncs.mlt" 21 796 834
+type(
+  int array
+)
+"test_sumfuncs.mlt" 22 838 844 "test_sumfuncs.mlt" 22 838 850
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 23 872 874 "test_sumfuncs.mlt" 25 955 1293
+)
+"test_sumfuncs.mlt" 22 838 853 "test_sumfuncs.mlt" 22 838 862
+type(
+  int array -> int
+)
+ident(
+  int_ref Sumfuncs.array_sum "sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+)
+"test_sumfuncs.mlt" 22 838 863 "test_sumfuncs.mlt" 22 838 868
+type(
+  int array
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 21 796 802 "test_sumfuncs.mlt" 21 796 807
+)
+"test_sumfuncs.mlt" 22 838 853 "test_sumfuncs.mlt" 22 838 868
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 23 872 878 "test_sumfuncs.mlt" 23 872 884
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 24 893 895 "test_sumfuncs.mlt" 25 955 1293
+)
+"test_sumfuncs.mlt" 23 872 887 "test_sumfuncs.mlt" 23 872 889
+type(
+  int
+)
+"test_sumfuncs.mlt" 24 893 899 "test_sumfuncs.mlt" 24 893 902
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 25 955 955 "test_sumfuncs.mlt" 25 955 1292
+)
+"test_sumfuncs.mlt" 24 893 905 "test_sumfuncs.mlt" 24 893 912
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 24 893 913 "test_sumfuncs.mlt" 24 893 937
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 24 893 938 "test_sumfuncs.mlt" 24 893 944
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 23 872 878 "test_sumfuncs.mlt" 23 872 884
+)
+"test_sumfuncs.mlt" 24 893 945 "test_sumfuncs.mlt" 24 893 951
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 22 838 844 "test_sumfuncs.mlt" 22 838 850
+)
+"test_sumfuncs.mlt" 24 893 905 "test_sumfuncs.mlt" 24 893 951
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 25 955 958 "test_sumfuncs.mlt" 25 955 961
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 25 955 965 "test_sumfuncs.mlt" 25 955 971
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 22 838 844 "test_sumfuncs.mlt" 22 838 850
+)
+"test_sumfuncs.mlt" 25 955 972 "test_sumfuncs.mlt" 25 955 973
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 25 955 974 "test_sumfuncs.mlt" 25 955 980
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 23 872 878 "test_sumfuncs.mlt" 23 872 884
+)
+"test_sumfuncs.mlt" 25 955 962 "test_sumfuncs.mlt" 25 955 982
+type(
+  bool
+)
+"test_sumfuncs.mlt" 25 955 958 "test_sumfuncs.mlt" 25 955 982
+type(
+  bool
+)
+"test_sumfuncs.mlt" 25 955 988 "test_sumfuncs.mlt" 25 955 993
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 25 955 1004 "test_sumfuncs.mlt" 25 955 1025
+type(
+  string
+)
+"test_sumfuncs.mlt" 25 955 1026 "test_sumfuncs.mlt" 25 955 1029
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 24 893 899 "test_sumfuncs.mlt" 24 893 902
+)
+"test_sumfuncs.mlt" 25 955 1030 "test_sumfuncs.mlt" 25 955 1282
+type(
+  string
+)
+"test_sumfuncs.mlt" 25 955 994 "test_sumfuncs.mlt" 25 955 1284
+type(
+  exn
+)
+"test_sumfuncs.mlt" 25 955 988 "test_sumfuncs.mlt" 25 955 1284
+type(
+  unit
+)
+"test_sumfuncs.mlt" 25 955 1290 "test_sumfuncs.mlt" 25 955 1292
+type(
+  unit
+)
+"test_sumfuncs.mlt" 25 955 955 "test_sumfuncs.mlt" 25 955 1292
+type(
+  unit
+)
+"test_sumfuncs.mlt" 24 893 895 "test_sumfuncs.mlt" 25 955 1293
+type(
+  unit
+)
+"test_sumfuncs.mlt" 23 872 874 "test_sumfuncs.mlt" 25 955 1293
+type(
+  unit
+)
+"test_sumfuncs.mlt" 22 838 840 "test_sumfuncs.mlt" 25 955 1293
+type(
+  unit
+)
+"test_sumfuncs.mlt" 21 796 798 "test_sumfuncs.mlt" 25 955 1293
+type(
+  unit
+)
+"test_sumfuncs.mlt" 18 735 735 "test_sumfuncs.mlt" 27 1311 1312
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 28 1314 1319 "test_sumfuncs.mlt" 28 1314 1321
+type(
+  unit
+)
+"test_sumfuncs.mlt" 31 1375 1381 "test_sumfuncs.mlt" 31 1375 1386
+type(
+  int array
+)
+ident(
+  def input "test_sumfuncs.mlt" 32 1414 1416 "test_sumfuncs.mlt" 35 1531 1866
+)
+"test_sumfuncs.mlt" 31 1375 1391 "test_sumfuncs.mlt" 31 1375 1393
+type(
+  int
+)
+"test_sumfuncs.mlt" 31 1375 1395 "test_sumfuncs.mlt" 31 1375 1396
+type(
+  int
+)
+"test_sumfuncs.mlt" 31 1375 1398 "test_sumfuncs.mlt" 31 1375 1399
+type(
+  int
+)
+"test_sumfuncs.mlt" 31 1375 1401 "test_sumfuncs.mlt" 31 1375 1404
+type(
+  int
+)
+"test_sumfuncs.mlt" 31 1375 1406 "test_sumfuncs.mlt" 31 1375 1407
+type(
+  int
+)
+"test_sumfuncs.mlt" 31 1375 1389 "test_sumfuncs.mlt" 31 1375 1410
+type(
+  int array
+)
+"test_sumfuncs.mlt" 32 1414 1420 "test_sumfuncs.mlt" 32 1414 1426
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 33 1448 1450 "test_sumfuncs.mlt" 35 1531 1866
+)
+"test_sumfuncs.mlt" 32 1414 1429 "test_sumfuncs.mlt" 32 1414 1438
+type(
+  int array -> int
+)
+ident(
+  int_ref Sumfuncs.array_sum "sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+)
+"test_sumfuncs.mlt" 32 1414 1439 "test_sumfuncs.mlt" 32 1414 1444
+type(
+  int array
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 31 1375 1381 "test_sumfuncs.mlt" 31 1375 1386
+)
+"test_sumfuncs.mlt" 32 1414 1429 "test_sumfuncs.mlt" 32 1414 1444
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 33 1448 1454 "test_sumfuncs.mlt" 33 1448 1460
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 34 1469 1471 "test_sumfuncs.mlt" 35 1531 1866
+)
+"test_sumfuncs.mlt" 33 1448 1463 "test_sumfuncs.mlt" 33 1448 1465
+type(
+  int
+)
+"test_sumfuncs.mlt" 34 1469 1475 "test_sumfuncs.mlt" 34 1469 1478
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 35 1531 1531 "test_sumfuncs.mlt" 35 1531 1865
+)
+"test_sumfuncs.mlt" 34 1469 1481 "test_sumfuncs.mlt" 34 1469 1488
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 34 1469 1489 "test_sumfuncs.mlt" 34 1469 1513
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 34 1469 1514 "test_sumfuncs.mlt" 34 1469 1520
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 33 1448 1454 "test_sumfuncs.mlt" 33 1448 1460
+)
+"test_sumfuncs.mlt" 34 1469 1521 "test_sumfuncs.mlt" 34 1469 1527
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 32 1414 1420 "test_sumfuncs.mlt" 32 1414 1426
+)
+"test_sumfuncs.mlt" 34 1469 1481 "test_sumfuncs.mlt" 34 1469 1527
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 35 1531 1534 "test_sumfuncs.mlt" 35 1531 1537
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 35 1531 1541 "test_sumfuncs.mlt" 35 1531 1547
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 32 1414 1420 "test_sumfuncs.mlt" 32 1414 1426
+)
+"test_sumfuncs.mlt" 35 1531 1548 "test_sumfuncs.mlt" 35 1531 1549
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 35 1531 1550 "test_sumfuncs.mlt" 35 1531 1556
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 33 1448 1454 "test_sumfuncs.mlt" 33 1448 1460
+)
+"test_sumfuncs.mlt" 35 1531 1538 "test_sumfuncs.mlt" 35 1531 1558
+type(
+  bool
+)
+"test_sumfuncs.mlt" 35 1531 1534 "test_sumfuncs.mlt" 35 1531 1558
+type(
+  bool
+)
+"test_sumfuncs.mlt" 35 1531 1564 "test_sumfuncs.mlt" 35 1531 1569
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 35 1531 1580 "test_sumfuncs.mlt" 35 1531 1601
+type(
+  string
+)
+"test_sumfuncs.mlt" 35 1531 1602 "test_sumfuncs.mlt" 35 1531 1605
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 34 1469 1475 "test_sumfuncs.mlt" 34 1469 1478
+)
+"test_sumfuncs.mlt" 35 1531 1606 "test_sumfuncs.mlt" 35 1531 1855
+type(
+  string
+)
+"test_sumfuncs.mlt" 35 1531 1570 "test_sumfuncs.mlt" 35 1531 1857
+type(
+  exn
+)
+"test_sumfuncs.mlt" 35 1531 1564 "test_sumfuncs.mlt" 35 1531 1857
+type(
+  unit
+)
+"test_sumfuncs.mlt" 35 1531 1863 "test_sumfuncs.mlt" 35 1531 1865
+type(
+  unit
+)
+"test_sumfuncs.mlt" 35 1531 1531 "test_sumfuncs.mlt" 35 1531 1865
+type(
+  unit
+)
+"test_sumfuncs.mlt" 34 1469 1471 "test_sumfuncs.mlt" 35 1531 1866
+type(
+  unit
+)
+"test_sumfuncs.mlt" 33 1448 1450 "test_sumfuncs.mlt" 35 1531 1866
+type(
+  unit
+)
+"test_sumfuncs.mlt" 32 1414 1416 "test_sumfuncs.mlt" 35 1531 1866
+type(
+  unit
+)
+"test_sumfuncs.mlt" 31 1375 1377 "test_sumfuncs.mlt" 35 1531 1866
+type(
+  unit
+)
+"test_sumfuncs.mlt" 28 1314 1314 "test_sumfuncs.mlt" 37 1884 1885
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 38 1887 1892 "test_sumfuncs.mlt" 38 1887 1894
+type(
+  unit
+)
+"test_sumfuncs.mlt" 41 1957 1963 "test_sumfuncs.mlt" 41 1957 1968
+type(
+  int array
+)
+ident(
+  def input "test_sumfuncs.mlt" 42 1981 1983 "test_sumfuncs.mlt" 45 2098 2427
+)
+"test_sumfuncs.mlt" 41 1957 1973 "test_sumfuncs.mlt" 41 1957 1975
+type(
+  int
+)
+"test_sumfuncs.mlt" 41 1957 1971 "test_sumfuncs.mlt" 41 1957 1977
+type(
+  int array
+)
+"test_sumfuncs.mlt" 42 1981 1987 "test_sumfuncs.mlt" 42 1981 1993
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 43 2015 2017 "test_sumfuncs.mlt" 45 2098 2427
+)
+"test_sumfuncs.mlt" 42 1981 1996 "test_sumfuncs.mlt" 42 1981 2005
+type(
+  int array -> int
+)
+ident(
+  int_ref Sumfuncs.array_sum "sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+)
+"test_sumfuncs.mlt" 42 1981 2006 "test_sumfuncs.mlt" 42 1981 2011
+type(
+  int array
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 41 1957 1963 "test_sumfuncs.mlt" 41 1957 1968
+)
+"test_sumfuncs.mlt" 42 1981 1996 "test_sumfuncs.mlt" 42 1981 2011
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 43 2015 2021 "test_sumfuncs.mlt" 43 2015 2027
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 44 2036 2038 "test_sumfuncs.mlt" 45 2098 2427
+)
+"test_sumfuncs.mlt" 43 2015 2030 "test_sumfuncs.mlt" 43 2015 2032
+type(
+  int
+)
+"test_sumfuncs.mlt" 44 2036 2042 "test_sumfuncs.mlt" 44 2036 2045
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 45 2098 2098 "test_sumfuncs.mlt" 45 2098 2426
+)
+"test_sumfuncs.mlt" 44 2036 2048 "test_sumfuncs.mlt" 44 2036 2055
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 44 2036 2056 "test_sumfuncs.mlt" 44 2036 2080
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 44 2036 2081 "test_sumfuncs.mlt" 44 2036 2087
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 43 2015 2021 "test_sumfuncs.mlt" 43 2015 2027
+)
+"test_sumfuncs.mlt" 44 2036 2088 "test_sumfuncs.mlt" 44 2036 2094
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 42 1981 1987 "test_sumfuncs.mlt" 42 1981 1993
+)
+"test_sumfuncs.mlt" 44 2036 2048 "test_sumfuncs.mlt" 44 2036 2094
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 45 2098 2101 "test_sumfuncs.mlt" 45 2098 2104
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 45 2098 2108 "test_sumfuncs.mlt" 45 2098 2114
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 42 1981 1987 "test_sumfuncs.mlt" 42 1981 1993
+)
+"test_sumfuncs.mlt" 45 2098 2115 "test_sumfuncs.mlt" 45 2098 2116
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 45 2098 2117 "test_sumfuncs.mlt" 45 2098 2123
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 43 2015 2021 "test_sumfuncs.mlt" 43 2015 2027
+)
+"test_sumfuncs.mlt" 45 2098 2105 "test_sumfuncs.mlt" 45 2098 2125
+type(
+  bool
+)
+"test_sumfuncs.mlt" 45 2098 2101 "test_sumfuncs.mlt" 45 2098 2125
+type(
+  bool
+)
+"test_sumfuncs.mlt" 45 2098 2131 "test_sumfuncs.mlt" 45 2098 2136
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 45 2098 2147 "test_sumfuncs.mlt" 45 2098 2168
+type(
+  string
+)
+"test_sumfuncs.mlt" 45 2098 2169 "test_sumfuncs.mlt" 45 2098 2172
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 44 2036 2042 "test_sumfuncs.mlt" 44 2036 2045
+)
+"test_sumfuncs.mlt" 45 2098 2173 "test_sumfuncs.mlt" 45 2098 2416
+type(
+  string
+)
+"test_sumfuncs.mlt" 45 2098 2137 "test_sumfuncs.mlt" 45 2098 2418
+type(
+  exn
+)
+"test_sumfuncs.mlt" 45 2098 2131 "test_sumfuncs.mlt" 45 2098 2418
+type(
+  unit
+)
+"test_sumfuncs.mlt" 45 2098 2424 "test_sumfuncs.mlt" 45 2098 2426
+type(
+  unit
+)
+"test_sumfuncs.mlt" 45 2098 2098 "test_sumfuncs.mlt" 45 2098 2426
+type(
+  unit
+)
+"test_sumfuncs.mlt" 44 2036 2038 "test_sumfuncs.mlt" 45 2098 2427
+type(
+  unit
+)
+"test_sumfuncs.mlt" 43 2015 2017 "test_sumfuncs.mlt" 45 2098 2427
+type(
+  unit
+)
+"test_sumfuncs.mlt" 42 1981 1983 "test_sumfuncs.mlt" 45 2098 2427
+type(
+  unit
+)
+"test_sumfuncs.mlt" 41 1957 1959 "test_sumfuncs.mlt" 45 2098 2427
+type(
+  unit
+)
+"test_sumfuncs.mlt" 38 1887 1887 "test_sumfuncs.mlt" 47 2445 2446
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 48 2448 2453 "test_sumfuncs.mlt" 48 2448 2455
+type(
+  unit
+)
+"test_sumfuncs.mlt" 51 2509 2515 "test_sumfuncs.mlt" 51 2509 2520
+type(
+  'a array
+)
+ident(
+  def input "test_sumfuncs.mlt" 52 2531 2533 "test_sumfuncs.mlt" 55 2647 2964
+)
+"test_sumfuncs.mlt" 51 2509 2523 "test_sumfuncs.mlt" 51 2509 2527
+type(
+  'a array
+)
+"test_sumfuncs.mlt" 52 2531 2537 "test_sumfuncs.mlt" 52 2531 2543
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 53 2565 2567 "test_sumfuncs.mlt" 55 2647 2964
+)
+"test_sumfuncs.mlt" 52 2531 2546 "test_sumfuncs.mlt" 52 2531 2555
+type(
+  int array -> int
+)
+ident(
+  int_ref Sumfuncs.array_sum "sumfuncs.ml" 1 0 4 "sumfuncs.ml" 1 0 13
+)
+"test_sumfuncs.mlt" 52 2531 2556 "test_sumfuncs.mlt" 52 2531 2561
+type(
+  int array
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 51 2509 2515 "test_sumfuncs.mlt" 51 2509 2520
+)
+"test_sumfuncs.mlt" 52 2531 2546 "test_sumfuncs.mlt" 52 2531 2561
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 53 2565 2571 "test_sumfuncs.mlt" 53 2565 2577
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 54 2585 2587 "test_sumfuncs.mlt" 55 2647 2964
+)
+"test_sumfuncs.mlt" 53 2565 2580 "test_sumfuncs.mlt" 53 2565 2581
+type(
+  int
+)
+"test_sumfuncs.mlt" 54 2585 2591 "test_sumfuncs.mlt" 54 2585 2594
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 55 2647 2647 "test_sumfuncs.mlt" 55 2647 2963
+)
+"test_sumfuncs.mlt" 54 2585 2597 "test_sumfuncs.mlt" 54 2585 2604
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 54 2585 2605 "test_sumfuncs.mlt" 54 2585 2629
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 54 2585 2630 "test_sumfuncs.mlt" 54 2585 2636
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 53 2565 2571 "test_sumfuncs.mlt" 53 2565 2577
+)
+"test_sumfuncs.mlt" 54 2585 2637 "test_sumfuncs.mlt" 54 2585 2643
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 52 2531 2537 "test_sumfuncs.mlt" 52 2531 2543
+)
+"test_sumfuncs.mlt" 54 2585 2597 "test_sumfuncs.mlt" 54 2585 2643
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 55 2647 2650 "test_sumfuncs.mlt" 55 2647 2653
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 55 2647 2657 "test_sumfuncs.mlt" 55 2647 2663
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 52 2531 2537 "test_sumfuncs.mlt" 52 2531 2543
+)
+"test_sumfuncs.mlt" 55 2647 2664 "test_sumfuncs.mlt" 55 2647 2665
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 55 2647 2666 "test_sumfuncs.mlt" 55 2647 2672
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 53 2565 2571 "test_sumfuncs.mlt" 53 2565 2577
+)
+"test_sumfuncs.mlt" 55 2647 2654 "test_sumfuncs.mlt" 55 2647 2674
+type(
+  bool
+)
+"test_sumfuncs.mlt" 55 2647 2650 "test_sumfuncs.mlt" 55 2647 2674
+type(
+  bool
+)
+"test_sumfuncs.mlt" 55 2647 2680 "test_sumfuncs.mlt" 55 2647 2685
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 55 2647 2696 "test_sumfuncs.mlt" 55 2647 2717
+type(
+  string
+)
+"test_sumfuncs.mlt" 55 2647 2718 "test_sumfuncs.mlt" 55 2647 2721
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 54 2585 2591 "test_sumfuncs.mlt" 54 2585 2594
+)
+"test_sumfuncs.mlt" 55 2647 2722 "test_sumfuncs.mlt" 55 2647 2953
+type(
+  string
+)
+"test_sumfuncs.mlt" 55 2647 2686 "test_sumfuncs.mlt" 55 2647 2955
+type(
+  exn
+)
+"test_sumfuncs.mlt" 55 2647 2680 "test_sumfuncs.mlt" 55 2647 2955
+type(
+  unit
+)
+"test_sumfuncs.mlt" 55 2647 2961 "test_sumfuncs.mlt" 55 2647 2963
+type(
+  unit
+)
+"test_sumfuncs.mlt" 55 2647 2647 "test_sumfuncs.mlt" 55 2647 2963
+type(
+  unit
+)
+"test_sumfuncs.mlt" 54 2585 2587 "test_sumfuncs.mlt" 55 2647 2964
+type(
+  unit
+)
+"test_sumfuncs.mlt" 53 2565 2567 "test_sumfuncs.mlt" 55 2647 2964
+type(
+  unit
+)
+"test_sumfuncs.mlt" 52 2531 2533 "test_sumfuncs.mlt" 55 2647 2964
+type(
+  unit
+)
+"test_sumfuncs.mlt" 51 2509 2511 "test_sumfuncs.mlt" 55 2647 2964
+type(
+  unit
+)
+"test_sumfuncs.mlt" 48 2448 2448 "test_sumfuncs.mlt" 57 2982 2983
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 61 3052 3057 "test_sumfuncs.mlt" 61 3052 3059
+type(
+  unit
+)
+"test_sumfuncs.mlt" 64 3111 3117 "test_sumfuncs.mlt" 64 3111 3122
+type(
+  int list
+)
+ident(
+  def input "test_sumfuncs.mlt" 65 3139 3141 "test_sumfuncs.mlt" 68 3254 3574
+)
+"test_sumfuncs.mlt" 64 3111 3126 "test_sumfuncs.mlt" 64 3111 3127
+type(
+  int
+)
+"test_sumfuncs.mlt" 64 3111 3129 "test_sumfuncs.mlt" 64 3111 3130
+type(
+  int
+)
+"test_sumfuncs.mlt" 64 3111 3132 "test_sumfuncs.mlt" 64 3111 3133
+type(
+  int
+)
+"test_sumfuncs.mlt" 64 3111 3125 "test_sumfuncs.mlt" 64 3111 3135
+type(
+  int list
+)
+"test_sumfuncs.mlt" 65 3139 3145 "test_sumfuncs.mlt" 65 3139 3151
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 66 3172 3174 "test_sumfuncs.mlt" 68 3254 3574
+)
+"test_sumfuncs.mlt" 65 3139 3154 "test_sumfuncs.mlt" 65 3139 3162
+type(
+  int list -> int
+)
+ident(
+  int_ref Sumfuncs.list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"test_sumfuncs.mlt" 65 3139 3163 "test_sumfuncs.mlt" 65 3139 3168
+type(
+  int list
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 64 3111 3117 "test_sumfuncs.mlt" 64 3111 3122
+)
+"test_sumfuncs.mlt" 65 3139 3154 "test_sumfuncs.mlt" 65 3139 3168
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 66 3172 3178 "test_sumfuncs.mlt" 66 3172 3184
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 67 3192 3194 "test_sumfuncs.mlt" 68 3254 3574
+)
+"test_sumfuncs.mlt" 66 3172 3187 "test_sumfuncs.mlt" 66 3172 3188
+type(
+  int
+)
+"test_sumfuncs.mlt" 67 3192 3198 "test_sumfuncs.mlt" 67 3192 3201
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 68 3254 3254 "test_sumfuncs.mlt" 68 3254 3573
+)
+"test_sumfuncs.mlt" 67 3192 3204 "test_sumfuncs.mlt" 67 3192 3211
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 67 3192 3212 "test_sumfuncs.mlt" 67 3192 3236
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 67 3192 3237 "test_sumfuncs.mlt" 67 3192 3243
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 66 3172 3178 "test_sumfuncs.mlt" 66 3172 3184
+)
+"test_sumfuncs.mlt" 67 3192 3244 "test_sumfuncs.mlt" 67 3192 3250
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 65 3139 3145 "test_sumfuncs.mlt" 65 3139 3151
+)
+"test_sumfuncs.mlt" 67 3192 3204 "test_sumfuncs.mlt" 67 3192 3250
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 68 3254 3257 "test_sumfuncs.mlt" 68 3254 3260
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 68 3254 3264 "test_sumfuncs.mlt" 68 3254 3270
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 65 3139 3145 "test_sumfuncs.mlt" 65 3139 3151
+)
+"test_sumfuncs.mlt" 68 3254 3271 "test_sumfuncs.mlt" 68 3254 3272
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 68 3254 3273 "test_sumfuncs.mlt" 68 3254 3279
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 66 3172 3178 "test_sumfuncs.mlt" 66 3172 3184
+)
+"test_sumfuncs.mlt" 68 3254 3261 "test_sumfuncs.mlt" 68 3254 3281
+type(
+  bool
+)
+"test_sumfuncs.mlt" 68 3254 3257 "test_sumfuncs.mlt" 68 3254 3281
+type(
+  bool
+)
+"test_sumfuncs.mlt" 68 3254 3287 "test_sumfuncs.mlt" 68 3254 3292
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 68 3254 3303 "test_sumfuncs.mlt" 68 3254 3324
+type(
+  string
+)
+"test_sumfuncs.mlt" 68 3254 3325 "test_sumfuncs.mlt" 68 3254 3328
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 67 3192 3198 "test_sumfuncs.mlt" 67 3192 3201
+)
+"test_sumfuncs.mlt" 68 3254 3329 "test_sumfuncs.mlt" 68 3254 3563
+type(
+  string
+)
+"test_sumfuncs.mlt" 68 3254 3293 "test_sumfuncs.mlt" 68 3254 3565
+type(
+  exn
+)
+"test_sumfuncs.mlt" 68 3254 3287 "test_sumfuncs.mlt" 68 3254 3565
+type(
+  unit
+)
+"test_sumfuncs.mlt" 68 3254 3571 "test_sumfuncs.mlt" 68 3254 3573
+type(
+  unit
+)
+"test_sumfuncs.mlt" 68 3254 3254 "test_sumfuncs.mlt" 68 3254 3573
+type(
+  unit
+)
+"test_sumfuncs.mlt" 67 3192 3194 "test_sumfuncs.mlt" 68 3254 3574
+type(
+  unit
+)
+"test_sumfuncs.mlt" 66 3172 3174 "test_sumfuncs.mlt" 68 3254 3574
+type(
+  unit
+)
+"test_sumfuncs.mlt" 65 3139 3141 "test_sumfuncs.mlt" 68 3254 3574
+type(
+  unit
+)
+"test_sumfuncs.mlt" 64 3111 3113 "test_sumfuncs.mlt" 68 3254 3574
+type(
+  unit
+)
+"test_sumfuncs.mlt" 61 3052 3052 "test_sumfuncs.mlt" 70 3592 3593
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 71 3595 3600 "test_sumfuncs.mlt" 71 3595 3602
+type(
+  unit
+)
+"test_sumfuncs.mlt" 74 3654 3660 "test_sumfuncs.mlt" 74 3654 3665
+type(
+  int list
+)
+ident(
+  def input "test_sumfuncs.mlt" 75 3694 3696 "test_sumfuncs.mlt" 78 3810 4143
+)
+"test_sumfuncs.mlt" 74 3654 3669 "test_sumfuncs.mlt" 74 3654 3670
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3672 "test_sumfuncs.mlt" 74 3654 3673
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3675 "test_sumfuncs.mlt" 74 3654 3676
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3678 "test_sumfuncs.mlt" 74 3654 3679
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3681 "test_sumfuncs.mlt" 74 3654 3682
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3684 "test_sumfuncs.mlt" 74 3654 3685
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3687 "test_sumfuncs.mlt" 74 3654 3688
+type(
+  int
+)
+"test_sumfuncs.mlt" 74 3654 3668 "test_sumfuncs.mlt" 74 3654 3690
+type(
+  int list
+)
+"test_sumfuncs.mlt" 75 3694 3700 "test_sumfuncs.mlt" 75 3694 3706
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 76 3727 3729 "test_sumfuncs.mlt" 78 3810 4143
+)
+"test_sumfuncs.mlt" 75 3694 3709 "test_sumfuncs.mlt" 75 3694 3717
+type(
+  int list -> int
+)
+ident(
+  int_ref Sumfuncs.list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"test_sumfuncs.mlt" 75 3694 3718 "test_sumfuncs.mlt" 75 3694 3723
+type(
+  int list
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 74 3654 3660 "test_sumfuncs.mlt" 74 3654 3665
+)
+"test_sumfuncs.mlt" 75 3694 3709 "test_sumfuncs.mlt" 75 3694 3723
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 76 3727 3733 "test_sumfuncs.mlt" 76 3727 3739
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 77 3748 3750 "test_sumfuncs.mlt" 78 3810 4143
+)
+"test_sumfuncs.mlt" 76 3727 3742 "test_sumfuncs.mlt" 76 3727 3744
+type(
+  int
+)
+"test_sumfuncs.mlt" 77 3748 3754 "test_sumfuncs.mlt" 77 3748 3757
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 78 3810 3810 "test_sumfuncs.mlt" 78 3810 4142
+)
+"test_sumfuncs.mlt" 77 3748 3760 "test_sumfuncs.mlt" 77 3748 3767
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 77 3748 3768 "test_sumfuncs.mlt" 77 3748 3792
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 77 3748 3793 "test_sumfuncs.mlt" 77 3748 3799
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 76 3727 3733 "test_sumfuncs.mlt" 76 3727 3739
+)
+"test_sumfuncs.mlt" 77 3748 3800 "test_sumfuncs.mlt" 77 3748 3806
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 75 3694 3700 "test_sumfuncs.mlt" 75 3694 3706
+)
+"test_sumfuncs.mlt" 77 3748 3760 "test_sumfuncs.mlt" 77 3748 3806
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 78 3810 3813 "test_sumfuncs.mlt" 78 3810 3816
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 78 3810 3820 "test_sumfuncs.mlt" 78 3810 3826
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 75 3694 3700 "test_sumfuncs.mlt" 75 3694 3706
+)
+"test_sumfuncs.mlt" 78 3810 3827 "test_sumfuncs.mlt" 78 3810 3828
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 78 3810 3829 "test_sumfuncs.mlt" 78 3810 3835
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 76 3727 3733 "test_sumfuncs.mlt" 76 3727 3739
+)
+"test_sumfuncs.mlt" 78 3810 3817 "test_sumfuncs.mlt" 78 3810 3837
+type(
+  bool
+)
+"test_sumfuncs.mlt" 78 3810 3813 "test_sumfuncs.mlt" 78 3810 3837
+type(
+  bool
+)
+"test_sumfuncs.mlt" 78 3810 3843 "test_sumfuncs.mlt" 78 3810 3848
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 78 3810 3859 "test_sumfuncs.mlt" 78 3810 3880
+type(
+  string
+)
+"test_sumfuncs.mlt" 78 3810 3881 "test_sumfuncs.mlt" 78 3810 3884
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 77 3748 3754 "test_sumfuncs.mlt" 77 3748 3757
+)
+"test_sumfuncs.mlt" 78 3810 3885 "test_sumfuncs.mlt" 78 3810 4132
+type(
+  string
+)
+"test_sumfuncs.mlt" 78 3810 3849 "test_sumfuncs.mlt" 78 3810 4134
+type(
+  exn
+)
+"test_sumfuncs.mlt" 78 3810 3843 "test_sumfuncs.mlt" 78 3810 4134
+type(
+  unit
+)
+"test_sumfuncs.mlt" 78 3810 4140 "test_sumfuncs.mlt" 78 3810 4142
+type(
+  unit
+)
+"test_sumfuncs.mlt" 78 3810 3810 "test_sumfuncs.mlt" 78 3810 4142
+type(
+  unit
+)
+"test_sumfuncs.mlt" 77 3748 3750 "test_sumfuncs.mlt" 78 3810 4143
+type(
+  unit
+)
+"test_sumfuncs.mlt" 76 3727 3729 "test_sumfuncs.mlt" 78 3810 4143
+type(
+  unit
+)
+"test_sumfuncs.mlt" 75 3694 3696 "test_sumfuncs.mlt" 78 3810 4143
+type(
+  unit
+)
+"test_sumfuncs.mlt" 74 3654 3656 "test_sumfuncs.mlt" 78 3810 4143
+type(
+  unit
+)
+"test_sumfuncs.mlt" 71 3595 3595 "test_sumfuncs.mlt" 80 4161 4162
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 81 4164 4169 "test_sumfuncs.mlt" 81 4164 4171
+type(
+  unit
+)
+"test_sumfuncs.mlt" 84 4223 4229 "test_sumfuncs.mlt" 84 4223 4234
+type(
+  int list
+)
+ident(
+  def input "test_sumfuncs.mlt" 85 4260 4262 "test_sumfuncs.mlt" 88 4376 4706
+)
+"test_sumfuncs.mlt" 84 4223 4238 "test_sumfuncs.mlt" 84 4223 4240
+type(
+  int
+)
+"test_sumfuncs.mlt" 84 4223 4242 "test_sumfuncs.mlt" 84 4223 4243
+type(
+  int
+)
+"test_sumfuncs.mlt" 84 4223 4245 "test_sumfuncs.mlt" 84 4223 4246
+type(
+  int
+)
+"test_sumfuncs.mlt" 84 4223 4248 "test_sumfuncs.mlt" 84 4223 4251
+type(
+  int
+)
+"test_sumfuncs.mlt" 84 4223 4253 "test_sumfuncs.mlt" 84 4223 4254
+type(
+  int
+)
+"test_sumfuncs.mlt" 84 4223 4237 "test_sumfuncs.mlt" 84 4223 4256
+type(
+  int list
+)
+"test_sumfuncs.mlt" 85 4260 4266 "test_sumfuncs.mlt" 85 4260 4272
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 86 4293 4295 "test_sumfuncs.mlt" 88 4376 4706
+)
+"test_sumfuncs.mlt" 85 4260 4275 "test_sumfuncs.mlt" 85 4260 4283
+type(
+  int list -> int
+)
+ident(
+  int_ref Sumfuncs.list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"test_sumfuncs.mlt" 85 4260 4284 "test_sumfuncs.mlt" 85 4260 4289
+type(
+  int list
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 84 4223 4229 "test_sumfuncs.mlt" 84 4223 4234
+)
+"test_sumfuncs.mlt" 85 4260 4275 "test_sumfuncs.mlt" 85 4260 4289
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 86 4293 4299 "test_sumfuncs.mlt" 86 4293 4305
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 87 4314 4316 "test_sumfuncs.mlt" 88 4376 4706
+)
+"test_sumfuncs.mlt" 86 4293 4308 "test_sumfuncs.mlt" 86 4293 4310
+type(
+  int
+)
+"test_sumfuncs.mlt" 87 4314 4320 "test_sumfuncs.mlt" 87 4314 4323
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 88 4376 4376 "test_sumfuncs.mlt" 88 4376 4705
+)
+"test_sumfuncs.mlt" 87 4314 4326 "test_sumfuncs.mlt" 87 4314 4333
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 87 4314 4334 "test_sumfuncs.mlt" 87 4314 4358
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 87 4314 4359 "test_sumfuncs.mlt" 87 4314 4365
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 86 4293 4299 "test_sumfuncs.mlt" 86 4293 4305
+)
+"test_sumfuncs.mlt" 87 4314 4366 "test_sumfuncs.mlt" 87 4314 4372
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 85 4260 4266 "test_sumfuncs.mlt" 85 4260 4272
+)
+"test_sumfuncs.mlt" 87 4314 4326 "test_sumfuncs.mlt" 87 4314 4372
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 88 4376 4379 "test_sumfuncs.mlt" 88 4376 4382
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 88 4376 4386 "test_sumfuncs.mlt" 88 4376 4392
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 85 4260 4266 "test_sumfuncs.mlt" 85 4260 4272
+)
+"test_sumfuncs.mlt" 88 4376 4393 "test_sumfuncs.mlt" 88 4376 4394
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 88 4376 4395 "test_sumfuncs.mlt" 88 4376 4401
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 86 4293 4299 "test_sumfuncs.mlt" 86 4293 4305
+)
+"test_sumfuncs.mlt" 88 4376 4383 "test_sumfuncs.mlt" 88 4376 4403
+type(
+  bool
+)
+"test_sumfuncs.mlt" 88 4376 4379 "test_sumfuncs.mlt" 88 4376 4403
+type(
+  bool
+)
+"test_sumfuncs.mlt" 88 4376 4409 "test_sumfuncs.mlt" 88 4376 4414
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 88 4376 4425 "test_sumfuncs.mlt" 88 4376 4446
+type(
+  string
+)
+"test_sumfuncs.mlt" 88 4376 4447 "test_sumfuncs.mlt" 88 4376 4450
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 87 4314 4320 "test_sumfuncs.mlt" 87 4314 4323
+)
+"test_sumfuncs.mlt" 88 4376 4451 "test_sumfuncs.mlt" 88 4376 4695
+type(
+  string
+)
+"test_sumfuncs.mlt" 88 4376 4415 "test_sumfuncs.mlt" 88 4376 4697
+type(
+  exn
+)
+"test_sumfuncs.mlt" 88 4376 4409 "test_sumfuncs.mlt" 88 4376 4697
+type(
+  unit
+)
+"test_sumfuncs.mlt" 88 4376 4703 "test_sumfuncs.mlt" 88 4376 4705
+type(
+  unit
+)
+"test_sumfuncs.mlt" 88 4376 4376 "test_sumfuncs.mlt" 88 4376 4705
+type(
+  unit
+)
+"test_sumfuncs.mlt" 87 4314 4316 "test_sumfuncs.mlt" 88 4376 4706
+type(
+  unit
+)
+"test_sumfuncs.mlt" 86 4293 4295 "test_sumfuncs.mlt" 88 4376 4706
+type(
+  unit
+)
+"test_sumfuncs.mlt" 85 4260 4262 "test_sumfuncs.mlt" 88 4376 4706
+type(
+  unit
+)
+"test_sumfuncs.mlt" 84 4223 4225 "test_sumfuncs.mlt" 88 4376 4706
+type(
+  unit
+)
+"test_sumfuncs.mlt" 81 4164 4164 "test_sumfuncs.mlt" 90 4724 4725
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 91 4727 4732 "test_sumfuncs.mlt" 91 4727 4734
+type(
+  unit
+)
+"test_sumfuncs.mlt" 94 4795 4801 "test_sumfuncs.mlt" 94 4795 4806
+type(
+  int list
+)
+ident(
+  def input "test_sumfuncs.mlt" 95 4817 4819 "test_sumfuncs.mlt" 98 4933 5257
+)
+"test_sumfuncs.mlt" 94 4795 4810 "test_sumfuncs.mlt" 94 4795 4812
+type(
+  int
+)
+"test_sumfuncs.mlt" 94 4795 4809 "test_sumfuncs.mlt" 94 4795 4813
+type(
+  int list
+)
+"test_sumfuncs.mlt" 95 4817 4823 "test_sumfuncs.mlt" 95 4817 4829
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 96 4850 4852 "test_sumfuncs.mlt" 98 4933 5257
+)
+"test_sumfuncs.mlt" 95 4817 4832 "test_sumfuncs.mlt" 95 4817 4840
+type(
+  int list -> int
+)
+ident(
+  int_ref Sumfuncs.list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"test_sumfuncs.mlt" 95 4817 4841 "test_sumfuncs.mlt" 95 4817 4846
+type(
+  int list
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 94 4795 4801 "test_sumfuncs.mlt" 94 4795 4806
+)
+"test_sumfuncs.mlt" 95 4817 4832 "test_sumfuncs.mlt" 95 4817 4846
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 96 4850 4856 "test_sumfuncs.mlt" 96 4850 4862
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 97 4871 4873 "test_sumfuncs.mlt" 98 4933 5257
+)
+"test_sumfuncs.mlt" 96 4850 4865 "test_sumfuncs.mlt" 96 4850 4867
+type(
+  int
+)
+"test_sumfuncs.mlt" 97 4871 4877 "test_sumfuncs.mlt" 97 4871 4880
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 98 4933 4933 "test_sumfuncs.mlt" 98 4933 5256
+)
+"test_sumfuncs.mlt" 97 4871 4883 "test_sumfuncs.mlt" 97 4871 4890
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 97 4871 4891 "test_sumfuncs.mlt" 97 4871 4915
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 97 4871 4916 "test_sumfuncs.mlt" 97 4871 4922
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 96 4850 4856 "test_sumfuncs.mlt" 96 4850 4862
+)
+"test_sumfuncs.mlt" 97 4871 4923 "test_sumfuncs.mlt" 97 4871 4929
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 95 4817 4823 "test_sumfuncs.mlt" 95 4817 4829
+)
+"test_sumfuncs.mlt" 97 4871 4883 "test_sumfuncs.mlt" 97 4871 4929
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 98 4933 4936 "test_sumfuncs.mlt" 98 4933 4939
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 98 4933 4943 "test_sumfuncs.mlt" 98 4933 4949
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 95 4817 4823 "test_sumfuncs.mlt" 95 4817 4829
+)
+"test_sumfuncs.mlt" 98 4933 4950 "test_sumfuncs.mlt" 98 4933 4951
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 98 4933 4952 "test_sumfuncs.mlt" 98 4933 4958
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 96 4850 4856 "test_sumfuncs.mlt" 96 4850 4862
+)
+"test_sumfuncs.mlt" 98 4933 4940 "test_sumfuncs.mlt" 98 4933 4960
+type(
+  bool
+)
+"test_sumfuncs.mlt" 98 4933 4936 "test_sumfuncs.mlt" 98 4933 4960
+type(
+  bool
+)
+"test_sumfuncs.mlt" 98 4933 4966 "test_sumfuncs.mlt" 98 4933 4971
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 98 4933 4982 "test_sumfuncs.mlt" 98 4933 5003
+type(
+  string
+)
+"test_sumfuncs.mlt" 98 4933 5004 "test_sumfuncs.mlt" 98 4933 5007
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 97 4871 4877 "test_sumfuncs.mlt" 97 4871 4880
+)
+"test_sumfuncs.mlt" 98 4933 5008 "test_sumfuncs.mlt" 98 4933 5246
+type(
+  string
+)
+"test_sumfuncs.mlt" 98 4933 4972 "test_sumfuncs.mlt" 98 4933 5248
+type(
+  exn
+)
+"test_sumfuncs.mlt" 98 4933 4966 "test_sumfuncs.mlt" 98 4933 5248
+type(
+  unit
+)
+"test_sumfuncs.mlt" 98 4933 5254 "test_sumfuncs.mlt" 98 4933 5256
+type(
+  unit
+)
+"test_sumfuncs.mlt" 98 4933 4933 "test_sumfuncs.mlt" 98 4933 5256
+type(
+  unit
+)
+"test_sumfuncs.mlt" 97 4871 4873 "test_sumfuncs.mlt" 98 4933 5257
+type(
+  unit
+)
+"test_sumfuncs.mlt" 96 4850 4852 "test_sumfuncs.mlt" 98 4933 5257
+type(
+  unit
+)
+"test_sumfuncs.mlt" 95 4817 4819 "test_sumfuncs.mlt" 98 4933 5257
+type(
+  unit
+)
+"test_sumfuncs.mlt" 94 4795 4797 "test_sumfuncs.mlt" 98 4933 5257
+type(
+  unit
+)
+"test_sumfuncs.mlt" 91 4727 4727 "test_sumfuncs.mlt" 100 5275 5276
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 101 5278 5283 "test_sumfuncs.mlt" 101 5278 5285
+type(
+  unit
+)
+"test_sumfuncs.mlt" 104 5337 5343 "test_sumfuncs.mlt" 104 5337 5348
+type(
+  'b list
+)
+ident(
+  def input "test_sumfuncs.mlt" 105 5357 5359 "test_sumfuncs.mlt" 108 5472 5791
+)
+"test_sumfuncs.mlt" 104 5337 5351 "test_sumfuncs.mlt" 104 5337 5353
+type(
+  'b list
+)
+"test_sumfuncs.mlt" 105 5357 5363 "test_sumfuncs.mlt" 105 5357 5369
+type(
+  int
+)
+ident(
+  def actual "test_sumfuncs.mlt" 106 5390 5392 "test_sumfuncs.mlt" 108 5472 5791
+)
+"test_sumfuncs.mlt" 105 5357 5372 "test_sumfuncs.mlt" 105 5357 5380
+type(
+  int list -> int
+)
+ident(
+  int_ref Sumfuncs.list_sum "sumfuncs.ml" 15 266 278 "sumfuncs.ml" 15 266 286
+)
+"test_sumfuncs.mlt" 105 5357 5381 "test_sumfuncs.mlt" 105 5357 5386
+type(
+  int list
+)
+ident(
+  int_ref input "test_sumfuncs.mlt" 104 5337 5343 "test_sumfuncs.mlt" 104 5337 5348
+)
+"test_sumfuncs.mlt" 105 5357 5372 "test_sumfuncs.mlt" 105 5357 5386
+call(
+  stack
+)
+type(
+  int
+)
+"test_sumfuncs.mlt" 106 5390 5396 "test_sumfuncs.mlt" 106 5390 5402
+type(
+  int
+)
+ident(
+  def expect "test_sumfuncs.mlt" 107 5410 5412 "test_sumfuncs.mlt" 108 5472 5791
+)
+"test_sumfuncs.mlt" 106 5390 5405 "test_sumfuncs.mlt" 106 5390 5406
+type(
+  int
+)
+"test_sumfuncs.mlt" 107 5410 5416 "test_sumfuncs.mlt" 107 5410 5419
+type(
+  string
+)
+ident(
+  def msg "test_sumfuncs.mlt" 108 5472 5472 "test_sumfuncs.mlt" 108 5472 5790
+)
+"test_sumfuncs.mlt" 107 5410 5422 "test_sumfuncs.mlt" 107 5410 5429
+type(
+  (int -> int -> string, unit, string) format -> int -> int -> string
+)
+ident(
+  int_ref Printf.sprintf "printf.mli" 129 6682 6682 "printf.mli" 129 6682 6727
+)
+"test_sumfuncs.mlt" 107 5410 5430 "test_sumfuncs.mlt" 107 5410 5454
+type(
+  (int -> int -> string, unit, string) format
+)
+"test_sumfuncs.mlt" 107 5410 5455 "test_sumfuncs.mlt" 107 5410 5461
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 106 5390 5396 "test_sumfuncs.mlt" 106 5390 5402
+)
+"test_sumfuncs.mlt" 107 5410 5462 "test_sumfuncs.mlt" 107 5410 5468
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 105 5357 5363 "test_sumfuncs.mlt" 105 5357 5369
+)
+"test_sumfuncs.mlt" 107 5410 5422 "test_sumfuncs.mlt" 107 5410 5468
+call(
+  stack
+)
+type(
+  string
+)
+"test_sumfuncs.mlt" 108 5472 5475 "test_sumfuncs.mlt" 108 5472 5478
+type(
+  bool -> bool
+)
+ident(
+  int_ref Pervasives.not "pervasives.mli" 134 5784 5784 "pervasives.mli" 134 5784 5824
+)
+"test_sumfuncs.mlt" 108 5472 5482 "test_sumfuncs.mlt" 108 5472 5488
+type(
+  int
+)
+ident(
+  int_ref actual "test_sumfuncs.mlt" 105 5357 5363 "test_sumfuncs.mlt" 105 5357 5369
+)
+"test_sumfuncs.mlt" 108 5472 5489 "test_sumfuncs.mlt" 108 5472 5490
+type(
+  int -> int -> bool
+)
+ident(
+  int_ref Pervasives.( = ) "pervasives.mli" 51 2086 2086 "pervasives.mli" 51 2086 2130
+)
+"test_sumfuncs.mlt" 108 5472 5491 "test_sumfuncs.mlt" 108 5472 5497
+type(
+  int
+)
+ident(
+  int_ref expect "test_sumfuncs.mlt" 106 5390 5396 "test_sumfuncs.mlt" 106 5390 5402
+)
+"test_sumfuncs.mlt" 108 5472 5479 "test_sumfuncs.mlt" 108 5472 5499
+type(
+  bool
+)
+"test_sumfuncs.mlt" 108 5472 5475 "test_sumfuncs.mlt" 108 5472 5499
+type(
+  bool
+)
+"test_sumfuncs.mlt" 108 5472 5505 "test_sumfuncs.mlt" 108 5472 5510
+type(
+  exn -> unit
+)
+ident(
+  int_ref Pervasives.raise "pervasives.mli" 30 1530 1530 "pervasives.mli" 30 1530 1567
+)
+"test_sumfuncs.mlt" 108 5472 5521 "test_sumfuncs.mlt" 108 5472 5543
+type(
+  string
+)
+"test_sumfuncs.mlt" 108 5472 5544 "test_sumfuncs.mlt" 108 5472 5547
+type(
+  string
+)
+ident(
+  int_ref msg "test_sumfuncs.mlt" 107 5410 5416 "test_sumfuncs.mlt" 107 5410 5419
+)
+"test_sumfuncs.mlt" 108 5472 5548 "test_sumfuncs.mlt" 108 5472 5780
+type(
+  string
+)
+"test_sumfuncs.mlt" 108 5472 5511 "test_sumfuncs.mlt" 108 5472 5782
+type(
+  exn
+)
+"test_sumfuncs.mlt" 108 5472 5505 "test_sumfuncs.mlt" 108 5472 5782
+type(
+  unit
+)
+"test_sumfuncs.mlt" 108 5472 5788 "test_sumfuncs.mlt" 108 5472 5790
+type(
+  unit
+)
+"test_sumfuncs.mlt" 108 5472 5472 "test_sumfuncs.mlt" 108 5472 5790
+type(
+  unit
+)
+"test_sumfuncs.mlt" 107 5410 5412 "test_sumfuncs.mlt" 108 5472 5791
+type(
+  unit
+)
+"test_sumfuncs.mlt" 106 5390 5392 "test_sumfuncs.mlt" 108 5472 5791
+type(
+  unit
+)
+"test_sumfuncs.mlt" 105 5357 5359 "test_sumfuncs.mlt" 108 5472 5791
+type(
+  unit
+)
+"test_sumfuncs.mlt" 104 5337 5339 "test_sumfuncs.mlt" 108 5472 5791
+type(
+  unit
+)
+"test_sumfuncs.mlt" 101 5278 5278 "test_sumfuncs.mlt" 110 5809 5810
+type(
+  unit -> unit
+)
+"test_sumfuncs.mlt" 5 100 112 "test_sumfuncs.mlt" 112 5813 5815
+type(
+  (unit -> unit) array
+)
+"test_sumfuncs.mlt" 5 100 100 "test_sumfuncs.mlt" 112 5813 5815
+call(
+  stack
+)
+type(
+  unit
+)

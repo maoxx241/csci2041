@@ -1,0 +1,1572 @@
+"listmanager.ml" 8 213 217 "listmanager.ml" 8 213 222
+type(
+  bool ref
+)
+ident(
+  def debug "listmanager.ml" 11 294 294 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 8 213 225 "listmanager.ml" 8 213 228
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"listmanager.ml" 8 213 229 "listmanager.ml" 8 213 234
+type(
+  bool
+)
+"listmanager.ml" 8 213 225 "listmanager.ml" 8 213 234
+type(
+  bool ref
+)
+"listmanager.ml" 11 294 298 "listmanager.ml" 11 294 309
+type(
+  string
+)
+ident(
+  def help_string "listmanager.ml" 34 1461 1461 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 12 312 318 "listmanager.ml" 12 312 323
+type(
+  string list
+)
+ident(
+  def lines "listmanager.ml" 29 1297 1299 "listmanager.ml" 29 1297 1323
+)
+"listmanager.ml" 13 328 334 "listmanager.ml" 13 328 348
+type(
+  string
+)
+"listmanager.ml" 14 350 356 "listmanager.ml" 14 350 400
+type(
+  string
+)
+"listmanager.ml" 15 402 408 "listmanager.ml" 15 402 470
+type(
+  string
+)
+"listmanager.ml" 16 472 478 "listmanager.ml" 16 472 489
+type(
+  string
+)
+"listmanager.ml" 17 491 497 "listmanager.ml" 17 491 541
+type(
+  string
+)
+"listmanager.ml" 18 543 549 "listmanager.ml" 18 543 586
+type(
+  string
+)
+"listmanager.ml" 19 588 594 "listmanager.ml" 19 588 651
+type(
+  string
+)
+"listmanager.ml" 20 653 659 "listmanager.ml" 20 653 725
+type(
+  string
+)
+"listmanager.ml" 21 727 733 "listmanager.ml" 21 727 774
+type(
+  string
+)
+"listmanager.ml" 22 776 782 "listmanager.ml" 22 776 824
+type(
+  string
+)
+"listmanager.ml" 23 826 832 "listmanager.ml" 23 826 903
+type(
+  string
+)
+"listmanager.ml" 24 905 911 "listmanager.ml" 24 905 999
+type(
+  string
+)
+"listmanager.ml" 25 1001 1007 "listmanager.ml" 25 1001 1105
+type(
+  string
+)
+"listmanager.ml" 26 1107 1113 "listmanager.ml" 26 1107 1192
+type(
+  string
+)
+"listmanager.ml" 27 1194 1200 "listmanager.ml" 27 1194 1286
+type(
+  string
+)
+"listmanager.ml" 12 312 326 "listmanager.ml" 28 1288 1293
+type(
+  string list
+)
+"listmanager.ml" 29 1297 1299 "listmanager.ml" 29 1297 1312
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"listmanager.ml" 29 1297 1313 "listmanager.ml" 29 1297 1317
+type(
+  string
+)
+"listmanager.ml" 29 1297 1318 "listmanager.ml" 29 1297 1323
+type(
+  string list
+)
+ident(
+  int_ref lines "listmanager.ml" 12 312 318 "listmanager.ml" 12 312 323
+)
+"listmanager.ml" 29 1297 1299 "listmanager.ml" 29 1297 1323
+call(
+  stack
+)
+type(
+  string
+)
+"listmanager.ml" 12 312 314 "listmanager.ml" 29 1297 1323
+type(
+  string
+)
+"listmanager.ml" 34 1461 1465 "listmanager.ml" 34 1461 1473
+type(
+  bool ref
+)
+ident(
+  def quit_now "listmanager.ml" 45 1902 1902 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 35 1476 1478 "listmanager.ml" 35 1476 1481
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"listmanager.ml" 35 1476 1482 "listmanager.ml" 35 1476 1487
+type(
+  bool
+)
+"listmanager.ml" 35 1476 1478 "listmanager.ml" 35 1476 1487
+type(
+  bool ref
+)
+"listmanager.ml" 45 1902 1906 "listmanager.ml" 45 1902 1921
+type(
+  string array -> unit
+)
+ident(
+  def execute_command "listmanager.ml" 67 3142 3142 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+type(
+  string array
+)
+ident(
+  def tokens "listmanager.ml" 46 1931 1933 "listmanager.ml" 58 2878 2944
+)
+"listmanager.ml" 46 1931 1939 "listmanager.ml" 46 1931 1945
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 46 1931 1947 "listmanager.ml" 46 1931 1948
+type(
+  int
+)
+"listmanager.ml" 46 1931 1939 "listmanager.ml" 46 1931 1949
+type(
+  string
+)
+"listmanager.ml" 47 1955 1958 "listmanager.ml" 47 1955 1964
+type(
+  string
+)
+"listmanager.ml" 47 1955 1968 "listmanager.ml" 47 1955 1992
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 47 1955 1993 "listmanager.ml" 47 1955 2004
+type(
+  string
+)
+ident(
+  int_ref help_string "listmanager.ml" 11 294 298 "listmanager.ml" 11 294 309
+)
+"listmanager.ml" 47 1955 1968 "listmanager.ml" 47 1955 2005
+call(
+  tail
+)
+type(
+  unit
+)
+"listmanager.ml" 48 2006 2009 "listmanager.ml" 48 2006 2015
+type(
+  string
+)
+"listmanager.ml" 48 2006 2019 "listmanager.ml" 48 2006 2027
+type(
+  bool ref
+)
+ident(
+  int_ref quit_now "listmanager.ml" 34 1461 1465 "listmanager.ml" 34 1461 1473
+)
+"listmanager.ml" 48 2006 2028 "listmanager.ml" 48 2006 2030
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"listmanager.ml" 48 2006 2031 "listmanager.ml" 48 2006 2035
+type(
+  bool
+)
+"listmanager.ml" 48 2006 2019 "listmanager.ml" 48 2006 2035
+type(
+  unit
+)
+"listmanager.ml" 48 2006 2037 "listmanager.ml" 48 2006 2040
+type(
+  unit
+)
+"listmanager.ml" 48 2006 2019 "listmanager.ml" 48 2006 2040
+type(
+  unit
+)
+"listmanager.ml" 49 2041 2044 "listmanager.ml" 49 2041 2050
+type(
+  string
+)
+"listmanager.ml" 49 2041 2054 "listmanager.ml" 49 2041 2078
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 49 2041 2079 "listmanager.ml" 49 2041 2093
+type(
+  string
+)
+"listmanager.ml" 49 2041 2054 "listmanager.ml" 49 2041 2093
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 49 2041 2094 "listmanager.ml" 49 2041 2110
+type(
+  string list -> unit
+)
+ident(
+  ext_ref Sortedlist.print
+)
+"listmanager.ml" 49 2041 2112 "listmanager.ml" 49 2041 2113
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 49 2041 2113 "listmanager.ml" 49 2041 2131
+type(
+  string list ref
+)
+ident(
+  ext_ref Undolist.curr_list
+)
+"listmanager.ml" 49 2041 2111 "listmanager.ml" 49 2041 2132
+type(
+  string list
+)
+"listmanager.ml" 49 2041 2094 "listmanager.ml" 49 2041 2132
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 49 2041 2133 "listmanager.ml" 49 2041 2157
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 49 2041 2158 "listmanager.ml" 49 2041 2172
+type(
+  string
+)
+"listmanager.ml" 49 2041 2133 "listmanager.ml" 49 2041 2172
+call(
+  tail
+)
+type(
+  unit
+)
+"listmanager.ml" 49 2041 2094 "listmanager.ml" 49 2041 2172
+type(
+  unit
+)
+"listmanager.ml" 49 2041 2054 "listmanager.ml" 49 2041 2172
+type(
+  unit
+)
+"listmanager.ml" 50 2173 2176 "listmanager.ml" 50 2173 2183
+type(
+  string
+)
+"listmanager.ml" 50 2173 2187 "listmanager.ml" 50 2173 2207
+type(
+  string list -> unit
+)
+ident(
+  ext_ref Undolist.set_to_list
+)
+"listmanager.ml" 50 2173 2208 "listmanager.ml" 50 2173 2210
+type(
+  string list
+)
+"listmanager.ml" 50 2173 2187 "listmanager.ml" 50 2173 2210
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 50 2173 2213 "listmanager.ml" 50 2173 2216
+type(
+  unit
+)
+"listmanager.ml" 50 2173 2187 "listmanager.ml" 50 2173 2216
+type(
+  unit
+)
+"listmanager.ml" 51 2217 2220 "listmanager.ml" 51 2217 2225
+type(
+  string
+)
+"listmanager.ml" 51 2217 2229 "listmanager.ml" 51 2217 2246
+type(
+  string -> unit
+)
+ident(
+  ext_ref Undolist.add_elem
+)
+"listmanager.ml" 51 2217 2248 "listmanager.ml" 51 2217 2254
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 51 2217 2256 "listmanager.ml" 51 2217 2257
+type(
+  int
+)
+"listmanager.ml" 51 2217 2247 "listmanager.ml" 51 2217 2259
+type(
+  string
+)
+"listmanager.ml" 51 2217 2229 "listmanager.ml" 51 2217 2259
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 51 2217 2261 "listmanager.ml" 51 2217 2264
+type(
+  unit
+)
+"listmanager.ml" 51 2217 2229 "listmanager.ml" 51 2217 2264
+type(
+  unit
+)
+"listmanager.ml" 52 2265 2268 "listmanager.ml" 52 2265 2276
+type(
+  string
+)
+"listmanager.ml" 52 2265 2280 "listmanager.ml" 52 2265 2300
+type(
+  string -> unit
+)
+ident(
+  ext_ref Undolist.remove_elem
+)
+"listmanager.ml" 52 2265 2302 "listmanager.ml" 52 2265 2308
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 52 2265 2310 "listmanager.ml" 52 2265 2311
+type(
+  int
+)
+"listmanager.ml" 52 2265 2301 "listmanager.ml" 52 2265 2313
+type(
+  string
+)
+"listmanager.ml" 52 2265 2280 "listmanager.ml" 52 2265 2313
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 52 2265 2315 "listmanager.ml" 52 2265 2318
+type(
+  unit
+)
+"listmanager.ml" 52 2265 2280 "listmanager.ml" 52 2265 2318
+type(
+  unit
+)
+"listmanager.ml" 53 2319 2322 "listmanager.ml" 53 2319 2328
+type(
+  string
+)
+"listmanager.ml" 53 2319 2332 "listmanager.ml" 53 2319 2352
+type(
+  string list -> string -> unit
+)
+ident(
+  ext_ref Util.strlist_to_file
+)
+"listmanager.ml" 53 2319 2354 "listmanager.ml" 53 2319 2355
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 53 2319 2355 "listmanager.ml" 53 2319 2373
+type(
+  string list ref
+)
+ident(
+  ext_ref Undolist.curr_list
+)
+"listmanager.ml" 53 2319 2353 "listmanager.ml" 53 2319 2374
+type(
+  string list
+)
+"listmanager.ml" 53 2319 2376 "listmanager.ml" 53 2319 2382
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 53 2319 2384 "listmanager.ml" 53 2319 2385
+type(
+  int
+)
+"listmanager.ml" 53 2319 2375 "listmanager.ml" 53 2319 2387
+type(
+  string
+)
+"listmanager.ml" 53 2319 2332 "listmanager.ml" 53 2319 2387
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 53 2319 2389 "listmanager.ml" 53 2319 2392
+type(
+  unit
+)
+"listmanager.ml" 53 2319 2332 "listmanager.ml" 53 2319 2392
+type(
+  unit
+)
+"listmanager.ml" 54 2393 2396 "listmanager.ml" 54 2393 2402
+type(
+  string
+)
+"listmanager.ml" 54 2393 2405 "listmanager.ml" 54 2393 2425
+type(
+  string list -> unit
+)
+ident(
+  ext_ref Undolist.set_to_list
+)
+"listmanager.ml" 54 2393 2427 "listmanager.ml" 54 2393 2449
+type(
+  string -> string list
+)
+ident(
+  ext_ref Util.strlist_from_file
+)
+"listmanager.ml" 54 2393 2451 "listmanager.ml" 54 2393 2457
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 54 2393 2459 "listmanager.ml" 54 2393 2460
+type(
+  int
+)
+"listmanager.ml" 54 2393 2450 "listmanager.ml" 54 2393 2462
+type(
+  string
+)
+"listmanager.ml" 54 2393 2426 "listmanager.ml" 54 2393 2463
+call(
+  stack
+)
+type(
+  string list
+)
+"listmanager.ml" 54 2393 2405 "listmanager.ml" 54 2393 2463
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 54 2393 2465 "listmanager.ml" 54 2393 2468
+type(
+  unit
+)
+"listmanager.ml" 54 2393 2405 "listmanager.ml" 54 2393 2468
+type(
+  unit
+)
+"listmanager.ml" 55 2469 2472 "listmanager.ml" 55 2469 2481
+type(
+  string
+)
+"listmanager.ml" 55 2469 2485 "listmanager.ml" 55 2469 2505
+type(
+  string list -> unit
+)
+ident(
+  ext_ref Undolist.set_to_list
+)
+"listmanager.ml" 55 2469 2507 "listmanager.ml" 55 2469 2523
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"listmanager.ml" 55 2469 2525 "listmanager.ml" 55 2469 2526
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 55 2469 2526 "listmanager.ml" 55 2469 2544
+type(
+  string list ref
+)
+ident(
+  ext_ref Undolist.curr_list
+)
+"listmanager.ml" 55 2469 2524 "listmanager.ml" 55 2469 2545
+type(
+  string list
+)
+"listmanager.ml" 55 2469 2547 "listmanager.ml" 55 2469 2569
+type(
+  string -> string list
+)
+ident(
+  ext_ref Util.strlist_from_file
+)
+"listmanager.ml" 55 2469 2570 "listmanager.ml" 55 2469 2576
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 55 2469 2578 "listmanager.ml" 55 2469 2579
+type(
+  int
+)
+"listmanager.ml" 55 2469 2570 "listmanager.ml" 55 2469 2580
+type(
+  string
+)
+"listmanager.ml" 55 2469 2546 "listmanager.ml" 55 2469 2581
+call(
+  stack
+)
+type(
+  string list
+)
+"listmanager.ml" 55 2469 2506 "listmanager.ml" 55 2469 2582
+call(
+  stack
+)
+type(
+  string list
+)
+"listmanager.ml" 55 2469 2485 "listmanager.ml" 55 2469 2582
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 55 2469 2584 "listmanager.ml" 55 2469 2587
+type(
+  unit
+)
+"listmanager.ml" 55 2469 2485 "listmanager.ml" 55 2469 2587
+type(
+  unit
+)
+"listmanager.ml" 56 2588 2591 "listmanager.ml" 56 2588 2597
+type(
+  string
+)
+"listmanager.ml" 56 2588 2605 "listmanager.ml" 56 2588 2610
+type(
+  bool
+)
+ident(
+  def check "listmanager.ml" 56 2588 2633 "listmanager.ml" 56 2588 2732
+)
+"listmanager.ml" 56 2588 2613 "listmanager.ml" 56 2588 2626
+type(
+  unit -> bool
+)
+ident(
+  ext_ref Undolist.undo
+)
+"listmanager.ml" 56 2588 2627 "listmanager.ml" 56 2588 2629
+type(
+  unit
+)
+"listmanager.ml" 56 2588 2613 "listmanager.ml" 56 2588 2629
+call(
+  stack
+)
+type(
+  bool
+)
+"listmanager.ml" 56 2588 2636 "listmanager.ml" 56 2588 2641
+type(
+  bool
+)
+ident(
+  int_ref check "listmanager.ml" 56 2588 2605 "listmanager.ml" 56 2588 2610
+)
+"listmanager.ml" 56 2588 2642 "listmanager.ml" 56 2588 2643
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"listmanager.ml" 56 2588 2644 "listmanager.ml" 56 2588 2649
+type(
+  bool
+)
+"listmanager.ml" 56 2588 2636 "listmanager.ml" 56 2588 2649
+type(
+  bool
+)
+"listmanager.ml" 56 2588 2655 "listmanager.ml" 56 2588 2679
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 56 2588 2680 "listmanager.ml" 56 2588 2723
+type(
+  string
+)
+"listmanager.ml" 56 2588 2655 "listmanager.ml" 56 2588 2723
+call(
+  tail
+)
+type(
+  unit
+)
+"listmanager.ml" 56 2588 2729 "listmanager.ml" 56 2588 2731
+type(
+  unit
+)
+"listmanager.ml" 56 2588 2633 "listmanager.ml" 56 2588 2732
+type(
+  unit
+)
+"listmanager.ml" 56 2588 2601 "listmanager.ml" 56 2588 2732
+type(
+  unit
+)
+"listmanager.ml" 57 2733 2736 "listmanager.ml" 57 2733 2742
+type(
+  string
+)
+"listmanager.ml" 57 2733 2750 "listmanager.ml" 57 2733 2755
+type(
+  bool
+)
+ident(
+  def check "listmanager.ml" 57 2733 2778 "listmanager.ml" 57 2733 2877
+)
+"listmanager.ml" 57 2733 2758 "listmanager.ml" 57 2733 2771
+type(
+  unit -> bool
+)
+ident(
+  ext_ref Undolist.redo
+)
+"listmanager.ml" 57 2733 2772 "listmanager.ml" 57 2733 2774
+type(
+  unit
+)
+"listmanager.ml" 57 2733 2758 "listmanager.ml" 57 2733 2774
+call(
+  stack
+)
+type(
+  bool
+)
+"listmanager.ml" 57 2733 2781 "listmanager.ml" 57 2733 2786
+type(
+  bool
+)
+ident(
+  int_ref check "listmanager.ml" 57 2733 2750 "listmanager.ml" 57 2733 2755
+)
+"listmanager.ml" 57 2733 2787 "listmanager.ml" 57 2733 2788
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"listmanager.ml" 57 2733 2789 "listmanager.ml" 57 2733 2794
+type(
+  bool
+)
+"listmanager.ml" 57 2733 2781 "listmanager.ml" 57 2733 2794
+type(
+  bool
+)
+"listmanager.ml" 57 2733 2800 "listmanager.ml" 57 2733 2824
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 57 2733 2825 "listmanager.ml" 57 2733 2868
+type(
+  string
+)
+"listmanager.ml" 57 2733 2800 "listmanager.ml" 57 2733 2868
+call(
+  tail
+)
+type(
+  unit
+)
+"listmanager.ml" 57 2733 2874 "listmanager.ml" 57 2733 2876
+type(
+  unit
+)
+"listmanager.ml" 57 2733 2778 "listmanager.ml" 57 2733 2877
+type(
+  unit
+)
+"listmanager.ml" 57 2733 2746 "listmanager.ml" 57 2733 2877
+type(
+  unit
+)
+"listmanager.ml" 58 2878 2882 "listmanager.ml" 58 2878 2883
+type(
+  string
+)
+"listmanager.ml" 58 2878 2887 "listmanager.ml" 58 2878 2911
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"listmanager.ml" 58 2878 2913 "listmanager.ml" 58 2878 2930
+type(
+  string
+)
+"listmanager.ml" 58 2878 2930 "listmanager.ml" 58 2878 2931
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"listmanager.ml" 58 2878 2932 "listmanager.ml" 58 2878 2938
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 45 1902 1922 "listmanager.ml" 45 1902 1928
+)
+"listmanager.ml" 58 2878 2940 "listmanager.ml" 58 2878 2941
+type(
+  int
+)
+"listmanager.ml" 58 2878 2932 "listmanager.ml" 58 2878 2942
+type(
+  string
+)
+"listmanager.ml" 58 2878 2912 "listmanager.ml" 58 2878 2943
+call(
+  stack
+)
+type(
+  string
+)
+"listmanager.ml" 58 2878 2887 "listmanager.ml" 58 2878 2944
+call(
+  tail
+)
+type(
+  unit
+)
+"listmanager.ml" 46 1931 1933 "listmanager.ml" 58 2878 2944
+type(
+  unit
+)
+"listmanager.ml" 67 3142 3146 "listmanager.ml" 67 3142 3150
+type(
+  bool ref
+)
+ident(
+  def echo "listmanager.ml" 68 3204 3204 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 67 3142 3154 "listmanager.ml" 67 3142 3157
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"listmanager.ml" 67 3142 3158 "listmanager.ml" 67 3142 3163
+type(
+  bool
+)
+"listmanager.ml" 67 3142 3154 "listmanager.ml" 67 3142 3163
+type(
+  bool ref
+)
+"listmanager.ml" 68 3204 3208 "listmanager.ml" 68 3204 3214
+type(
+  string
+)
+ident(
+  def prompt "listmanager.ml" 71 3305 3305 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 68 3204 3217 "listmanager.ml" 68 3204 3223
+type(
+  string
+)
+"listmanager.ml" 71 3305 3309 "listmanager.ml" 71 3305 3316
+type(
+  (string * Arg.spec * string) list
+)
+ident(
+  def options "listmanager.ml" 77 3518 3518 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 72 3326 3329 "listmanager.ml" 72 3326 3336
+type(
+  string
+)
+"listmanager.ml" 72 3326 3342 "listmanager.ml" 72 3326 3348
+type(
+  bool ref
+)
+ident(
+  int_ref echo "listmanager.ml" 67 3142 3146 "listmanager.ml" 67 3142 3150
+)
+"listmanager.ml" 72 3326 3339 "listmanager.ml" 72 3326 3348
+type(
+  Arg.spec
+)
+"listmanager.ml" 72 3326 3351 "listmanager.ml" 72 3326 3391
+type(
+  string
+)
+"listmanager.ml" 72 3326 3328 "listmanager.ml" 72 3326 3392
+type(
+  string * Arg.spec * string
+)
+"listmanager.ml" 73 3394 3397 "listmanager.ml" 73 3394 3405
+type(
+  string
+)
+"listmanager.ml" 73 3394 3410 "listmanager.ml" 73 3394 3417
+type(
+  bool ref
+)
+ident(
+  int_ref debug "listmanager.ml" 8 213 217 "listmanager.ml" 8 213 222
+)
+"listmanager.ml" 73 3394 3407 "listmanager.ml" 73 3394 3417
+type(
+  Arg.spec
+)
+"listmanager.ml" 73 3394 3419 "listmanager.ml" 73 3394 3458
+type(
+  string
+)
+"listmanager.ml" 73 3394 3396 "listmanager.ml" 73 3394 3459
+type(
+  string * Arg.spec * string
+)
+"listmanager.ml" 71 3305 3324 "listmanager.ml" 74 3461 3462
+type(
+  (string * Arg.spec * string) list
+)
+"listmanager.ml" 77 3518 3522 "listmanager.ml" 77 3518 3539
+type(
+  'a -> unit
+)
+ident(
+  def handle_extra_args "listmanager.ml" 80 3593 3593 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 77 3518 3540 "listmanager.ml" 77 3518 3543
+type(
+  'a
+)
+ident(
+  def arg "listmanager.ml" 77 3518 3546 "listmanager.ml" 77 3518 3548
+)
+"listmanager.ml" 77 3518 3546 "listmanager.ml" 77 3518 3548
+type(
+  unit
+)
+"listmanager.ml" 80 3593 3597 "listmanager.ml" 80 3593 3602
+type(
+  string
+)
+ident(
+  def usage "listmanager.ml" 83 3670 3670 "listmanager.ml" 1 0 -1
+)
+"listmanager.ml" 80 3593 3605 "listmanager.ml" 80 3593 3612
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"listmanager.ml" 80 3593 3613 "listmanager.ml" 80 3593 3634
+type(
+  (string -> string, unit, string) format
+)
+"listmanager.ml" 80 3593 3635 "listmanager.ml" 80 3593 3643
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"listmanager.ml" 80 3593 3645 "listmanager.ml" 80 3593 3646
+type(
+  int
+)
+"listmanager.ml" 80 3593 3635 "listmanager.ml" 80 3593 3647
+type(
+  string
+)
+"listmanager.ml" 80 3593 3605 "listmanager.ml" 80 3593 3647
+call(
+  stack
+)
+type(
+  string
+)
+"listmanager.ml" 83 3670 3674 "listmanager.ml" 83 3670 3675
+type(
+  unit
+)
+"listmanager.ml" 84 3678 3680 "listmanager.ml" 84 3678 3689
+type(
+  (Arg.key * Arg.spec * Arg.doc) list ->
+  Arg.anon_fun -> Arg.usage_msg -> unit
+)
+ident(
+  ext_ref Arg.parse
+)
+"listmanager.ml" 84 3678 3690 "listmanager.ml" 84 3678 3697
+type(
+  (Arg.key * Arg.spec * Arg.doc) list
+)
+ident(
+  int_ref options "listmanager.ml" 71 3305 3309 "listmanager.ml" 71 3305 3316
+)
+"listmanager.ml" 84 3678 3698 "listmanager.ml" 84 3678 3715
+type(
+  Arg.anon_fun
+)
+ident(
+  int_ref handle_extra_args "listmanager.ml" 77 3518 3522 "listmanager.ml" 77 3518 3539
+)
+"listmanager.ml" 84 3678 3716 "listmanager.ml" 84 3678 3721
+type(
+  Arg.usage_msg
+)
+ident(
+  int_ref usage "listmanager.ml" 80 3593 3597 "listmanager.ml" 80 3593 3602
+)
+"listmanager.ml" 84 3678 3680 "listmanager.ml" 84 3678 3721
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 86 3771 3783 "listmanager.ml" 86 3771 3784
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 86 3771 3784 "listmanager.ml" 86 3771 3792
+type(
+  bool ref
+)
+ident(
+  int_ref quit_now "listmanager.ml" 34 1461 1465 "listmanager.ml" 34 1461 1473
+)
+"listmanager.ml" 86 3771 3783 "listmanager.ml" 86 3771 3792
+type(
+  bool
+)
+"listmanager.ml" 86 3771 3793 "listmanager.ml" 86 3771 3795
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( != )
+)
+"listmanager.ml" 86 3771 3796 "listmanager.ml" 86 3771 3800
+type(
+  bool
+)
+"listmanager.ml" 86 3771 3783 "listmanager.ml" 86 3771 3800
+type(
+  bool
+)
+"listmanager.ml" 87 3859 3867 "listmanager.ml" 87 3859 3873
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 87 3859 3874 "listmanager.ml" 87 3859 3878
+type(
+  (string -> unit, out_channel, unit) format
+)
+"listmanager.ml" 87 3859 3879 "listmanager.ml" 87 3859 3885
+type(
+  string
+)
+ident(
+  int_ref prompt "listmanager.ml" 68 3204 3208 "listmanager.ml" 68 3204 3214
+)
+"listmanager.ml" 87 3859 3867 "listmanager.ml" 87 3859 3885
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 88 3926 3938 "listmanager.ml" 88 3926 3942
+type(
+  string
+)
+ident(
+  def line "listmanager.ml" 89 4012 4020 "listmanager.ml" 105 4859 4917
+)
+"listmanager.ml" 88 3926 3945 "listmanager.ml" 88 3926 3954
+type(
+  unit -> string
+)
+ident(
+  ext_ref Pervasives.read_line
+)
+"listmanager.ml" 88 3926 3955 "listmanager.ml" 88 3926 3957
+type(
+  unit
+)
+"listmanager.ml" 88 3926 3945 "listmanager.ml" 88 3926 3957
+call(
+  stack
+)
+type(
+  string
+)
+"listmanager.ml" 89 4012 4023 "listmanager.ml" 89 4012 4024
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 89 4012 4024 "listmanager.ml" 89 4012 4028
+type(
+  bool ref
+)
+ident(
+  int_ref echo "listmanager.ml" 67 3142 3146 "listmanager.ml" 67 3142 3150
+)
+"listmanager.ml" 89 4012 4023 "listmanager.ml" 89 4012 4028
+type(
+  bool
+)
+"listmanager.ml" 90 4099 4109 "listmanager.ml" 90 4099 4115
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 90 4099 4116 "listmanager.ml" 90 4099 4122
+type(
+  (string -> unit, out_channel, unit) format
+)
+"listmanager.ml" 90 4099 4123 "listmanager.ml" 90 4099 4127
+type(
+  string
+)
+ident(
+  int_ref line "listmanager.ml" 88 3926 3938 "listmanager.ml" 88 3926 3942
+)
+"listmanager.ml" 90 4099 4109 "listmanager.ml" 90 4099 4127
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 89 4012 4020 "listmanager.ml" 90 4099 4127
+type(
+  unit
+)
+"listmanager.ml" 91 4129 4141 "listmanager.ml" 91 4129 4147
+type(
+  string array
+)
+ident(
+  def tokens "listmanager.ml" 93 4278 4286 "listmanager.ml" 105 4859 4917
+)
+"listmanager.ml" 92 4216 4226 "listmanager.ml" 92 4216 4239
+type(
+  string list -> string array
+)
+ident(
+  ext_ref Array.of_list
+)
+"listmanager.ml" 92 4216 4241 "listmanager.ml" 92 4216 4250
+type(
+  Str.regexp -> string -> string list
+)
+ident(
+  ext_ref Str.split
+)
+"listmanager.ml" 92 4216 4252 "listmanager.ml" 92 4216 4262
+type(
+  string -> Str.regexp
+)
+ident(
+  ext_ref Str.regexp
+)
+"listmanager.ml" 92 4216 4263 "listmanager.ml" 92 4216 4267
+type(
+  string
+)
+"listmanager.ml" 92 4216 4251 "listmanager.ml" 92 4216 4268
+call(
+  stack
+)
+type(
+  Str.regexp
+)
+"listmanager.ml" 92 4216 4269 "listmanager.ml" 92 4216 4273
+type(
+  string
+)
+ident(
+  int_ref line "listmanager.ml" 88 3926 3938 "listmanager.ml" 88 3926 3942
+)
+"listmanager.ml" 92 4216 4240 "listmanager.ml" 92 4216 4274
+call(
+  stack
+)
+type(
+  string list
+)
+"listmanager.ml" 92 4216 4226 "listmanager.ml" 92 4216 4274
+call(
+  stack
+)
+type(
+  string array
+)
+"listmanager.ml" 93 4278 4290 "listmanager.ml" 93 4278 4294
+type(
+  int
+)
+ident(
+  def ntok "listmanager.ml" 94 4320 4328 "listmanager.ml" 105 4859 4917
+)
+"listmanager.ml" 93 4278 4297 "listmanager.ml" 93 4278 4309
+type(
+  string array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"listmanager.ml" 93 4278 4310 "listmanager.ml" 93 4278 4316
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 91 4129 4141 "listmanager.ml" 91 4129 4147
+)
+"listmanager.ml" 93 4278 4297 "listmanager.ml" 93 4278 4316
+type(
+  int
+)
+"listmanager.ml" 94 4320 4331 "listmanager.ml" 94 4320 4332
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"listmanager.ml" 94 4320 4332 "listmanager.ml" 94 4320 4337
+type(
+  bool ref
+)
+ident(
+  int_ref debug "listmanager.ml" 8 213 217 "listmanager.ml" 8 213 222
+)
+"listmanager.ml" 94 4320 4331 "listmanager.ml" 94 4320 4337
+type(
+  bool
+)
+"listmanager.ml" 96 4429 4441 "listmanager.ml" 96 4429 4447
+type(
+  (string -> int -> unit, out_channel, unit) format -> string -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 96 4429 4448 "listmanager.ml" 96 4429 4470
+type(
+  (string -> int -> unit, out_channel, unit) format
+)
+"listmanager.ml" 96 4429 4471 "listmanager.ml" 96 4429 4475
+type(
+  string
+)
+ident(
+  int_ref line "listmanager.ml" 88 3926 3938 "listmanager.ml" 88 3926 3942
+)
+"listmanager.ml" 96 4429 4476 "listmanager.ml" 96 4429 4480
+type(
+  int
+)
+ident(
+  int_ref ntok "listmanager.ml" 93 4278 4290 "listmanager.ml" 93 4278 4294
+)
+"listmanager.ml" 96 4429 4441 "listmanager.ml" 96 4429 4480
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 97 4482 4500 "listmanager.ml" 97 4482 4501
+type(
+  int
+)
+"listmanager.ml" 97 4482 4505 "listmanager.ml" 97 4482 4509
+type(
+  int
+)
+ident(
+  int_ref ntok "listmanager.ml" 93 4278 4290 "listmanager.ml" 93 4278 4294
+)
+"listmanager.ml" 97 4482 4509 "listmanager.ml" 97 4482 4510
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"listmanager.ml" 97 4482 4510 "listmanager.ml" 97 4482 4511
+type(
+  int
+)
+"listmanager.ml" 97 4482 4505 "listmanager.ml" 97 4482 4511
+type(
+  int
+)
+"listmanager.ml" 98 4515 4529 "listmanager.ml" 98 4515 4535
+type(
+  (int -> string -> unit, out_channel, unit) format -> int -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 98 4515 4536 "listmanager.ml" 98 4515 4547
+type(
+  (int -> string -> unit, out_channel, unit) format
+)
+"listmanager.ml" 98 4515 4548 "listmanager.ml" 98 4515 4549
+type(
+  int
+)
+ident(
+  int_ref i "listmanager.ml" 97 4482 4494 "listmanager.ml" 99 4562 4578
+)
+"listmanager.ml" 98 4515 4550 "listmanager.ml" 98 4515 4556
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 91 4129 4141 "listmanager.ml" 91 4129 4147
+)
+"listmanager.ml" 98 4515 4558 "listmanager.ml" 98 4515 4559
+type(
+  int
+)
+ident(
+  int_ref i "listmanager.ml" 97 4482 4494 "listmanager.ml" 99 4562 4578
+)
+"listmanager.ml" 98 4515 4550 "listmanager.ml" 98 4515 4560
+type(
+  string
+)
+"listmanager.ml" 98 4515 4529 "listmanager.ml" 98 4515 4561
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 97 4482 4494 "listmanager.ml" 99 4562 4578
+type(
+  unit
+)
+"listmanager.ml" 95 4413 4423 "listmanager.ml" 100 4579 4592
+type(
+  unit
+)
+"listmanager.ml" 94 4320 4328 "listmanager.ml" 100 4579 4592
+type(
+  unit
+)
+"listmanager.ml" 101 4594 4605 "listmanager.ml" 101 4594 4609
+type(
+  int
+)
+ident(
+  int_ref ntok "listmanager.ml" 93 4278 4290 "listmanager.ml" 93 4278 4294
+)
+"listmanager.ml" 101 4594 4609 "listmanager.ml" 101 4594 4610
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"listmanager.ml" 101 4594 4610 "listmanager.ml" 101 4594 4611
+type(
+  int
+)
+"listmanager.ml" 101 4594 4605 "listmanager.ml" 101 4594 4611
+type(
+  bool
+)
+"listmanager.ml" 102 4617 4631 "listmanager.ml" 102 4617 4646
+type(
+  string array -> unit
+)
+ident(
+  int_ref execute_command "listmanager.ml" 45 1902 1906 "listmanager.ml" 45 1902 1921
+)
+"listmanager.ml" 102 4617 4647 "listmanager.ml" 102 4617 4653
+type(
+  string array
+)
+ident(
+  int_ref tokens "listmanager.ml" 91 4129 4141 "listmanager.ml" 91 4129 4147
+)
+"listmanager.ml" 102 4617 4631 "listmanager.ml" 102 4617 4654
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 103 4689 4704 "listmanager.ml" 103 4689 4705
+type(
+  exn
+)
+ident(
+  def e "listmanager.ml" 104 4807 4819 "listmanager.ml" 105 4859 4917
+)
+"listmanager.ml" 104 4807 4823 "listmanager.ml" 104 4807 4832
+type(
+  string
+)
+ident(
+  def excstring "listmanager.ml" 105 4859 4871 "listmanager.ml" 105 4859 4917
+)
+"listmanager.ml" 104 4807 4835 "listmanager.ml" 104 4807 4853
+type(
+  exn -> string
+)
+ident(
+  ext_ref Printexc.to_string
+)
+"listmanager.ml" 104 4807 4854 "listmanager.ml" 104 4807 4855
+type(
+  exn
+)
+ident(
+  int_ref e "listmanager.ml" 103 4689 4704 "listmanager.ml" 103 4689 4705
+)
+"listmanager.ml" 104 4807 4835 "listmanager.ml" 104 4807 4855
+call(
+  stack
+)
+type(
+  string
+)
+"listmanager.ml" 105 4859 4871 "listmanager.ml" 105 4859 4877
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 105 4859 4878 "listmanager.ml" 105 4859 4901
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"listmanager.ml" 105 4859 4902 "listmanager.ml" 105 4859 4906
+type(
+  string
+)
+ident(
+  int_ref line "listmanager.ml" 88 3926 3938 "listmanager.ml" 88 3926 3942
+)
+"listmanager.ml" 105 4859 4907 "listmanager.ml" 105 4859 4916
+type(
+  string
+)
+ident(
+  int_ref excstring "listmanager.ml" 104 4807 4823 "listmanager.ml" 104 4807 4832
+)
+"listmanager.ml" 105 4859 4871 "listmanager.ml" 105 4859 4917
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 104 4807 4819 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 102 4617 4627 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 101 4594 4602 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 94 4320 4328 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 93 4278 4286 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 91 4129 4137 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 89 4012 4020 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 88 3926 3934 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 87 3859 3867 "listmanager.ml" 105 4859 4917
+type(
+  unit
+)
+"listmanager.ml" 86 3771 3777 "listmanager.ml" 106 4918 4929
+type(
+  unit
+)
+"listmanager.ml" 108 4939 4945 "listmanager.ml" 108 4939 4956
+type(
+  exn
+)
+"listmanager.ml" 108 4939 4960 "listmanager.ml" 108 4939 4962
+type(
+  unit
+)
+"listmanager.ml" 85 3759 3761 "listmanager.ml" 109 5014 5019
+type(
+  unit
+)
+"listmanager.ml" 110 5021 5023 "listmanager.ml" 110 5021 5029
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"listmanager.ml" 110 5021 5030 "listmanager.ml" 110 5021 5049
+type(
+  (unit, out_channel, unit) format
+)
+"listmanager.ml" 110 5021 5023 "listmanager.ml" 110 5021 5050
+call(
+  stack
+)
+type(
+  unit
+)
+"listmanager.ml" 85 3759 3761 "listmanager.ml" 110 5021 5050
+type(
+  unit
+)
+"listmanager.ml" 84 3678 3680 "listmanager.ml" 110 5021 5050
+type(
+  unit
+)

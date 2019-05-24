@@ -1,0 +1,633 @@
+open Sortedlist;;               (* insert / remove / print / merge *)
+open Printf;;
+open Mltest;;
+
+(* files for diffing *)
+let actual_file = "test-data/actual.tmp";;
+let expect_file = "test-data/expect.tmp";;
+let diff_file   = "test-data/diff.tmp"  ;;
+let msgref = ref "";;
+
+Mltest.main [|
+(******************************************)
+(* sortedlist insert tests *)
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.insert base cases *)
+  let list = [] in
+  let elem = 1 in
+  let actual = insert list elem in
+  let expect = [1] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:23"; msg=msg; code="17:  (* Sortedlist.insert base cases *)\n18:  let list = [] in\n19:  let elem = 1 in\n20:  let actual = insert list elem in\n21:  let expect = [1] in\n22:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n23:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert base cases *)
+  let list = [] in
+  let elem = "a" in
+  let actual = insert list elem in
+  let expect = ["a"] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:32"; msg=msg; code="26:  (* Sortedlist.insert base cases *)\n27:  let list = [] in\n28:  let elem = \"a\" in\n29:  let actual = insert list elem in\n30:  let expect = [\"a\"] in\n31:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n32:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.insert short lists *)
+  let list = [3] in
+  let elem = 1 in
+  let actual = insert list elem in
+  let expect = [1;3] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:44"; msg=msg; code="38:  (* Sortedlist.insert short lists *)\n39:  let list = [3] in\n40:  let elem = 1 in\n41:  let actual = insert list elem in\n42:  let expect = [1;3] in\n43:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n44:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert short lists *)
+  let list = [3] in
+  let elem = 5 in
+  let actual = insert list elem in
+  let expect = [3;5] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:53"; msg=msg; code="47:  (* Sortedlist.insert short lists *)\n48:  let list = [3] in\n49:  let elem = 5 in\n50:  let actual = insert list elem in\n51:  let expect = [3;5] in\n52:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n53:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert short lists *)
+  let list = ["c"] in
+  let elem = "a" in
+  let actual = insert list elem in
+  let expect = ["a";"c"] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:62"; msg=msg; code="56:  (* Sortedlist.insert short lists *)\n57:  let list = [\"c\"] in\n58:  let elem = \"a\" in\n59:  let actual = insert list elem in\n60:  let expect = [\"a\";\"c\"] in\n61:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n62:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert short lists *)
+  let list = ["c"] in
+  let elem = "e" in
+  let actual = insert list elem in
+  let expect = ["c";"e"] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:71"; msg=msg; code="65:  (* Sortedlist.insert short lists *)\n66:  let list = [\"c\"] in\n67:  let elem = \"e\" in\n68:  let actual = insert list elem in\n69:  let expect = [\"c\";\"e\"] in\n70:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n71:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.insert med lists *)
+  let list = [1; 3; 5; 7] in
+  let elem = 0 in
+  let actual = insert list elem in
+  let expect = [0; 1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:84"; msg=msg; code="78:  (* Sortedlist.insert med lists *)\n79:  let list = [1; 3; 5; 7] in\n80:  let elem = 0 in\n81:  let actual = insert list elem in\n82:  let expect = [0; 1; 3; 5; 7] in\n83:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n84:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert med lists *)
+  let list = [1; 3; 5; 7] in
+  let elem = 2 in
+  let actual = insert list elem in
+  let expect = [1; 2; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:93"; msg=msg; code="87:  (* Sortedlist.insert med lists *)\n88:  let list = [1; 3; 5; 7] in\n89:  let elem = 2 in\n90:  let actual = insert list elem in\n91:  let expect = [1; 2; 3; 5; 7] in\n92:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n93:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert med lists *)
+  let list = [1; 3; 5; 7] in
+  let elem = 4 in
+  let actual = insert list elem in
+  let expect = [1; 3; 4; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:102"; msg=msg; code="96:  (* Sortedlist.insert med lists *)\n97:  let list = [1; 3; 5; 7] in\n98:  let elem = 4 in\n99:  let actual = insert list elem in\n100:  let expect = [1; 3; 4; 5; 7] in\n101:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n102:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert med lists *)
+  let list = [1; 3; 5; 7] in
+  let elem = 6 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 6; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:111"; msg=msg; code="105:  (* Sortedlist.insert med lists *)\n106:  let list = [1; 3; 5; 7] in\n107:  let elem = 6 in\n108:  let actual = insert list elem in\n109:  let expect = [1; 3; 5; 6; 7] in\n110:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n111:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert med lists *)
+  let list = [1; 3; 5; 7] in
+  let elem = 8 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7; 8] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:120"; msg=msg; code="114:  (* Sortedlist.insert med lists *)\n115:  let list = [1; 3; 5; 7] in\n116:  let elem = 8 in\n117:  let actual = insert list elem in\n118:  let expect = [1; 3; 5; 7; 8] in\n119:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n120:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.insert no duplicates *)
+  let list = [1; 3; 5; 7] in
+  let elem = 1 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:132"; msg=msg; code="126:  (* Sortedlist.insert no duplicates *)\n127:  let list = [1; 3; 5; 7] in\n128:  let elem = 1 in\n129:  let actual = insert list elem in\n130:  let expect = [1; 3; 5; 7] in\n131:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n132:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert no duplicates *)
+  let list = [1; 3; 5; 7] in
+  let elem = 3 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:141"; msg=msg; code="135:  (* Sortedlist.insert no duplicates *)\n136:  let list = [1; 3; 5; 7] in\n137:  let elem = 3 in\n138:  let actual = insert list elem in\n139:  let expect = [1; 3; 5; 7] in\n140:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n141:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert no duplicates *)
+  let list = [1; 3; 5; 7] in
+  let elem = 5 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:150"; msg=msg; code="144:  (* Sortedlist.insert no duplicates *)\n145:  let list = [1; 3; 5; 7] in\n146:  let elem = 5 in\n147:  let actual = insert list elem in\n148:  let expect = [1; 3; 5; 7] in\n149:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n150:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert no duplicates *)
+  let list = [1; 3; 5; 7] in
+  let elem = 5 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:159"; msg=msg; code="153:  (* Sortedlist.insert no duplicates *)\n154:  let list = [1; 3; 5; 7] in\n155:  let elem = 5 in\n156:  let actual = insert list elem in\n157:  let expect = [1; 3; 5; 7] in\n158:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n159:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert no duplicates *)
+  let list = [1; 3; 5; 7] in
+  let elem = 7 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:168"; msg=msg; code="162:  (* Sortedlist.insert no duplicates *)\n163:  let list = [1; 3; 5; 7] in\n164:  let elem = 7 in\n165:  let actual = insert list elem in\n166:  let expect = [1; 3; 5; 7] in\n167:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n168:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.insert long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 4 in
+  let actual = insert list elem in
+  let expect = [1; 3; 4; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:180"; msg=msg; code="174:  (* Sortedlist.insert long lists *)\n175:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n176:  let elem = 4 in\n177:  let actual = insert list elem in\n178:  let expect = [1; 3; 4; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in\n179:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n180:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 50 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 50; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:189"; msg=msg; code="183:  (* Sortedlist.insert long lists *)\n184:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n185:  let elem = 50 in\n186:  let actual = insert list elem in\n187:  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 50; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in\n188:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n189:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 100 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; 100] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:198"; msg=msg; code="192:  (* Sortedlist.insert long lists *)\n193:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n194:  let elem = 100 in\n195:  let actual = insert list elem in\n196:  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; 100] in\n197:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n198:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert long lists, no duplicates *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 11 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:207"; msg=msg; code="201:  (* Sortedlist.insert long lists, no duplicates *)\n202:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n203:  let elem = 11 in\n204:  let actual = insert list elem in\n205:  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in\n206:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n207:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.insert long lists, no duplicates *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 99 in
+  let actual = insert list elem in
+  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:216"; msg=msg; code="210:  (* Sortedlist.insert long lists, no duplicates *)\n211:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n212:  let elem = 99 in\n213:  let actual = insert list elem in\n214:  let expect = [1; 3; 5; 7; 9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99] in\n215:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n216:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(******************************************)
+(* sortedlist insert tests *)
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.remove base cases *)
+  let list = [] in
+  let elem = 1 in
+  let actual = remove list elem in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:231"; msg=msg; code="225:  (* Sortedlist.remove base cases *)\n226:  let list = [] in\n227:  let elem = 1 in\n228:  let actual = remove list elem in\n229:  let expect = [] in\n230:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n231:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove base cases *)
+  let list = [] in
+  let elem = "a" in
+  let actual = remove list elem in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:240"; msg=msg; code="234:  (* Sortedlist.remove base cases *)\n235:  let list = [] in\n236:  let elem = \"a\" in\n237:  let actual = remove list elem in\n238:  let expect = [] in\n239:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n240:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = [1] in
+  let elem = 1 in
+  let actual = remove list elem in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:253"; msg=msg; code="247:  (* Sortedlist.remove short lists *)\n248:  let list = [1] in\n249:  let elem = 1 in\n250:  let actual = remove list elem in\n251:  let expect = [] in\n252:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n253:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = [1] in
+  let elem = 3 in
+  let actual = remove list elem in
+  let expect = [1] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:262"; msg=msg; code="256:  (* Sortedlist.remove short lists *)\n257:  let list = [1] in\n258:  let elem = 3 in\n259:  let actual = remove list elem in\n260:  let expect = [1] in\n261:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n262:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = [1] in
+  let elem = 0 in
+  let actual = remove list elem in
+  let expect = [1] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:271"; msg=msg; code="265:  (* Sortedlist.remove short lists *)\n266:  let list = [1] in\n267:  let elem = 0 in\n268:  let actual = remove list elem in\n269:  let expect = [1] in\n270:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n271:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = ["a"] in
+  let elem = "a" in
+  let actual = remove list elem in
+  let expect = [] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:280"; msg=msg; code="274:  (* Sortedlist.remove short lists *)\n275:  let list = [\"a\"] in\n276:  let elem = \"a\" in\n277:  let actual = remove list elem in\n278:  let expect = [] in\n279:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n280:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = ["c"] in
+  let elem = "a" in
+  let actual = remove list elem in
+  let expect = ["c"] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:289"; msg=msg; code="283:  (* Sortedlist.remove short lists *)\n284:  let list = [\"c\"] in\n285:  let elem = \"a\" in\n286:  let actual = remove list elem in\n287:  let expect = [\"c\"] in\n288:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n289:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove short lists *)
+  let list = ["c"] in
+  let elem = "e" in
+  let actual = remove list elem in
+  let expect = ["c"] in
+  let msg = sprintf "Expect: %s\nActual: %s" (strlist2str expect) (strlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:298"; msg=msg; code="292:  (* Sortedlist.remove short lists *)\n293:  let list = [\"c\"] in\n294:  let elem = \"e\" in\n295:  let actual = remove list elem in\n296:  let expect = [\"c\"] in\n297:  let msg = sprintf \"Expect: %s\\nActual: %s\" (strlist2str expect) (strlist2str actual) in\n298:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.remove med lists *)
+  let list = [1;3;5;7] in
+  let elem = 1 in
+  let actual = remove list elem in
+  let expect = [3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:310"; msg=msg; code="304:  (* Sortedlist.remove med lists *)\n305:  let list = [1;3;5;7] in\n306:  let elem = 1 in\n307:  let actual = remove list elem in\n308:  let expect = [3;5;7] in\n309:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n310:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove med lists *)
+  let list = [1;3;5;7] in
+  let elem = 3 in
+  let actual = remove list elem in
+  let expect = [1;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:319"; msg=msg; code="313:  (* Sortedlist.remove med lists *)\n314:  let list = [1;3;5;7] in\n315:  let elem = 3 in\n316:  let actual = remove list elem in\n317:  let expect = [1;5;7] in\n318:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n319:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove med lists *)
+  let list = [1;3;5;7] in
+  let elem = 5 in
+  let actual = remove list elem in
+  let expect = [1;3;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:327"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove med lists *)
+  let list = [1;3;5;7] in
+  let elem = 7 in
+  let actual = remove list elem in
+  let expect = [1;3;5] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:335"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.remove no element equal *)
+  let list = [1;3;5;7] in
+  let elem = 0 in
+  let actual = remove list elem in
+  let expect = [1;3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:347"; msg=msg; code="341:  (* Sortedlist.remove no element equal *)\n342:  let list = [1;3;5;7] in\n343:  let elem = 0 in\n344:  let actual = remove list elem in\n345:  let expect = [1;3;5;7] in\n346:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n347:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove no element equal *)
+  let list = [1;3;5;7] in
+  let elem = 2 in
+  let actual = remove list elem in
+  let expect = [1;3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:356"; msg=msg; code="350:  (* Sortedlist.remove no element equal *)\n351:  let list = [1;3;5;7] in\n352:  let elem = 2 in\n353:  let actual = remove list elem in\n354:  let expect = [1;3;5;7] in\n355:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n356:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove no element equal *)
+  let list = [1;3;5;7] in
+  let elem = 4 in
+  let actual = remove list elem in
+  let expect = [1;3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:364"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove no element equal *)
+  let list = [1;3;5;7] in
+  let elem = 6 in
+  let actual = remove list elem in
+  let expect = [1;3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:372"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove no element equal *)
+  let list = [1;3;5;7] in
+  let elem = 8 in
+  let actual = remove list elem in
+  let expect = [1;3;5;7] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:380"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 33 in
+  let actual = remove list elem in
+  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ]in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:392"; msg=msg; code="386:  (* Sortedlist.remove long lists *)\n387:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n388:  let elem = 33 in\n389:  let actual = remove list elem in\n390:  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ]in\n391:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n392:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 67 in
+  let actual = remove list elem in
+  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ]in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:401"; msg=msg; code="395:  (* Sortedlist.remove long lists *)\n396:  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in\n397:  let elem = 67 in\n398:  let actual = remove list elem in\n399:  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ]in\n400:  let msg = sprintf \"Expect: %s\\nActual: %s\" (intlist2str expect) (intlist2str actual) in\n401:  __check__ (actual = expect);\n"}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 22 in
+  let actual = remove list elem in
+  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ]in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:409"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 99 in
+  let actual = remove list elem in
+  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; ] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:417"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99; ] in
+  let elem = 150 in
+  let actual = remove list elem in
+  let expect = [ 1;  3;  5;  7;  9; 11; 13; 15; 17; 19; 21; 23; 25; 27; 29; 31; 33; 35; 37; 39; 41; 43; 45; 47; 49; 51; 53; 55; 57; 59; 61; 63; 65; 67; 69; 71; 73; 75; 77; 79; 81; 83; 85; 87; 89; 91; 93; 95; 97; 99;] in
+  let msg = sprintf "Expect: %s\nActual: %s" (intlist2str expect) (intlist2str actual) in
+if not ( (actual = expect)) then raise (TestFail {loc="test_sortedlist1.ml:425"; msg=msg; code=""}) else ();
+  (* END_TEST *)
+);
+
+(* sortedist print tests *)
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.print short lists *)
+  let list = [ "a";  "b";  "c";] in
+  let expect_string = "\
+a
+b
+c
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:441"; msg=(!msgref); code="432:  (* Sortedlist.print short lists *)\n433:  let list = [ \"a\";  \"b\";  \"c\";] in\n434:  let expect_string = \"\\\n435:a\n436:b\n437:c\n438:\" in\n439:  let thunk = fun () -> print list in\n440:  save_stdout actual_file thunk;\n441:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Sortedlist.remove long lists *)
+  let list = [ "apple";  "banana";  "orange"; "strawberry" ;] in
+  let expect_string = "\
+apple
+banana
+orange
+strawberry
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:454"; msg=(!msgref); code="444:  (* Sortedlist.remove long lists *)\n445:  let list = [ \"apple\";  \"banana\";  \"orange\"; \"strawberry\" ;] in\n446:  let expect_string = \"\\\n447:apple\n448:banana\n449:orange\n450:strawberry\n451:\" in\n452:  let thunk = fun () -> print list in\n453:  save_stdout actual_file thunk;\n454:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.print single element *)
+  let list = [ "Banana"] in
+  let expect_string = "\
+Banana
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:468"; msg=(!msgref); code="461:  (* Sortedlist.print single element *)\n462:  let list = [ \"Banana\"] in\n463:  let expect_string = \"\\\n464:Banana\n465:\" in\n466:  let thunk = fun () -> print list in\n467:  save_stdout actual_file thunk;\n468:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.print empty list *)
+  let list = [] in
+  let expect_string = "\
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:480"; msg=(!msgref); code="474:  (* Sortedlist.print empty list *)\n475:  let list = [] in\n476:  let expect_string = \"\\\n477:\" in\n478:  let thunk = fun () -> print list in\n479:  save_stdout actual_file thunk;\n480:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.print medium lists *)
+  let list = [ "practice";"clear";"child";"period";"yard";"yeah";"problem";"your";"cause";"near";"operation";"heart";"difference";"wall";"I";"hard";"energy";"up";"story";"art";"natural";"usually";"debate";"program";"mind";] in
+  let expect_string = "\
+practice
+clear
+child
+period
+yard
+yeah
+problem
+your
+cause
+near
+operation
+heart
+difference
+wall
+I
+hard
+energy
+up
+story
+art
+natural
+usually
+debate
+program
+mind
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:517"; msg=(!msgref); code="486:  (* Sortedlist.print medium lists *)\n487:  let list = [ \"practice\";\"clear\";\"child\";\"period\";\"yard\";\"yeah\";\"problem\";\"your\";\"cause\";\"near\";\"operation\";\"heart\";\"difference\";\"wall\";\"I\";\"hard\";\"energy\";\"up\";\"story\";\"art\";\"natural\";\"usually\";\"debate\";\"program\";\"mind\";] in\n488:  let expect_string = \"\\\n489:practice\n490:clear\n491:child\n492:period\n493:yard\n494:yeah\n495:problem\n496:your\n497:cause\n498:near\n499:operation\n500:heart\n501:difference\n502:wall\n503:I\n504:hard\n505:energy\n506:up\n507:story\n508:art\n509:natural\n510:usually\n511:debate\n512:program\n513:mind\n514:\" in\n515:  let thunk = fun () -> print list in\n516:  save_stdout actual_file thunk;\n517:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* Sortedlist.print medium lists *)
+  let list = [ "generation";"state";"carry";"real";"expert";"behavior";"second";"return";"subject";"result";"manager";"president";"painting";"career";"goal";"safe";"artist";"number";"public";"you";"baby";"picture";"center";"player";"culture";"fail";"agree";"space";"rock";"door";"here";"decade";"worker";"draw";"give";"reason";"between";"believe";"brother";"past";"speech";"break";"organization";"yes";"black";"war";"cover";"phone";"feel";"they";"floor";"physical";"cost";"might";"house";"else";"value";"coach";"woman";"take";"play";"set";"go";"court";"some";"place";"performance";"summer";"themselves";"death";"owner";"customer";"senior";"attention";"remember";"exactly";"financial";"weapon";"race";"huge";"road";"collection";"throughout";"season";"act";"day";"could";"same";"sea";"third";"dark";"usually";"become";"evening";"probably";"mention";"trip";"seat";"art";"question";] in
+  let expect_string = "\
+generation
+state
+carry
+real
+expert
+behavior
+second
+return
+subject
+result
+manager
+president
+painting
+career
+goal
+safe
+artist
+number
+public
+you
+baby
+picture
+center
+player
+culture
+fail
+agree
+space
+rock
+door
+here
+decade
+worker
+draw
+give
+reason
+between
+believe
+brother
+past
+speech
+break
+organization
+yes
+black
+war
+cover
+phone
+feel
+they
+floor
+physical
+cost
+might
+house
+else
+value
+coach
+woman
+take
+play
+set
+go
+court
+some
+place
+performance
+summer
+themselves
+death
+owner
+customer
+senior
+attention
+remember
+exactly
+financial
+weapon
+race
+huge
+road
+collection
+throughout
+season
+act
+day
+could
+same
+sea
+third
+dark
+usually
+become
+evening
+probably
+mention
+trip
+seat
+art
+question
+" in
+  let thunk = fun () -> print list in
+  save_stdout actual_file thunk;
+if not ( (check_diff_expect expect_string expect_file actual_file diff_file msgref)) then raise (TestFail {loc="test_sortedlist1.ml:628"; msg=(!msgref); code="522:  (* Sortedlist.print medium lists *)\n523:  let list = [ \"generation\";\"state\";\"carry\";\"real\";\"expert\";\"behavior\";\"second\";\"return\";\"subject\";\"result\";\"manager\";\"president\";\"painting\";\"career\";\"goal\";\"safe\";\"artist\";\"number\";\"public\";\"you\";\"baby\";\"picture\";\"center\";\"player\";\"culture\";\"fail\";\"agree\";\"space\";\"rock\";\"door\";\"here\";\"decade\";\"worker\";\"draw\";\"give\";\"reason\";\"between\";\"believe\";\"brother\";\"past\";\"speech\";\"break\";\"organization\";\"yes\";\"black\";\"war\";\"cover\";\"phone\";\"feel\";\"they\";\"floor\";\"physical\";\"cost\";\"might\";\"house\";\"else\";\"value\";\"coach\";\"woman\";\"take\";\"play\";\"set\";\"go\";\"court\";\"some\";\"place\";\"performance\";\"summer\";\"themselves\";\"death\";\"owner\";\"customer\";\"senior\";\"attention\";\"remember\";\"exactly\";\"financial\";\"weapon\";\"race\";\"huge\";\"road\";\"collection\";\"throughout\";\"season\";\"act\";\"day\";\"could\";\"same\";\"sea\";\"third\";\"dark\";\"usually\";\"become\";\"evening\";\"probably\";\"mention\";\"trip\";\"seat\";\"art\";\"question\";] in\n524:  let expect_string = \"\\\n525:generation\n526:state\n527:carry\n528:real\n529:expert\n530:behavior\n531:second\n532:return\n533:subject\n534:result\n535:manager\n536:president\n537:painting\n538:career\n539:goal\n540:safe\n541:artist\n542:number\n543:public\n544:you\n545:baby\n546:picture\n547:center\n548:player\n549:culture\n550:fail\n551:agree\n552:space\n553:rock\n554:door\n555:here\n556:decade\n557:worker\n558:draw\n559:give\n560:reason\n561:between\n562:believe\n563:brother\n564:past\n565:speech\n566:break\n567:organization\n568:yes\n569:black\n570:war\n571:cover\n572:phone\n573:feel\n574:they\n575:floor\n576:physical\n577:cost\n578:might\n579:house\n580:else\n581:value\n582:coach\n583:woman\n584:take\n585:play\n586:set\n587:go\n588:court\n589:some\n590:place\n591:performance\n592:summer\n593:themselves\n594:death\n595:owner\n596:customer\n597:senior\n598:attention\n599:remember\n600:exactly\n601:financial\n602:weapon\n603:race\n604:huge\n605:road\n606:collection\n607:throughout\n608:season\n609:act\n610:day\n611:could\n612:same\n613:sea\n614:third\n615:dark\n616:usually\n617:become\n618:evening\n619:probably\n620:mention\n621:trip\n622:seat\n623:art\n624:question\n625:\" in\n626:  let thunk = fun () -> print list in\n627:  save_stdout actual_file thunk;\n628:  __check_output__ (check_diff_expect expect_string expect_file actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+
+|];;    
+    
